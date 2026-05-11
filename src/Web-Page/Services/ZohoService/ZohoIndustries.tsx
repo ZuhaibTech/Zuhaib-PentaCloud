@@ -1,0 +1,187 @@
+"use client";
+
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Stethoscope, ShoppingBag, Banknote, Briefcase, 
+  Factory, Home, ChevronLeft, ChevronRight
+} from "lucide-react";
+import { CLAY_CARD, CLAY_ICON } from "./Constants";
+
+const industries = [
+  {
+    title: "Healthcare",
+    icon: <Stethoscope size={24} />,
+    body: "HIPAA-aware Zoho CRM for patient management, appointment scheduling, and referral tracking.",
+    apps: ["Zoho CRM", "Zoho Books", "Zoho Desk", "Zoho People"],
+    color: "bg-blue-50 text-[#1A7FD4]"
+  },
+  {
+    title: "Retail & eCommerce",
+    icon: <ShoppingBag size={24} />,
+    body: "Zoho Inventory integrated with Shopify and Amazon for multi-channel stock management.",
+    apps: ["Zoho Inventory", "Zoho CRM", "Zoho Campaigns"],
+    color: "bg-emerald-50 text-[#34C98A]"
+  },
+  {
+    title: "Financial Services",
+    icon: <Banknote size={24} />,
+    body: "Zoho CRM customised for client onboarding, KYC workflows, and relationship management.",
+    apps: ["Zoho CRM", "Zoho Books", "Zoho Sign"],
+    color: "bg-amber-50 text-[#F59E0B]"
+  },
+  {
+    title: "Professional Services",
+    icon: <Briefcase size={24} />,
+    body: "Zoho Projects for client project management and time tracking. Zoho CRM for proposal management.",
+    apps: ["Zoho Projects", "Zoho CRM", "Zoho Books"],
+    color: "bg-indigo-50 text-[#6366F1]"
+  },
+  {
+    title: "Manufacturing",
+    icon: <Factory size={24} />,
+    body: "Zoho Inventory for raw material tracking. Zoho CRM for dealer and distributor management.",
+    apps: ["Zoho Inventory", "Zoho CRM", "Zoho Creator"],
+    color: "bg-slate-50 text-[#475569]"
+  },
+  {
+    title: "Real Estate",
+    icon: <Home size={24} />,
+    body: "Zoho CRM customised for property listings, lead source tracking, and deal closure workflows.",
+    apps: ["Zoho CRM", "Zoho Campaigns", "Zoho Books"],
+    color: "bg-red-50 text-[#EF4444]"
+  }
+];
+
+const ZohoIndustries = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) setVisibleCount(1);
+      else if (window.innerWidth < 1024) setVisibleCount(2);
+      else if (window.innerWidth < 1280) setVisibleCount(3);
+      else setVisibleCount(4);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Calculate total steps based on individual card sliding
+  const maxIndex = Math.max(0, industries.length - visibleCount);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  }, [maxIndex]);
+
+  const prevSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  }, [maxIndex]);
+
+  return (
+    <section className="py-24 px-6 bg-[#E8F0F8] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+          <div className="max-w-2xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="inline-block px-4 py-1 bg-blue-50 text-[#1A7FD4] rounded-full text-[10px] font-black uppercase tracking-[3px] mb-6"
+            >
+              INDUSTRIES
+            </motion.div>
+            <h2 className="text-3xl md:text-5xl font-nunito font-black text-[#0D1B2A] leading-tight">
+              Zoho Solutions Built <br/> <span className="text-[#1A7FD4]">for Your Industry</span>
+            </h2>
+          </div>
+          
+          <div className="flex gap-4">
+            <button 
+              onClick={prevSlide}
+              className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] transition-all active:scale-90"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button 
+              onClick={nextSlide}
+              className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] transition-all active:scale-90"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+
+        {/* Industry Carousel */}
+        <div className="relative">
+          <div className="overflow-visible">
+            <motion.div 
+              className="flex gap-6 cursor-grab active:cursor-grabbing"
+              drag="x"
+              dragConstraints={{ right: 0, left: 0 }}
+              dragElastic={0.1}
+              onDragEnd={(e, { offset }) => {
+                if (offset.x < -50) nextSlide();
+                else if (offset.x > 50) prevSlide();
+              }}
+              animate={{ x: `calc(-${currentIndex * (100 / visibleCount)}% - ${currentIndex * 24}px)` }}
+              transition={{ type: "spring", stiffness: 120, damping: 20 }}
+            >
+              {industries.map((industry, i) => (
+                <div 
+                  key={i}
+                  className="flex-shrink-0 select-none"
+                  style={{ width: `calc(${100 / visibleCount}% - ${(visibleCount - 1) * 24 / visibleCount}px)` }}
+                >
+                  <motion.div
+                    className={`${CLAY_CARD} p-8 group hover:-translate-y-1 transition-all duration-500 h-full min-h-[360px] flex flex-col`}
+                  >
+                    <div className={`w-12 h-12 ${CLAY_ICON} ${industry.color.split(" ")[1]} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                      {industry.icon}
+                    </div>
+
+                    <div className="flex-grow">
+                      <h3 className="text-xl font-nunito font-black text-[#0D1B2A] mb-3 group-hover:text-[#1A7FD4] transition-colors">
+                        {industry.title}
+                      </h3>
+                      <p className="text-xs text-[#4A6080] font-inter leading-relaxed line-clamp-4">
+                        {industry.body}
+                      </p>
+                    </div>
+
+                    <div className="pt-6 border-t border-slate-50 mt-6">
+                      <p className="text-[9px] font-black text-[#1A7FD4] uppercase tracking-widest mb-3">Core Apps</p>
+                      <div className="flex flex-wrap gap-1.5">
+                         {industry.apps.map((app, idx) => (
+                           <span key={idx} className="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-100 text-[8px] font-bold text-slate-500 uppercase">
+                             {app}
+                           </span>
+                         ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Progress Dots */}
+        <div className="flex justify-center gap-2 mt-12">
+          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                currentIndex === i ? "w-8 bg-[#1A7FD4]" : "w-1.5 bg-slate-200"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ZohoIndustries;

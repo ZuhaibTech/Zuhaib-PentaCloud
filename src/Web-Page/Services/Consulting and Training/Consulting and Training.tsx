@@ -1,0 +1,30 @@
+"use client";
+
+import React from "react";
+import ConsultingHero from "./ConsultingHero";
+import ConsultingOffer from "./ConsultingOffer";
+import ConsultingProcess from "./ConsultingProcess";
+import TrainingDelivery from "./TrainingDelivery";
+import ConsultingWhyPentacloud from "./ConsultingWhyPentacloud";
+import ConsultingFAQ from "./ConsultingFAQ";
+
+const ConsultingAndTraining = () => {
+  return (
+    <div className="bg-background min-h-screen pt-24 pb-12 overflow-x-hidden">
+      {/* Background Orbs */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/50 rounded-full blur-[150px] -z-10" />
+      <div className="absolute top-[20%] -left-40 w-[600px] h-[600px] bg-indigo-100/40 rounded-full blur-[120px] -z-10" />
+
+      <div className="max-w-7xl mx-auto px-6">
+        <ConsultingHero />
+        <ConsultingOffer />
+        <ConsultingProcess />
+        <TrainingDelivery />
+        <ConsultingWhyPentacloud />
+        <ConsultingFAQ />
+      </div>
+    </div>
+  );
+};
+
+export default ConsultingAndTraining;
