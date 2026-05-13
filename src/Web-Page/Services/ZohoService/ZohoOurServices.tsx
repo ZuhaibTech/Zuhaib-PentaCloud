@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { CLAY_CARD, NEUMORPHIC_BUTTON, CLAY_ICON } from "./Constants";
 
-const services = [
+const services: { icon: React.ReactElement<{ size?: number }>; title: string; body: string; included: string[]; ideal: string }[] = [
   {
     icon: <Settings size={32} />,
     title: "Zoho Implementation",
@@ -54,7 +54,7 @@ const services = [
   }
 ];
 
-const ServiceCard = ({ service, index }: { service: typeof services[0], index: number }) => {
+const ServiceCard = ({ service, index }: { service: (typeof services)[0]; index: number }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -87,7 +87,7 @@ const ServiceCard = ({ service, index }: { service: typeof services[0], index: n
             layout
             className={`${isExpanded ? "w-12 h-12" : "w-20 h-20"} ${CLAY_ICON} text-[#1A7FD4] flex items-center justify-center group-hover:rotate-3 transition-all duration-500 shrink-0`}
           >
-            {React.cloneElement(service.icon as React.ReactElement, { size: isExpanded ? 24 : 36 })}
+            {React.cloneElement(service.icon as React.ReactElement<{ size?: number }>, { size: isExpanded ? 24 : 36 })}
           </motion.div>
           <motion.h3 
             layout
