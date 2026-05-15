@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 };
 
 import WhatsApp from "@/Details/WhatsApp/WhatsApp";
+import SplashWrapper from "@/Animation/SplashWrapper";
 
 export default function RootLayout({
   children,
@@ -32,8 +33,10 @@ export default function RootLayout({
       className={`${inter.variable} ${nunito.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col relative">
-        {children}
-        <WhatsApp />
+        <SplashWrapper>
+          {children}
+          <WhatsApp />
+        </SplashWrapper>
       </body>
     </html>
   );
