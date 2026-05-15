@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 const CTA = () => {
   return (
-    <section className="relative w-full py-10 px-4 md:px-6 lg:px-8 mb-20">
+    <section className="relative w-full py-6 px-4 md:px-6 lg:px-8 mb-10">
       <motion.div 
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number] }}
         viewport={{ once: true }}
-        className="relative w-full max-w-6xl mx-auto rounded-[32px] p-8 md:p-12 lg:px-20 py-12 md:py-16 overflow-hidden shadow-2xl"
+        className="relative w-full max-w-6xl mx-auto rounded-[32px] p-8 md:p-12 lg:px-20 py-8 md:py-10 overflow-hidden shadow-2xl"
         style={{ background: 'linear-gradient(135deg, #1A7FD4 0%, #0D5FA3 60%, #29C6E0 100%)' }}
       >
         {/* Animated Background FX */}

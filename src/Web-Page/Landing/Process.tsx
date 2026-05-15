@@ -409,13 +409,13 @@ const ZohoSyncFlow = () => {
 
 const Process = () => {
   return (
-    <section className="bg-background py-20 px-4 md:px-8 relative overflow-hidden">
+    <section className="bg-background py-10 px-4 md:px-8 relative overflow-hidden">
       {/* Subtle Background Glow */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-[1200px] mx-auto relative z-10">
         
-        <div className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+        <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -503,16 +503,22 @@ const Process = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="md:col-span-2 bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl p-6 flex flex-col relative overflow-hidden shadow-xl hover:from-[#1A237E] hover:to-[#185FA5] transition-all duration-500 group cursor-pointer"
+            className="md:col-span-2 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-6 flex flex-col relative overflow-hidden shadow-xl group cursor-pointer"
           >
-            <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full blur-[60px]" />
-            <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-auto border border-white/30 backdrop-blur-md relative z-10">
-              <Cloud className="w-5 h-5 text-white" />
-            </div>
-            <ArchDiagram />
-            <div className="mt-auto pt-4 relative z-10">
-              <h3 className="text-white font-bold text-xl">End-to-End Cloud Solution</h3>
-              <p className="text-blue-100/70 text-[13px] mt-1 max-w-md">Full-cycle architecture from concept to global deployment.</p>
+            {/* Smooth Hover Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1A237E] to-[#185FA5] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out z-0" />
+            
+            <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full blur-[60px] z-0" />
+            
+            <div className="relative z-10 flex flex-col h-full">
+              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-auto border border-white/30 backdrop-blur-md">
+                <Cloud className="w-5 h-5 text-white" />
+              </div>
+              <ArchDiagram />
+              <div className="mt-auto pt-4">
+                <h3 className="text-white font-bold text-xl">End-to-End Cloud Solution</h3>
+                <p className="text-blue-100/70 text-[13px] mt-1 max-w-md">Full-cycle architecture from concept to global deployment.</p>
+              </div>
             </div>
           </motion.div>
 

@@ -17,11 +17,12 @@ const WhyPentacloud = () => {
 
   return (
     <section className="py-24 bg-background relative px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start relative">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 relative">
         
-        {/* Left Column - Visual Card (Sticky) */}
-        <div className="sticky top-28 self-start">
-          <motion.div
+        {/* Left Column - Sticky Wrapper */}
+        <div className="relative">
+          <div className="sticky top-32">
+            <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -104,6 +105,7 @@ const WhyPentacloud = () => {
             )}
           </AnimatePresence>
         </motion.div>
+        </div>
       </div>
 
         {/* Right Column - Differentiators */}

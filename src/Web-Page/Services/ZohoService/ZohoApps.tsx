@@ -149,7 +149,7 @@ const ZohoApps = () => {
   }, [isPaused, nextSlide]);
 
   return (
-    <section className="py-24 px-6 bg-[#E8F0F8] overflow-hidden relative">
+    <section className="py-24 px-6 bg-[#F8FBFF] overflow-hidden relative">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(26,127,212,0.05)_0%,transparent_70%)] pointer-events-none -z-10" />
       
@@ -172,14 +172,14 @@ const ZohoApps = () => {
 
         {/* Carousel Container */}
         <div 
-          className="relative px-2 sm:px-10"
+          className="relative px-2 sm:px-10 group"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Navigation Buttons */}
           <button 
             onClick={prevSlide}
-            className="absolute -left-2 sm:-left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-md shadow-xl border border-slate-200 text-[#1A7FD4] hover:bg-white hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 disabled:opacity-30 focus:opacity-100"
+            className="absolute -left-2 sm:-left-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-xl border border-slate-100 text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 lg:opacity-100 lg:group-hover:opacity-100"
             aria-label="Previous slide"
           >
             <ChevronLeft size={28} strokeWidth={3} />
@@ -187,7 +187,7 @@ const ZohoApps = () => {
 
           <button 
             onClick={nextSlide}
-            className="absolute -right-2 sm:-right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-md shadow-xl border border-slate-200 text-[#1A7FD4] hover:bg-white hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 disabled:opacity-30 focus:opacity-100"
+            className="absolute -right-2 sm:-right-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-xl border border-slate-100 text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 lg:opacity-100 lg:group-hover:opacity-100"
             aria-label="Next slide"
           >
             <ChevronRight size={28} strokeWidth={3} />

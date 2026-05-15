@@ -14,11 +14,11 @@ const HowWeWork = () => {
   }, []);
 
   const steps = [
-    { step: "01", title: "Discovery & Audit", icon: Search, bg: "#EEF3FF", color: "#1A7FD4", duration: "Week 1–2", desc: "Deep-dive discovery to understand goals, tech stack, and pain points — followed by a free audit." },
-    { step: "02", title: "Solution Architecture", icon: Layout, bg: "#E0F7FF", color: "#29C6E0", duration: "Week 2–3", desc: "Designing custom solutions, data models, integration points, and security architecture." },
-    { step: "03", title: "Agile Build & Configure", icon: Code, bg: "#E8FFE8", color: "#34C98A", duration: "Week 3–8", desc: "Building in 2-week sprints with continuous reviews, configuring flows, objects, and integrations." },
-    { step: "04", title: "Testing & Training", icon: CheckCircle, bg: "#FFF8E0", color: "#F59E0B", duration: "Week 8–10", desc: "Rigorous UAT testing and data validation followed by role-specific team training sessions." },
-    { step: "05", title: "Go-Live & Support", icon: Rocket, bg: "#FFE8F0", color: "#EC4899", duration: "Week 10+", desc: "Zero-downtime deployment, hypercare support, and transition into managed support models." }
+    { step: "01", title: "Discovery & Audit", icon: Search, bg: "#EEF3FF", color: "#1A7FD4", desc: "Deep-dive discovery to understand goals, tech stack, and pain points — followed by a free audit." },
+    { step: "02", title: "Solution Architecture", icon: Layout, bg: "#E0F7FF", color: "#29C6E0", desc: "Designing custom solutions, data models, integration points, and security architecture." },
+    { step: "03", title: "Agile Build & Configure", icon: Code, bg: "#E8FFE8", color: "#34C98A", desc: "Building in 2-week sprints with continuous reviews, configuring flows, objects, and integrations." },
+    { step: "04", title: "Testing & Training", icon: CheckCircle, bg: "#FFF8E0", color: "#F59E0B", desc: "Rigorous UAT testing and data validation followed by role-specific team training sessions." },
+    { step: "05", title: "Go-Live & Support", icon: Rocket, bg: "#FFE8F0", color: "#EC4899", desc: "Zero-downtime deployment, hypercare support, and transition into managed support models." }
   ];
 
   return (
@@ -94,12 +94,7 @@ const HowWeWork = () => {
                   {step.desc}
                 </p>
                 
-                <div 
-                  className="inline-block px-4 py-1.5 rounded-full font-nunito font-bold text-[11px] shadow-sm"
-                  style={{ backgroundColor: step.bg, color: step.color }}
-                >
-                  {step.duration}
-                </div>
+
                 
                 {i === 0 && (
                   <div className="mt-4 text-[10px] font-nunito font-black text-green-500 uppercase tracking-widest animate-pulse">

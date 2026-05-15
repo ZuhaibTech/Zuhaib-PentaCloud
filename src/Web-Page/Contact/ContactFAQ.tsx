@@ -41,15 +41,18 @@ const faqs = [
 const FAQItem = ({ question, answer, image }: { question: string; answer: string; image: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className={`${CLAY_CARD} mb-4 overflow-hidden transition-all duration-300`}>
+    <div className={`${CLAY_CARD} mb-4 overflow-hidden`}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-6 flex items-center justify-between text-left"
       >
         <span className="font-nunito font-bold text-lg text-[#0D1B2A]">{question}</span>
-        <div className={`p-2 rounded-full ${isOpen ? 'bg-[#1A7FD4] text-white shadow-[0_4px_10px_rgba(26,127,212,0.3)]' : 'bg-background text-[#1A7FD4] shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)]'} transition-colors`}>
+        <motion.div 
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          className={`p-2 rounded-full ${isOpen ? 'bg-[#1A7FD4] text-white shadow-[0_4px_10px_rgba(26,127,212,0.3)]' : 'bg-background text-[#1A7FD4] shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)]'} transition-colors duration-300`}
+        >
           {isOpen ? <Minus size={18} /> : <Plus size={18} />}
-        </div>
+        </motion.div>
       </button>
       <AnimatePresence>
         {isOpen && (
@@ -57,6 +60,7 @@ const FAQItem = ({ question, answer, image }: { question: string; answer: string
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="px-6 pb-6"
           >
             <div className="flex flex-col md:flex-row gap-6 items-start">

@@ -4,7 +4,7 @@ import React from "react";
 import ZohoHero from "./ZohoHero";
 import ZohoApps from "./ZohoApps";
 import ZohoOurServices from "./ZohoOurServices";
-import ZohoWhyPentacloud from "./ZohoWhyPentacloud";
+
 import ZohoIndustries from "./ZohoIndustries";
 import ZohoPackages from "./ZohoPackages";
 import ZohoCTA from "./ZohoCTA";
@@ -22,8 +22,7 @@ const ZohoService = () => {
       {/* ─── Our Services Section ────────────────────────────────── */}
       <ZohoOurServices />
 
-      {/* ─── Why Pentacloud Section ──────────────────────────────── */}
-      <ZohoWhyPentacloud />
+
 
       {/* ─── Industries Section ──────────────────────────────────── */}
       <ZohoIndustries />

@@ -4,14 +4,63 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Phone, Mail, Globe, MapPin, Send, CheckCircle2, 
-  Loader2, Clock, ShieldCheck, Zap, MessageCircle 
+  Loader2, Clock, ShieldCheck, Zap, MessageCircle, ChevronDown
 } from "lucide-react";
 import { CLAY_CARD, CLAY_INPUT } from "./Constants";
 import ContactLocations from "./ContactLocations";
 
+const CustomSelect = ({ label, options, placeholder, value, onChange }: any) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="space-y-2 relative">
+      <label className="font-nunito font-black text-[#0D1B2A] text-sm ml-2">{label}</label>
+      <div 
+        onClick={() => setIsOpen(!isOpen)}
+        className={`${CLAY_INPUT} flex items-center justify-between cursor-pointer group`}
+      >
+        <span className={value ? "text-[#0D1B2A]" : "text-[#4A6080]/60"}>
+          {value || placeholder}
+        </span>
+        <ChevronDown size={18} className={`text-[#1A7FD4] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+            className="absolute z-50 left-0 right-0 top-[calc(100%+8px)] bg-background rounded-2xl shadow-[10px_10px_30px_rgba(163,185,210,0.4),-10px_-10px_30px_rgba(255,255,255,0.9)] border border-white/50 overflow-hidden"
+          >
+            <div className="max-h-[240px] overflow-y-auto custom-scrollbar">
+              {options.map((opt: string) => (
+                <div
+                  key={opt}
+                  onClick={() => {
+                    onChange(opt);
+                    setIsOpen(false);
+                  }}
+                  className="px-6 py-3 font-inter text-sm text-[#4A6080] hover:bg-[#1A7FD4] hover:text-white transition-colors cursor-pointer"
+                >
+                  {opt}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 const ContactInfoForm = () => {
   const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success">("idle");
   const [agreed, setAgreed] = useState(false);
+  const [formData, setFormData] = useState({
+    service: "",
+    source: ""
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,19 +102,19 @@ const ContactInfoForm = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:sticky lg:top-32 space-y-12"
+              className="lg:sticky lg:top-32 space-y-8"
             >
               <div>
                 <div className="bg-background shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)] text-[#1A7FD4] font-nunito font-black text-[10px] tracking-[4px] rounded-full px-5 py-1.5 mb-8 inline-block uppercase">
                   GET IN TOUCH
                 </div>
                 
-                <h1 className="font-nunito font-black text-4xl md:text-5xl lg:text-6xl text-[#0D1B2A] mb-8 leading-[1.1]">
+                <h1 className="font-nunito font-black text-4xl md:text-5xl lg:text-6xl text-[#0D1B2A] mb-6 leading-[1.1]">
                   Let's Build Something <br/>
                   <span className="text-[#1A7FD4]">Extraordinary Together.</span>
                 </h1>
                 
-                <p className="font-inter text-[#4A6080] text-base md:text-lg leading-relaxed mb-10 max-w-xl">
+                <p className="font-inter text-[#4A6080] text-base md:text-lg leading-relaxed mb-8 max-w-xl">
                   Whether you have a project in mind, need expert advice, or just want to explore how Pentacloud can help your business grow.
                 </p>
                 
@@ -87,13 +136,13 @@ const ContactInfoForm = () => {
               {/* Quick Contact Info */}
               <div className="space-y-4">
                  <div className="flex items-center gap-4 group">
-                    <div className="w-10 h-10 rounded-xl bg-background shadow-[inset_2px_2px_5px_rgba(163,185,210,0.3),inset_-2px_-2px_5px_rgba(255,255,255,0.8)] flex items-center justify-center text-[#1A7FD4] group-hover:scale-110 transition-transform">
+                    <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-[#1A7FD4]/10 flex items-center justify-center text-[#1A7FD4] group-hover:scale-110 transition-transform">
                        <Mail size={18} />
                     </div>
                     <span className="font-nunito font-black text-[#0D1B2A] text-sm">hello@pentacloudconsulting.com</span>
                  </div>
                  <div className="flex items-center gap-4 group">
-                    <div className="w-10 h-10 rounded-xl bg-background shadow-[inset_2px_2px_5px_rgba(163,185,210,0.3),inset_-2px_-2px_5px_rgba(255,255,255,0.8)] flex items-center justify-center text-[#34C98A] group-hover:scale-110 transition-transform">
+                    <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-[#34C98A]/10 flex items-center justify-center text-[#34C98A] group-hover:scale-110 transition-transform">
                        <MessageCircle size={18} />
                     </div>
                     <span className="font-nunito font-black text-[#0D1B2A] text-sm">+971 545 132 807</span>
@@ -102,7 +151,7 @@ const ContactInfoForm = () => {
 
               {/* Follow Us Section */}
               <div>
-                <span className="font-nunito font-black text-[#0D1B2A] uppercase tracking-wider text-[10px] mb-6 block">FOLLOW US</span>
+                <span className="font-nunito font-black text-[#0D1B2A] uppercase tracking-wider text-[10px] mb-4 block">FOLLOW US</span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     { label: "LinkedIn", sub: "Company updates", color: "bg-[#0A66C2]", icon: "linkedin" },
@@ -180,62 +229,28 @@ const ContactInfoForm = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <label className="font-nunito font-black text-[#0D1B2A] text-sm ml-2">Country *</label>
-                    <select required className={CLAY_INPUT}>
-                      <option value="">Select your country</option>
-                      {["India", "United Arab Emirates", "Saudi Arabia", "Qatar", "Bahrain", "Kuwait", "Oman", "United Kingdom", "United States", "Other"].map(opt => (
-                        <option key={opt} value={opt}>{opt}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="font-nunito font-black text-[#0D1B2A] text-sm ml-2">Service You're Interested In *</label>
-                    <select required className={CLAY_INPUT}>
-                      <option value="">Select a service</option>
-                      {["Salesforce Consulting", "Cloud Solutions", "Web Development", "App Development", "Digital Marketing", "Data Migration", "Consulting & Training", "Zoho Services", "Multiple Services", "Not Sure — Need Advice"].map(opt => (
-                        <option key={opt} value={opt}>{opt}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+                <CustomSelect 
+                  label="Service You're Interested In *"
+                  placeholder="Select a service"
+                  options={["Salesforce Consulting", "Cloud Solutions", "Web Development", "App Development", "Digital Marketing", "Data Migration", "Consulting & Training", "Zoho Services", "Multiple Services", "Not Sure — Need Advice"]}
+                  value={formData.service}
+                  onChange={(val: string) => setFormData({ ...formData, service: val })}
+                />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <label className="font-nunito font-black text-[#0D1B2A] text-sm ml-2">Project Budget Range</label>
-                    <select className={CLAY_INPUT}>
-                      <option value="">Select budget range</option>
-                      {["Under ₹50,000", "₹50,000 – ₹2,00,000", "₹2,00,000 – ₹5,00,000", "₹5,00,000 – ₹15,00,000", "₹15,00,000+", "Not Sure / To Be Discussed"].map(opt => (
-                        <option key={opt} value={opt}>{opt}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="font-nunito font-black text-[#0D1B2A] text-sm ml-2">How Soon Do You Need This?</label>
-                    <select className={CLAY_INPUT}>
-                      <option value="">Select timeline</option>
-                      {["Immediately (ASAP)", "Within 1 Month", "1–3 Months", "3–6 Months", "Just Exploring for Now"].map(opt => (
-                        <option key={opt} value={opt}>{opt}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+
 
                 <div className="space-y-2">
                   <label className="font-nunito font-black text-[#0D1B2A] text-sm ml-2">Tell Us About Your Project *</label>
                   <textarea required minLength={20} rows={5} placeholder="Briefly describe what you're looking to achieve, any challenges you're facing, and what success looks like for you..." className={CLAY_INPUT}></textarea>
                 </div>
 
-                <div className="space-y-2">
-                  <label className="font-nunito font-black text-[#0D1B2A] text-sm ml-2">How Did You Hear About Us?</label>
-                  <select className={CLAY_INPUT}>
-                    <option value="">Select an option</option>
-                    {["Google Search", "LinkedIn", "Instagram", "Facebook", "Referral from someone", "Existing client", "Industry event", "Other"].map(opt => (
-                      <option key={opt} value={opt}>{opt}</option>
-                    ))}
-                  </select>
-                </div>
+                <CustomSelect 
+                  label="How Did You Hear About Us?"
+                  placeholder="Select an option"
+                  options={["Google Search", "LinkedIn", "Instagram", "Facebook", "Referral from someone", "Existing client", "Industry event", "Other"]}
+                  value={formData.source}
+                  onChange={(val: string) => setFormData({ ...formData, source: val })}
+                />
 
                 <div className="flex items-start gap-4 px-2">
                   <div className="mt-1">

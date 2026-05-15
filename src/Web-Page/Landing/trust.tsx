@@ -64,31 +64,26 @@ const Trust = () => {
   const y = useTransform(scrollYProgress, [0, 0.2], [100, 0]);
 
   return (
-    <section ref={containerRef} className="relative flex items-center justify-center py-16 md:py-20 overflow-hidden bg-background">
+    <section ref={containerRef} className="relative flex items-center justify-center py-8 md:py-10 overflow-hidden bg-background">
       {/* Background Video & Overlays */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <img
+          src="/Hero/Global Reach.jpeg"
+          alt="Global Reach"
           className="w-full h-full object-cover opacity-100"
-          poster="/Hero/Penta-Hero-BG.jpeg"
-        >
-          <source src="/Hero/Global Earth.mp4" type="video/mp4" />
-        </video>
+        />
         
         {/* Light Theme Overlays */}
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#E8F0F8] via-[#E8F0F8]/50 to-transparent" />
         <div className="absolute inset-0 z-10 bg-[#E8F0F8]/10" />
-        <div className="absolute inset-0 z-10 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+
       </div>
 
       <motion.div 
         style={{ opacity, y }}
         className="max-w-7xl mx-auto px-6 md:px-12 relative z-20 w-full"
       >
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-8 md:mb-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -115,7 +110,7 @@ const Trust = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative rounded-[3rem] border border-white/50 bg-white/80 backdrop-blur-xl shadow-[15px_15px_30px_rgba(15,23,42,0.08),-5px_-5px_15px_rgba(255,255,255,0.8),inset_5px_5px_10px_rgba(255,255,255,1),inset_-5px_-5px_10px_rgba(15,23,42,0.03)] p-6 md:p-8 lg:p-12"
+          className="relative rounded-[3rem] border border-white/60 bg-white/30 backdrop-blur-2xl shadow-[20px_20px_40px_rgba(15,23,42,0.05),-10px_-10px_30px_rgba(255,255,255,0.4)] p-6 md:p-8 lg:p-12"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 relative z-10">
             {stats.map((stat, index) => (
@@ -130,7 +125,7 @@ const Trust = () => {
                 )}
 
                 <div className="flex flex-col items-center text-center px-4">
-                  <div className="w-14 h-14 rounded-2xl bg-white border border-white shadow-[6px_6px_12px_#e2e8f0,-6px_-6px_12px_#ffffff,inset_3px_3px_6px_#ffffff,inset_-3px_-3px_6px_#e2e8f0] flex items-center justify-center mb-6 text-slate-700 group-hover:bg-blue-50 transition-all duration-500">
+                  <div className="w-14 h-14 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-[4px_4px_10px_rgba(163,185,210,0.2),-4px_-4px_10px_rgba(255,255,255,0.8)] flex items-center justify-center mb-6 text-slate-700 group-hover:bg-white/60 transition-all duration-500">
                     {stat.icon}
                   </div>
                   

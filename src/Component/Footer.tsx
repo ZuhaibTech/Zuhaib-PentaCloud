@@ -7,7 +7,14 @@ import {
   Phone, 
   Mail, 
   ArrowRight, 
-  Cloud
+  Cloud,
+  Settings,
+  Database,
+  Code,
+  Smartphone,
+  Globe,
+  RefreshCw,
+  GraduationCap
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -72,14 +79,14 @@ const Footer = () => {
   return (
     <div className="relative">
       {/* CTA Section - Light Theme Area */}
-      <section className="bg-background pt-12 pb-1 relative z-20">
+      <section className="bg-background pt-6 pb-1 relative z-20">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <CTA />
         </div>
       </section>
 
       {/* Dark Footer Section */}
-      <footer className="relative bg-[#020617] pt-12 pb-6 overflow-hidden">
+      <footer className="relative bg-[#020617] pt-8 pb-4 overflow-hidden">
         {/* Animated Background Grid & Orbs */}
         <div className="absolute inset-0 z-0">
           <motion.div 
@@ -92,7 +99,7 @@ const Footer = () => {
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-600/20 blur-[150px] rounded-full pointer-events-none" 
           />
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+
         </div>
 
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
@@ -103,10 +110,10 @@ const Footer = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-10"
           >
             {/* Brand Info */}
-            <motion.div variants={itemVariants} className="lg:col-span-4 flex flex-col items-start gap-8">
+            <motion.div variants={itemVariants} className="lg:col-span-4 flex flex-col items-start gap-6">
               <Image 
                 src="/Logo/Pentacloud logo.png" 
                 alt="Pentacloud Logo" 
@@ -132,12 +139,12 @@ const Footer = () => {
             {/* Company Links */}
             <motion.div variants={itemVariants} className="lg:col-span-2 lg:col-start-6 flex flex-col gap-6">
               <h4 className="text-white font-bold text-xl tracking-wide mb-2">Company</h4>
-              <ul className="flex flex-col gap-4">
+              <ul className="flex flex-col gap-3">
                 {['About Us', 'Careers', 'Partner Network', 'News & Press', 'Client Stories'].map((link) => (
                   <li key={link}>
                     <Link href="#" className="text-slate-400 hover:text-blue-400 transition-all duration-300 inline-flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-0 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:mr-2 group-hover:translate-x-0 transition-all duration-300 text-blue-400" />
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">{link}</span>
+                      <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">{link}</span>
                     </Link>
                   </li>
                 ))}
@@ -147,12 +154,21 @@ const Footer = () => {
             {/* Services Links */}
             <motion.div variants={itemVariants} className="lg:col-span-2 flex flex-col gap-6">
               <h4 className="text-white font-bold text-xl tracking-wide mb-2">Services</h4>
-              <ul className="flex flex-col gap-4">
-                {['Salesforce Consulting', 'Cloud Migration', 'Enterprise App Dev', 'Data & Analytics', 'Zoho Automation'].map((link) => (
-                  <li key={link}>
-                    <Link href="#" className="text-slate-400 hover:text-indigo-400 transition-all duration-300 inline-flex items-center group">
+              <ul className="flex flex-col gap-3">
+                {[
+                  { name: 'Salesforce Consulting', href: '/services/salesforce' },
+                  { name: 'Zoho Service', href: '/services/zoho' },
+                  { name: 'Cloud Solution', href: '/services/cloud' },
+                  { name: 'Web Development', href: '/services/web' },
+                  { name: 'App Development', href: '/services/app' },
+                  { name: 'Digital Marketing', href: '/services/digital-marketing' },
+                  { name: 'Data Migration', href: '/services/data-migration' },
+                  { name: 'Consulting And Training', href: '/services/consulting' }
+                ].map((service) => (
+                  <li key={service.name}>
+                    <Link href={service.href} className="text-slate-400 hover:text-indigo-400 transition-all duration-300 inline-flex items-center group">
                       <ArrowRight className="w-4 h-4 mr-0 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:mr-2 group-hover:translate-x-0 transition-all duration-300 text-indigo-400" />
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">{link}</span>
+                      <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">{service.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -192,9 +208,9 @@ const Footer = () => {
           </motion.div>
 
           {/* Bottom Bar with Massive Typography */}
-          <div className="relative border-t border-white/10 pt-8 flex flex-col items-center">
+          <div className="relative border-t border-white/10 pt-4 flex flex-col items-center">
             
-            <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+            <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
               <p className="text-slate-500 text-sm">
                 © {new Date().getFullYear()} Pentacloud Consulting. All rights reserved.
               </p>
@@ -211,7 +227,7 @@ const Footer = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                 viewport={{ once: true }}
-                className="text-[8vw] font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-b from-white/20 to-transparent"
+                className="text-[6vw] font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-b from-white/20 to-transparent"
               >
                 PENTACLOUD
               </motion.h1>

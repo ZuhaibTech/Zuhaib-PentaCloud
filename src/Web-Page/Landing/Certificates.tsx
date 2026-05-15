@@ -5,88 +5,35 @@ import { motion } from "framer-motion";
 import { 
   ShieldCheck, 
   Award, 
-  Cpu, 
   Cloud, 
-  Lock, 
-  Globe, 
-  Server, 
-  Database,
-  CheckCircle2,
   Trophy,
   Zap,
   Layers,
-  Rocket,
-  Code
+  Code,
+  TrendingUp,
+  MessageCircle,
+  DollarSign,
+  RefreshCw,
+  BarChart3,
+  CheckCircle2
 } from "lucide-react";
 
 const certificates = [
-  // Cloud - AWS
-  { id: 1, title: "AWS Solutions Architect", issuer: "Amazon Web Services", icon: <Cloud className="w-6 h-6 text-orange-400" />, color: "from-orange-500/20" },
-  { id: 2, title: "AWS Cloud Practitioner", issuer: "Amazon Web Services", icon: <Award className="w-6 h-6 text-orange-500" />, color: "from-orange-500/20" },
-  { id: 3, title: "AWS Certified Developer", issuer: "Amazon Web Services", icon: <Zap className="w-6 h-6 text-orange-400" />, color: "from-orange-500/20" },
-  { id: 4, title: "AWS Certified SysOps", issuer: "Amazon Web Services", icon: <Server className="w-6 h-6 text-orange-400" />, color: "from-orange-500/20" },
-  { id: 5, title: "AWS Security Specialty", issuer: "Amazon Web Services", icon: <Lock className="w-6 h-6 text-orange-600" />, color: "from-orange-600/20" },
+  // Salesforce Certifications
+  { id: 1, title: "Salesforce Certified Administrator", issuer: "Salesforce", icon: <Cloud className="w-6 h-6 text-sky-400" />, color: "from-sky-500/20" },
+  { id: 2, title: "Salesforce Platform Developer I", issuer: "Salesforce", icon: <Code className="w-6 h-6 text-sky-500" />, color: "from-sky-500/20" },
+  { id: 3, title: "Salesforce Application Architect", issuer: "Salesforce", icon: <Zap className="w-6 h-6 text-sky-600" />, color: "from-sky-600/20" },
+  { id: 4, title: "Salesforce System Architect", issuer: "Salesforce", icon: <ShieldCheck className="w-6 h-6 text-sky-400" />, color: "from-sky-400/20" },
+  { id: 5, title: "Salesforce Sales Cloud Consultant", issuer: "Salesforce", icon: <TrendingUp className="w-6 h-6 text-sky-500" />, color: "from-sky-500/20" },
+  { id: 6, title: "Salesforce Service Cloud Consultant", issuer: "Salesforce", icon: <MessageCircle className="w-6 h-6 text-sky-500" />, color: "from-sky-500/20" },
   
-  // Cloud - Azure
-  { id: 6, title: "Azure Solutions Architect", issuer: "Microsoft", icon: <Layers className="w-6 h-6 text-blue-400" />, color: "from-blue-500/20" },
-  { id: 7, title: "Azure Fundamentals", issuer: "Microsoft", icon: <Award className="w-6 h-6 text-blue-300" />, color: "from-blue-300/20" },
-  { id: 8, title: "Azure Developer Associate", issuer: "Microsoft", icon: <Zap className="w-6 h-6 text-blue-500" />, color: "from-blue-500/20" },
-  { id: 9, title: "Azure Security Engineer", issuer: "Microsoft", icon: <ShieldCheck className="w-6 h-6 text-blue-600" />, color: "from-blue-600/20" },
-  { id: 10, title: "Azure DevOps Engineer", issuer: "Microsoft", icon: <Rocket className="w-6 h-6 text-blue-400" />, color: "from-blue-400/20" },
-
-  // Cloud - Google
-  { id: 11, title: "Google Cloud Professional", issuer: "Google Cloud", icon: <Globe className="w-6 h-6 text-red-400" />, color: "from-red-500/20" },
-  { id: 12, title: "GCP Cloud Digital Leader", issuer: "Google Cloud", icon: <Award className="w-6 h-6 text-red-300" />, color: "from-red-300/20" },
-  { id: 13, title: "GCP Security Engineer", issuer: "Google Cloud", icon: <Lock className="w-6 h-6 text-red-600" />, color: "from-red-600/20" },
-  { id: 14, title: "GCP Data Engineer", issuer: "Google Cloud", icon: <Database className="w-6 h-6 text-red-500" />, color: "from-red-500/20" },
-
-  // Cybersecurity
-  { id: 15, title: "CISSP Cybersecurity", issuer: "ISC²", icon: <ShieldCheck className="w-6 h-6 text-green-400" />, color: "from-green-500/20" },
-  { id: 16, title: "CCSP Cloud Security", issuer: "ISC²", icon: <Cloud className="w-6 h-6 text-green-500" />, color: "from-green-500/20" },
-  { id: 17, title: "CISM Security Manager", issuer: "ISACA", icon: <Award className="w-6 h-6 text-emerald-500" />, color: "from-emerald-500/20" },
-  { id: 18, title: "CISA Systems Auditor", issuer: "ISACA", icon: <CheckCircle2 className="w-6 h-6 text-emerald-400" />, color: "from-emerald-400/20" },
-  { id: 19, title: "CEH Ethical Hacker", issuer: "EC-Council", icon: <Lock className="w-6 h-6 text-emerald-400" />, color: "from-emerald-500/20" },
-  { id: 20, title: "CompTIA Security+", issuer: "CompTIA", icon: <Award className="w-6 h-6 text-purple-400" />, color: "from-purple-500/20" },
-  { id: 21, title: "CompTIA Network+", issuer: "CompTIA", icon: <Globe className="w-6 h-6 text-purple-300" />, color: "from-purple-300/20" },
-  { id: 22, title: "CompTIA Cloud+", issuer: "CompTIA", icon: <Cloud className="w-6 h-6 text-purple-500" />, color: "from-purple-500/20" },
-
-  // Project & IT Management
-  { id: 23, title: "PMP Project Management", issuer: "PMI", icon: <Trophy className="w-6 h-6 text-yellow-400" />, color: "from-yellow-500/20" },
-  { id: 24, title: "CAPM Management", issuer: "PMI", icon: <Award className="w-6 h-6 text-yellow-500" />, color: "from-yellow-500/20" },
-  { id: 25, title: "ITIL v4 Foundation", issuer: "AXELOS", icon: <Zap className="w-6 h-6 text-pink-500" />, color: "from-pink-500/20" },
-  { id: 26, title: "Prince2 Practitioner", issuer: "AXELOS", icon: <Trophy className="w-6 h-6 text-pink-400" />, color: "from-pink-400/20" },
-
-  // Networking & Infrastructure
-  { id: 27, title: "CCNP Enterprise", issuer: "Cisco Systems", icon: <Server className="w-6 h-6 text-blue-600" />, color: "from-blue-600/20" },
-  { id: 28, title: "CCNA Networking", issuer: "Cisco Systems", icon: <Globe className="w-6 h-6 text-blue-500" />, color: "from-blue-500/20" },
-  { id: 29, title: "CCNP Data Center", issuer: "Cisco Systems", icon: <Database className="w-6 h-6 text-blue-700" />, color: "from-blue-700/20" },
-  { id: 30, title: "JNCIA-Junos", issuer: "Juniper Networks", icon: <Zap className="w-6 h-6 text-blue-400" />, color: "from-blue-400/20" },
-
-  // Kubernetes & DevOps
-  { id: 31, title: "CKA Administrator", issuer: "CNCF", icon: <Zap className="w-6 h-6 text-blue-300" />, color: "from-blue-300/20" },
-  { id: 32, title: "CKAD Developer", issuer: "CNCF", icon: <Code className="w-6 h-6 text-blue-400" />, color: "from-blue-400/20" },
-  { id: 33, title: "CKS Security", issuer: "CNCF", icon: <ShieldCheck className="w-6 h-6 text-blue-500" />, color: "from-blue-500/20" },
-  { id: 34, title: "Terraform Associate", issuer: "HashiCorp", icon: <Cpu className="w-6 h-6 text-indigo-400" />, color: "from-indigo-500/20" },
-  { id: 35, title: "Docker Certified Assoc.", issuer: "Docker Inc.", icon: <Zap className="w-6 h-6 text-blue-400" />, color: "from-blue-400/20" },
-
-  // Databases & CRM
-  { id: 36, title: "Salesforce Architect", issuer: "Salesforce", icon: <Database className="w-6 h-6 text-sky-400" />, color: "from-sky-500/20" },
-  { id: 37, title: "Salesforce Administrator", issuer: "Salesforce", icon: <Award className="w-6 h-6 text-sky-500" />, color: "from-sky-500/20" },
-  { id: 38, title: "Salesforce Developer", issuer: "Salesforce", icon: <Zap className="w-6 h-6 text-sky-600" />, color: "from-sky-600/20" },
-  { id: 39, title: "MongoDB Certified DBA", issuer: "MongoDB", icon: <Database className="w-6 h-6 text-green-500" />, color: "from-green-500/20" },
-  { id: 40, title: "OCP Java SE 17", issuer: "Oracle", icon: <Cpu className="w-6 h-6 text-red-600" />, color: "from-red-600/20" },
-
-  // Specialised & Hybrid
-  { id: 41, title: "Red Hat Certified Engineer", issuer: "Red Hat", icon: <Layers className="w-6 h-6 text-red-500" />, color: "from-red-500/20" },
-  { id: 42, title: "IBM Cloud Specialist", issuer: "IBM", icon: <CheckCircle2 className="w-6 h-6 text-blue-700" />, color: "from-blue-700/20" },
-  { id: 43, title: "VCP Data Center", issuer: "VMware", icon: <Server className="w-6 h-6 text-slate-500" />, color: "from-slate-500/20" },
-  { id: 44, title: "Nutanix Certified Prof.", issuer: "Nutanix", icon: <Zap className="w-6 h-6 text-emerald-600" />, color: "from-emerald-600/20" },
-  { id: 45, title: "Citrix Certified Assoc.", issuer: "Citrix", icon: <Globe className="w-6 h-6 text-blue-300" />, color: "from-blue-300/20" },
-  { id: 46, title: "PCNSA Security", issuer: "Palo Alto", icon: <ShieldCheck className="w-6 h-6 text-orange-600" />, color: "from-orange-600/20" },
-  { id: 47, title: "NSE 4 Network Security", issuer: "Fortinet", icon: <Lock className="w-6 h-6 text-red-700" />, color: "from-red-700/20" },
-  { id: 48, title: "Splunk Core Certified", issuer: "Splunk", icon: <Zap className="w-6 h-6 text-pink-600" />, color: "from-pink-600/20" },
-  { id: 49, title: "ServiceNow Admin", issuer: "ServiceNow", icon: <CheckCircle2 className="w-6 h-6 text-green-600" />, color: "from-green-600/20" },
-  { id: 50, title: "Zendesk Support Admin", issuer: "Zendesk", icon: <Award className="w-6 h-6 text-orange-400" />, color: "from-orange-400/20" },
+  // Xero Certifications
+  { id: 7, title: "Xero Advisor Certified", issuer: "Xero", icon: <Award className="w-6 h-6 text-blue-400" />, color: "from-blue-500/20" },
+  { id: 8, title: "Xero Payroll Certified", issuer: "Xero", icon: <DollarSign className="w-6 h-6 text-blue-500" />, color: "from-blue-500/20" },
+  { id: 9, title: "Xero App Advisory Certified", issuer: "Xero", icon: <Layers className="w-6 h-6 text-blue-600" />, color: "from-blue-600/20" },
+  { id: 10, title: "Xero Migration Specialist", issuer: "Xero", icon: <RefreshCw className="w-6 h-6 text-blue-400" />, color: "from-blue-400/20" },
+  { id: 11, title: "Xero Reporting Specialist", issuer: "Xero", icon: <BarChart3 className="w-6 h-6 text-blue-500" />, color: "from-blue-500/20" },
+  { id: 12, title: "Xero Bronze Partner", issuer: "Xero", icon: <Trophy className="w-6 h-6 text-blue-300" />, color: "from-blue-300/20" },
 ];
 
 const Certificates = () => {
