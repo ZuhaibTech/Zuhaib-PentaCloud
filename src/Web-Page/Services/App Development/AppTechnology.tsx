@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Smartphone, Zap, Server, Flame, Cloud, Share2, PenTool, CreditCard, BarChart2, GitBranch, Layers } from "lucide-react";
 
-const CLAY_CARD = "bg-background rounded-[28px] shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)]";
+const CLAY_CARD = "bg-background rounded-[20px] sm:rounded-[28px] shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)]";
 
 const AppTechnology = () => {
   const categories = [
@@ -44,7 +44,7 @@ const AppTechnology = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden px-6">
+    <section className="py-10 sm:py-24 bg-background relative overflow-hidden px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none opacity-[0.06]">
         {[...Array(20)].map((_, i) => (
           <motion.div 
@@ -58,45 +58,45 @@ const AppTechnology = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <div className="text-[#1A7FD4] font-nunito font-bold text-[11px] tracking-[2px] uppercase mb-4">TECHNOLOGY</div>
-          <h2 className="font-nunito font-extrabold text-[42px] text-[#0D1B2A]">
-            Built With The Best <span className="text-[#1A7FD4]">App Technologies</span>
+        <div className="text-center mb-8 sm:mb-16">
+          <div className="text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[11px] tracking-[2px] uppercase mb-3 sm:mb-4">TECHNOLOGY</div>
+          <h2 className="font-nunito font-extrabold text-2xl sm:text-[42px] text-[#0D1B2A] leading-tight">
+            Built With The Best <br className="sm:hidden" /> <span className="text-[#1A7FD4]">App Technologies</span>
           </h2>
         </div>
 
         {categories.map((cat, idx) => (
-          <div key={idx} className="mb-20">
+          <div key={idx} className="mb-12 sm:mb-20">
             <div 
-              className="font-nunito font-bold text-[11px] tracking-[2px] rounded-full px-5 py-1.5 mb-8 w-fit mx-auto md:mx-0 uppercase bg-background shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)]"
+              className="font-nunito font-bold text-[10px] sm:text-[11px] tracking-[2px] rounded-full px-5 py-1.5 mb-6 sm:mb-8 w-fit mx-auto md:mx-0 uppercase bg-background shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)]"
               style={{ color: cat.color }}
             >
               {cat.label}
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
               {cat.techs.map((tech, i) => (
                  <motion.div
                    key={i}
                    initial={{ opacity: 0, scale: 0.6 }}
                    whileInView={{ opacity: 1, scale: 1 }}
-                   transition={{ type: "spring", bounce: 0.4, delay: i * 0.08 }}
-                   whileHover={{ y: -8, scale: 1.02 }}
+                   transition={{ type: "spring", bounce: 0.4, delay: i * 0.05 }}
+                   whileHover={{ y: -6, scale: 1.02 }}
                    viewport={{ once: true }}
-                   className={`${CLAY_CARD} p-6 flex flex-col h-full group`}
+                   className={`${CLAY_CARD} p-5 sm:p-6 flex flex-col h-full group overflow-hidden`}
                  >
                     <div 
-                      className={`w-12 h-12 flex items-center justify-center rounded-[14px] mb-4 transition-all duration-500 group-hover:rotate-[360deg] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.3),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] relative bg-background`}
+                      className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl sm:rounded-[14px] mb-3 sm:mb-4 transition-all duration-500 group-hover:rotate-[360deg] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.3),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] relative bg-background shrink-0`}
                       style={{ color: tech.color }}
                     >
-                      <tech.icon size={22} />
+                      <tech.icon className="w-4.5 h-4.5 sm:w-[22px] sm:h-[22px]" />
                     </div>
-                   <h3 className="font-nunito font-bold text-[18px] text-[#0D1B2A] mb-1">{tech.name}</h3>
-                   <div className="text-[11px] font-nunito font-bold text-[#8BA4BE] uppercase mb-3 tracking-[1px]">{tech.sub}</div>
-                   <p className="font-inter text-[12px] text-[#4A6080] leading-relaxed mb-6 flex-1">
+                   <h3 className="font-nunito font-bold text-base sm:text-[18px] text-[#0D1B2A] mb-0.5 sm:mb-1">{tech.name}</h3>
+                   <div className="text-[10px] sm:text-[11px] font-nunito font-bold text-[#8BA4BE] uppercase mb-2 sm:mb-3 tracking-[1px]">{tech.sub}</div>
+                   <p className="font-inter text-[11px] sm:text-[12px] text-[#4A6080] leading-relaxed mb-4 sm:mb-6 flex-1">
                      {tech.desc}
                    </p>
                    <div className="space-y-2">
-                     <div className="flex justify-between text-[10px] font-nunito font-black" style={{ color: cat.color }}>
+                     <div className="flex justify-between text-[9px] sm:text-[10px] font-nunito font-black" style={{ color: cat.color }}>
                         <span>Expertise</span>
                         <span>{tech.level}%</span>
                      </div>
@@ -116,16 +116,16 @@ const AppTechnology = () => {
           </div>
         ))}
 
-        <div className="mt-20 flex flex-col items-center">
-           <div className="text-[13px] font-inter text-[#8BA4BE] mb-6">Also working with:</div>
-           <div className="flex flex-wrap justify-center gap-3">
+        <div className="mt-12 sm:mt-20 flex flex-col items-center">
+           <div className="text-[11px] sm:text-[13px] font-inter text-[#8BA4BE] mb-4 sm:mb-6">Also working with:</div>
+           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {["Expo", "Redux", "MobX", "Socket.io", "Twilio", "OneSignal", "Lottie", "RevenueCat", "Segment"].map((pill, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ delay: i * 0.05 }}
-                  className="bg-background px-4 py-1.5 rounded-full text-[#1A7FD4] font-nunito font-bold text-[12px] shadow-[2px_2px_5px_rgba(163,185,210,0.4),-2px_-2px_5px_rgba(255,255,255,0.8)] hover:scale-105 transition-transform cursor-default"
+                  className="bg-background px-3.5 py-1.5 sm:px-4 sm:py-1.5 rounded-full text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[12px] shadow-[2px_2px_5px_rgba(163,185,210,0.4),-2px_-2px_5px_rgba(255,255,255,0.8)] hover:scale-105 transition-transform cursor-default"
                 >
                   {pill}
                 </motion.div>

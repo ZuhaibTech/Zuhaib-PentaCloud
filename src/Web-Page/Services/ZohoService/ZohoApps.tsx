@@ -149,54 +149,54 @@ const ZohoApps = () => {
   }, [isPaused, nextSlide]);
 
   return (
-    <section className="py-24 px-6 bg-[#F8FBFF] overflow-hidden relative">
+    <section className="py-10 sm:py-24 px-4 sm:px-6 bg-[#F8FBFF] overflow-hidden relative">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(26,127,212,0.05)_0%,transparent_70%)] pointer-events-none -z-10" />
       
       <div className="max-w-7xl mx-auto relative">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1 bg-blue-50 text-[#1A7FD4] rounded-full text-[10px] font-black uppercase tracking-[3px] mb-6"
+            className="inline-block px-3 py-1 bg-blue-50 text-[#1A7FD4] rounded-full text-[8.5px] sm:text-[10px] font-black uppercase tracking-[3px] mb-4 sm:mb-6"
           >
             ZOHO ECOSYSTEM
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-nunito font-black text-[#0D1B2A] mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-nunito font-black text-[#0D1B2A] mb-4 sm:mb-6 leading-tight">
             45+ Zoho Apps. <br/> <span className="text-[#1A7FD4]">One Unified Partner.</span>
           </h2>
-          <p className="text-[#4A6080] font-inter text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#4A6080] font-inter text-xs sm:text-lg max-w-2xl mx-auto leading-relaxed">
             From CRM to accounting, marketing to HR — we implement and optimise every corner of the Zoho ecosystem for your business.
           </p>
         </div>
 
         {/* Carousel Container */}
         <div 
-          className="relative px-2 sm:px-10 group"
+          className="relative px-1 sm:px-10 group"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Navigation Buttons */}
           <button 
             onClick={prevSlide}
-            className="absolute -left-2 sm:-left-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-xl border border-slate-100 text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 lg:opacity-100 lg:group-hover:opacity-100"
+            className="absolute left-1 sm:-left-12 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white shadow-xl border border-slate-100 text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white hover:scale-110 transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 lg:opacity-100 lg:group-hover:opacity-100 cursor-pointer"
             aria-label="Previous slide"
           >
-            <ChevronLeft size={28} strokeWidth={3} />
+            <ChevronLeft className="w-4 h-4 sm:w-7 sm:h-7" strokeWidth={3} />
           </button>
 
           <button 
             onClick={nextSlide}
-            className="absolute -right-2 sm:-right-12 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-xl border border-slate-100 text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 lg:opacity-100 lg:group-hover:opacity-100"
+            className="absolute right-1 sm:-right-12 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white shadow-xl border border-slate-100 text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white hover:scale-110 transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 lg:opacity-100 lg:group-hover:opacity-100 cursor-pointer"
             aria-label="Next slide"
           >
-            <ChevronRight size={28} strokeWidth={3} />
+            <ChevronRight className="w-4 h-4 sm:w-7 sm:h-7" strokeWidth={3} />
           </button>
 
           {/* Cards Wrapper */}
-          <div className="overflow-hidden py-8">
+          <div className="overflow-hidden py-4 sm:py-8">
             <motion.div 
-              className="flex gap-8 cursor-grab active:cursor-grabbing"
+              className="flex gap-4 sm:gap-8 cursor-grab active:cursor-grabbing"
               drag="x"
               dragConstraints={{ right: 0, left: 0 }}
               dragElastic={0.2}
@@ -209,41 +209,41 @@ const ZohoApps = () => {
                   prevSlide();
                 }
               }}
-              animate={{ x: `calc(-${currentIndex * 100}% - ${currentIndex * 32}px)` }}
+              animate={{ x: `calc(-${currentIndex * 100}% - ${currentIndex * (visibleCount === 1 ? 16 : 32)}px)` }}
               transition={{ type: "spring", stiffness: 150, damping: 25 }}
             >
               {apps.map((app, i) => (
                 <div 
                   key={i} 
                   className="flex-shrink-0 select-none"
-                  style={{ width: `calc(${100 / visibleCount}% - ${(visibleCount - 1) * 32 / visibleCount}px)` }}
+                  style={{ width: `calc(${100 / visibleCount}% - ${(visibleCount - 1) * (visibleCount === 1 ? 16 : 32) / visibleCount}px)` }}
                 >
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className={`${CLAY_CARD} p-8 group hover:-translate-y-2 transition-all duration-500 flex flex-col h-full min-h-[460px]`}
+                    className={`${CLAY_CARD} p-5 sm:p-8 group hover:-translate-y-2 transition-all duration-500 flex flex-col h-full min-h-[380px] sm:min-h-[460px] rounded-[20px] sm:rounded-[32px]`}
                   >
-                    <div className={`w-14 h-14 ${CLAY_ICON} ${app.color.split(" ")[1]} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 ${CLAY_ICON} ${app.color.split(" ")[1]} flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shrink-0 [&_svg]:w-5.5 [&_svg]:h-5.5 [&_svg]:sm:w-7 [&_svg]:sm:h-7`}>
                        {app.icon}
                     </div>
-                    <div className="flex-grow">
-                       <p className="text-[10px] font-black text-[#1A7FD4] uppercase tracking-[2px] mb-2">{app.category}</p>
-                       <h3 className="text-2xl font-nunito font-black text-[#0D1B2A] mb-4">{app.title}</h3>
-                       <p className="text-sm text-[#4A6080] font-inter leading-relaxed mb-8 line-clamp-4">
+                    <div className="flex-grow flex flex-col">
+                       <p className="text-[8.5px] sm:text-[10px] font-black text-[#1A7FD4] uppercase tracking-[1.5px] sm:tracking-[2px] mb-1.5">{app.category}</p>
+                       <h3 className="text-lg sm:text-2xl font-nunito font-black text-[#0D1B2A] mb-2 sm:mb-4">{app.title}</h3>
+                       <p className="text-xs sm:text-sm text-[#4A6080] font-inter leading-relaxed mb-4 sm:mb-8 line-clamp-4 flex-grow">
                           {app.body}
                        </p>
-                       <div className="space-y-3">
+                       <div className="space-y-2 sm:space-y-3 mt-auto">
                           {app.features.slice(0, 4).map((feature, idx) => (
-                             <div key={idx} className="flex items-center gap-3 text-[11px] font-bold text-[#0D1B2A]">
-                                <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-[#1A7FD4]">
-                                   <Check size={12} strokeWidth={3} />
+                             <div key={idx} className="flex items-center gap-2 sm:gap-3 text-[9.5px] sm:text-[11px] font-bold text-[#0D1B2A] min-w-0">
+                                <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-blue-50 flex items-center justify-center text-[#1A7FD4] shrink-0">
+                                   <Check className="w-2.5 h-2.5 sm:w-3 sm:h-3" strokeWidth={3} />
                                 </div>
                                 <span className="truncate">{feature}</span>
                              </div>
                           ))}
                           {app.features.length > 4 && (
-                             <p className="text-[10px] font-black text-[#1A7FD4] pt-2 uppercase tracking-wider">+ {app.features.length - 4} MORE FEATURES</p>
+                             <p className="text-[8.5px] sm:text-[10px] font-black text-[#1A7FD4] pt-1 sm:pt-2 uppercase tracking-wider leading-none">+ {app.features.length - 4} MORE FEATURES</p>
                           )}
                        </div>
                     </div>
@@ -253,16 +253,14 @@ const ZohoApps = () => {
             </motion.div>
           </div>
 
-
-
           {/* Pagination Dots */}
-          <div className="flex justify-center gap-3 mt-12">
+          <div className="flex justify-center gap-2 sm:gap-3 mt-6 sm:mt-12">
             {Array.from({ length: totalSlides }).map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrentIndex(i)}
-                className={`h-2.5 rounded-full transition-all duration-500 ${
-                  currentIndex === i ? "w-10 bg-[#1A7FD4] shadow-[0_0_10px_rgba(26,127,212,0.3)]" : "w-2.5 bg-[#1A7FD4]/20 hover:bg-[#1A7FD4]/40"
+                className={`h-2 sm:h-2.5 rounded-full transition-all duration-500 cursor-pointer ${
+                  currentIndex === i ? "w-6 sm:w-10 bg-[#1A7FD4] shadow-[0_0_10px_rgba(26,127,212,0.3)]" : "w-2 sm:w-2.5 bg-[#1A7FD4]/20 hover:bg-[#1A7FD4]/40"
                 }`}
                 aria-label={`Go to slide ${i + 1}`}
               />

@@ -4,19 +4,19 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, ChevronDown, ArrowRight, Cloud, Settings, Database, Code, Smartphone, RefreshCw, GraduationCap, LayoutGrid } from "lucide-react";
  
- const getMobileIcon = (iconName: string | undefined) => {
-   switch (iconName) {
-     case "Salesforce": return <Cloud size={18} />;
-     case "Zoho": return <Settings size={18} />;
-     case "Cloud": return <Database size={18} />;
-     case "Web": return <Code size={18} />;
-     case "App": return <Smartphone size={18} />;
-     case "Marketing": return <Globe size={18} />;
-     case "Migration": return <RefreshCw size={18} />;
-     case "Consulting": return <GraduationCap size={18} />;
-     default: return <LayoutGrid size={18} />;
-   }
- };
+const getMobileIcon = (iconName: string | undefined) => {
+  switch (iconName) {
+    case "Salesforce": return <Cloud size={16} />;
+    case "Zoho": return <Settings size={16} />;
+    case "Cloud": return <Database size={16} />;
+    case "Web": return <Code size={16} />;
+    case "App": return <Smartphone size={16} />;
+    case "Marketing": return <Globe size={16} />;
+    case "Migration": return <RefreshCw size={16} />;
+    case "Consulting": return <GraduationCap size={16} />;
+    default: return <LayoutGrid size={16} />;
+  }
+};
 import Link from "next/link";
 import Image from "next/image";
 import { SwipeMaskNav } from "@/Animation/NavbarAnimation";
@@ -24,6 +24,7 @@ import { SwipeMaskNav } from "@/Animation/NavbarAnimation";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesExpanded, setIsServicesExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,19 +101,19 @@ const Navbar = () => {
       <nav
         className={`w-full transition-all duration-500 relative ${
           isScrolled
-            ? "max-w-[98%] xl:max-w-[98%] bg-background/90 backdrop-blur-xl shadow-[10px_10px_30px_rgba(163,185,210,0.5)] rounded-2xl py-3 px-6 md:px-8"
-            : "max-w-full bg-transparent py-6 px-8 md:px-12"
+            ? "max-w-[98%] xl:max-w-[98%] bg-background/90 backdrop-blur-xl shadow-[10px_10px_30px_rgba(163,185,210,0.4)] rounded-2xl py-2.5 sm:py-3 px-4 sm:px-6 md:px-8"
+            : "max-w-full bg-transparent py-4 sm:py-6 px-4 sm:px-8 md:px-12"
         }`}
       >
         <div className="w-full flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group shrink-0">
             <Image 
               src="/Logo/Pentacloud logo.png" 
               alt="Pentacloud Logo" 
-              width={160} 
-              height={40} 
-              className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              width={140} 
+              height={35} 
+              className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
@@ -131,10 +132,17 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-slate-900"
+            className="md:hidden p-1.5 text-slate-900 focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <motion.div
+              key={isMobileMenuOpen ? "close" : "menu"}
+              initial={{ rotate: -30, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              transition={{ duration: 0.2 }}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </motion.div>
           </button>
         </div>
 
@@ -142,54 +150,83 @@ const Navbar = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className={`absolute left-0 right-0 bg-background border border-white/50 p-6 md:hidden shadow-2xl z-50 ${
-                isScrolled ? "top-[calc(100%+1rem)] rounded-3xl" : "top-full border-b"
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className={`absolute left-0 right-0 bg-background/95 backdrop-blur-2xl border border-white/50 p-5 md:hidden shadow-2xl z-50 max-h-[calc(100vh-100px)] overflow-y-auto ${
+                isScrolled ? "top-[calc(100%+0.75rem)] rounded-2xl" : "top-full border-b"
               }`}
             >
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 {navLinks.map((link) => (
-                  <div key={link.name} className="flex flex-col gap-4">
+                  <div key={link.name} className="flex flex-col">
                     {link.hasDropdown ? (
-                      <div className="flex flex-col gap-4">
-                        <span className="text-lg font-black text-slate-400 uppercase tracking-widest text-[10px]">
-                          {link.name}
-                        </span>
-                        <div className="grid grid-cols-1 gap-4">
-                          {link.subItems?.map((sub) => (
-                            <Link
-                              key={sub.name}
-                              href={sub.href}
-                              className="flex items-center gap-4 group"
-                              onClick={() => setIsMobileMenuOpen(false)}
+                      <div className="flex flex-col">
+                        <button 
+                          onClick={() => setIsServicesExpanded(!isServicesExpanded)}
+                          className="flex items-center justify-between text-base font-bold text-slate-900 hover:text-blue-600 transition-colors w-full py-1.5 focus:outline-none"
+                        >
+                          <span>{link.name}</span>
+                          <motion.div
+                            animate={{ rotate: isServicesExpanded ? 180 : 0 }}
+                            transition={{ duration: 0.2 }}
+                          >
+                            <ChevronDown className="w-4 h-4 text-slate-500" />
+                          </motion.div>
+                        </button>
+                        
+                        <AnimatePresence>
+                          {isServicesExpanded && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25, ease: "easeInOut" }}
+                              className="overflow-hidden pl-3 border-l border-slate-100 flex flex-col gap-2.5 mt-1"
                             >
-                              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                                {getMobileIcon(sub.icon)}
+                              <div className="grid grid-cols-1 gap-2.5 py-1">
+                                {link.subItems?.map((sub) => (
+                                  <Link
+                                    key={sub.name}
+                                    href={sub.href}
+                                    className="flex items-center gap-3 group"
+                                    onClick={() => {
+                                      setIsMobileMenuOpen(false);
+                                      setIsServicesExpanded(false);
+                                    }}
+                                  >
+                                    <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                                      {getMobileIcon(sub.icon)}
+                                    </div>
+                                    <div className="flex flex-col">
+                                      <span className="text-xs font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{sub.name}</span>
+                                      <span className="text-[10px] text-slate-500 line-clamp-1">{sub.description}</span>
+                                    </div>
+                                  </Link>
+                                ))}
                               </div>
-                              <div className="flex flex-col">
-                                <span className="text-[15px] font-bold text-slate-900">{sub.name}</span>
-                                <span className="text-[11px] text-slate-500">{sub.description}</span>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-base font-bold text-slate-900 hover:text-blue-600 transition-colors py-1.5"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsServicesExpanded(false);
+                        }}
                       >
                         {link.name}
                       </Link>
                     )}
                   </div>
                 ))}
-                <hr className="border-slate-100" />
-                <div className="flex flex-col gap-4">
-                  <button className="bg-blue-600 text-white px-6 py-4 rounded-2xl text-center font-bold">
+                <hr className="border-slate-100/80 my-1" />
+                <div className="flex flex-col pt-1">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl text-center font-bold text-sm shadow-lg shadow-blue-500/10 active:scale-[0.98] transition-all">
                     Get Started
                   </button>
                 </div>

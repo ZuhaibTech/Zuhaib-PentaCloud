@@ -50,11 +50,11 @@ const CloudWhy = () => {
   ];
 
   return (
-    <section className="py-24 bg-[#E8F0F8] relative px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start relative">
+    <section className="py-10 sm:py-24 bg-[#E8F0F8] relative px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start relative">
         
-        {/* Left Column - Visual Card (Sticky, Image 3/WhyPentacloud Style) */}
-        <div className="sticky top-28 self-start">
+        {/* Left Column - Visual Card (Sticky, Image 3/WhyPentacloud Style) - Hidden on Mobile */}
+        <div className="hidden lg:block sticky top-28 self-start">
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -89,7 +89,7 @@ const CloudWhy = () => {
                    
                    <div className="relative z-10 flex flex-col items-center text-center px-8">
                       <div className="w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-8 shadow-2xl border border-white/20">
-                         {React.createElement(features[activeFeature].icon, { size: 40, className: "text-white" })}
+                         {React.createElement(features[activeFeature].icon, { className: "w-10 h-10 text-white" })}
                       </div>
                       <h3 className="text-white font-nunito font-black text-3xl mb-4 tracking-tight">
                          {features[activeFeature].title}
@@ -129,20 +129,20 @@ const CloudWhy = () => {
         </div>
 
         {/* Right Column - Content & Interactive List */}
-        <div className="flex flex-col gap-12">
-          <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-8 sm:gap-12 w-full">
+          <div className="flex flex-col gap-4 sm:gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="px-6 py-2 bg-[#E8F0F8] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3)] rounded-full text-[#1A7FD4] text-[10px] font-black tracking-widest uppercase mb-4 inline-block w-fit"
+              className="px-4 sm:px-6 py-1.5 sm:py-2 bg-white/60 shadow-[inset_2px_2px_5px_rgba(163,185,210,0.25)] rounded-full text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-widest uppercase mb-2 inline-block w-fit"
             >
               THE PENTACLOUD EDGE
             </motion.div>
-            <h2 className="text-[42px] md:text-[52px] font-nunito font-black text-[#0D1B2A] leading-tight">
+            <h2 className="text-2xl sm:text-[42px] md:text-[52px] font-nunito font-black text-[#0D1B2A] leading-tight">
               Your Infrastructure, <br />
               <span className="text-[#1A7FD4]">Our Obsession</span>
             </h2>
-            <p className="text-[#4A6080] font-inter text-lg leading-relaxed max-w-lg">
+            <p className="text-[#4A6080] font-inter text-xs sm:text-lg leading-relaxed max-w-lg">
               We combine deep technical certification with real-world infrastructure expertise — delivering cloud solutions that genuinely transform how your business performs.
             </p>
           </div>
@@ -153,39 +153,56 @@ const CloudWhy = () => {
                 key={i}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.05 }}
                 onMouseEnter={() => setActiveFeature(i)}
-                className={`relative flex gap-6 p-6 rounded-[32px] transition-all duration-500 cursor-default group ${
+                onClick={() => setActiveFeature(i)}
+                className={`relative flex gap-4 sm:gap-6 p-4 sm:p-6 rounded-[20px] sm:rounded-[32px] transition-all duration-500 cursor-default group overflow-hidden ${
                   activeFeature === i 
-                  ? "bg-white shadow-[15px_15px_40px_rgba(163,185,210,0.4)] -translate-x-2" 
+                  ? "bg-white shadow-[15px_15px_40px_rgba(163,185,210,0.4)] -translate-x-1 sm:-translate-x-2" 
                   : "hover:bg-white/40"
                 }`}
               >
                 <div 
-                  className={`w-16 h-16 shrink-0 flex items-center justify-center rounded-[20px] transition-all duration-500 ${
+                  className={`w-12 h-12 sm:w-16 sm:h-16 shrink-0 flex items-center justify-center rounded-xl sm:rounded-[20px] transition-all duration-500 ${
                     activeFeature === i 
                     ? "bg-[#1A7FD4] text-white shadow-lg rotate-[15deg] scale-110" 
                     : "bg-[#E8F0F8] shadow-[4px_4px_8px_rgba(163,185,210,0.4)] text-[#1A7FD4]"
                   }`}
                 >
-                  <item.icon size={28} />
+                  <item.icon className="w-5 h-5 sm:w-7 sm:h-7" />
                 </div>
-                <div>
-                  <h3 className={`font-nunito font-black text-[20px] transition-colors mb-2 ${
+                <div className="min-w-0 flex-1">
+                  <h3 className={`font-nunito font-black text-sm sm:text-[20px] transition-colors mb-1 sm:mb-2 truncate ${
                     activeFeature === i ? 'text-[#1A7FD4]' : 'text-[#0D1B2A]'
                   }`}>
                     {item.title}
                   </h3>
-                  <AnimatePresence>
+                  <AnimatePresence initial={false}>
                     {activeFeature === i && (
-                      <motion.p 
+                      <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="font-inter text-[14px] text-[#4A6080] leading-relaxed pr-6"
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="overflow-hidden"
                       >
-                        {item.desc}
-                      </motion.p>
+                        <p className="font-inter text-xs sm:text-[14px] text-[#4A6080] leading-relaxed pr-2 pt-1 mb-3">
+                          {item.desc}
+                        </p>
+                        
+                        {/* Premium Inline Visual Card - Only rendered on mobile/tablet viewports */}
+                        <div className="lg:hidden w-full aspect-video rounded-xl overflow-hidden relative border border-slate-100 shadow-sm mt-3">
+                           <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                           <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/40 to-transparent opacity-85" />
+                           <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm border border-slate-100/50">
+                              <item.icon className="w-3.5 h-3.5 text-[#1A7FD4]" />
+                              <span className="text-[10px] font-nunito font-black text-[#0D1B2A] uppercase tracking-wider">{item.badge}</span>
+                           </div>
+                           <div className="absolute top-2 right-2 px-2 py-0.5 bg-[#0D1B2A]/70 backdrop-blur-md rounded-md text-[9px] font-black text-white/90">
+                              0{i + 1}
+                           </div>
+                        </div>
+                      </motion.div>
                     )}
                   </AnimatePresence>
                 </div>

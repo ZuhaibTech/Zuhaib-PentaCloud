@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Search, Layout, Code, CheckCircle, Rocket } from "lucide-react";
 
-const CLAY_CARD = "bg-background rounded-[28px] shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)]";
+const CLAY_CARD = "bg-background rounded-[20px] sm:rounded-[28px] shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)]";
 
 const HowWeWork = () => {
   const [mounted, setMounted] = useState(false);
@@ -22,7 +22,7 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden px-6">
+    <section className="py-10 px-4 sm:px-6 bg-background relative overflow-hidden">
       {/* Background Dots */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.08]">
         {mounted && [...Array(20)].map((_, i) => (
@@ -37,17 +37,17 @@ const HowWeWork = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20 flex flex-col items-center">
-          <div className="bg-background shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)] text-[#1A7FD4] font-nunito font-bold text-[11px] tracking-[2px] rounded-full px-5 py-1.5 mb-6">
+        <div className="text-center mb-8 sm:mb-20 flex flex-col items-center">
+          <div className="bg-background shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)] text-[#1A7FD4] font-nunito font-bold text-[9px] sm:text-[11px] tracking-[2px] rounded-full px-4 py-1.5 mb-4 sm:mb-6 leading-none">
             HOW WE WORK
           </div>
-          <h2 className="font-nunito font-extrabold text-[42px] text-[#0D1B2A] leading-tight mb-4">
+          <h2 className="font-nunito font-extrabold text-2xl sm:text-[42px] text-[#0D1B2A] leading-tight">
             Your Salesforce Journey <br/>
             In <span className="text-[#1A7FD4]">5 Clear Steps</span>
           </h2>
         </div>
 
-        <div className="relative flex flex-col md:flex-row gap-6 items-stretch">
+        <div className="relative flex flex-col md:flex-row gap-4 sm:gap-6 items-stretch">
           {/* Connecting Line (Desktop) */}
           <div className="absolute top-[160px] left-0 right-0 h-[2px] hidden md:block">
              <motion.div 
@@ -63,41 +63,39 @@ const HowWeWork = () => {
               key={i}
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.15, type: "spring" }}
+              transition={{ delay: i * 0.05, type: "spring" }}
               viewport={{ once: true }}
-              className={`${CLAY_CARD} p-8 flex-1 relative group journey-card flex flex-col items-center justify-center min-h-[400px] transition-all duration-500`}
+              className={`${CLAY_CARD} p-5 sm:p-8 flex-1 relative group journey-card flex flex-col items-center justify-start md:justify-center min-h-[220px] md:min-h-[400px] transition-all duration-500`}
             >
               {/* Watermark (Revealed on Hover) */}
               <div 
-                className="absolute bottom-4 right-4 text-7xl font-nunito font-black text-[#1A7FD4] pointer-events-none select-none opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"
+                className="absolute bottom-4 right-4 text-7xl font-nunito font-black text-[#1A7FD4] pointer-events-none select-none opacity-0 md:group-hover:opacity-10 transition-opacity duration-500 z-10"
               >
                 {step.step}
               </div>
 
               {/* Main Content (Centered initially, moves up significantly on hover) */}
-              <div className="flex flex-col items-center justify-center transition-all duration-700 group-hover:-translate-y-24 z-20">
+              <div className="flex flex-col items-center justify-center transition-all duration-700 md:group-hover:-translate-y-20 lg:group-hover:-translate-y-24 z-20">
                 <div 
-                  className={`w-[68px] h-[68px] flex items-center justify-center rounded-[22px] mb-4 shadow-[inset_4px_4px_8px_rgba(163,185,210,0.3),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] relative bg-background transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110`}
+                  className={`w-[56px] h-[56px] md:w-[68px] md:h-[68px] flex items-center justify-center rounded-xl md:rounded-[22px] mb-3 md:mb-4 shadow-[inset_4px_4px_8px_rgba(163,185,210,0.3),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] relative bg-background transition-all duration-500 md:group-hover:rotate-[10deg] md:group-hover:scale-110 shrink-0`}
                   style={{ color: step.color, border: `2px solid ${step.bg}` }}
                 >
-                  <step.icon size={30} />
+                  <step.icon className="w-6 h-6 md:w-[30px] md:h-[30px]" />
                   {i === 0 && (
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-ping" />
+                    <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white animate-ping" />
                   )}
                 </div>
-                <h3 className="font-nunito font-bold text-[20px] text-[#0D1B2A] text-center transition-all duration-500 group-hover:scale-105">{step.title}</h3>
+                <h3 className="font-nunito font-bold text-base md:text-[20px] text-[#0D1B2A] text-center transition-all duration-500 md:group-hover:scale-105">{step.title}</h3>
               </div>
 
               {/* Info Reveal (Positions lower to avoid overlap) */}
-              <div className="absolute inset-x-6 bottom-8 flex flex-col items-center opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-10 group-hover:translate-y-0 z-20">
-                <p className="font-inter text-[13px] text-[#4A6080] leading-relaxed mb-5 text-center px-2">
+              <div className="md:absolute md:inset-x-6 md:bottom-8 flex flex-col items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700 md:translate-y-10 md:group-hover:translate-y-0 z-20 mt-3 md:mt-0 w-full">
+                <p className="font-inter text-xs md:text-[13px] text-[#4A6080] leading-relaxed md:mb-5 text-center px-1">
                   {step.desc}
                 </p>
-                
 
-                
                 {i === 0 && (
-                  <div className="mt-4 text-[10px] font-nunito font-black text-green-500 uppercase tracking-widest animate-pulse">
+                  <div className="mt-2 md:mt-4 text-[9px] sm:text-[10px] font-nunito font-black text-green-500 uppercase tracking-widest animate-pulse leading-none">
                     Most Popular
                   </div>
                 )}

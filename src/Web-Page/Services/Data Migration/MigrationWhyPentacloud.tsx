@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Database, CheckCircle2, Star, Zap } from "lucide-react";
+import { ShieldCheck, CheckCircle2, Zap } from "lucide-react";
 import { CLAY_CARD } from "./Constants";
 
 const differentiators = [
@@ -18,15 +18,15 @@ const differentiators = [
 
 const MigrationWhyPentacloud = () => {
   return (
-    <section className="mb-32">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="mb-12 sm:mb-24 md:mb-32">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           className="relative"
         >
-          <div className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-[48px] shadow-2xl border border-white aspect-[4/5] flex items-center justify-center relative group">
-             <div className="absolute inset-0 rounded-[48px] overflow-hidden">
+          <div className="bg-gradient-to-br from-white to-blue-50 p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white aspect-[4/5] flex items-center justify-center relative group">
+             <div className="absolute inset-0 rounded-[24px] sm:rounded-[48px] overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
@@ -35,52 +35,58 @@ const MigrationWhyPentacloud = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
              </div>
              
-             {/* Floating Badges */}
-             <div className="absolute top-12 left-8 p-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-blue-50 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#1A7FD4] flex items-center justify-center"><CheckCircle2 size={20} /></div>
+             {/* Floating Badges - Optimized for Mobile Screen Bounds to prevent overflow */}
+             <div className="absolute top-4 left-3 sm:top-12 sm:left-8 p-2.5 sm:p-4 bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-lg border border-blue-50 flex items-center gap-2 sm:gap-3">
+                <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 text-[#1A7FD4] flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                </div>
                 <div>
-                   <p className="text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-1">✅ 100% Success Rate</p>
-                   <p className="text-[9px] font-bold text-[#4A6080] leading-none">Zero data loss across all migrations</p>
+                   <p className="text-[8px] sm:text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-0.5 sm:mb-1">100% Success Rate</p>
+                   <p className="text-[7px] sm:text-[9px] text-slate-400 font-bold leading-none">Zero data loss record</p>
                 </div>
              </div>
 
-             <div className="absolute top-1/2 -right-8 -translate-y-1/2 p-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-blue-50 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-green-50 text-[#34C98A] flex items-center justify-center"><ShieldCheck size={20} /></div>
+             <div className="absolute top-1/2 right-3 sm:-right-8 sm:-translate-y-1/2 p-2.5 sm:p-4 bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-lg border border-blue-50 flex items-center gap-2 sm:gap-3">
+                <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-green-50 text-[#34C98A] flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
+                </div>
                 <div>
-                   <p className="text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-1">🔒 GDPR + HIPAA Compliant</p>
-                   <p className="text-[9px] font-bold text-[#4A6080] leading-none">Full regulatory compliance</p>
+                   <p className="text-[8px] sm:text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-0.5 sm:mb-1">GDPR + HIPAA Compliant</p>
+                   <p className="text-[7px] sm:text-[9px] text-slate-400 font-bold leading-none">Full regulatory compliance</p>
                 </div>
              </div>
 
-             <div className="absolute bottom-12 left-10 p-4 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-blue-50 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#F59E0B] flex items-center justify-center"><Zap size={20} /></div>
+             <div className="absolute bottom-4 left-3 sm:bottom-12 sm:left-10 p-2.5 sm:p-4 bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-lg border border-blue-50 flex items-center gap-2 sm:gap-3">
+                <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-50 text-[#F59E0B] flex items-center justify-center shrink-0">
+                  <Zap className="w-4 h-4 sm:w-5 sm:h-5" />
+                </div>
                 <div>
-                   <p className="text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-1">⚡ Zero Downtime</p>
-                   <p className="text-[9px] font-bold text-[#4A6080] leading-none">Business continuity guaranteed</p>
+                   <p className="text-[8px] sm:text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-0.5 sm:mb-1">Zero Downtime</p>
+                   <p className="text-[7px] sm:text-[9px] text-slate-400 font-bold leading-none">Business continuity guaranteed</p>
                 </div>
              </div>
           </div>
         </motion.div>
 
-        <div>
+        <div className="pt-6 lg:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1 bg-blue-50 text-[#1A7FD4] rounded-full text-[10px] font-black uppercase tracking-[3px] mb-6"
+            className="inline-block px-4 py-1.5 bg-blue-50 text-[#1A7FD4] rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-[2px] sm:tracking-[3px] mb-4 sm:mb-6"
           >
             WHY PENTACLOUD
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-nunito font-black text-[#0D1B2A] mb-12">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-nunito font-black text-[#0D1B2A] mb-6 sm:mb-12 leading-tight">
             Migration Experts You <br/> <span className="text-[#1A7FD4]">Can Actually Trust</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
             {differentiators.map((item, i) => (
               <div key={i} className="group">
-                <h4 className="font-nunito font-black text-[#0D1B2A] mb-2 flex items-center gap-2 group-hover:text-[#1A7FD4] transition-colors leading-tight">
+                <h4 className="font-nunito font-black text-sm sm:text-base text-[#0D1B2A] mb-1.5 sm:mb-2 flex items-center gap-2 group-hover:text-[#1A7FD4] transition-colors leading-tight">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#1A7FD4] flex-shrink-0" /> {item.title}
                 </h4>
-                <p className="text-[11px] text-[#4A6080] font-inter leading-relaxed">{item.body}</p>
+                <p className="text-[10px] sm:text-[11px] text-[#4A6080] font-inter leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>

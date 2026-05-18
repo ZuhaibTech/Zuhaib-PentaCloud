@@ -2,12 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Clock } from "lucide-react";
 import { CLAY_CARD } from "./Constants";
 
 const resultStats = [
   { val: "300%", label: "Average ROI Delivered", sub: "Across all marketing clients" },
-  { val: "180%", label: "Avg Organic Traffic Growth", sub: "Within first 6 months of SEO" },
-  { val: "65%", label: "Avg Reduction in Cost Per Lead", sub: "Through PPC optimisation" },
+  { val: "180%", label: "Avg Organic Growth", sub: "Within first 6 months of SEO" },
+  { val: "65%", label: "Avg Reduction in CPL", sub: "Through PPC optimisation" },
   { val: "42%", label: "Avg Email Open Rate", sub: "vs 21% industry average" }
 ];
 
@@ -43,65 +44,65 @@ const caseStudies = [
 
 const DigitalResults = () => {
   return (
-    <section className="mb-32">
-      <div className="text-center mb-20">
+    <section className="mb-12 sm:mb-24 md:mb-32">
+      <div className="text-center mb-10 sm:mb-16 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="inline-block px-4 py-1 bg-blue-50 text-[#1A7FD4] rounded-full text-[10px] font-black uppercase tracking-[3px] mb-6"
+          className="inline-block px-4 py-1.5 bg-blue-50 text-[#1A7FD4] rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-[2px] sm:tracking-[3px] mb-4 sm:mb-6"
         >
           PROVEN RESULTS
         </motion.div>
-        <h2 className="text-4xl md:text-6xl font-nunito font-black text-[#0D1B2A] mb-6">
+        <h2 className="text-2xl sm:text-4xl md:text-6xl font-nunito font-black text-[#0D1B2A] mb-4 sm:mb-6 leading-tight">
           Numbers That Tell <br/> <span className="text-[#1A7FD4]">Our Story</span>
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-10 sm:mb-20">
         {resultStats.map((stat, i) => (
           <motion.div 
             key={i} 
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className={`${CLAY_CARD} p-8 text-center`}
+            className={`${CLAY_CARD} p-4 sm:p-8 text-center rounded-[20px] sm:rounded-[32px]`}
           >
-            <p className="text-4xl md:text-5xl font-nunito font-black text-[#1A7FD4] mb-2">{stat.val}</p>
-            <p className="text-sm font-black text-[#0D1B2A] mb-1">{stat.label}</p>
-            <p className="text-[10px] text-[#4A6080]">{stat.sub}</p>
+            <p className="text-2xl sm:text-4xl md:text-5xl font-nunito font-black text-[#1A7FD4] mb-1 sm:mb-2">{stat.val}</p>
+            <p className="text-[10px] sm:text-sm font-black text-[#0D1B2A] mb-0.5 sm:mb-1">{stat.label}</p>
+            <p className="text-[8px] sm:text-[10px] text-[#4A6080] font-bold">{stat.sub}</p>
           </motion.div>
         ))}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
         {caseStudies.map((cs, i) => (
           <motion.div 
             key={i}
-            whileHover={{ y: -10 }}
-            className={`${CLAY_CARD} p-8 flex flex-col h-full`}
+            whileHover={{ y: -6 }}
+            className={`${CLAY_CARD} p-5 sm:p-8 flex flex-col h-full rounded-[20px] sm:rounded-[32px] overflow-hidden`}
           >
-            <div className="flex justify-between items-start mb-6">
-               <div className="px-3 py-1 bg-blue-50 text-[#1A7FD4] rounded-lg text-[10px] font-black uppercase tracking-wider">{cs.industry}</div>
-               <div className="text-[10px] font-bold text-slate-400 flex items-center gap-1">⏱️ {cs.timeline}</div>
+            <div className="flex justify-between items-center mb-4 sm:mb-6">
+               <div className="px-3 py-1 bg-blue-50 text-[#1A7FD4] rounded-lg text-[9px] sm:text-[10px] font-black uppercase tracking-wider shrink-0">{cs.industry}</div>
+               <div className="text-[9px] sm:text-[10px] font-bold text-slate-400 flex items-center gap-1.5 shrink-0"><Clock className="w-3 h-3 text-[#1A7FD4]" /> {cs.timeline}</div>
             </div>
-            <h4 className="text-xl font-nunito font-black text-[#0D1B2A] mb-4">{cs.service}</h4>
+            <h4 className="text-base sm:text-xl font-nunito font-black text-[#0D1B2A] mb-3 sm:mb-4 leading-tight">{cs.service}</h4>
             
             <div className="space-y-4 flex-grow">
                <div>
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Challenge:</p>
-                  <p className="text-xs text-[#4A6080] leading-relaxed">{cs.challenge}</p>
+                  <p className="text-[9px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Challenge:</p>
+                  <p className="text-[10px] sm:text-xs text-[#4A6080] leading-relaxed">{cs.challenge}</p>
                </div>
                <div>
-                  <p className="text-[10px] font-black text-[#1A7FD4] uppercase tracking-widest mb-1">What We Did:</p>
-                  <p className="text-xs text-[#4A6080] leading-relaxed">{cs.solution}</p>
+                  <p className="text-[9px] sm:text-[10px] font-black text-[#1A7FD4] uppercase tracking-widest mb-1">What We Did:</p>
+                  <p className="text-[10px] sm:text-xs text-[#4A6080] leading-relaxed">{cs.solution}</p>
                </div>
-               <div className="p-4 bg-green-50 rounded-2xl border border-green-100">
-                  <p className="text-[10px] font-black text-[#34C98A] uppercase tracking-widest mb-1">Result:</p>
-                  <p className="text-xs font-bold text-[#0D1B2A] leading-relaxed">{cs.result}</p>
+               <div className="p-3.5 sm:p-4 bg-green-50 rounded-xl sm:rounded-2xl border border-green-100">
+                  <p className="text-[9px] sm:text-[10px] font-black text-[#34C98A] uppercase tracking-widest mb-1">Result:</p>
+                  <p className="text-[10px] sm:text-xs font-bold text-[#0D1B2A] leading-relaxed">{cs.result}</p>
                </div>
             </div>
             
-            <div className="mt-8 pt-6 border-t border-blue-50 flex items-center justify-center">
-               <div className="w-full aspect-video bg-slate-50 rounded-2xl flex items-center justify-center border border-slate-100 overflow-hidden relative group">
+            <div className="mt-5 pt-4 border-t border-blue-50 flex items-center justify-center">
+               <div className="w-full aspect-video bg-slate-50 rounded-xl sm:rounded-2xl flex items-center justify-center border border-slate-100 overflow-hidden relative group">
                   <img src={cs.image} alt={cs.industry} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                </div>
             </div>

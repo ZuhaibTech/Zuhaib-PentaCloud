@@ -28,9 +28,9 @@ const locations = [
 
 const ContactLocations = () => {
   return (
-    <section className="py-16 px-6 bg-background">
+    <section className="py-6 sm:py-16 px-0 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {locations.map((loc, idx) => (
             <motion.div
               key={loc.label}
@@ -38,37 +38,37 @@ const ContactLocations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={`${CLAY_CARD} p-8 flex flex-col items-start hover:-translate-y-2 transition-transform duration-500`}
+              className={`${CLAY_CARD} p-5 sm:p-8 flex flex-col items-start hover:-translate-y-1.5 transition-transform duration-500 rounded-[20px] sm:rounded-[32px]`}
             >
-              <div className="w-12 h-12 rounded-2xl bg-background shadow-[inset_2px_2px_5px_rgba(163,185,210,0.3),inset_-2px_-2px_5px_rgba(255,255,255,0.8)] flex items-center justify-center mb-6 shrink-0">
-                <Globe2 className={loc.iconColor} size={24} />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-background shadow-[inset_1.5px_1.5px_4px_rgba(163,185,210,0.25),inset_-1.5px_-1.5px_4px_rgba(255,255,255,0.7)] flex items-center justify-center mb-4 sm:mb-6 shrink-0">
+                <Globe2 className={`${loc.iconColor} w-5 h-5 sm:w-6 sm:h-6`} />
               </div>
               
-              <h4 className="font-nunito font-black text-xl text-[#0D1B2A] mb-4">
+              <h4 className="font-nunito font-black text-base sm:text-xl text-[#0D1B2A] mb-2 sm:mb-4">
                 {loc.label}
               </h4>
 
-              <div className="space-y-4 mb-6 flex-grow">
+              <div className="space-y-2 sm:space-y-4 mb-4 sm:mb-6 flex-grow">
                 <div className="flex gap-3">
-                  <MapPin size={16} className="text-[#4A6080] shrink-0 mt-1" />
-                  <p className="font-inter text-[#4A6080] text-sm leading-relaxed">
+                  <MapPin size={15} className="text-[#4A6080] shrink-0 mt-0.5" />
+                  <p className="font-inter text-[#4A6080] text-xs sm:text-sm leading-relaxed">
                     {loc.address}
                   </p>
                 </div>
                 
                 <div className="flex gap-3 items-center">
-                  <Phone size={16} className="text-[#4A6080] shrink-0" />
-                  <span className="font-nunito font-bold text-[#0D1B2A] text-sm">
+                  <Phone size={15} className="text-[#4A6080] shrink-0" />
+                  <span className="font-nunito font-bold text-[#0D1B2A] text-xs sm:text-sm">
                     {loc.phone}
                   </span>
                 </div>
               </div>
 
-              <div className="w-full pt-6 border-t border-[#1A7FD4]/5 flex items-center justify-between">
-                <span className="text-[10px] font-nunito font-black tracking-widest text-[#1A7FD4] uppercase">
+              <div className="w-full pt-4 sm:pt-6 border-t border-[#1A7FD4]/5 flex items-center justify-between">
+                <span className="text-[9px] sm:text-[10px] font-nunito font-black tracking-widest text-[#1A7FD4] uppercase">
                   ACTIVE NOW
                 </span>
-                <div className="w-2 h-2 rounded-full bg-[#34C98A] animate-pulse" />
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#34C98A] animate-pulse" />
               </div>
             </motion.div>
           ))}

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { 
   Stethoscope, ShoppingBag, Banknote, Briefcase, 
   Factory, Home, ChevronLeft, ChevronRight
@@ -81,34 +81,34 @@ const ZohoIndustries = () => {
   }, [maxIndex]);
 
   return (
-    <section className="py-24 px-6 bg-[#E8F0F8] relative overflow-hidden">
+    <section className="py-10 px-4 sm:px-6 bg-[#E8F0F8] relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-8 mb-8 sm:mb-16">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="inline-block px-4 py-1 bg-blue-50 text-[#1A7FD4] rounded-full text-[10px] font-black uppercase tracking-[3px] mb-6"
+              className="inline-block px-3 py-1 bg-blue-50 text-[#1A7FD4] rounded-full text-[8.5px] sm:text-[10px] font-black uppercase tracking-[3px] mb-4 sm:mb-6"
             >
               INDUSTRIES
             </motion.div>
-            <h2 className="text-3xl md:text-5xl font-nunito font-black text-[#0D1B2A] leading-tight">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-nunito font-black text-[#0D1B2A] leading-tight">
               Zoho Solutions Built <br/> <span className="text-[#1A7FD4]">for Your Industry</span>
             </h2>
           </div>
           
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             <button 
               onClick={prevSlide}
-              className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] transition-all active:scale-90"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] transition-all active:scale-90 cursor-pointer"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <button 
               onClick={nextSlide}
-              className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] transition-all active:scale-90"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] transition-all active:scale-90 cursor-pointer"
             >
-              <ChevronRight size={20} />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>
@@ -135,26 +135,26 @@ const ZohoIndustries = () => {
                   style={{ width: `calc(${100 / visibleCount}% - ${(visibleCount - 1) * 24 / visibleCount}px)` }}
                 >
                   <motion.div
-                    className={`${CLAY_CARD} p-8 group hover:-translate-y-1 transition-all duration-500 h-full min-h-[360px] flex flex-col`}
+                    className={`${CLAY_CARD} p-5 sm:p-8 group hover:-translate-y-1 transition-all duration-500 h-full min-h-[300px] sm:min-h-[360px] flex flex-col rounded-[20px] sm:rounded-[32px]`}
                   >
-                    <div className={`w-12 h-12 ${CLAY_ICON} ${industry.color.split(" ")[1]} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 ${CLAY_ICON} ${industry.color.split(" ")[1]} flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-500 shrink-0 [&_svg]:w-5 [&_svg]:h-5 [&_svg]:sm:w-6 [&_svg]:sm:h-6`}>
                       {industry.icon}
                     </div>
 
                     <div className="flex-grow">
-                      <h3 className="text-xl font-nunito font-black text-[#0D1B2A] mb-3 group-hover:text-[#1A7FD4] transition-colors">
+                      <h3 className="text-lg sm:text-xl font-nunito font-black text-[#0D1B2A] mb-2 sm:mb-3 group-hover:text-[#1A7FD4] transition-colors">
                         {industry.title}
                       </h3>
-                      <p className="text-xs text-[#4A6080] font-inter leading-relaxed line-clamp-4">
+                      <p className="text-[11px] sm:text-xs text-[#4A6080] font-inter leading-relaxed line-clamp-4">
                         {industry.body}
                       </p>
                     </div>
 
-                    <div className="pt-6 border-t border-slate-50 mt-6">
-                      <p className="text-[9px] font-black text-[#1A7FD4] uppercase tracking-widest mb-3">Core Apps</p>
+                    <div className="pt-4 border-t border-slate-50 mt-4">
+                      <p className="text-[8px] sm:text-[9px] font-black text-[#1A7FD4] uppercase tracking-widest mb-2 sm:mb-3">Core Apps</p>
                       <div className="flex flex-wrap gap-1.5">
                          {industry.apps.map((app, idx) => (
-                           <span key={idx} className="px-2 py-0.5 rounded-md bg-slate-50 border border-slate-100 text-[8px] font-bold text-slate-500 uppercase">
+                           <span key={idx} className="px-1.5 py-0.5 rounded-md bg-slate-50 border border-slate-100 text-[7.5px] sm:text-[8px] font-bold text-slate-500 uppercase leading-none">
                              {app}
                            </span>
                          ))}
@@ -168,13 +168,13 @@ const ZohoIndustries = () => {
         </div>
 
         {/* Progress Dots */}
-        <div className="flex justify-center gap-2 mt-12">
+        <div className="flex justify-center gap-2 mt-6 sm:mt-12">
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrentIndex(i)}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                currentIndex === i ? "w-8 bg-[#1A7FD4]" : "w-1.5 bg-slate-200"
+              className={`h-1 sm:h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
+                currentIndex === i ? "w-6 sm:w-8 bg-[#1A7FD4]" : "w-1 sm:w-1.5 bg-slate-200"
               }`}
             />
           ))}

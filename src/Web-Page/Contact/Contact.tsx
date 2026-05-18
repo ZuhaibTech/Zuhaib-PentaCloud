@@ -26,10 +26,10 @@ const Contact = () => {
         animate={{ scale: 1, opacity: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl group transition-all"
+        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[100] w-12 h-12 sm:w-16 sm:h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl group transition-all"
       >
-        <MessageCircle size={32} />
-        <div className="absolute right-20 bg-[#0D1B2A] text-white px-4 py-2 rounded-xl text-xs font-black whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl border border-white/10">
+        <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" />
+        <div className="absolute right-20 bg-[#0D1B2A] text-white px-4 py-2 rounded-xl text-xs font-black whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-xl border border-white/10 hidden sm:block">
            Chat with us on WhatsApp
         </div>
       </motion.a>

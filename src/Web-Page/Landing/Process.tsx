@@ -409,18 +409,18 @@ const ZohoSyncFlow = () => {
 
 const Process = () => {
   return (
-    <section className="bg-background py-10 px-4 md:px-8 relative overflow-hidden">
+    <section className="bg-background py-6 sm:py-10 px-4 md:px-8 relative overflow-hidden">
       {/* Subtle Background Glow */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="max-w-[1200px] mx-auto relative z-10">
         
-        <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+        <div className="mb-6 md:mb-8 flex flex-col md:flex-row justify-start items-start md:items-end gap-4 md:gap-12 lg:gap-16">
           <div className="max-w-2xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-blue-500 text-xs font-bold tracking-[0.2em] uppercase mb-4"
+              className="text-blue-500 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-2"
             >
               Our Expertise
             </motion.div>
@@ -428,9 +428,9 @@ const Process = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.2] md:leading-[1.1]"
             >
-              Comprehensive <br /> Solutions for <br />
+              Comprehensive <br className="hidden sm:block" /> Solutions for <br />
               <span className="text-blue-600">Digital Transformation</span>
             </motion.h2>
           </div>
@@ -440,20 +440,19 @@ const Process = () => {
             transition={{ delay: 0.2 }}
             className="max-w-sm"
           >
-            <p className="text-slate-600 font-medium text-sm md:text-base leading-relaxed">
+            <p className="text-slate-600 font-medium text-xs sm:text-sm md:text-base leading-relaxed">
               We combine strategic consulting with technical excellence to solve your most complex business challenges.
             </p>
           </motion.div>
         </div>
 
-        {/* 4-Column CSS Grid - Height reduced to 240px per row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[280px]">
-          
-          {/* Card 1: Salesforce (1x1) */}
+        {/* 4-Column CSS Grid - Dynamic row height on mobile, locked 280px on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-auto md:auto-rows-[280px]">
+                   {/* Card 1: Salesforce (1x1) */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[2rem] p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
+            className="bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
           >
             {/* Uniform Blue Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -464,7 +463,7 @@ const Process = () => {
             </div>
             <PipelineFlow />
             <div className="mt-auto pt-2">
-              <h3 className="text-slate-900 font-bold text-base">Salesforce Consulting</h3>
+              <h3 className="text-slate-900 font-bold text-sm sm:text-base">Salesforce Consulting</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">Optimizing CRM pipelines.</p>
               <Link href="/services/salesforce" className="inline-flex items-center gap-2 text-blue-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -478,7 +477,7 @@ const Process = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 }}
-            className="bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[2rem] p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
+            className="bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
           >
             {/* Uniform Blue Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -489,7 +488,7 @@ const Process = () => {
             </div>
             <ServerNodes />
             <div className="mt-auto pt-2">
-              <h3 className="text-slate-900 font-bold text-base">Cloud Solutions</h3>
+              <h3 className="text-slate-900 font-bold text-sm sm:text-base">Cloud Solutions</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">Scalable infrastructure setup.</p>
               <Link href="/services/cloud" className="inline-flex items-center gap-2 text-indigo-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -503,7 +502,7 @@ const Process = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="md:col-span-2 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl p-6 flex flex-col relative overflow-hidden shadow-xl group cursor-pointer"
+            className="md:col-span-2 bg-gradient-to-br from-blue-500 to-blue-700 rounded-[1.5rem] sm:rounded-3xl p-5 sm:p-6 flex flex-col relative overflow-hidden shadow-xl group cursor-pointer"
           >
             {/* Smooth Hover Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#1A237E] to-[#185FA5] opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-in-out z-0" />
@@ -516,8 +515,8 @@ const Process = () => {
               </div>
               <ArchDiagram />
               <div className="mt-auto pt-4">
-                <h3 className="text-white font-bold text-xl">End-to-End Cloud Solution</h3>
-                <p className="text-blue-100/70 text-[13px] mt-1 max-w-md">Full-cycle architecture from concept to global deployment.</p>
+                <h3 className="text-white font-bold text-lg sm:text-xl">End-to-End Cloud Solution</h3>
+                <p className="text-blue-100/70 text-xs sm:text-[13px] mt-1 max-w-md">Full-cycle architecture from concept to global deployment.</p>
               </div>
             </div>
           </motion.div>
@@ -528,7 +527,7 @@ const Process = () => {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="md:col-span-2 bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[2rem] p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
+            className="md:col-span-2 bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
           >
             {/* Uniform Blue Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -539,7 +538,7 @@ const Process = () => {
             </div>
             <BrowserMockup />
             <div className="mt-auto pt-2">
-              <h3 className="text-slate-900 font-bold text-base">Web Development</h3>
+              <h3 className="text-slate-900 font-bold text-sm sm:text-base">Web Development</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">High-performance platforms.</p>
               <Link href="/services/web" className="inline-flex items-center gap-2 text-green-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -548,14 +547,12 @@ const Process = () => {
             </div>
           </motion.div>
 
-
-
           {/* Card 4: Data Migration (1x1) */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[2rem] p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
+            className="bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
           >
             {/* Uniform Blue Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -566,7 +563,7 @@ const Process = () => {
             </div>
             <DataMigrationFlow />
             <div className="mt-auto pt-2">
-              <h3 className="text-slate-900 font-bold text-base">Data Migration</h3>
+              <h3 className="text-slate-900 font-bold text-sm sm:text-base">Data Migration</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">Secure, zero-downtime transfers.</p>
               <Link href="/services/data-migration" className="inline-flex items-center gap-2 text-amber-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -580,7 +577,7 @@ const Process = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3 }}
-            className="bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[2rem] p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
+            className="bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-6 flex flex-col hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
           >
             {/* Uniform Blue Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -591,7 +588,7 @@ const Process = () => {
             </div>
             <PhoneMockup />
             <div className="mt-auto pt-2">
-              <h3 className="text-slate-900 font-bold text-base">App Development</h3>
+              <h3 className="text-slate-900 font-bold text-sm sm:text-base">App Development</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">Native & Cross-platform apps.</p>
               <Link href="/services/app" className="inline-flex items-center gap-2 text-purple-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -606,7 +603,7 @@ const Process = () => {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="md:col-span-2 lg:col-span-2 bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[2rem] p-6 flex flex-col sm:flex-row gap-4 items-center justify-between hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
+            className="md:col-span-2 lg:col-span-2 bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-6 flex flex-col sm:flex-row gap-4 items-center justify-between hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
           >
             {/* Uniform Blue Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -616,8 +613,8 @@ const Process = () => {
                 <BarChart3 className="w-5 h-5 text-pink-400" />
               </div>
               <div className="mt-auto pt-4">
-                <h3 className="text-slate-900 font-bold text-lg">Digital Marketing</h3>
-                <p className="text-slate-500 font-medium text-[13px] mt-1 max-w-[200px]">Data-driven marketing to maximize your brand reach and ROI.</p>
+                <h3 className="text-slate-900 font-bold text-base sm:text-lg">Digital Marketing</h3>
+                <p className="text-slate-500 font-medium text-xs sm:text-[13px] mt-1 max-w-[200px]">Data-driven marketing to maximize your brand reach and ROI.</p>
                 <Link href="/services/digital-marketing" className="inline-flex items-center gap-2 text-pink-500 font-bold text-xs mt-4 hover:gap-3 transition-all group/btn">
                    Explore Service <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
@@ -633,7 +630,7 @@ const Process = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 }}
-            className="md:col-span-2 lg:col-span-2 bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[2rem] p-6 flex flex-col sm:flex-row gap-4 items-center justify-between hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
+            className="md:col-span-2 lg:col-span-2 bg-background border-2 border-[#1A7FD4]/10 shadow-[8px_8px_16px_rgba(163,185,210,0.5),-8px_-8px_16px_rgba(255,255,255,0.95)] rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-6 flex flex-col sm:flex-row gap-4 items-center justify-between hover:border-[#1A7FD4]/40 hover:shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
           >
             {/* Uniform Blue Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -643,8 +640,8 @@ const Process = () => {
                 <Globe className="w-5 h-5 text-orange-400" />
               </div>
               <div className="mt-auto pt-4">
-                <h3 className="text-slate-900 font-bold text-lg">Zoho Services</h3>
-                <p className="text-slate-500 font-medium text-[13px] mt-1 max-w-[200px]">Unified business workflows with custom ecosystem implementations.</p>
+                <h3 className="text-slate-900 font-bold text-base sm:text-lg">Zoho Services</h3>
+                <p className="text-slate-500 font-medium text-xs sm:text-[13px] mt-1 max-w-[200px]">Unified business workflows with custom ecosystem implementations.</p>
                 <Link href="/services/zoho" className="inline-flex items-center gap-2 text-orange-500 font-bold text-xs mt-4 hover:gap-3 transition-all group/btn">
                    Explore Service <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                 </Link>

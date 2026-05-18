@@ -25,7 +25,7 @@ const TeamCard = ({ member, index }: { member: any, index: number }) => {
     <motion.div
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: index * 0.2, type: "spring", bounce: 0.4 }}
+      transition={{ duration: 0.8, delay: index * 0.1, type: "spring", bounce: 0.4 }}
       viewport={{ once: true, margin: "-50px" }}
       style={{ perspective: 1000 }}
       className="w-full"
@@ -34,21 +34,20 @@ const TeamCard = ({ member, index }: { member: any, index: number }) => {
         onMouseMove={handleMouse}
         onMouseLeave={handleMouseLeave}
         style={{ rotateX, rotateY }}
-        className="w-full max-w-[320px] mx-auto bg-background rounded-[28px] overflow-hidden shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)] group transition-all duration-300 hover:shadow-[15px_15px_30px_rgba(163,185,210,0.6)] hover:-translate-y-2"
+        className="w-full max-w-[300px] sm:max-w-[320px] mx-auto bg-background rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[8px_8px_16px_rgba(163,185,210,0.4),-8px_-8px_16px_rgba(255,255,255,0.9)] group transition-all duration-300 hover:shadow-[15px_15px_30px_rgba(163,185,210,0.5)] hover:-translate-y-1.5"
       >
         {/* Avatar Area */}
-        <div className="relative h-[180px]">
+        <div className="relative h-[140px] sm:h-[180px]">
           <div className="absolute inset-0 overflow-hidden">
             <img 
               src={member.banner} 
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
               alt="Banner" 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>
           
-          <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 z-20">
-            <div className="w-24 h-24 rounded-full border-4 border-white bg-white shadow-xl overflow-hidden">
+          <div className="absolute -bottom-8 sm:-bottom-10 left-1/2 -translate-x-1/2 z-20">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white bg-white shadow-xl overflow-hidden">
               <img 
                 src={member.image} 
                 className="w-full h-full object-cover" 
@@ -58,28 +57,28 @@ const TeamCard = ({ member, index }: { member: any, index: number }) => {
           </div>
         </div>
         
-        <div className="h-10" /> {/* Spacer for avatar overlap */}
+        <div className="h-8 sm:h-10" /> {/* Spacer for avatar overlap */}
         
         {/* Info Area */}
-        <div className="p-6">
-          <h3 className="font-nunito font-bold text-[20px] text-[#0D1B2A]">{member.name}</h3>
-          <div className="font-nunito font-semibold text-[13px] text-[#1A7FD4] tracking-[1px] mb-4 uppercase">{member.role}</div>
-          <p className="font-inter text-[13px] text-[#4A6080] leading-[1.7] mb-6 min-h-[80px]">
+        <div className="p-4 sm:p-6">
+          <h3 className="font-nunito font-bold text-base sm:text-[20px] text-[#0D1B2A]">{member.name}</h3>
+          <div className="font-nunito font-semibold text-[11px] sm:text-[13px] text-[#1A7FD4] tracking-[1px] mb-2 sm:mb-4 uppercase">{member.role}</div>
+          <p className="font-inter text-xs sm:text-[13px] text-[#4A6080] leading-relaxed sm:leading-[1.7] mb-4 sm:mb-6 min-h-[60px] sm:min-h-[80px]">
             {member.bio}
           </p>
           
-          <div className="flex flex-wrap gap-2 mb-6">
+          <div className="flex flex-wrap gap-1.5 mb-4 sm:mb-6">
             {member.tags.map((tag:string, i:number) => (
-              <span key={i} className="bg-background shadow-[2px_2px_4px_rgba(163,185,210,0.4),-2px_-2px_4px_rgba(255,255,255,0.8)] text-[#1A7FD4] font-nunito font-bold text-[11px] px-3 py-1 rounded-full group-hover:scale-105 transition-transform">
+              <span key={i} className="bg-background shadow-[1px_1px_3px_rgba(163,185,210,0.3),-1px_-1px_3px_rgba(255,255,255,0.7)] text-[#1A7FD4] font-nunito font-bold text-[9px] sm:text-[11px] px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full group-hover:scale-105 transition-transform">
                 {tag}
               </span>
             ))}
           </div>
 
           {/* Socials Placeholder */}
-          <div className="flex gap-2 border-t border-slate-100 pt-4">
-             <div className="w-8 h-8 rounded-lg bg-background shadow-[3px_3px_6px_rgba(163,185,210,0.4),-3px_-3px_6px_rgba(255,255,255,0.8)] flex items-center justify-center text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white transition-colors cursor-pointer text-xs font-bold">in</div>
-             <div className="w-8 h-8 rounded-lg bg-background shadow-[3px_3px_6px_rgba(163,185,210,0.4),-3px_-3px_6px_rgba(255,255,255,0.8)] flex items-center justify-center text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white transition-colors cursor-pointer text-xs font-bold">tw</div>
+          <div className="flex gap-2 border-t border-slate-100 pt-3 sm:pt-4">
+             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-background shadow-[2px_2px_4px_rgba(163,185,210,0.3),-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white transition-colors cursor-pointer text-[10px] sm:text-xs font-bold">in</div>
+             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-background shadow-[2px_2px_4px_rgba(163,185,210,0.3),-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center text-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white transition-colors cursor-pointer text-[10px] sm:text-xs font-bold">tw</div>
           </div>
         </div>
       </motion.div>
@@ -94,8 +93,8 @@ const Leadership = () => {
       role: "Pentacloud Consulting", 
       bio: "Visionary technology leader driving Pentacloud's mission to democratise enterprise cloud solutions across Asia with a passion for Salesforce and AI.", 
       tags: ["Salesforce", "Cloud Strategy", "AI"],
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200",
-      banner: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600"
+      image: "/Profile/Arshad.png",
+      banner: "/Profile/Profile-Banner.jpg"
     },
     { 
       name: "Cloud Architect", 
@@ -103,7 +102,7 @@ const Leadership = () => {
       bio: "Certified Tier 3 engineer specialising in enterprise cloud infrastructure, cybersecurity, and DevOps transformation for Fortune-level deployments.", 
       tags: ["AWS", "DevOps", "Cybersecurity"],
       image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=200",
-      banner: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600"
+      banner: "/Profile/Profile-Banner.jpg"
     },
     { 
       name: "Salesforce Lead", 
@@ -111,23 +110,23 @@ const Leadership = () => {
       bio: "16+ Salesforce certifications and deep expertise in CRM implementation, customisation, and enterprise system integrations across multiple industries.", 
       tags: ["Salesforce CRM", "Integrations", "Training"],
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
-      banner: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600"
+      banner: "/Profile/Profile-Banner.jpg"
     },
   ];
 
   return (
-    <section className="w-full py-16 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full py-10 sm:py-16 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
-        <div className="text-center mb-16">
-          <div className="text-[#1A7FD4] font-nunito font-bold text-[11px] tracking-[2px] uppercase mb-4">THE PEOPLE</div>
-          <h2 className="font-nunito font-extrabold text-4xl md:text-[42px] text-[#0D1B2A] leading-[1.2]">
+        <div className="text-center mb-8 sm:mb-16">
+          <div className="text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[11px] tracking-[2px] uppercase mb-2 sm:mb-4">THE PEOPLE</div>
+          <h2 className="font-nunito font-extrabold text-2xl sm:text-4xl md:text-[42px] text-[#0D1B2A] leading-[1.2] px-2">
             Leadership That Leads <br/>
             <span className="text-[#1A7FD4]">By Example</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
           {team.map((m, i) => <TeamCard key={i} member={m} index={i} />)}
         </div>
 

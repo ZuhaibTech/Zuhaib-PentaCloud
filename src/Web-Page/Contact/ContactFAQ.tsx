@@ -41,17 +41,17 @@ const faqs = [
 const FAQItem = ({ question, answer, image }: { question: string; answer: string; image: string }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className={`${CLAY_CARD} mb-4 overflow-hidden`}>
+    <div className={`${CLAY_CARD} mb-3 sm:mb-4 overflow-hidden rounded-[20px] sm:rounded-[32px]`}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full p-6 flex items-center justify-between text-left"
+        className="w-full p-4 sm:p-6 flex items-center justify-between text-left gap-4"
       >
-        <span className="font-nunito font-bold text-lg text-[#0D1B2A]">{question}</span>
+        <span className="font-nunito font-bold text-sm sm:text-lg text-[#0D1B2A]">{question}</span>
         <motion.div 
           animate={{ rotate: isOpen ? 180 : 0 }}
-          className={`p-2 rounded-full ${isOpen ? 'bg-[#1A7FD4] text-white shadow-[0_4px_10px_rgba(26,127,212,0.3)]' : 'bg-background text-[#1A7FD4] shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)]'} transition-colors duration-300`}
+          className={`p-1.5 sm:p-2 rounded-full shrink-0 ${isOpen ? 'bg-[#1A7FD4] text-white shadow-[0_4px_10px_rgba(26,127,212,0.3)]' : 'bg-background text-[#1A7FD4] shadow-[2px_2px_5px_rgba(163,185,210,0.3),-2px_-2px_5px_rgba(255,255,255,0.75)]'} transition-colors duration-300`}
         >
-          {isOpen ? <Minus size={18} /> : <Plus size={18} />}
+          {isOpen ? <Minus className="w-4 h-4 sm:w-[18px] sm:h-[18px]" /> : <Plus className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />}
         </motion.div>
       </button>
       <AnimatePresence>
@@ -61,10 +61,10 @@ const FAQItem = ({ question, answer, image }: { question: string; answer: string
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="px-6 pb-6"
+            className="px-4 pb-4 sm:px-6 sm:pb-6"
           >
-            <div className="flex flex-col md:flex-row gap-6 items-start">
-               <div className="w-full md:w-40 h-28 rounded-2xl bg-background shadow-[inset_4px_4px_8px_rgba(163,185,210,0.3),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] flex items-center justify-center overflow-hidden shrink-0">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+               <div className="w-24 sm:w-40 h-16 sm:h-28 rounded-xl bg-background shadow-[inset_2.5px_2.5px_5px_rgba(163,185,210,0.25),inset_-2.5px_-2.5px_5px_rgba(255,255,255,0.7)] flex items-center justify-center overflow-hidden shrink-0">
                   <motion.img 
                     whileHover={{ scale: 1.1 }}
                     src={image} 
@@ -72,7 +72,7 @@ const FAQItem = ({ question, answer, image }: { question: string; answer: string
                     className="w-full h-full object-cover"
                   />
                </div>
-               <p className="text-[#4A6080] font-inter text-sm leading-relaxed flex-1">{answer}</p>
+               <p className="text-[#4A6080] font-inter text-xs sm:text-sm leading-relaxed flex-1">{answer}</p>
             </div>
           </motion.div>
         )}
@@ -83,26 +83,25 @@ const FAQItem = ({ question, answer, image }: { question: string; answer: string
 
 const ContactFAQ = () => {
   return (
-    <section className="pb-12 px-6">
+    <section className="pb-6 sm:pb-12 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="inline-block px-6 py-2 bg-background shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)] text-[#1A7FD4] rounded-full text-[10px] font-black uppercase tracking-[3px] mb-6"
+            className="inline-block px-4 py-1.5 bg-background shadow-[3px_3px_8px_rgba(163,185,210,0.3),-3px_-3px_8px_rgba(255,255,255,0.75)] text-[#1A7FD4] rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-[2px] sm:tracking-[3px] mb-4 sm:mb-6"
           >
             COMMON QUESTIONS
           </motion.div>
-          <h2 className="text-4xl font-nunito font-black text-[#0D1B2A]">Before You Reach Out</h2>
+          <h2 className="text-2xl sm:text-4xl font-nunito font-black text-[#0D1B2A]">Before You Reach Out</h2>
         </div>
         
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, i) => (
             <FAQItem key={i} question={faq.question} answer={faq.answer} image={faq.image} />
           ))}
         </div>
       </div>
-
     </section>
   );
 };

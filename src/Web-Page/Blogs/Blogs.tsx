@@ -10,10 +10,10 @@ import {
 
 // ─── Design Tokens ───────────────────────────────────────────────
 const CLAY_CARD =
-  "bg-background rounded-[28px] shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)]";
+  "bg-background rounded-[20px] sm:rounded-[28px] shadow-[8px_8px_16px_rgba(163,185,210,0.4),-8px_-8px_16px_rgba(255,255,255,0.9)]";
 
 const CLAY_PILL =
-  "rounded-full shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)]";
+  "rounded-full shadow-[2px_2px_6px_rgba(163,185,210,0.3),-2px_-2px_6px_rgba(255,255,255,0.7)]";
 
 // ─── Blog Data ────────────────────────────────────────────────────
 const CATEGORIES = ["All", "Salesforce", "Cloud", "Digital Marketing", "App Dev", "Web Dev", "Data Migration"];
@@ -188,7 +188,7 @@ const fadeUp: Variants = {
   hidden: { opacity: 0, y: 32 },
   visible: (i = 0) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.65, delay: i * 0.09, ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number] },
+    transition: { duration: 0.65, delay: i * 0.05, ease: [0.34, 1.56, 0.64, 1] as [number, number, number, number] },
   }),
 };
 
@@ -209,7 +209,7 @@ const FeaturedCard = ({ blog }: { blog: typeof BLOGS[0] }) => (
     <div className="flex flex-col lg:flex-row h-full">
       {/* Image */}
       <div
-        className={`relative lg:w-1/2 h-64 lg:h-auto overflow-hidden flex-shrink-0`}
+        className="relative lg:w-1/2 h-44 sm:h-64 lg:h-auto overflow-hidden flex-shrink-0"
       >
         <img 
           src={blog.image} 
@@ -219,13 +219,13 @@ const FeaturedCard = ({ blog }: { blog: typeof BLOGS[0] }) => (
         <div className={`absolute inset-0 bg-gradient-to-br ${blog.gradient} opacity-20`} />
         
         {/* Featured badge */}
-        <div className="absolute top-5 left-5 flex items-center gap-2 bg-[#1A7FD4] text-white rounded-full px-4 py-1.5 text-[11px] font-bold tracking-wider shadow-lg">
-          <TrendingUp size={12} />
+        <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-[#1A7FD4] text-white rounded-full px-3 py-1 text-[9px] sm:text-[11px] font-bold tracking-wider shadow-lg">
+          <TrendingUp size={11} />
           FEATURED
         </div>
         {/* Category */}
         <div
-          className="absolute bottom-5 left-5 rounded-full px-4 py-1.5 text-[11px] font-bold tracking-wider bg-background shadow-[2px_2px_5px_rgba(163,185,210,0.3),-2px_-2px_5px_rgba(255,255,255,0.8)]"
+          className="absolute bottom-4 left-4 rounded-full px-3 py-1 text-[9px] sm:text-[11px] font-bold tracking-wider bg-background shadow-[2px_2px_5px_rgba(163,185,210,0.3),-2px_-2px_5px_rgba(255,255,255,0.8)]"
           style={{ color: blog.tagColor }}
         >
           {blog.tag}
@@ -233,31 +233,31 @@ const FeaturedCard = ({ blog }: { blog: typeof BLOGS[0] }) => (
       </div>
 
       {/* Content */}
-      <div className="p-10 flex flex-col justify-between lg:w-1/2">
+      <div className="p-5 sm:p-10 flex flex-col justify-between lg:w-1/2">
         <div>
-          <div className="flex flex-wrap items-center gap-4 text-[12px] text-[#8BA4BE] mb-5 font-inter">
-            <span className="flex items-center gap-1.5"><Calendar size={13} />{blog.date}</span>
-            <span className="flex items-center gap-1.5"><User size={13} />{blog.author}</span>
-            <span className="flex items-center gap-1.5"><Clock size={13} />{blog.readTime}</span>
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-[10px] sm:text-[12px] text-[#8BA4BE] mb-3 sm:mb-5 font-inter">
+            <span className="flex items-center gap-1"><Calendar size={12} />{blog.date}</span>
+            <span className="flex items-center gap-1"><User size={12} />{blog.author}</span>
+            <span className="flex items-center gap-1"><Clock size={12} />{blog.readTime}</span>
           </div>
-          <h2 className="font-nunito font-black text-2xl lg:text-3xl text-[#0D1B2A] mb-5 group-hover:text-[#1A7FD4] transition-colors duration-300 leading-tight">
+          <h2 className="font-nunito font-black text-lg sm:text-2xl lg:text-3xl text-[#0D1B2A] mb-3 sm:mb-5 group-hover:text-[#1A7FD4] transition-colors duration-300 leading-tight">
             {blog.title}
           </h2>
-          <p className="font-inter text-[15px] text-[#4A6080] leading-[1.75]">
+          <p className="font-inter text-xs sm:text-sm md:text-[15px] text-[#4A6080] leading-relaxed sm:leading-[1.75]">
             {blog.excerpt}
           </p>
         </div>
-        <div className="flex items-center justify-between mt-8 pt-6 border-t border-slate-100">
+        <div className="flex items-center justify-between mt-4 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-100">
           <button
-            className="flex items-center gap-2 font-nunito font-bold text-[14px] text-[#1A7FD4] group/btn"
+            className="flex items-center gap-1.5 font-nunito font-bold text-xs sm:text-[14px] text-[#1A7FD4] group/btn"
             style={{ color: blog.accent }}
           >
             Read Full Article
-            <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+            <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
           </button>
           <div className="flex items-center gap-1.5 text-[#8BA4BE]">
-            <MessageSquare size={15} />
-            <span className="text-[12px] font-inter">{blog.comments}</span>
+            <MessageSquare size={13} />
+            <span className="text-[10px] sm:text-[12px] font-inter">{blog.comments}</span>
           </div>
         </div>
       </div>
@@ -273,11 +273,11 @@ const BlogCard = ({ blog, index }: { blog: typeof BLOGS[0]; index: number }) => 
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
-    whileHover={{ y: -10, transition: { type: "spring", stiffness: 300 } }}
+    whileHover={{ y: -8, transition: { type: "spring", stiffness: 300 } }}
     className={`${CLAY_CARD} overflow-hidden group cursor-pointer flex flex-col`}
   >
     {/* Image */}
-    <div className={`relative h-52 overflow-hidden flex-shrink-0`}>
+    <div className="relative h-40 sm:h-52 overflow-hidden flex-shrink-0">
       <img 
         src={blog.image} 
         alt={blog.title} 
@@ -286,7 +286,7 @@ const BlogCard = ({ blog, index }: { blog: typeof BLOGS[0]; index: number }) => 
       <div className={`absolute inset-0 bg-gradient-to-br ${blog.gradient} opacity-20`} />
       
       <div
-        className={`${CLAY_PILL} absolute top-4 left-4 px-4 py-1.5 text-[11px] font-nunito font-bold tracking-wider bg-background`}
+        className={`${CLAY_PILL} absolute top-3 left-3 px-3 py-1 text-[9px] sm:text-[11px] font-nunito font-bold tracking-wider bg-background`}
         style={{ color: blog.tagColor }}
       >
         {blog.tag}
@@ -294,37 +294,36 @@ const BlogCard = ({ blog, index }: { blog: typeof BLOGS[0]; index: number }) => 
     </div>
 
     {/* Content */}
-    <div className="p-7 flex flex-col flex-1">
-      <div className="flex flex-wrap items-center gap-3 text-[11px] text-[#8BA4BE] mb-4 font-inter">
-        <span className="flex items-center gap-1"><Calendar size={12} />{blog.date}</span>
-        <span className="flex items-center gap-1"><Clock size={12} />{blog.readTime}</span>
+    <div className="p-4 sm:p-7 flex flex-col flex-1">
+      <div className="flex flex-wrap items-center gap-2 text-[10px] sm:text-[11px] text-[#8BA4BE] mb-2 sm:mb-4 font-inter">
+        <span className="flex items-center gap-1"><Calendar size={11} />{blog.date}</span>
+        <span className="flex items-center gap-1"><Clock size={11} />{blog.readTime}</span>
       </div>
 
-      <h3 className="font-nunito font-extrabold text-[18px] text-[#0D1B2A] mb-3 group-hover:text-[#1A7FD4] transition-colors duration-300 leading-snug flex-1">
+      <h3 className="font-nunito font-extrabold text-sm sm:text-[18px] text-[#0D1B2A] mb-2 sm:mb-3 group-hover:text-[#1A7FD4] transition-colors duration-300 leading-snug flex-1">
         {blog.title}
       </h3>
 
-      <p className="font-inter text-[13px] text-[#4A6080] leading-[1.7] mb-5 line-clamp-3">
+      <p className="font-inter text-xs sm:text-[13px] text-[#4A6080] leading-relaxed sm:leading-[1.7] mb-3 sm:mb-5 line-clamp-3">
         {blog.excerpt}
       </p>
 
-      <div className="flex items-center justify-between pt-5 border-t border-slate-100 mt-auto">
+      <div className="flex items-center justify-between pt-4 border-t border-slate-100 mt-auto">
         <button
-          className="flex items-center gap-1.5 font-nunito font-bold text-[13px] group/btn"
+          className="flex items-center gap-1.5 font-nunito font-bold text-xs sm:text-[13px] group/btn"
           style={{ color: blog.accent }}
         >
           Read More
-          <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+          <ArrowRight size={13} className="group-hover/btn:translate-x-1 transition-transform" />
         </button>
         <div className="flex items-center gap-1 text-[#8BA4BE]">
-          <MessageSquare size={14} />
-          <span className="text-[11px] font-inter">{blog.comments}</span>
+          <MessageSquare size={13} />
+          <span className="text-[10px] sm:text-[11px] font-inter">{blog.comments}</span>
         </div>
       </div>
     </div>
   </motion.div>
 );
-
 
 // ─── Main Page ────────────────────────────────────────────────────
 export default function Blogs() {
@@ -347,23 +346,23 @@ export default function Blogs() {
   const hasMore = visibleCount < filtered.length;
 
   return (
-    <main className="relative w-full min-h-screen bg-background pt-28 pb-12 overflow-x-hidden">
+    <main className="relative w-full min-h-screen bg-background pt-20 sm:pt-28 pb-6 sm:pb-12 overflow-x-hidden">
 
       {/* ── Background blobs ── */}
       <div className="fixed top-0 right-0 w-[700px] h-[700px] bg-[#C8E2FA] rounded-full mix-blend-multiply filter blur-[140px] opacity-25 pointer-events-none -z-10" />
       <div className="fixed bottom-0 left-0 w-[500px] h-[500px] bg-[#D4EEFF] rounded-full mix-blend-multiply filter blur-[120px] opacity-25 pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
         {/* ══ HERO HEADER ════════════════════════════════════════ */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`${CLAY_PILL} inline-flex items-center gap-2 bg-background text-[#1A7FD4] font-nunito font-bold text-[11px] tracking-[3px] px-5 py-2 mb-6 shadow-[inset_4px_4px_10px_rgba(163,185,210,0.3),inset_-4px_-4px_10px_rgba(255,255,255,0.8)]`}
+            className={`${CLAY_PILL} inline-flex items-center gap-1.5 bg-background text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[11px] tracking-[3px] px-4 py-1.5 mb-4 sm:mb-6 shadow-[inset_3px_3px_8px_rgba(163,185,210,0.25),inset_-3px_-3px_8px_rgba(255,255,255,0.7)]`}
           >
-            <BookOpen size={12} />
+            <BookOpen size={11} />
             INSIGHTS & UPDATES
           </motion.div>
 
@@ -371,7 +370,7 @@ export default function Blogs() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.34, 1.56, 0.64, 1] }}
-            className="font-nunito font-black text-4xl md:text-6xl text-[#0D1B2A] mb-5 leading-[1.1]"
+            className="font-nunito font-black text-2xl sm:text-4xl md:text-6xl text-[#0D1B2A] mb-3 sm:mb-5 leading-[1.2] md:leading-[1.1]"
           >
             Insights &{" "}
             <span className="text-[#1A7FD4] relative">
@@ -389,7 +388,7 @@ export default function Blogs() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="font-inter text-[#4A6080] max-w-2xl mx-auto text-[17px] leading-relaxed mb-10"
+            className="font-inter text-[#4A6080] max-w-2xl mx-auto text-xs sm:text-base md:text-[17px] leading-relaxed mb-6 sm:mb-10 px-2"
           >
             Stay ahead with our latest thoughts on Salesforce excellence, cloud strategy,
             digital marketing, and the future of enterprise technology.
@@ -400,20 +399,20 @@ export default function Blogs() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className={`${CLAY_CARD} flex items-center gap-3 max-w-md mx-auto px-5 py-3.5 rounded-full`}
+            className={`${CLAY_CARD} flex items-center gap-2.5 max-w-md mx-auto px-4 py-2.5 rounded-full`}
           >
-            <Search size={18} className="text-[#8BA4BE] flex-shrink-0" />
+            <Search size={16} className="text-[#8BA4BE] flex-shrink-0" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => { setSearchQuery(e.target.value); setVisibleCount(6); }}
               placeholder="Search articles..."
-              className="flex-1 font-inter text-[14px] text-[#0D1B2A] bg-transparent outline-none placeholder:text-[#8BA4BE]"
+              className="flex-1 font-inter text-xs sm:text-[14px] text-[#0D1B2A] bg-transparent outline-none placeholder:text-[#8BA4BE]"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="text-[#8BA4BE] hover:text-[#1A7FD4] text-xs font-bold"
+                className="text-[#8BA4BE] hover:text-[#1A7FD4] text-[10px] sm:text-xs font-bold"
               >
                 ✕
               </button>
@@ -426,13 +425,13 @@ export default function Blogs() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mb-14"
+          className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-14"
         >
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
               onClick={() => { setActiveCategory(cat); setVisibleCount(6); }}
-              className={`${CLAY_PILL} px-5 py-2.5 font-nunito font-bold text-[13px] transition-all duration-300 ${
+              className={`${CLAY_PILL} px-3.5 py-1.5 sm:px-5 sm:py-2.5 font-nunito font-bold text-xs sm:text-[13px] transition-all duration-300 ${
                 activeCategory === cat
                   ? "bg-[#1A7FD4] text-white scale-105 shadow-[inset_2px_2px_5px_rgba(0,0,0,0.2)]"
                   : "bg-background text-[#4A6080] hover:-translate-y-0.5"
@@ -451,7 +450,7 @@ export default function Blogs() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="mb-10"
+              className="mb-8 sm:mb-10"
             >
               <FeaturedCard blog={featured} />
             </motion.div>
@@ -467,7 +466,7 @@ export default function Blogs() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8"
             >
               {visible.map((blog, i) => (
                 <BlogCard key={blog.id} blog={blog} index={i} />
@@ -478,14 +477,14 @@ export default function Blogs() {
               key="empty"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center py-24"
+              className="text-center py-16 sm:py-24"
             >
-              <div className={`${CLAY_CARD} inline-block px-12 py-10`}>
-                <Search size={40} className="text-[#8BA4BE] mx-auto mb-4" />
-                <p className="font-nunito font-bold text-[18px] text-[#0D1B2A] mb-2">
+              <div className={`${CLAY_CARD} inline-block px-8 py-8 sm:px-12 sm:py-10`}>
+                <Search size={32} className="text-[#8BA4BE] mx-auto mb-3" />
+                <p className="font-nunito font-bold text-base sm:text-[18px] text-[#0D1B2A] mb-1 sm:mb-2">
                   No articles found
                 </p>
-                <p className="font-inter text-[14px] text-[#8BA4BE]">
+                <p className="font-inter text-xs sm:text-[14px] text-[#8BA4BE]">
                   Try a different search term or category
                 </p>
               </div>
@@ -499,14 +498,14 @@ export default function Blogs() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="flex justify-center mt-12"
+            className="flex justify-center mt-8 sm:mt-12"
           >
             <button
               onClick={() => setVisibleCount((v) => v + 3)}
-              className={`${CLAY_PILL} flex items-center gap-2 bg-background text-[#1A7FD4] font-nunito font-bold text-[14px] px-8 py-4 hover:-translate-y-1 transition-all duration-300`}
+              className={`${CLAY_PILL} flex items-center gap-1.5 bg-background text-[#1A7FD4] font-nunito font-bold text-xs sm:text-[14px] px-6 py-3.5 sm:px-8 sm:py-4 hover:-translate-y-0.5 transition-all duration-300`}
             >
               Load More Articles
-              <ChevronRight size={16} />
+              <ChevronRight size={14} />
             </button>
           </motion.div>
         )}
@@ -517,7 +516,7 @@ export default function Blogs() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 mb-0"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-8 sm:mt-12 mb-0"
         >
           {[
             { num: "50+", label: "Articles Published", icon: BookOpen },
@@ -532,17 +531,16 @@ export default function Blogs() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className={`${CLAY_CARD} p-6 text-center`}
+              className={`${CLAY_CARD} p-4 sm:p-6 text-center`}
             >
-              <div className="w-10 h-10 rounded-[12px] bg-background shadow-[inset_2px_2px_5px_rgba(163,185,210,0.4),inset_-2px_-2px_5px_rgba(255,255,255,0.8)] flex items-center justify-center mx-auto mb-3">
-                <Icon size={18} className="text-[#1A7FD4]" />
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-[12px] bg-background shadow-[inset_1.5px_1.5px_3px_rgba(163,185,210,0.25),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.7)] flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                <Icon size={15} className="text-[#1A7FD4]" />
               </div>
-              <div className="font-nunito font-black text-2xl text-[#1A7FD4] mb-1">{num}</div>
-              <div className="font-inter text-[12px] text-[#8BA4BE]">{label}</div>
+              <div className="font-nunito font-black text-lg sm:text-2xl text-[#1A7FD4] mb-0.5 sm:mb-1">{num}</div>
+              <div className="font-inter text-[10px] sm:text-[12px] text-[#8BA4BE]">{label}</div>
             </motion.div>
           ))}
         </motion.div>
-
 
       </div>
     </main>

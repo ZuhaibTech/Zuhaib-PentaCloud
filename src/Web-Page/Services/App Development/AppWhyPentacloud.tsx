@@ -18,17 +18,17 @@ const AppWhyPentacloud = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start relative">
+    <section className="py-10 sm:py-24 bg-background relative px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start relative">
         
-        {/* Left Column - Visual Card (Sticky) */}
-        <div className="sticky top-28 self-start">
+        {/* Left Column - Visual Card (Sticky) - Hidden on Mobile to prevent layout collapse */}
+        <div className="hidden lg:block sticky top-28 self-start">
           <motion.div
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, type: "spring" }}
-            className="relative min-h-[600px] rounded-[32px] shadow-[0_24px_60px_rgba(26,127,212,0.30)] group flex flex-col items-center justify-center"
+            className="relative min-h-[600px] rounded-[32px] shadow-[0_24px_60px_rgba(26,127,212,0.30)] group flex flex-col items-center justify-center overflow-hidden"
             style={{ background: 'linear-gradient(145deg, #1A7FD4 0%, #0D1B2A 50%, #1A7FD4 100%)' }}
           >
           {/* Main Dynamic Image Placeholder */}
@@ -55,10 +55,10 @@ const AppWhyPentacloud = () => {
                    
                    <div className="relative z-10 flex flex-col items-center text-center px-8">
                       <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 border border-white/20 shadow-2xl">
-                         {React.createElement(differentiators[activeWhy].icon, { size: 32, className: "text-white" })}
+                         {React.createElement(differentiators[activeWhy].icon, { className: "w-8 h-8 text-white" })}
                       </div>
                       <div className="text-white font-nunito font-black text-2xl uppercase tracking-[2px] leading-tight mb-2">{differentiators[activeWhy].title}</div>
-                      <div className="text-white/60 font-inter text-sm max-w-[280px]">{differentiators[activeWhy].desc}</div>
+                      <div className="text-white/60 font-inter text-sm max-w-[280px] leading-relaxed">{differentiators[activeWhy].desc}</div>
                    </div>
 
                  {/* Corner Accents */}
@@ -76,10 +76,13 @@ const AppWhyPentacloud = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="absolute bottom-12 left-8 bg-white p-4 rounded-[16px] shadow-2xl z-20"
+                className="absolute bottom-12 left-8 bg-white p-4 rounded-[16px] shadow-2xl z-20 flex items-center gap-2"
               >
-                <div className="font-nunito font-bold text-[14px] text-[#0D1B2A]">📱 iOS + Android</div>
-                <div className="font-inter text-[12px] text-[#4A6080]">One Codebase, Both Platforms</div>
+                <Smartphone className="w-3.5 h-3.5 text-[#1A7FD4] shrink-0" />
+                <div>
+                   <div className="font-nunito font-bold text-[14px] text-[#0D1B2A] leading-tight">iOS + Android</div>
+                   <div className="font-inter text-[12px] text-[#4A6080]">One Codebase, Both Platforms</div>
+                </div>
               </motion.div>
             )}
             {activeWhy === 3 && (
@@ -87,10 +90,13 @@ const AppWhyPentacloud = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="absolute top-12 right-8 bg-white p-4 rounded-[16px] shadow-2xl z-20"
+                className="absolute top-12 right-8 bg-white p-4 rounded-[16px] shadow-2xl z-20 flex items-center gap-2"
               >
-                <div className="font-nunito font-bold text-[14px] text-[#0D1B2A]">⚡ 0.8s Cold Start</div>
-                <div className="font-inter text-[12px] text-[#4A6080]">Performance Optimized</div>
+                <Zap className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
+                <div>
+                   <div className="font-nunito font-bold text-[14px] text-[#0D1B2A] leading-tight">0.8s Cold Start</div>
+                   <div className="font-inter text-[12px] text-[#4A6080]">Performance Optimized</div>
+                </div>
               </motion.div>
             )}
             {activeWhy === 2 && (
@@ -98,15 +104,18 @@ const AppWhyPentacloud = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="absolute bottom-32 right-10 bg-white p-4 rounded-[16px] shadow-2xl z-20"
+                className="absolute bottom-32 right-10 bg-white p-4 rounded-[16px] shadow-2xl z-20 flex items-center gap-2"
               >
-                <div className="font-nunito font-bold text-[14px] text-[#0D1B2A]">🚀 App Store Ready</div>
-                <div className="font-inter text-[12px] text-[#4A6080]">Submission Experts</div>
+                <Lock className="w-3.5 h-3.5 text-[#34C98A] shrink-0" />
+                <div>
+                   <div className="font-nunito font-bold text-[14px] text-[#0D1B2A] leading-tight">App Store Ready</div>
+                   <div className="font-inter text-[12px] text-[#4A6080]">Submission Experts</div>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
-        </motion.div>
-      </div>
+          </motion.div>
+        </div>
 
         {/* Right Column - Differentiators */}
         <motion.div
@@ -114,11 +123,12 @@ const AppWhyPentacloud = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
+          className="w-full"
         >
-          <div className="text-[#1A7FD4] font-nunito font-bold text-[11px] tracking-[2px] uppercase mb-4">
+          <div className="text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[11px] tracking-[2px] uppercase mb-3 sm:mb-4">
             WHY PENTACLOUD
           </div>
-          <h2 className="font-nunito font-extrabold text-[38px] text-[#0D1B2A] leading-tight mb-6">
+          <h2 className="font-nunito font-extrabold text-2xl sm:text-[38px] text-[#0D1B2A] leading-tight mb-4 sm:mb-6">
             Apps Built for <br/>
             <span className="text-[#1A7FD4] relative inline-block">
               Real Users, Real Results
@@ -130,39 +140,56 @@ const AppWhyPentacloud = () => {
               />
             </span>
           </h2>
-          <p className="font-inter text-[16px] text-[#4A6080] leading-[1.8] mb-10">
+          <p className="font-inter text-xs sm:text-base text-[#4A6080] leading-relaxed mb-6 sm:mb-10 pr-2">
             We obsess over user experience, performance, and retention — building apps that users love, businesses trust, and App Store reviewers approve.
           </p>
 
-          <div className="grid grid-cols-1 gap-2">
+          <div className="grid grid-cols-1 gap-2.5">
             {differentiators.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.05 }}
                 onMouseEnter={() => setActiveWhy(i)}
-                className={`relative flex gap-5 p-4 rounded-[20px] transition-all duration-300 cursor-default group ${activeWhy === i ? 'bg-[#E8F0F8] shadow-lg -translate-x-2' : 'hover:bg-[#E8F0F8]/40'}`}
+                onClick={() => setActiveWhy(i)}
+                className={`relative flex gap-3.5 sm:gap-5 p-3.5 sm:p-4 rounded-xl sm:rounded-[20px] transition-all duration-300 cursor-default group overflow-hidden ${activeWhy === i ? 'bg-[#E8F0F8] shadow-lg -translate-x-1.5 sm:-translate-x-2' : 'hover:bg-[#E8F0F8]/40'}`}
               >
                 <div 
-                  className={`w-[52px] h-[52px] shrink-0 flex items-center justify-center rounded-[14px] transition-all duration-300 ${activeWhy === i ? 'bg-[#1A7FD4] text-white' : 'bg-white shadow-sm text-[#1A7FD4]'}`}
+                  className={`w-10 h-10 sm:w-[52px] sm:h-[52px] shrink-0 flex items-center justify-center rounded-lg sm:rounded-[14px] transition-all duration-300 ${activeWhy === i ? 'bg-[#1A7FD4] text-white' : 'bg-white shadow-sm text-[#1A7FD4]'}`}
                 >
-                  <item.icon size={22} />
+                  <item.icon className="w-4.5 h-4.5 sm:w-[22px] sm:h-[22px]" />
                 </div>
-                <div>
-                  <h3 className={`font-nunito font-bold text-[17px] transition-colors mb-1 ${activeWhy === i ? 'text-[#1A7FD4]' : 'text-[#0D1B2A]'}`}>
+                <div className="min-w-0 flex-1">
+                  <h3 className={`font-nunito font-bold text-sm sm:text-[17px] transition-colors mb-1 truncate ${activeWhy === i ? 'text-[#1A7FD4]' : 'text-[#0D1B2A]'}`}>
                     {item.title}
                   </h3>
-                  <AnimatePresence>
+                  <AnimatePresence initial={false}>
                     {activeWhy === i && (
-                      <motion.p 
+                      <motion.div 
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="font-inter text-[13px] text-[#4A6080] leading-relaxed pr-4"
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="overflow-hidden"
                       >
-                        {item.desc}
-                      </motion.p>
+                        <p className="font-inter text-[11px] sm:text-[13px] text-[#4A6080] leading-relaxed mb-3 pr-2 pt-1">
+                          {item.desc}
+                        </p>
+                        
+                        {/* Premium Inline Visual Card - Only rendered on mobile/tablet viewports */}
+                        <div className="lg:hidden w-full aspect-video rounded-xl overflow-hidden relative border border-slate-100 shadow-sm mt-3">
+                           <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                           <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/40 to-transparent opacity-85" />
+                           <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm border border-slate-100/50">
+                              <item.icon className="w-3.5 h-3.5 text-[#1A7FD4]" />
+                              <span className="text-[10px] font-nunito font-black text-[#0D1B2A] uppercase tracking-wider">{item.title}</span>
+                           </div>
+                           <div className="absolute top-2 right-2 px-2 py-0.5 bg-[#0D1B2A]/70 backdrop-blur-md rounded-md text-[9px] font-black text-white/90">
+                              0{i + 1}
+                           </div>
+                        </div>
+                      </motion.div>
                     )}
                   </AnimatePresence>
                 </div>

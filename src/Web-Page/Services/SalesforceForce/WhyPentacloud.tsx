@@ -16,11 +16,11 @@ const WhyPentacloud = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 relative">
+    <section className="py-10 sm:py-24 bg-background relative px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start relative">
         
-        {/* Left Column - Sticky Wrapper */}
-        <div className="relative">
+        {/* Left Column - Sticky Wrapper - Hidden on Mobile */}
+        <div className="hidden lg:block relative w-full">
           <div className="sticky top-32">
             <motion.div
             initial={{ opacity: 0, x: -80 }}
@@ -57,7 +57,7 @@ const WhyPentacloud = () => {
                          {React.createElement(differentiators[activeWhy].icon, { size: 32, className: "text-white" })}
                       </div>
                       <div className="text-white font-nunito font-black text-2xl uppercase tracking-[2px] leading-tight mb-2">{differentiators[activeWhy].title}</div>
-                      <div className="text-white/60 font-inter text-sm max-w-[280px]">{differentiators[activeWhy].desc}</div>
+                      <div className="text-white/60 font-inter text-sm max-w-[280px] leading-relaxed">{differentiators[activeWhy].desc}</div>
                    </div>
 
                  {/* Corner Accents */}
@@ -75,10 +75,13 @@ const WhyPentacloud = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="absolute bottom-10 left-8 bg-white p-4 rounded-[16px] shadow-2xl z-20"
+                className="absolute bottom-10 left-8 bg-white p-4 rounded-[16px] shadow-2xl z-20 flex items-center gap-2"
               >
-                <div className="font-nunito font-bold text-[14px] text-[#0D1B2A]">🏆 Salesforce Certified</div>
-                <div className="font-inter text-[12px] text-[#4A6080]">16+ Active Certifications</div>
+                <Shield className="w-3.5 h-3.5 text-[#1A7FD4] shrink-0" />
+                <div>
+                   <div className="font-nunito font-bold text-[14px] text-[#0D1B2A] leading-tight">Salesforce Certified</div>
+                   <div className="font-inter text-[12px] text-[#4A6080]">16+ Active Certifications</div>
+                </div>
               </motion.div>
             )}
             {activeWhy === 1 && (
@@ -86,10 +89,13 @@ const WhyPentacloud = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="absolute top-10 right-8 bg-white p-4 rounded-[16px] shadow-2xl z-20"
+                className="absolute top-10 right-8 bg-white p-4 rounded-[16px] shadow-2xl z-20 flex items-center gap-2"
               >
-                <div className="font-nunito font-bold text-[14px] text-[#0D1B2A]">⚡ 48hr Response SLA</div>
-                <div className="font-inter text-[12px] text-[#4A6080]">Guaranteed Support</div>
+                <Zap className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
+                <div>
+                   <div className="font-nunito font-bold text-[14px] text-[#0D1B2A] leading-tight">48hr Response SLA</div>
+                   <div className="font-inter text-[12px] text-[#4A6080]">Guaranteed Support</div>
+                </div>
               </motion.div>
             )}
             {activeWhy === 3 && (
@@ -97,16 +103,19 @@ const WhyPentacloud = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="absolute bottom-24 right-6 bg-white p-4 rounded-[16px] shadow-2xl z-20"
+                className="absolute bottom-24 right-6 bg-white p-4 rounded-[16px] shadow-2xl z-20 flex items-center gap-2"
               >
-                <div className="font-nunito font-bold text-[14px] text-[#0D1B2A]">✅ On-Time Delivery</div>
-                <div className="font-inter text-[12px] text-[#4A6080]">Agile Sprint Cycles</div>
+                <Heart className="w-3.5 h-3.5 text-[#EC4899] shrink-0" />
+                <div>
+                   <div className="font-nunito font-bold text-[14px] text-[#0D1B2A] leading-tight">On-Time Delivery</div>
+                   <div className="font-inter text-[12px] text-[#4A6080]">Agile Sprint Cycles</div>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
-        </motion.div>
+          </motion.div>
+          </div>
         </div>
-      </div>
 
         {/* Right Column - Differentiators */}
         <motion.div
@@ -114,11 +123,12 @@ const WhyPentacloud = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
+          className="w-full"
         >
-          <div className="text-[#1A7FD4] font-nunito font-bold text-[11px] tracking-[2px] uppercase mb-4">
+          <div className="text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[11px] tracking-[2px] uppercase mb-3 sm:mb-4">
             WHY PENTACLOUD
           </div>
-          <h2 className="font-nunito font-extrabold text-[38px] text-[#0D1B2A] leading-tight mb-6">
+          <h2 className="font-nunito font-extrabold text-2xl sm:text-[38px] text-[#0D1B2A] leading-tight mb-4 sm:mb-6">
             Not Just Another <br/>
             <span className="text-[#1A7FD4] relative inline-block">
               Salesforce Partner
@@ -130,39 +140,56 @@ const WhyPentacloud = () => {
               />
             </span>
           </h2>
-          <p className="font-inter text-[16px] text-[#4A6080] leading-[1.8] mb-10">
+          <p className="font-inter text-xs sm:text-base text-[#4A6080] leading-relaxed mb-6 sm:mb-10 pr-2">
             We combine deep technical certification with real-world business consulting — delivering Salesforce solutions that your team actually adopts and loves.
           </p>
 
-          <div className="grid grid-cols-1 gap-2">
+          <div className="grid grid-cols-1 gap-2.5">
             {differentiators.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.05 }}
                 onMouseEnter={() => setActiveWhy(i)}
-                className={`relative flex gap-5 p-4 rounded-[20px] transition-all duration-300 cursor-default group ${activeWhy === i ? 'bg-white shadow-lg -translate-x-2' : 'hover:bg-white/40'}`}
+                onClick={() => setActiveWhy(i)}
+                className={`relative flex gap-3.5 sm:gap-5 p-3.5 sm:p-4 rounded-xl sm:rounded-[20px] transition-all duration-300 cursor-default group overflow-hidden ${activeWhy === i ? 'bg-white shadow-lg -translate-x-1.5 sm:-translate-x-2' : 'hover:bg-white/40'}`}
               >
                 <div 
-                  className={`w-[52px] h-[52px] shrink-0 flex items-center justify-center rounded-[14px] transition-all duration-300 ${activeWhy === i ? 'bg-[#1A7FD4] text-white' : 'bg-white shadow-sm text-[#1A7FD4]'}`}
+                  className={`w-10 h-10 sm:w-[52px] sm:h-[52px] shrink-0 flex items-center justify-center rounded-lg sm:rounded-[14px] transition-all duration-300 ${activeWhy === i ? 'bg-[#1A7FD4] text-white' : 'bg-white shadow-sm text-[#1A7FD4]'}`}
                 >
-                  <item.icon size={22} />
+                  <item.icon className="w-4.5 h-4.5 sm:w-[22px] sm:h-[22px]" />
                 </div>
-                <div>
-                  <h3 className={`font-nunito font-bold text-[17px] transition-colors mb-1 ${activeWhy === i ? 'text-[#1A7FD4]' : 'text-[#0D1B2A]'}`}>
+                <div className="min-w-0 flex-1">
+                  <h3 className={`font-nunito font-bold text-sm sm:text-[17px] transition-colors mb-1 truncate ${activeWhy === i ? 'text-[#1A7FD4]' : 'text-[#0D1B2A]'}`}>
                     {item.title}
                   </h3>
-                  <AnimatePresence>
+                  <AnimatePresence initial={false}>
                     {activeWhy === i && (
-                      <motion.p 
+                      <motion.div 
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="font-inter text-[13px] text-[#4A6080] leading-relaxed pr-4"
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="overflow-hidden"
                       >
-                        {item.desc}
-                      </motion.p>
+                        <p className="font-inter text-[11px] sm:text-[13px] text-[#4A6080] leading-relaxed mb-3 pr-2 pt-1">
+                          {item.desc}
+                        </p>
+                        
+                        {/* Premium Inline Visual Card - Only rendered on mobile/tablet viewports */}
+                        <div className="lg:hidden w-full aspect-video rounded-xl overflow-hidden relative border border-slate-100 shadow-sm mt-3">
+                           <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                           <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/40 to-transparent opacity-85" />
+                           <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm border border-slate-100/50">
+                              <item.icon className="w-3.5 h-3.5 text-[#1A7FD4]" />
+                              <span className="text-[10px] font-nunito font-black text-[#0D1B2A] uppercase tracking-wider">{item.title}</span>
+                           </div>
+                           <div className="absolute top-2 right-2 px-2 py-0.5 bg-[#0D1B2A]/70 backdrop-blur-md rounded-md text-[9px] font-black text-white/90">
+                              0{i + 1}
+                           </div>
+                        </div>
+                      </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
