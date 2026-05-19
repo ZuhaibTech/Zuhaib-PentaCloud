@@ -244,7 +244,7 @@ const ContactInfoForm = () => {
                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white shadow-sm border border-[#1A7FD4]/10 flex items-center justify-center text-[#1A7FD4] group-hover:scale-105 transition-transform shrink-0">
                        <Mail size={15} />
                     </div>
-                    <span className="font-nunito font-black text-[#0D1B2A] text-xs sm:text-sm break-all">hello@pentacloudconsulting.com</span>
+                    <span className="font-nunito font-black text-[#0D1B2A] text-xs sm:text-sm break-all">contact@pentacloudconsulting.com</span>
                  </div>
                  <div className="flex items-center gap-3 sm:gap-4 group">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white shadow-sm border border-[#34C98A]/10 flex items-center justify-center text-[#34C98A] group-hover:scale-105 transition-transform shrink-0">
@@ -262,6 +262,7 @@ const ContactInfoForm = () => {
                     { 
                       label: "LinkedIn", 
                       color: "bg-[#0A66C2]", 
+                      url: "https://www.linkedin.com/company/pentacloudconsulting/",
                       icon: (
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
                           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -273,6 +274,7 @@ const ContactInfoForm = () => {
                     { 
                       label: "Instagram", 
                       color: "bg-[#E4405F]", 
+                      url: "https://www.instagram.com/pentacloud.in?igsh=MWt5dnF1N25iYmFnOA%3D%3D",
                       icon: (
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
                           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -284,6 +286,7 @@ const ContactInfoForm = () => {
                     { 
                       label: "Facebook", 
                       color: "bg-[#1877F2]", 
+                      url: "https://www.facebook.com/profile.php?id=61573242994665&mibextid=wwXIfr&rdid=a9vdt4aEsAkRZwBi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CP9RauVy6%2F%3Fmibextid%3DwwXIfr#",
                       icon: (
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
                           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -293,16 +296,20 @@ const ContactInfoForm = () => {
                     { 
                       label: "X", 
                       color: "bg-[#000000]", 
+                      url: "https://x.com/pentacloudind?s=21",
                       icon: (
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
-                          <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                          <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                          <path d="M20 4L4 20" />
                         </svg>
                       )
                     }
                   ].map((social, i) => (
                     <a 
                       key={i} 
-                      href="#" 
+                      href={social.url} 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`flex flex-col items-center justify-center p-2.5 sm:p-3 ${CLAY_CARD} hover:shadow-lg transition-all group rounded-[16px] sm:rounded-[20px] text-center`}
                     >
                       <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg ${social.color} text-white flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-transform`}>

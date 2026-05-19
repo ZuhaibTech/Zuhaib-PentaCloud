@@ -14,7 +14,7 @@ const locations = [
   },
   {
     label: "UAE Presence",
-    address: "Across Dubai, Abu Dhabi & UAE",
+    address: "Office No. 84, Owner Adel Mohammed Ali, Al Quoz 1, Al Quoz 1, Dubai, 0000, Dubai",
     phone: "+971 545 132 807",
     iconColor: "text-[#34C98A]"
   },
