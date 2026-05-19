@@ -92,7 +92,7 @@ const FormBlock = ({ handleSubmit, formStatus, agreed, setAgreed, formData, setF
         <CustomSelect 
           label="Service You're Interested In *"
           placeholder="Select a service"
-          options={["Salesforce Consulting", "Cloud Solutions", "Web Development", "App Development", "Digital Marketing", "Data Migration", "Consulting & Training", "Zoho Services", "Multiple Services", "Not Sure — Need Advice"]}
+          options={["Salesforce Consulting", "Cloud Solutions", "Web Development", "App Development", "Digital Marketing", "Data Migration", "Consulting & Training", "Zoho Services", "Multiple Services", "Not Sure, Need Advice"]}
           value={formData.service}
           onChange={(val: string) => setFormData({ ...formData, service: val })}
         />

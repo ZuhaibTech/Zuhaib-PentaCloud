@@ -25,7 +25,7 @@ const ZohoCTA = () => {
               </h2>
               
               <p className="text-blue-50/80 font-inter text-xs sm:text-lg md:text-xl max-w-2xl mx-auto mb-6 sm:mb-12 leading-relaxed">
-                Get a free Zoho consultation from our certified team. Whether you're new to Zoho, already using it but not getting full value, or planning a full Zoho One deployment — we'll give you honest advice and a clear plan.
+                Get a free Zoho consultation from our certified team. Whether you're new to Zoho, already using it but not getting full value, or planning a full Zoho One deployment, we'll give you honest advice and a clear plan.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center items-center gap-3 mb-6 sm:mb-12 w-full sm:w-auto">

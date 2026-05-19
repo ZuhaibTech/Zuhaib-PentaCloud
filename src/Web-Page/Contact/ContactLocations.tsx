@@ -8,7 +8,7 @@ import { CLAY_CARD } from "./Constants";
 const locations = [
   {
     label: "India Office",
-    address: "Jagan Arcade, 4th Floor, 1st Main Road, Anandnagar, RT Nagar, Bengaluru — 560032, Karnataka, India",
+    address: "Jagan Arcade, 4th Floor, 1st Main Road, Anandnagar, RT Nagar, Bengaluru, 560032, Karnataka, India",
     phone: "+971 545 132 807",
     iconColor: "text-[#1A7FD4]"
   },

@@ -52,7 +52,7 @@ const WebWhatWeBuild = () => {
     },
     {
       title: "Landing Pages & Funnels",
-      desc: "High-converting landing pages engineered for your campaigns — A/B test-ready and built around your conversion goals.",
+      desc: "High-converting landing pages engineered for your campaigns, A/B test-ready and built around your conversion goals.",
       icon: Target,
       color: "#34C98A",
       bg: "#E8F0F8",
@@ -61,7 +61,7 @@ const WebWhatWeBuild = () => {
     },
     {
       title: "Web Portals & Dashboards",
-      desc: "Complex client portals, admin dashboards, and internal tools — built with real-time data and role-based access control.",
+      desc: "Complex client portals, admin dashboards, and internal tools, built with real-time data and role-based access control.",
       icon: LayoutDashboard,
       color: "#8B5CF6",
       bg: "#E8F0F8",
@@ -70,7 +70,7 @@ const WebWhatWeBuild = () => {
     },
     {
       title: "Custom Web Applications",
-      desc: "Bespoke web applications built from scratch for your unique business logic — scalable architecture and API-first design.",
+      desc: "Bespoke web applications built from scratch for your unique business logic, scalable architecture and API-first design.",
       icon: Code2,
       color: "#29C6E0",
       bg: "#E8F0F8",
@@ -101,7 +101,7 @@ const WebWhatWeBuild = () => {
             Every Type of Web <span className="text-[#1A7FD4]">Experience, Built Right</span>
           </motion.h2>
           <p className="font-inter text-xs sm:text-[16px] text-[#4A6080] max-w-[620px] leading-relaxed pr-2">
-            From marketing websites to complex enterprise portals — we build web experiences that convert visitors into customers.
+            From marketing websites to complex enterprise portals, we build web experiences that convert visitors into customers.
           </p>
         </div>
 

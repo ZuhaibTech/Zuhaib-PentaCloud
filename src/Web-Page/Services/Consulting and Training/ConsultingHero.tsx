@@ -22,7 +22,7 @@ const ConsultingHero = () => {
           Measurable Growth.
         </h1>
         <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#4A6080] max-w-xl font-inter leading-relaxed mb-6 sm:mb-12">
-          Pentacloud's consulting and training programmes bridge the gap between technology investment and business impact. Whether you need strategic technology consulting to navigate complex decisions or hands-on training to upskill your team — our certified experts deliver programmes that create lasting capability inside your organisation.
+          Pentacloud's consulting and training programmes bridge the gap between technology investment and business impact. Whether you need strategic technology consulting to navigate complex decisions or hands-on training to upskill your team, our certified experts deliver programmes that create lasting capability inside your organisation.
         </p>
         
         <div className="flex flex-wrap gap-3 sm:gap-6 mb-6 sm:mb-12">

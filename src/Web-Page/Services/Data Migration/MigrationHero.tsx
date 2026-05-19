@@ -23,7 +23,7 @@ const MigrationHero = () => {
           Zero Downtime.
         </h1>
         <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#4A6080] max-w-xl font-inter leading-relaxed mb-6 sm:mb-8">
-          Pentacloud delivers secure, compliant, and seamless data migration across platforms, systems, and clouds — protecting every record, every relationship, and every byte of your business-critical data through every stage of the migration journey.
+          Pentacloud delivers secure, compliant, and seamless data migration across platforms, systems, and clouds, protecting every record, every relationship, and every byte of your business-critical data through every stage of the migration journey.
         </p>
         
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6 sm:mb-8 w-full sm:w-auto">

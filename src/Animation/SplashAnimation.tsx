@@ -12,9 +12,9 @@ export default function SplashAnimation({ onComplete }: { onComplete: () => void
     
     // Premium cinematic timeline
     const timers = [
-      setTimeout(() => setPhase(1), 200),   // Penta-Core draw
-      setTimeout(() => setPhase(2), 1100),  // Cinematic Text Reveal
-      setTimeout(() => setPhase(3), 3200),  // Zoom & Fade Exit
+      setTimeout(() => setPhase(1), 200),  // Penta-Core draw
+      setTimeout(() => setPhase(2), 1100), // Cinematic Text Reveal
+      setTimeout(() => setPhase(3), 3200), // Zoom & Fade Exit
       setTimeout(() => onComplete(), 4000), // Finish
     ];
     

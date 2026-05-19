@@ -54,7 +54,7 @@ const WebDevelopmentHero = () => {
 
           {/* Headline */}
           <div className="flex flex-col gap-1 mb-4 sm:mb-6">
-            {["Websites That", "Don't Just Look Good —"].map((text, i) => (
+            {["Websites That", "Don't Just Look Good, "].map((text, i) => (
               <div key={i} className="overflow-hidden">
                 <motion.h1
                   initial={{ y: 60, opacity: 0 }}
@@ -86,7 +86,7 @@ const WebDevelopmentHero = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="font-inter text-xs sm:text-base md:text-[17px] text-[#4A6080] leading-relaxed max-w-[520px] mb-6 sm:mb-8 pr-2"
           >
-            Pentacloud builds stunning, high-performance websites tailored to your business — combining cutting-edge design, bulletproof security, and scalable architecture that grows with your ambitions. Every pixel purposeful. Every millisecond optimised.
+            Pentacloud builds stunning, high-performance websites tailored to your business, combining cutting-edge design, bulletproof security, and scalable architecture that grows with your ambitions. Every pixel purposeful. Every millisecond optimised.
           </motion.p>
 
           {/* CTA Row */}
@@ -96,11 +96,11 @@ const WebDevelopmentHero = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6 sm:mb-8 w-full sm:w-auto"
           >
-            <button className={`bg-[#1A7FD4] text-white font-nunito font-bold px-5 py-3 sm:px-8 sm:py-4 ${CLAY_BUTTON} hover:-translate-y-0.5 active:translate-y-[2px] transition-all flex items-center justify-center gap-2 group text-xs sm:text-base w-full sm:w-auto cursor-pointer`}>
-              Start Your Project <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
             <button className="border-2 border-[#1A7FD4] text-[#1A7FD4] font-nunito font-bold px-5 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-[#1A7FD4] hover:text-white transition-all text-xs sm:text-base w-full sm:w-auto flex items-center justify-center cursor-pointer">
               View Our Work
+            </button>
+            <button className={`bg-[#1A7FD4] text-white font-nunito font-bold px-5 py-3 sm:px-8 sm:py-4 ${CLAY_BUTTON} hover:-translate-y-0.5 active:translate-y-[2px] transition-all flex items-center justify-center gap-2 group text-xs sm:text-base w-full sm:w-auto cursor-pointer`}>
+              Start Your Project <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
 
@@ -120,7 +120,7 @@ const WebDevelopmentHero = () => {
         </div>
 
         {/* Right Column - Browser Mockup */}
-        <div className="relative flex items-center justify-center w-full max-w-full px-2 sm:px-8 lg:px-0 mt-6 lg:mt-0 overflow-hidden sm:overflow-visible">
+        <div className="relative flex items-start justify-center w-full max-w-full px-2 sm:px-8 lg:px-0 mt-6 lg:mt-0 overflow-hidden sm:overflow-visible lg:self-start lg:pt-10 xl:pt-16">
           <motion.div
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}

@@ -9,14 +9,14 @@ const deliveryFormats = [
   {
     icon: <Building2 className="text-[#1A7FD4]" />,
     title: "On-Site Instructor-Led",
-    body: "Our certified trainers come to your office and deliver training directly to your team in your working environment — using your own Salesforce org or cloud environment where possible, making training immediately relevant and applicable to daily tasks.",
+    body: "Our certified trainers come to your office and deliver training directly to your team in your working environment, using your own Salesforce org or cloud environment where possible, making training immediately relevant and applicable to daily tasks.",
     bestFor: "Teams of 5–30 people",
     details: "Bengaluru · Mumbai · Delhi · Hyderabad · UAE (Dubai/Abu Dhabi)"
   },
   {
     icon: <Globe className="text-[#34C98A]" />,
     title: "Virtual Instructor-Led (VILT)",
-    body: "Live online training delivered via Zoom or Teams — interactive sessions with screen sharing, live demonstrations, breakout rooms for practice, and Q&A throughout. Recorded for participants to revisit after the session.",
+    body: "Live online training delivered via Zoom or Teams, interactive sessions with screen sharing, live demonstrations, breakout rooms for practice, and Q&A throughout. Recorded for participants to revisit after the session.",
     bestFor: "Remote or distributed teams",
     details: "Weekday & weekend batches available"
   },
@@ -30,7 +30,7 @@ const deliveryFormats = [
   {
     icon: <GraduationCap className="text-[#8B5CF6]" />,
     title: "Certification Preparation",
-    body: "Structured exam preparation programmes for Salesforce and cloud certifications — covering exam topic areas, practice questions, mock exams, study guides, and expert coaching sessions. Our pass rate exceeds 85%.",
+    body: "Structured exam preparation programmes for Salesforce and cloud certifications, covering exam topic areas, practice questions, mock exams, study guides, and expert coaching sessions. Our pass rate exceeds 85%.",
     bestFor: "Individual or team certifications",
     details: "85%+ first attempt pass rate"
   }
@@ -59,7 +59,7 @@ const TrainingDelivery = () => {
           Training That Actually <br/> <span className="text-[#1A7FD4]">Changes Behaviour</span>
         </h2>
         <p className="text-[#4A6080] max-w-2xl mx-auto font-inter text-xs sm:text-base md:text-lg leading-relaxed px-2">
-          We design every training programme around adult learning principles — hands-on practice, real-world scenarios, and immediate application.
+          We design every training programme around adult learning principles, hands-on practice, real-world scenarios, and immediate application.
         </p>
       </div>
 

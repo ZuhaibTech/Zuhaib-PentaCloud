@@ -14,7 +14,7 @@ const CloudProcess = () => {
       duration: "Day 1–5",
       icon: Search,
       color: "#1A7FD4",
-      body: "Our Tier 3 certified engineers conduct a comprehensive no-obligation assessment of your existing infrastructure — mapping workloads, identifying security gaps, and calculating cloud readiness score.",
+      body: "Our Tier 3 certified engineers conduct a comprehensive no-obligation assessment of your existing infrastructure, mapping workloads, identifying security gaps, and calculating cloud readiness score.",
       deliverable: "Cloud Readiness Report",
       side: "left"
     },
@@ -24,7 +24,7 @@ const CloudProcess = () => {
       duration: "Week 1–2",
       icon: Layout,
       color: "#29C6E0",
-      body: "We design your target cloud architecture — selecting the right cloud platform (AWS, Azure, GCP), defining network topology, security zones, and a detailed migration runbook.",
+      body: "We design your target cloud architecture, selecting the right cloud platform (AWS, Azure, GCP), defining network topology, security zones, and a detailed migration runbook.",
       deliverable: "Architecture Blueprint",
       side: "right"
     },
@@ -34,7 +34,7 @@ const CloudProcess = () => {
       duration: "Week 2–4",
       icon: Code2,
       color: "#34C98A",
-      body: "All infrastructure is provisioned as code using Terraform — version-controlled, repeatable, and auditable. VPCs, subnets, and IAM roles spun up in hours, not weeks.",
+      body: "All infrastructure is provisioned as code using Terraform, version-controlled, repeatable, and auditable. VPCs, subnets, and IAM roles spun up in hours, not weeks.",
       deliverable: "IaC Repository",
       side: "left"
     },
@@ -44,7 +44,7 @@ const CloudProcess = () => {
       duration: "Week 3–6",
       icon: ArrowRight,
       color: "#8B5CF6",
-      body: "Zero-downtime migration using phased cutover strategy — databases and services migrated sequentially with full rollback capability at every stage. Your business never skips a beat.",
+      body: "Zero-downtime migration using phased cutover strategy, databases and services migrated sequentially with full rollback capability at every stage. Your business never skips a beat.",
       deliverable: "Live Cloud Environment",
       side: "right"
     },
@@ -54,7 +54,7 @@ const CloudProcess = () => {
       duration: "Week 5–7",
       icon: Shield,
       color: "#EC4899",
-      body: "Post-migration security hardening — VAPT scanning, IAM policy review, network firewall rules, and compliance mapping for GDPR/HIPAA/ISO 27001.",
+      body: "Post-migration security hardening, VAPT scanning, IAM policy review, network firewall rules, and compliance mapping for GDPR/HIPAA/ISO 27001.",
       deliverable: "Security Audit Report",
       side: "left"
     },

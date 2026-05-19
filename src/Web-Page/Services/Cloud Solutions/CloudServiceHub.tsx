@@ -22,7 +22,7 @@ const CloudServiceHub = () => {
       color: "#1A7FD4",
       bg: "#EEF3FF",
       title: "Cloud & DC Architecture",
-      desc: "We design enterprise cloud and datacenter architectures from the ground up — VPC design, subnet planning, load balancing, and multi-region deployments.",
+      desc: "We design enterprise cloud and datacenter architectures from the ground up, VPC design, subnet planning, load balancing, and multi-region deployments.",
       tags: ["VPC Design", "Multi-Region", "DR Planning"],
       metric: "99.99% Uptime Design",
       visual: (

@@ -17,7 +17,7 @@ const WhatWeOffer = () => {
   const services = [
     {
       title: "Salesforce Implementation",
-      desc: "We handle complete end-to-end Salesforce deployment — from requirements gathering and solution architecture to go-live support. Sales Cloud, Service Cloud, Marketing Cloud — we implement them all with zero disruption to your operations.",
+      desc: "We handle complete end-to-end Salesforce deployment, from requirements gathering and solution architecture to go-live support. Sales Cloud, Service Cloud, Marketing Cloud, we implement them all with zero disruption to your operations.",
       icon: Settings,
       color: "#1A7FD4",
       tags: ["Sales Cloud", "Service Cloud", "Marketing Cloud"],
@@ -25,7 +25,7 @@ const WhatWeOffer = () => {
     },
     {
       title: "Customisation & Optimisation",
-      desc: "Your business is unique — your Salesforce should be too. We build custom objects, flows, validation rules, and Lightning components that perfectly mirror your business processes and eliminate every manual workaround.",
+      desc: "Your business is unique, your Salesforce should be too. We build custom objects, flows, validation rules, and Lightning components that perfectly mirror your business processes and eliminate every manual workaround.",
       icon: Sliders,
       color: "#29C6E0",
       tags: ["Custom Objects", "Lightning", "Process Builder", "Flows"],
@@ -33,7 +33,7 @@ const WhatWeOffer = () => {
     },
     {
       title: "Salesforce Health Check",
-      desc: "Is your Salesforce underperforming? Our certified Tier 3 engineers conduct a comprehensive no-obligation audit covering data quality, security settings, automation efficiency, and adoption rates — delivering an actionable improvement roadmap.",
+      desc: "Is your Salesforce underperforming? Our certified Tier 3 engineers conduct a comprehensive no-obligation audit covering data quality, security settings, automation efficiency, and adoption rates, delivering an actionable improvement roadmap.",
       icon: Activity,
       color: "#34C98A",
       tags: ["Free Audit", "Security Review", "Performance Report"],
@@ -41,7 +41,7 @@ const WhatWeOffer = () => {
     },
     {
       title: "System Integration",
-      desc: "We seamlessly connect Salesforce with your existing tech stack — ERP systems, marketing tools, accounting software like Xero, Zoho, and custom APIs. Data flows automatically, eliminating silos and giving you a single source of business truth.",
+      desc: "We seamlessly connect Salesforce with your existing tech stack, ERP systems, marketing tools, accounting software like Xero, Zoho, and custom APIs. Data flows automatically, eliminating silos and giving you a single source of business truth.",
       icon: GitMerge,
       color: "#8B5CF6",
       tags: ["API Integration", "Xero", "Zoho", "ERP", "REST/SOAP"],
@@ -49,7 +49,7 @@ const WhatWeOffer = () => {
     },
     {
       title: "Support & Maintenance",
-      desc: "Your Salesforce journey doesn't end at go-live. We provide dedicated ongoing support with guaranteed 48-hour response SLA, proactive monitoring, release management, and continuous improvement — so your CRM stays ahead of your business needs.",
+      desc: "Your Salesforce journey doesn't end at go-live. We provide dedicated ongoing support with guaranteed 48-hour response SLA, proactive monitoring, release management, and continuous improvement, so your CRM stays ahead of your business needs.",
       icon: HeadphonesIcon,
       color: "#F59E0B",
       tags: ["48hr SLA", "Release Mgmt", "Proactive Monitoring"],
@@ -57,7 +57,7 @@ const WhatWeOffer = () => {
     },
     {
       title: "Training & Enablement",
-      desc: "User adoption is where most Salesforce investments fail. Our certified trainers deliver role-specific training programs — Admin, Sales Rep, Manager — ensuring your team uses Salesforce confidently and productively from day one.",
+      desc: "User adoption is where most Salesforce investments fail. Our certified trainers deliver role-specific training programs, Admin, Sales Rep, Manager, ensuring your team uses Salesforce confidently and productively from day one.",
       icon: GraduationCap,
       color: "#EC4899",
       tags: ["Admin Training", "User Adoption", "Role-Based", "Certified Trainers"],
@@ -88,7 +88,7 @@ const WhatWeOffer = () => {
             Complete Salesforce <span className="text-[#1A7FD4]">Service Ecosystem</span>
           </motion.h2>
           <p className="font-inter text-[#4A6080] max-w-[560px] text-xs sm:text-[16px] leading-relaxed mt-2 sm:mt-4">
-            From initial implementation to ongoing optimisation — we cover every aspect of your Salesforce journey.
+            From initial implementation to ongoing optimisation, we cover every aspect of your Salesforce journey.
           </p>
         </div>
 
@@ -136,7 +136,13 @@ const WhatWeOffer = () => {
                 {service.visual === "gears" && (
                   <div className="flex items-center gap-3 sm:gap-4 w-full min-w-0">
                     <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E8F0F8] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3)] flex items-center justify-center shrink-0">
-                      <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-[#29C6E0] rounded-full animate-spin border-t-transparent" />
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                        className="flex items-center justify-center"
+                      >
+                        <Settings className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#29C6E0]" />
+                      </motion.div>
                     </div>
                     <div className="flex-1 h-2 bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] rounded-full overflow-hidden">
                       <motion.div 
@@ -150,15 +156,15 @@ const WhatWeOffer = () => {
                 {service.visual === "health" && (
                   <div className="flex items-center gap-3 sm:gap-4 min-w-0">
                     <div className="relative w-10 h-10 sm:w-12 sm:h-12 bg-[#E8F0F8] rounded-full shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3)] flex items-center justify-center shrink-0">
-                      <svg className="w-8 h-8 sm:w-10 sm:h-10 transform -rotate-90">
-                        <circle cx="16" cy="16" r="14" fill="transparent" stroke="rgba(52,201,138,0.1)" strokeWidth="3" className="sm:cx-20 sm:cy-20 sm:r-18" />
+                      <svg viewBox="0 0 36 36" className="w-8 h-8 sm:w-10 sm:h-10 transform -rotate-90">
+                        <circle cx="18" cy="18" r="16" fill="transparent" stroke="rgba(52,201,138,0.1)" strokeWidth="3" />
                         <motion.circle 
-                          initial={{ strokeDashoffset: 88 }}
-                          whileInView={{ strokeDashoffset: 88 - (88 * 0.87) }}
-                          cx="16" cy="16" r="14" fill="transparent" stroke="#34C98A" strokeWidth="3" strokeDasharray="88" className="transition-all duration-1000 sm:cx-20 sm:cy-20 sm:r-18 sm:strokeDasharray-113" 
+                          initial={{ strokeDashoffset: 100 }}
+                          whileInView={{ strokeDashoffset: 13 }}
+                          cx="18" cy="18" r="16" fill="transparent" stroke="#34C98A" strokeWidth="3" strokeDasharray="100" className="transition-all duration-1000" 
                         />
                       </svg>
-                      <div className="absolute inset-0 flex items-center justify-center text-[8px] sm:text-[9px] font-black text-[#34C98A]">87%</div>
+                      <div className="absolute inset-0 flex items-center justify-center text-[9px] sm:text-[11px] font-black text-[#34C98A] leading-none">87%</div>
                     </div>
                     <span className="text-[10px] sm:text-[12px] font-black text-[#34C98A] uppercase tracking-widest truncate">Health Score</span>
                   </div>

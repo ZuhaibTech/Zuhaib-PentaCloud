@@ -16,7 +16,7 @@ const apps = [
     title: "Zoho CRM",
     category: "Sales & CRM",
     color: "bg-blue-50 text-[#1A7FD4]",
-    body: "The core of the Zoho ecosystem. We implement and customise Zoho CRM to match your exact sales process — lead management, pipeline tracking, automation rules, custom modules, and third-party integrations.",
+    body: "The core of the Zoho ecosystem. We implement and customise Zoho CRM to match your exact sales process, lead management, pipeline tracking, automation rules, custom modules, and third-party integrations.",
     features: ["Lead & contact management", "Deal pipeline & forecasting", "Workflow automation", "Custom modules & fields", "Email integration", "Mobile CRM app", "Sales analytics & reports"]
   },
   {
@@ -24,7 +24,7 @@ const apps = [
     title: "Zoho Books",
     category: "Finance & Accounting",
     color: "bg-green-50 text-[#34C98A]",
-    body: "Complete cloud accounting for growing businesses — invoicing, expense tracking, bank reconciliation, GST compliance, and financial reporting. We implement Zoho Books with full chart of accounts setup.",
+    body: "Complete cloud accounting for growing businesses, invoicing, expense tracking, bank reconciliation, GST compliance, and financial reporting. We implement Zoho Books with full chart of accounts setup.",
     features: ["GST-compliant invoicing", "Expense management", "Bank reconciliation", "Financial statements", "Project billing", "Inventory integration", "Multi-currency support"]
   },
   {
@@ -32,7 +32,7 @@ const apps = [
     title: "Zoho One",
     category: "Business Suite",
     color: "bg-amber-50 text-[#F59E0B]",
-    body: "Zoho One is the all-in-one operating system for business — 40+ integrated apps covering every business function. We manage complete Zoho One deployments from provisioning to organization-wide rollout.",
+    body: "Zoho One is the all-in-one operating system for business, 40+ integrated apps covering every business function. We manage complete Zoho One deployments from provisioning to organization-wide rollout.",
     features: ["40+ integrated business apps", "Single sign-on (SSO)", "Centralised user management", "Cross-app automation", "Unified analytics", "Mobile access all apps", "Admin console management"]
   },
   {
@@ -48,7 +48,7 @@ const apps = [
     title: "Zoho Projects",
     category: "Project Management",
     color: "bg-indigo-50 text-[#6366F1]",
-    body: "End-to-end project management for teams of every size — tasks, milestones, Gantt charts, and time tracking. We configure Zoho Projects to match your methodology — whether waterfall, agile, or hybrid.",
+    body: "End-to-end project management for teams of every size, tasks, milestones, Gantt charts, and time tracking. We configure Zoho Projects to match your methodology, whether waterfall, agile, or hybrid.",
     features: ["Task & milestone management", "Gantt chart planning", "Time tracking & timesheets", "Resource allocation", "Budget management", "Client portal access", "CRM & Books integration"]
   },
   {
@@ -166,7 +166,7 @@ const ZohoApps = () => {
             45+ Zoho Apps. <br/> <span className="text-[#1A7FD4]">One Unified Partner.</span>
           </h2>
           <p className="text-[#4A6080] font-inter text-xs sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            From CRM to accounting, marketing to HR — we implement and optimise every corner of the Zoho ecosystem for your business.
+            From CRM to accounting, marketing to HR, we implement and optimise every corner of the Zoho ecosystem for your business.
           </p>
         </div>
 

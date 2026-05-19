@@ -50,7 +50,7 @@ const WhatDriveUs = () => {
             <div className="font-nunito font-black text-[10px] sm:text-[12px] tracking-[3px] text-[#1A7FD4] mb-2 sm:mb-3 uppercase">OUR MISSION</div>
             <h3 className="font-nunito font-black text-lg sm:text-[26px] text-[#0D1B2A] mb-3 sm:mb-4 group-hover:text-[#1A7FD4] transition-colors">Driving Digital Excellence</h3>
             <p className="font-inter text-xs sm:text-[15px] text-[#4A6080] leading-relaxed sm:leading-[1.9]">
-              To empower businesses with cutting-edge Salesforce, Cloud, and AI solutions — delivering measurable transformation that scales with ambition and drives sustainable growth.
+              To empower businesses with cutting-edge Salesforce, Cloud, and AI solutions, delivering measurable transformation that scales with ambition and drives sustainable growth.
             </p>
           </motion.div>
 
@@ -70,7 +70,7 @@ const WhatDriveUs = () => {
             <div className="font-nunito font-black text-[10px] sm:text-[12px] tracking-[3px] text-[#29C6E0] mb-2 sm:mb-3 uppercase">OUR VISION</div>
             <h3 className="font-nunito font-black text-lg sm:text-[26px] text-[#0D1B2A] mb-3 sm:mb-4 group-hover:text-[#29C6E0] transition-colors">Technology for Every Business</h3>
             <p className="font-inter text-xs sm:text-[15px] text-[#4A6080] leading-relaxed sm:leading-[1.9]">
-              To be the most trusted technology partner in Asia — making enterprise-grade Salesforce and Cloud solutions accessible to businesses of every size.
+              To be the most trusted technology partner in Asia, making enterprise-grade Salesforce and Cloud solutions accessible to businesses of every size.
             </p>
           </motion.div>
         </div>

@@ -14,7 +14,7 @@ const HowWeWork = () => {
   }, []);
 
   const steps = [
-    { step: "01", title: "Discovery & Audit", icon: Search, bg: "#EEF3FF", color: "#1A7FD4", desc: "Deep-dive discovery to understand goals, tech stack, and pain points — followed by a free audit." },
+    { step: "01", title: "Discovery & Audit", icon: Search, bg: "#EEF3FF", color: "#1A7FD4", desc: "Deep-dive discovery to understand goals, tech stack, and pain points, followed by a free audit." },
     { step: "02", title: "Solution Architecture", icon: Layout, bg: "#E0F7FF", color: "#29C6E0", desc: "Designing custom solutions, data models, integration points, and security architecture." },
     { step: "03", title: "Agile Build & Configure", icon: Code, bg: "#E8FFE8", color: "#34C98A", desc: "Building in 2-week sprints with continuous reviews, configuring flows, objects, and integrations." },
     { step: "04", title: "Testing & Training", icon: CheckCircle, bg: "#FFF8E0", color: "#F59E0B", desc: "Rigorous UAT testing and data validation followed by role-specific team training sessions." },
@@ -89,8 +89,8 @@ const HowWeWork = () => {
               </div>
 
               {/* Info Reveal (Positions lower to avoid overlap) */}
-              <div className="md:absolute md:inset-x-6 md:bottom-8 flex flex-col items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700 md:translate-y-10 md:group-hover:translate-y-0 z-20 mt-3 md:mt-0 w-full">
-                <p className="font-inter text-xs md:text-[13px] text-[#4A6080] leading-relaxed md:mb-5 text-center px-1">
+              <div className="md:absolute md:inset-x-6 md:bottom-8 flex flex-col items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700 md:translate-y-10 md:group-hover:translate-y-0 z-20 mt-3 md:mt-0 w-full md:w-auto">
+                <p className="font-inter text-xs md:text-[13px] text-[#4A6080] leading-relaxed md:mb-5 text-center px-2 sm:px-4">
                   {step.desc}
                 </p>
 

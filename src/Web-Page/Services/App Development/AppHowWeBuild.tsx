@@ -8,12 +8,12 @@ const CLAY_CARD = "bg-background rounded-[20px] sm:rounded-[28px] shadow-[10px_1
 
 const AppHowWeBuild = () => {
   const steps = [
-    { title: "Idea Validation", duration: "Day 1–3", icon: Lightbulb, bg: "#EEF3FF", color: "#1A7FD4", deliverable: "Validation Report", desc: "We analyse your app idea — market size, competitor apps, technical feasibility, and monetisation potential.", visual: "lightbulb" },
+    { title: "Idea Validation", duration: "Day 1–3", icon: Lightbulb, bg: "#EEF3FF", color: "#1A7FD4", deliverable: "Validation Report", desc: "We analyse your app idea, market size, competitor apps, technical feasibility, and monetisation potential.", visual: "lightbulb" },
     { title: "UX Wireframes", duration: "Day 3–10", icon: Users, bg: "#EEF3FF", color: "#1A7FD4", deliverable: "User Flow Diagrams", desc: "User journey mapping, persona definition, and low-fidelity wireframes across every screen.", visual: "userflow" },
-    { title: "UI Design", duration: "Day 10–20", icon: Palette, bg: "#FFE8F0", color: "#EC4899", deliverable: "Interactive Prototype", desc: "High-fidelity mobile UI designs across all screens — animations, micro-interactions, and empty states.", visual: "uidesign" },
+    { title: "UI Design", duration: "Day 10–20", icon: Palette, bg: "#FFE8F0", color: "#EC4899", deliverable: "Interactive Prototype", desc: "High-fidelity mobile UI designs across all screens, animations, micro-interactions, and empty states.", visual: "uidesign" },
     { title: "Development Sprints", duration: "Week 3–8", icon: Code2, bg: "#E8FFE8", color: "#34C98A", deliverable: "Weekly Test Builds", desc: "2-week agile sprints with weekly TestFlight / internal builds shared for your review.", visual: "sprints" },
-    { title: "QA & Testing", duration: "Week 8–9", icon: TestTube2, bg: "#FFF8E0", color: "#F59E0B", deliverable: "QA Test Report", desc: "Testing on 30+ real devices — functional testing, performance profiling, and battery usage.", visual: "qa" },
-    { title: "Launch & Growth", duration: "Week 9–10", icon: Rocket, bg: "#FFE8F0", color: "#EC4899", deliverable: "Live on App Stores", desc: "End-to-end App Store and Play Store submission — screenshots, descriptions, and metadata.", visual: "launch" }
+    { title: "QA & Testing", duration: "Week 8–9", icon: TestTube2, bg: "#FFF8E0", color: "#F59E0B", deliverable: "QA Test Report", desc: "Testing on 30+ real devices, functional testing, performance profiling, and battery usage.", visual: "qa" },
+    { title: "Launch & Growth", duration: "Week 9–10", icon: Rocket, bg: "#FFE8F0", color: "#EC4899", deliverable: "Live on App Stores", desc: "End-to-end App Store and Play Store submission, screenshots, descriptions, and metadata.", visual: "launch" }
   ];
 
   return (

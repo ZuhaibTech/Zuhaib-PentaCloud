@@ -49,7 +49,7 @@ const BLOGS = [
     comments: 9,
     title: "AWS vs Azure vs GCP: Which Cloud Is Right for Your Business in 2025?",
     excerpt:
-      "A practical breakdown of the three major cloud platforms — comparing cost, compliance, performance, and which industries benefit most from each.",
+      "A practical breakdown of the three major cloud platforms, comparing cost, compliance, performance, and which industries benefit most from each.",
     gradient: "from-[#E0F7FF] to-[#C8F0F8]",
     accent: "#29C6E0",
     featured: false,
@@ -85,7 +85,7 @@ const BLOGS = [
     comments: 11,
     title: "Salesforce Health Check: 10 Signs Your Org Needs Attention",
     excerpt:
-      "From duplicate records and broken automation to security vulnerabilities — here are the 10 most common Salesforce org issues we find in every audit.",
+      "From duplicate records and broken automation to security vulnerabilities, here are the 10 most common Salesforce org issues we find in every audit.",
     gradient: "from-[#EEF3FF] to-[#D4EEFF]",
     accent: "#1A7FD4",
     featured: false,
@@ -103,7 +103,7 @@ const BLOGS = [
     comments: 8,
     title: "React Native vs Flutter in 2025: Which Should You Choose?",
     excerpt:
-      "After building 30+ cross-platform apps, here's our honest comparison of React Native and Flutter — performance, ecosystem, hiring, and total cost.",
+      "After building 30+ cross-platform apps, here's our honest comparison of React Native and Flutter, performance, ecosystem, hiring, and total cost.",
     gradient: "from-[#F3E8FF] to-[#E9D8FD]",
     accent: "#8B5CF6",
     featured: false,
@@ -121,7 +121,7 @@ const BLOGS = [
     comments: 16,
     title: "How We Cut a Client's Cloud Bill by 47% in 90 Days",
     excerpt:
-      "A real case study from one of our cloud cost optimisation engagements — the exact strategies we used to find and eliminate wasted cloud spend.",
+      "A real case study from one of our cloud cost optimisation engagements, the exact strategies we used to find and eliminate wasted cloud spend.",
     gradient: "from-[#E0F7FF] to-[#C8F0F8]",
     accent: "#29C6E0",
     featured: false,
@@ -175,7 +175,7 @@ const BLOGS = [
     comments: 24,
     title: "LinkedIn Ads for B2B: The Strategy That Generated 120 Leads in 90 Days",
     excerpt:
-      "A behind-the-scenes breakdown of the exact LinkedIn campaign strategy we ran for a B2B client — targeting, creative, budget, and results.",
+      "A behind-the-scenes breakdown of the exact LinkedIn campaign strategy we ran for a B2B client, targeting, creative, budget, and results.",
     gradient: "from-[#FFE8F0] to-[#FFD4E8]",
     accent: "#EC4899",
     featured: false,
@@ -431,7 +431,7 @@ export default function Blogs() {
             <button
               key={cat}
               onClick={() => { setActiveCategory(cat); setVisibleCount(6); }}
-              className={`${CLAY_PILL} px-3.5 py-1.5 sm:px-5 sm:py-2.5 font-nunito font-bold text-xs sm:text-[13px] transition-all duration-300 ${
+              className={`${CLAY_PILL} cursor-pointer px-3.5 py-1.5 sm:px-5 sm:py-2.5 font-nunito font-bold text-xs sm:text-[13px] transition-all duration-300 ${
                 activeCategory === cat
                   ? "bg-[#1A7FD4] text-white scale-105 shadow-[inset_2px_2px_5px_rgba(0,0,0,0.2)]"
                   : "bg-background text-[#4A6080] hover:-translate-y-0.5"
@@ -502,7 +502,7 @@ export default function Blogs() {
           >
             <button
               onClick={() => setVisibleCount((v) => v + 3)}
-              className={`${CLAY_PILL} flex items-center gap-1.5 bg-background text-[#1A7FD4] font-nunito font-bold text-xs sm:text-[14px] px-6 py-3.5 sm:px-8 sm:py-4 hover:-translate-y-0.5 transition-all duration-300`}
+              className={`${CLAY_PILL} cursor-pointer flex items-center gap-1.5 bg-background text-[#1A7FD4] font-nunito font-bold text-xs sm:text-[14px] px-6 py-3.5 sm:px-8 sm:py-4 hover:-translate-y-0.5 transition-all duration-300`}
             >
               Load More Articles
               <ChevronRight size={14} />

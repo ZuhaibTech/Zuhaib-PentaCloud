@@ -17,17 +17,17 @@ const AppDevelopQuestions = () => {
     },
     { 
       q: "Do you build for both iOS and Android?", 
-      a: "Yes — we build for both simultaneously using React Native, which shares ~90% of the codebase between platforms. This means significantly lower cost and faster delivery than building two separate native apps.",
+      a: "Yes, we build for both simultaneously using React Native, which shares ~90% of the codebase between platforms. This means significantly lower cost and faster delivery than building two separate native apps.",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400"
     },
     { 
       q: "Do you handle App Store submission?", 
-      a: "Absolutely — App Store and Play Store submission is included in every project. We handle developer account setup, app screenshots, metadata writing, content ratings, and the review process.",
+      a: "Absolutely, App Store and Play Store submission is included in every project. We handle developer account setup, app screenshots, metadata writing, content ratings, and the review process.",
       image: "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&q=80&w=400"
     },
     { 
       q: "Can you integrate my app with Salesforce?", 
-      a: "Yes — as a certified Salesforce partner, we specialise in building mobile apps that connect directly to Salesforce. Whether it's a custom field service app, a client portal, or a sales enablement tool.",
+      a: "Yes, as a certified Salesforce partner, we specialise in building mobile apps that connect directly to Salesforce. Whether it's a custom field service app, a client portal, or a sales enablement tool.",
       image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=400"
     },
     { 

@@ -111,7 +111,7 @@ const CloudHero = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="font-inter text-xs sm:text-base md:text-[17px] text-[#4A6080] leading-relaxed max-w-[520px] pr-2"
           >
-            Pentacloud designs, deploys, and manages enterprise-grade cloud infrastructure — from architecture blueprints to 24/7 managed operations. Scalable, secure, and optimised for performance from day one.
+            Pentacloud designs, deploys, and manages enterprise-grade cloud infrastructure, from architecture blueprints to 24/7 managed operations. Scalable, secure, and optimised for performance from day one.
           </motion.p>
 
           {/* CTA Row */}

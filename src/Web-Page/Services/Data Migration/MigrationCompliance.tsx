@@ -8,22 +8,22 @@ import { CLAY_CARD } from "./Constants";
 const complianceCards = [
   {
     title: "GDPR Compliant",
-    body: "All data migrations involving EU personal data are handled under full GDPR compliance — data minimisation, purpose limitation, lawful transfer mechanisms, audit trails, and data destruction certificates for source systems post-migration.",
+    body: "All data migrations involving EU personal data are handled under full GDPR compliance, data minimisation, purpose limitation, lawful transfer mechanisms, audit trails, and data destruction certificates for source systems post-migration.",
     coverage: ["Personal data identification", "Lawful basis documentation", "Data transfer agreements", "Retention policy enforcement", "Right to erasure compliance", "Breach notification readiness"]
   },
   {
     title: "HIPAA Compliant",
-    body: "Healthcare data migrations are handled with full HIPAA compliance — PHI identification and classification, Business Associate Agreements, encrypted transfer protocols, access control logging, and audit trails meeting HIPAA Security Rule requirements.",
+    body: "Healthcare data migrations are handled with full HIPAA compliance, PHI identification and classification, Business Associate Agreements, encrypted transfer protocols, access control logging, and audit trails meeting HIPAA Security Rule requirements.",
     coverage: ["PHI identification & mapping", "BAA documentation", "Encrypted transfer (AES-256)", "Access control & logging", "Audit trail maintenance", "Incident response plan"]
   },
   {
     title: "ISO 27001 Aligned",
-    body: "Our migration methodology is aligned to ISO 27001 information security standards — risk assessment, asset management, access control, cryptography, and supplier relationship security controls applied throughout every migration engagement.",
+    body: "Our migration methodology is aligned to ISO 27001 information security standards, risk assessment, asset management, access control, cryptography, and supplier relationship security controls applied throughout every migration engagement.",
     coverage: ["Information security policy", "Risk assessment & treatment", "Asset classification", "Cryptographic controls", "Supplier security assessment", "Security incident management"]
   },
   {
     title: "Enterprise Security Standards",
-    body: "Every migration uses enterprise-grade security protocols throughout — AES-256 encryption for data in transit and at rest, VPN-secured transfer channels, multi-factor authentication on all migration tools, and IP-whitelisted access to source and target systems during migration.",
+    body: "Every migration uses enterprise-grade security protocols throughout, AES-256 encryption for data in transit and at rest, VPN-secured transfer channels, multi-factor authentication on all migration tools, and IP-whitelisted access to source and target systems during migration.",
     coverage: ["AES-256 encryption in transit", "AES-256 encryption at rest", "VPN-secured data channels", "MFA on all migration access", "IP whitelisting enforced", "Complete access audit log"]
   }
 ];
@@ -43,7 +43,7 @@ const MigrationCompliance = () => {
           Your Data Stays <br/> <span className="text-[#1A7FD4]">Safe. Always.</span>
         </h2>
         <p className="text-[#4A6080] max-w-2xl mx-auto font-inter text-xs sm:text-base md:text-lg leading-relaxed px-2">
-          Every migration is executed under strict security protocols and regulatory compliance frameworks — protecting your data and your business reputation throughout the entire journey.
+          Every migration is executed under strict security protocols and regulatory compliance frameworks, protecting your data and your business reputation throughout the entire journey.
         </p>
       </div>
 

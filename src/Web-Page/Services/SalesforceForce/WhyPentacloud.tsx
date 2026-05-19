@@ -8,9 +8,9 @@ const WhyPentacloud = () => {
   const [activeWhy, setActiveWhy] = useState(0);
   const differentiators = [
     { title: "16+ Active Salesforce Certifications", icon: Shield, bg: "#EEF3FF", color: "#1A7FD4", desc: "Our team holds certifications across Admin, Developer, Architect, and Consultant tracks.", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" },
-    { title: "48-Hour Response Guarantee", icon: Zap, bg: "#FFF8E0", color: "#F59E0B", desc: "Every support request is acknowledged within 48 hours — with critical issues escalated immediately.", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800" },
+    { title: "48-Hour Response Guarantee", icon: Zap, bg: "#FFF8E0", color: "#F59E0B", desc: "Every support request is acknowledged within 48 hours, with critical issues escalated immediately.", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800" },
     { title: "Industry-Specific Expertise", icon: Users, bg: "#F3E8FF", color: "#8B5CF6", desc: "Deep domain knowledge across Healthcare, Finance, Retail, and Corporate Enterprise.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" },
-    { title: "Agile Delivery, Always On Time", icon: RefreshCw, bg: "#E0F7FF", color: "#29C6E0", desc: "2-week sprint cycles with full client visibility — no black-box development.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" },
+    { title: "Agile Delivery, Always On Time", icon: RefreshCw, bg: "#E0F7FF", color: "#29C6E0", desc: "2-week sprint cycles with full client visibility, no black-box development.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" },
     { title: "India + UAE Presence", icon: Globe, bg: "#E8FFE8", color: "#34C98A", desc: "Offices in Bengaluru and UAE presence, serving clients across India and the Middle East.", image: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=800" },
     { title: "Post Go-Live Partnership", icon: Heart, bg: "#FFE8F0", color: "#EC4899", desc: "We don't disappear after launch. Our managed support ensures your Salesforce evolves.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" }
   ];
@@ -20,7 +20,7 @@ const WhyPentacloud = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start relative">
         
         {/* Left Column - Sticky Wrapper - Hidden on Mobile */}
-        <div className="hidden lg:block relative w-full">
+        <div className="hidden lg:block relative w-full self-stretch">
           <div className="sticky top-32">
             <motion.div
             initial={{ opacity: 0, x: -80 }}
@@ -141,7 +141,7 @@ const WhyPentacloud = () => {
             </span>
           </h2>
           <p className="font-inter text-xs sm:text-base text-[#4A6080] leading-relaxed mb-6 sm:mb-10 pr-2">
-            We combine deep technical certification with real-world business consulting — delivering Salesforce solutions that your team actually adopts and loves.
+            We combine deep technical certification with real-world business consulting, delivering Salesforce solutions that your team actually adopts and loves.
           </p>
 
           <div className="grid grid-cols-1 gap-2.5">

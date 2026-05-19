@@ -8,7 +8,7 @@ const ZohoFAQ = () => {
   const faqs = [
     {
       question: "What is the difference between Zoho CRM and Zoho One?",
-      answer: "Zoho CRM is a single application focused on sales, marketing, and customer relationship management. Zoho One is a complete business operating suite containing 40+ integrated Zoho applications covering sales, marketing, finance, HR, project management, and more — all under one subscription. Zoho One is significantly better value for growing businesses that need multiple functions.",
+      answer: "Zoho CRM is a single application focused on sales, marketing, and customer relationship management. Zoho One is a complete business operating suite containing 40+ integrated Zoho applications covering sales, marketing, finance, HR, project management, and more, all under one subscription. Zoho One is significantly better value for growing businesses that need multiple functions.",
       icon: Settings,
       color: "#1A7FD4",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400"
@@ -22,14 +22,14 @@ const ZohoFAQ = () => {
     },
     {
       question: "Can you migrate our data from Salesforce to Zoho?",
-      answer: "Yes — Salesforce to Zoho CRM migration is one of our most common requests. We migrate all standard objects as well as custom objects, fields, attachments, and historical data — maintaining all relationships between records. We run a full test migration in a Zoho sandbox before touching production data.",
+      answer: "Yes, Salesforce to Zoho CRM migration is one of our most common requests. We migrate all standard objects as well as custom objects, fields, attachments, and historical data, maintaining all relationships between records. We run a full test migration in a Zoho sandbox before touching production data.",
       icon: Database,
       color: "#F59E0B",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400"
     },
     {
       question: "Is Zoho Books GST compliant for Indian businesses?",
-      answer: "Yes — Zoho Books is fully GST compliant and is approved by the Indian government for GST e-invoicing. We configure Zoho Books with correct GST tax rates, HSN/SAC codes, e-invoice generation, and GSTR report generation. For UAE clients, we set up VAT compliance per Federal Tax Authority requirements.",
+      answer: "Yes, Zoho Books is fully GST compliant and is approved by the Indian government for GST e-invoicing. We configure Zoho Books with correct GST tax rates, HSN/SAC codes, e-invoice generation, and GSTR report generation. For UAE clients, we set up VAT compliance per Federal Tax Authority requirements.",
       icon: Shield,
       color: "#8B5CF6",
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=400"
@@ -43,7 +43,7 @@ const ZohoFAQ = () => {
     },
     {
       question: "Do you provide ongoing Zoho support after implementation?",
-      answer: "Yes — ongoing Zoho managed support is one of our core offerings. We offer monthly retainer plans starting from 4 hours per month — covering user management, configuration changes, new automation builds, and troubleshooting. Most growing businesses find the Standard plan (8hrs/month) sufficient for day-to-day management.",
+      answer: "Yes, ongoing Zoho managed support is one of our core offerings. We offer monthly retainer plans starting from 4 hours per month, covering user management, configuration changes, new automation builds, and troubleshooting. Most growing businesses find the Standard plan (8hrs/month) sufficient for day-to-day management.",
       icon: HelpCircle,
       color: "#34C98A",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400"

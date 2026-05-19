@@ -14,7 +14,7 @@ const WebHowWeBuild = () => {
       duration: "Day 1–3",
       icon: MessageSquare,
       color: "#1A7FD4",
-      body: "Structured discovery session covering business goals, target audience, brand guidelines, and technical requirements — resulting in a clear project brief.",
+      body: "Structured discovery session covering business goals, target audience, brand guidelines, and technical requirements, resulting in a clear project brief.",
       deliverable: "Project Brief",
       side: "left"
     },
@@ -24,7 +24,7 @@ const WebHowWeBuild = () => {
       duration: "Day 3–7",
       icon: PenTool,
       color: "#8B5CF6",
-      body: "Mapping every page as a wireframe — defining information architecture, user flows, and conversion paths before any visual design.",
+      body: "Mapping every page as a wireframe, defining information architecture, user flows, and conversion paths before any visual design.",
       deliverable: "Wireframe Deck",
       side: "right"
     },

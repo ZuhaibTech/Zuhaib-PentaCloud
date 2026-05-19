@@ -15,19 +15,19 @@ const options = [
     color: "bg-background text-[#34C98A] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.35),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]",
     btnColor: "bg-[#34C98A]",
     btnShadow: "shadow-[0_6px_12px_rgba(52,201,138,0.25)]",
-    response: "⚡ Typically within 2 hours",
+    response: "Typically within 2 hours",
     responseIcon: <Zap size={13} className="text-amber-400 shrink-0" />
   },
   {
     icon: <Mail />,
     title: "Email Us",
-    body: "For detailed project briefs, RFP submissions, or formal enquiries — email us and we'll respond with a thorough reply within 24 hours.",
+    body: "For detailed project briefs, RFP submissions, or formal enquiries, email us and we'll respond with a thorough reply within 24 hours.",
     cta: "Send Email →",
     href: "mailto:contact@pentacloudconsulting.com",
     color: "bg-background text-[#1A7FD4] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.35),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]",
     btnColor: "bg-[#1A7FD4]",
     btnShadow: "shadow-[0_6px_12px_rgba(26,127,212,0.25)]",
-    response: "📧 Within 24 business hours",
+    response: "Within 24 business hours",
     responseIcon: <Clock size={13} className="text-blue-400 shrink-0" />
   },
   {
@@ -39,7 +39,7 @@ const options = [
     color: "bg-background text-[#F59E0B] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.35),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]",
     btnColor: "bg-[#F59E0B]",
     btnShadow: "shadow-[0_6px_12px_rgba(245,158,11,0.25)]",
-    response: "📅 Choose your preferred time",
+    response: "Choose your preferred time",
     responseIcon: <Calendar size={13} className="text-amber-400 shrink-0" />
   },
   {
@@ -57,7 +57,7 @@ const options = [
     color: "bg-background text-[#0A66C2] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.35),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]",
     btnColor: "bg-[#0A66C2]",
     btnShadow: "shadow-[0_6px_12px_rgba(10,102,194,0.25)]",
-    response: "💼 LinkedIn monitored daily",
+    response: "LinkedIn monitored daily",
     responseIcon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3 text-blue-400 shrink-0">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />

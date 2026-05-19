@@ -18,7 +18,7 @@ const CloudCTA = () => {
   const faqs = [
     {
       q: "What is the difference between cloud migration and cloud architecture?",
-      a: "Cloud architecture is designing how your systems should be structured in the cloud — which services to use, security boundaries, and cost optimisation. Cloud migration is the execution — actually moving your workloads to that architecture. We do both, always starting with architecture first.",
+      a: "Cloud architecture is designing how your systems should be structured in the cloud, which services to use, security boundaries, and cost optimisation. Cloud migration is the execution, actually moving your workloads to that architecture. We do both, always starting with architecture first.",
       type: "clay"
     },
     {
@@ -43,7 +43,7 @@ const CloudCTA = () => {
     },
     {
       q: "Can you reduce our existing cloud costs?",
-      a: "In almost every case — yes. We typically find 30–50% cost savings through right-sizing, reserved instance planning, and removing zombie resources. We offer a free cost optimisation audit first.",
+      a: "In almost every case, yes. We typically find 30–50% cost savings through right-sizing, reserved instance planning, and removing zombie resources. We offer a free cost optimisation audit first.",
       type: "neuro"
     }
   ];

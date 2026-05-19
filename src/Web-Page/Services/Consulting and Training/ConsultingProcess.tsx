@@ -9,7 +9,7 @@ const processSteps = [
     step: "1",
     duration: "Day 1–2",
     title: "Discovery Call & Brief",
-    body: "We begin with a structured discovery session — understanding your business challenge, current technology landscape, team capabilities, timeline, and budget constraints. No sales pitch. No generic recommendations. Just honest questions to fully understand your situation before we suggest any solutions.",
+    body: "We begin with a structured discovery session, understanding your business challenge, current technology landscape, team capabilities, timeline, and budget constraints. No sales pitch. No generic recommendations. Just honest questions to fully understand your situation before we suggest any solutions.",
     activities: ["Stakeholder interviews", "Current state documentation", "Challenge & goal definition", "Constraint identification", "Preliminary scope agreement"],
     deliverable: "Discovery Summary Document"
   },
@@ -17,7 +17,7 @@ const processSteps = [
     step: "2",
     duration: "Week 1–2",
     title: "Deep Assessment & Analysis",
-    body: "Our certified experts conduct a thorough assessment of your current environment — whether that's your Salesforce org, cloud infrastructure, business processes, or team capability gaps. We gather data, interview stakeholders, and analyse findings before forming any recommendations — ensuring advice is grounded in your reality.",
+    body: "Our certified experts conduct a thorough assessment of your current environment, whether that's your Salesforce org, cloud infrastructure, business processes, or team capability gaps. We gather data, interview stakeholders, and analyse findings before forming any recommendations, ensuring advice is grounded in your reality.",
     activities: ["Technical environment audit", "Stakeholder interviews", "Process mapping", "Gap analysis", "Benchmark comparison", "Risk identification"],
     deliverable: "Assessment Report & Gap Analysis"
   },
@@ -25,7 +25,7 @@ const processSteps = [
     step: "3",
     duration: "Week 2–3",
     title: "Strategy & Recommendations",
-    body: "We present a clear, prioritised set of recommendations — short-term quick wins, medium-term improvements, and long-term strategic initiatives. Every recommendation includes a business case, estimated effort, expected outcome, and suggested sequencing. You get honest advice — even for simpler or cheaper solutions.",
+    body: "We present a clear, prioritised set of recommendations, short-term quick wins, medium-term improvements, and long-term strategic initiatives. Every recommendation includes a business case, estimated effort, expected outcome, and suggested sequencing. You get honest advice, even for simpler or cheaper solutions.",
     activities: ["Strategy document preparation", "Business case development", "Roadmap sequencing", "Investment vs return analysis", "Executive presentation", "Q&A and refinement session"],
     deliverable: "Technology Strategy & Roadmap Document"
   },
@@ -33,7 +33,7 @@ const processSteps = [
     step: "4",
     duration: "Week 3 onwards",
     title: "Implementation or Handover",
-    body: "Depending on your preference, we either support you through implementation — providing project oversight, quality assurance, and technical guidance — or hand over the strategy document to your internal team or preferred partner with a full briefing session to ensure successful execution.",
+    body: "Depending on your preference, we either support you through implementation, providing project oversight, quality assurance, and technical guidance, or hand over the strategy document to your internal team or preferred partner with a full briefing session to ensure successful execution.",
     activities: ["Implementation project oversight", "Vendor management support", "Quality assurance reviews", "Progress milestone reviews", "Risk monitoring & escalation", "Knowledge transfer sessions"],
     deliverable: "Implementation Guidance & Oversight Report"
   }
@@ -54,7 +54,7 @@ const ConsultingProcess = () => {
           From Challenge to <br/> <span className="text-[#1A7FD4]">Clear Solution in 4 Steps</span>
         </h2>
         <p className="text-[#4A6080] max-w-2xl mx-auto font-inter text-xs sm:text-base md:text-lg leading-relaxed px-2">
-          Every consulting engagement follows a structured approach — starting with honest assessment and ending with actionable outcomes.
+          Every consulting engagement follows a structured approach, starting with honest assessment and ending with actionable outcomes.
         </p>
       </div>
 

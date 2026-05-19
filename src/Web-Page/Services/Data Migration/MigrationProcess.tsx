@@ -10,7 +10,7 @@ const processSteps = [
     step: "1",
     duration: "Day 1–5",
     title: "Discovery & Data Audit",
-    body: "We begin with a thorough audit of your source system — mapping all data objects, relationships, volumes, data quality issues, duplicate records, and dependencies. We assess data complexity, identify transformation requirements, and calculate migration effort and timeline. You receive a complete Migration Readiness Report before any work begins.",
+    body: "We begin with a thorough audit of your source system, mapping all data objects, relationships, volumes, data quality issues, duplicate records, and dependencies. We assess data complexity, identify transformation requirements, and calculate migration effort and timeline. You receive a complete Migration Readiness Report before any work begins.",
     deliverable: "Migration Readiness Report",
     activities: ["Source system inventory", "Data volume assessment", "Data quality analysis", "Duplicate identification", "Dependency mapping", "Compliance requirements review"]
   },
@@ -18,7 +18,7 @@ const processSteps = [
     step: "2",
     duration: "Day 5–10",
     title: "Migration Strategy & Planning",
-    body: "We design your migration strategy — defining the migration approach (big bang vs phased), cutover windows, rollback plan, data transformation rules, field mapping specifications, and a detailed runbook with task-by-task execution steps. Nothing is left to chance or improvisation.",
+    body: "We design your migration strategy, defining the migration approach (big bang vs phased), cutover windows, rollback plan, data transformation rules, field mapping specifications, and a detailed runbook with task-by-task execution steps. Nothing is left to chance or improvisation.",
     deliverable: "Migration Runbook",
     activities: ["Migration approach selection", "Cutover window planning", "Field mapping documentation", "Transformation rule design", "Rollback strategy definition", "Stakeholder communication plan"]
   },
@@ -26,7 +26,7 @@ const processSteps = [
     step: "3",
     duration: "Week 2–3",
     title: "Environment Setup & Test Migration",
-    body: "We configure the target environment and run a full test migration in a sandbox — migrating a representative sample of data to validate field mappings, transformation rules, data relationships, and application behaviour in the target system before a single byte of production data is touched.",
+    body: "We configure the target environment and run a full test migration in a sandbox, migrating a representative sample of data to validate field mappings, transformation rules, data relationships, and application behaviour in the target system before a single byte of production data is touched.",
     deliverable: "Test Migration Report",
     activities: ["Target environment setup", "Sandbox migration execution", "Field mapping validation", "Relationship integrity check", "Application testing on migrated data", "Performance benchmarking"]
   },
@@ -34,7 +34,7 @@ const processSteps = [
     step: "4",
     duration: "Week 3–4",
     title: "Data Cleansing & Preparation",
-    body: "Before production migration, we cleanse and prepare your source data — removing duplicates, standardising formats, filling mandatory fields, archiving obsolete records, and applying transformation rules to ensure only clean, accurate data arrives in the target system.",
+    body: "Before production migration, we cleanse and prepare your source data, removing duplicates, standardising formats, filling mandatory fields, archiving obsolete records, and applying transformation rules to ensure only clean, accurate data arrives in the target system.",
     deliverable: "Cleansed Data Set",
     activities: ["Duplicate record removal", "Data format standardisation", "Mandatory field population", "Obsolete record archiving", "Data transformation execution", "Pre-migration quality report"]
   },
@@ -42,7 +42,7 @@ const processSteps = [
     step: "5",
     duration: "Week 4–5",
     title: "Production Migration & Cutover",
-    body: "The production migration is executed during a pre-agreed cutover window — minimising business disruption. We run migration in phases, monitoring every step in real time. Full rollback capability is maintained until final validation sign-off from your team. No cutover is declared complete until your team confirms data accuracy in production.",
+    body: "The production migration is executed during a pre-agreed cutover window, minimising business disruption. We run migration in phases, monitoring every step in real time. Full rollback capability is maintained until final validation sign-off from your team. No cutover is declared complete until your team confirms data accuracy in production.",
     deliverable: "Live Target System",
     activities: ["Pre-migration final backup", "Phased data migration execution", "Real-time progress monitoring", "Immediate post-migration validation", "User acceptance testing (UAT)", "Go/no-go decision with client"]
   },
@@ -50,7 +50,7 @@ const processSteps = [
     step: "6",
     duration: "Week 5–6",
     title: "Validation, Reconciliation & Handover",
-    body: "After go-live, we run a comprehensive reconciliation — comparing record counts, financial totals, relationship integrity, and data samples between source and target to prove 100% migration completeness. We also decommission the source system safely and provide full documentation of the completed migration for your records and compliance requirements.",
+    body: "After go-live, we run a comprehensive reconciliation, comparing record counts, financial totals, relationship integrity, and data samples between source and target to prove 100% migration completeness. We also decommission the source system safely and provide full documentation of the completed migration for your records and compliance requirements.",
     deliverable: "Migration Completion Report",
     activities: ["Record count reconciliation", "Financial total validation", "Random sample audit", "Source system decommission", "Full documentation handover", "30-day post-migration support"]
   }
@@ -80,7 +80,7 @@ const MigrationProcess = () => {
           Our Proven 6-Step <br/> <span className="text-[#1A7FD4]">Migration Methodology</span>
         </h2>
         <p className="text-[#4A6080] max-w-2xl mx-auto font-inter text-xs sm:text-base md:text-lg leading-relaxed px-2">
-          Every migration follows our battle-tested methodology — built from 100+ successful migrations with zero data loss record.
+          Every migration follows our battle-tested methodology, built from 100+ successful migrations with zero data loss record.
         </p>
       </div>
 

@@ -85,7 +85,7 @@ const ZohoPackages = () => {
             Zoho Packages That <br/> <span className="text-[#1A7FD4]">Fit Your Business</span>
           </h2>
           <p className="text-[#4A6080] font-inter text-xs sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            From a single Zoho app implementation to a full Zoho One deployment — we have a package that fits your needs and budget.
+            From a single Zoho app implementation to a full Zoho One deployment, we have a package that fits your needs and budget.
           </p>
         </div>
 

@@ -36,7 +36,7 @@ const ZohoHero = () => {
             </h1>
             
             <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#4A6080] font-inter leading-relaxed mb-6 sm:mb-8 max-w-xl">
-              Pentacloud is a certified Zoho partner delivering end-to-end Zoho consulting, implementation, integration, and training services — helping businesses across India and the UAE maximise their Zoho investment and run smarter, faster, and more profitably.
+              Pentacloud is a certified Zoho partner delivering end-to-end Zoho consulting, implementation, integration, and training services, helping businesses across India and the UAE maximise their Zoho investment and run smarter, faster, and more profitably.
             </p>
 
             <div className="flex flex-row items-center gap-2 sm:gap-3 mb-6 sm:mb-8 w-full sm:w-auto">

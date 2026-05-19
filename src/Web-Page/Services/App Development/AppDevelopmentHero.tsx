@@ -84,7 +84,7 @@ const AppDevelopmentHero = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="font-inter text-xs sm:text-base md:text-[17px] text-[#4A6080] leading-[1.8] max-w-[520px] mb-6 sm:mb-8"
           >
-            Pentacloud builds intuitive, high-performance mobile and web applications that solve real business problems. From MVP to enterprise-scale — we design, build, and launch apps that your users keep coming back to, across iOS, Android, and Web.
+            Pentacloud builds intuitive, high-performance mobile and web applications that solve real business problems. From MVP to enterprise-scale, we design, build, and launch apps that your users keep coming back to, across iOS, Android, and Web.
           </motion.p>
 
           {/* CTA Row */}

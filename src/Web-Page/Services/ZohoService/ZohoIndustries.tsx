@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
 import { 
   Stethoscope, ShoppingBag, Banknote, Briefcase, 
@@ -54,8 +54,9 @@ const industries = [
 ];
 
 const ZohoIndustries = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [visibleCount, setVisibleCount] = useState(4);
+  const [activeDot, setActiveDot] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,16 +70,43 @@ const ZohoIndustries = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Calculate total steps based on individual card sliding
+  const checkScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft } = scrollRef.current;
+      const cardWidth = scrollRef.current.firstElementChild?.getBoundingClientRect().width || 320;
+      const gap = 24;
+      const index = Math.round(scrollLeft / (cardWidth + gap));
+      setActiveDot(index);
+    }
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (el) {
+      el.addEventListener("scroll", checkScroll);
+      checkScroll();
+    }
+    return () => el?.removeEventListener("scroll", checkScroll);
+  }, [visibleCount]);
+
   const maxIndex = Math.max(0, industries.length - visibleCount);
 
-  const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-  }, [maxIndex]);
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const cardWidth = scrollRef.current.firstElementChild?.getBoundingClientRect().width || 320;
+      const gap = 24;
+      const scrollAmount = direction === "left" ? -(cardWidth + gap) : (cardWidth + gap);
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
 
-  const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-  }, [maxIndex]);
+  const scrollToActiveDot = (index: number) => {
+    if (scrollRef.current) {
+      const cardWidth = scrollRef.current.firstElementChild?.getBoundingClientRect().width || 320;
+      const gap = 24;
+      scrollRef.current.scrollTo({ left: index * (cardWidth + gap), behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="py-10 px-4 sm:px-6 bg-[#E8F0F8] relative overflow-hidden">
@@ -99,14 +127,14 @@ const ZohoIndustries = () => {
           
           <div className="flex gap-3">
             <button 
-              onClick={prevSlide}
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] transition-all active:scale-90 cursor-pointer"
+              onClick={() => scroll("left")}
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] hover:bg-white bg-white/50 shadow-sm transition-all active:scale-90 cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <button 
-              onClick={nextSlide}
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] transition-all active:scale-90 cursor-pointer"
+              onClick={() => scroll("right")}
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#1A7FD4] hover:border-[#1A7FD4] hover:bg-white bg-white/50 shadow-sm transition-all active:scale-90 cursor-pointer"
             >
               <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
@@ -115,24 +143,26 @@ const ZohoIndustries = () => {
 
         {/* Industry Carousel */}
         <div className="relative">
-          <div className="overflow-visible">
-            <motion.div 
-              className="flex gap-6 cursor-grab active:cursor-grabbing"
-              drag="x"
-              dragConstraints={{ right: 0, left: 0 }}
-              dragElastic={0.1}
-              onDragEnd={(e, { offset }) => {
-                if (offset.x < -50) nextSlide();
-                else if (offset.x > 50) prevSlide();
-              }}
-              animate={{ x: `calc(-${currentIndex * (100 / visibleCount)}% - ${currentIndex * 24}px)` }}
-              transition={{ type: "spring", stiffness: 120, damping: 20 }}
+          <div 
+            className="overflow-hidden -mx-6 px-6"
+            style={{
+              maskImage: "linear-gradient(to right, transparent, white 24px, white calc(100% - 24px), transparent)",
+              WebkitMaskImage: "linear-gradient(to right, transparent, white 24px, white calc(100% - 24px), transparent)"
+            }}
+          >
+            <div 
+              ref={scrollRef}
+              className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-6 px-1 scrollbar-none"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
               {industries.map((industry, i) => (
                 <div 
                   key={i}
-                  className="flex-shrink-0 select-none"
-                  style={{ width: `calc(${100 / visibleCount}% - ${(visibleCount - 1) * 24 / visibleCount}px)` }}
+                  className="flex-shrink-0 select-none snap-start"
+                  style={{ 
+                    width: `calc(${100 / visibleCount}% - ${(visibleCount - 1) * 24 / visibleCount}px)`,
+                    minWidth: visibleCount === 1 ? "100%" : "280px"
+                  }}
                 >
                   <motion.div
                     className={`${CLAY_CARD} p-5 sm:p-8 group hover:-translate-y-1 transition-all duration-500 h-full min-h-[300px] sm:min-h-[360px] flex flex-col rounded-[20px] sm:rounded-[32px]`}
@@ -163,7 +193,7 @@ const ZohoIndustries = () => {
                   </motion.div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -172,9 +202,9 @@ const ZohoIndustries = () => {
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrentIndex(i)}
+              onClick={() => scrollToActiveDot(i)}
               className={`h-1 sm:h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
-                currentIndex === i ? "w-6 sm:w-8 bg-[#1A7FD4]" : "w-1 sm:w-1.5 bg-slate-200"
+                activeDot === i ? "w-6 sm:w-8 bg-[#1A7FD4]" : "w-1 sm:w-1.5 bg-slate-200"
               }`}
             />
           ))}

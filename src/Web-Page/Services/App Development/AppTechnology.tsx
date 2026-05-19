@@ -15,7 +15,7 @@ const AppTechnology = () => {
       techs: [
         { name: "React Native", sub: "Cross-Platform", icon: Smartphone, color: "#29C6E0", bg: "#E0F7FF", level: 95, desc: "Write once, run natively on iOS and Android with near-native performance." },
         { name: "Swift / SwiftUI", sub: "Native iOS", icon: Zap, color: "#F59E0B", bg: "#FFF8E0", level: 88, desc: "Apple's modern language for building fluid, performant iOS experiences." },
-        { name: "Kotlin", sub: "Native Android", icon: Smartphone, color: "#34C98A", bg: "#E8FFE8", level: 87, desc: "Google's preferred language for Android development — concise and safe." },
+        { name: "Kotlin", sub: "Native Android", icon: Smartphone, color: "#34C98A", bg: "#E8FFE8", level: 87, desc: "Google's preferred language for Android development, concise and safe." },
         { name: "Flutter", sub: "Cross-Platform UI", icon: Layers, color: "#1A7FD4", bg: "#EEF3FF", level: 85, desc: "Google's UI toolkit for building natively compiled apps from a single codebase." }
       ]
     },

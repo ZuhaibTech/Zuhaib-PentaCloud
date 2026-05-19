@@ -348,10 +348,10 @@ const ZohoSyncFlow = () => {
       {icons.map((icon, i) => {
         // Spread positions to ensure complete visibility in a larger container
         const positions = [
-          { top: "5%", left: "12%" },    // Top Left
-          { top: "65%", left: "5%" },    // Bottom Left
-          { top: "0%", left: "70%" },     // Top Right
-          { top: "45%", left: "82%" },    // Mid Right
+          { top: "5%", left: "12%" },   // Top Left
+          { top: "65%", left: "5%" },   // Bottom Left
+          { top: "0%", left: "70%" },    // Top Right
+          { top: "45%", left: "82%" },   // Mid Right
           { top: "80%", left: "45%" }     // Bottom Center
         ];
         

@@ -56,10 +56,10 @@ const OurJourney = () => {
   const milestones = [
     { year: 2020, title: "The Beginning", text: "Pentacloud Consulting founded in Bengaluru with a vision to democratise enterprise technology solutions.", stat: "Day 1", icon: <Rocket />, color: '#1A7FD4' },
     { year: 2021, title: "First Certifications", text: "Achieved first 5 Salesforce certifications, establishing ourselves as a credible partner in South India.", stat: "5 Certs", icon: <Award />, color: '#F59E0B' },
-    { year: 2022, title: "Expanding Horizons", text: "Expanded service offerings to include Cloud Infrastructure, DevOps, and Cybersecurity — serving 25+ clients.", stat: "25+ Clients", icon: <Globe />, color: '#34C98A' },
-    { year: 2023, title: "Partnership Milestones", text: "Became official partners with Salesforce, Zoho, Xero, and Meta — unlocking enterprise capabilities.", stat: "4 Partnerships", icon: <Handshake />, color: '#8B5CF6' },
+    { year: 2022, title: "Expanding Horizons", text: "Expanded service offerings to include Cloud Infrastructure, DevOps, and Cybersecurity, serving 25+ clients.", stat: "25+ Clients", icon: <Globe />, color: '#34C98A' },
+    { year: 2023, title: "Partnership Milestones", text: "Became official partners with Salesforce, Zoho, Xero, and Meta, unlocking enterprise capabilities.", stat: "4 Partnerships", icon: <Handshake />, color: '#8B5CF6' },
     { year: 2024, title: "100+ Projects", text: "Crossed the landmark of 100+ successful project deliveries with 16+ certifications and zero data loss.", stat: "100+ Projects", icon: <Trophy />, color: '#EC4899' },
-    { year: 2025, title: "Going Global", text: "Established UAE presence and expanded digital marketing capabilities — now serving clients globally.", stat: "UAE Expansion", icon: <Star />, color: '#29C6E0' },
+    { year: 2025, title: "Going Global", text: "Established UAE presence and expanded digital marketing capabilities, now serving clients globally.", stat: "UAE Expansion", icon: <Star />, color: '#29C6E0' },
   ];
 
   return (

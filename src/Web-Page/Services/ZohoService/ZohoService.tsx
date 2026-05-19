@@ -5,8 +5,6 @@ import ZohoHero from "./ZohoHero";
 import ZohoApps from "./ZohoApps";
 import ZohoOurServices from "./ZohoOurServices";
 import ZohoIndustries from "./ZohoIndustries";
-import ZohoPackages from "./ZohoPackages";
-import ZohoCTA from "./ZohoCTA";
 import ZohoFAQ from "./ZohoFAQ";
 
 const ZohoService = () => {
@@ -24,14 +22,8 @@ const ZohoService = () => {
       {/* ─── Industries Section ──────────────────────────────────── */}
       <ZohoIndustries />
 
-      {/* ─── Packages Section ────────────────────────────────────── */}
-      <ZohoPackages />
-
       {/* ─── FAQ Section ─────────────────────────────────────────── */}
       <ZohoFAQ />
-
-      {/* ─── CTA Section ─────────────────────────────────────────── */}
-      <ZohoCTA />
     </main>
   );
 };

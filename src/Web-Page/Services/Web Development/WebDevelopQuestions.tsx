@@ -15,14 +15,14 @@ const WebDevelopQuestions = () => {
     },
     { 
       question: "Do you build on WordPress or custom code?", 
-      answer: "Both — we recommend the right approach for your needs. We use WordPress/Webflow for content-heavy sites and Next.js/React for performance-critical applications.",
+      answer: "Both, we recommend the right approach for your needs. We use WordPress/Webflow for content-heavy sites and Next.js/React for performance-critical applications.",
       icon: Code2,
       color: "#34C98A",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=400"
     },
     { 
       question: "Will my website be mobile-friendly?", 
-      answer: "Absolutely — every website we build is mobile-first by default. We test across 20+ screen sizes and aim for 100/100 Mobile scores.",
+      answer: "Absolutely, every website we build is mobile-first by default. We test across 20+ screen sizes and aim for 100/100 Mobile scores.",
       icon: Smartphone,
       color: "#F59E0B",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400"
@@ -36,7 +36,7 @@ const WebDevelopQuestions = () => {
     },
     { 
       question: "Do you provide hosting and maintenance?", 
-      answer: "Yes — we offer high-performance cloud hosting and managed maintenance packages so you can focus on your business while we handle the tech.",
+      answer: "Yes, we offer high-performance cloud hosting and managed maintenance packages so you can focus on your business while we handle the tech.",
       icon: Globe,
       color: "#1A7FD4",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400"

@@ -13,7 +13,7 @@ const services = [
   {
     icon: <Settings />,
     title: "Zoho Implementation",
-    body: "Complete end-to-end Zoho implementation — from requirements gathering and solution design to configuration, data migration, testing, and go-live.",
+    body: "Complete end-to-end Zoho implementation, from requirements gathering and solution design to configuration, data migration, testing, and go-live.",
     included: ["Business requirements analysis", "Solution architecture design", "App configuration & customisation", "Data migration from legacy systems", "Integration with existing tools", "User acceptance testing (UAT)", "Go-live support", "30-day post-implementation support"],
     ideal: "New Zoho customers, Businesses replacing legacy CRM/ERP"
   },
@@ -27,28 +27,28 @@ const services = [
   {
     icon: <GitMerge />,
     title: "Zoho Integration Services",
-    body: "We connect your Zoho ecosystem to the rest of your technology stack — accounting software, eCommerce platforms, and custom in-house systems.",
+    body: "We connect your Zoho ecosystem to the rest of your technology stack, accounting software, eCommerce platforms, and custom in-house systems.",
     included: ["Zoho CRM ↔ Xero / Salesforce", "Zoho Books ↔ Shopify", "Zoho CRM ↔ WhatsApp Business", "Zoho ↔ Google / Microsoft 365", "Zoho Flow automation builds", "Webhook & REST API integration"],
     ideal: "Omni-channel businesses, Enterprise stacks"
   },
   {
     icon: <Database />,
     title: "Zoho Data Migration",
-    body: "We migrate your existing business data into Zoho — contacts, deals, invoices, and historical records — from any source system with full data integrity.",
+    body: "We migrate your existing business data into Zoho, contacts, deals, invoices, and historical records, from any source system with full data integrity.",
     included: ["Salesforce & HubSpot migration", "Microsoft Dynamics migration", "Tally / Tally Prime migration", "QuickBooks migration", "Excel / Google Sheets migration", "Legacy in-house CRM migration"],
     ideal: "Companies switching to Zoho"
   },
   {
     icon: <GraduationCap />,
     title: "Zoho Training Programmes",
-    body: "Comprehensive Zoho training designed for every role — sales, finance, HR, and administrators, delivered on your actual Zoho environment.",
-    included: ["Zoho CRM — Sales & Admin", "Zoho Books — Finance Team", "Zoho One — Admin & IT", "Zoho Campaigns & Desk training", "On-site or virtual delivery", "Certificate of completion"],
+    body: "Comprehensive Zoho training designed for every role, sales, finance, HR, and administrators, delivered on your actual Zoho environment.",
+    included: ["Zoho CRM, Sales & Admin", "Zoho Books, Finance Team", "Zoho One, Admin & IT", "Zoho Campaigns & Desk training", "On-site or virtual delivery", "Certificate of completion"],
     ideal: "New teams, Organisations upskilling staff"
   },
   {
     icon: <Headphones />,
     title: "Ongoing Zoho Support",
-    body: "Monthly managed support for your Zoho environment — covering user additions, configuration changes, new workflows, and troubleshooting.",
+    body: "Monthly managed support for your Zoho environment, covering user additions, configuration changes, new workflows, and troubleshooting.",
     included: ["Monthly support retainers", "4hr, 8hr, or 16hr plans", "48hr response SLA", "Zoho update management", "Quarterly optimisation reviews", "Dedicated account manager"],
     ideal: "Growing SMBs, Enterprise departments"
   }
@@ -188,7 +188,7 @@ const ZohoOurServices = () => {
             Complete Zoho Services <br/> <span className="text-[#1A7FD4]">From Setup to Scale</span>
           </h2>
           <p className="text-[#4A6080] font-inter text-xs sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            We don't just install Zoho. We configure it, integrate it, train your team on it, and support it — ensuring your investment delivers maximum ROI.
+            We don't just install Zoho. We configure it, integrate it, train your team on it, and support it, ensuring your investment delivers maximum ROI.
           </p>
         </div>
 

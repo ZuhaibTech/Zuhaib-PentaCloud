@@ -8,14 +8,14 @@ const SalesforceQuestions = () => {
   const faqs = [
     { 
       question: "How long does a Salesforce implementation take?", 
-      answer: "Timelines vary by complexity — a standard Sales Cloud implementation typically takes 4–8 weeks. Larger multi-cloud projects with custom integrations can take 3–6 months.",
+      answer: "Timelines vary by complexity, a standard Sales Cloud implementation typically takes 4–8 weeks. Larger multi-cloud projects with custom integrations can take 3–6 months.",
       icon: Rocket,
       color: "#1A7FD4",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400"
     },
     { 
       question: "Do we need to already be on Salesforce to work with you?", 
-      answer: "Not at all. We work with businesses at every stage — whether you're evaluating Salesforce for the first time, migrating from another CRM, or looking to optimise an existing Salesforce org.",
+      answer: "Not at all. We work with businesses at every stage, whether you're evaluating Salesforce for the first time, migrating from another CRM, or looking to optimise an existing Salesforce org.",
       icon: Target,
       color: "#34C98A",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400"

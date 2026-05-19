@@ -8,35 +8,35 @@ const DigitalFAQ = () => {
   const faqs = [
     {
       question: "How long before we see results from SEO?",
-      answer: "SEO is a long-term investment — you typically start seeing measurable ranking improvements in 3–4 months, with significant traffic growth by month 5–6. For competitive industries, 12 months is a realistic timeline for dominant rankings. We set honest expectations from day one and provide monthly progress reports showing ranking movement, traffic trends, and domain authority growth.",
+      answer: "SEO is a long-term investment, you typically start seeing measurable ranking improvements in 3–4 months, with significant traffic growth by month 5–6. For competitive industries, 12 months is a realistic timeline for dominant rankings. We set honest expectations from day one and provide monthly progress reports showing ranking movement, traffic trends, and domain authority growth.",
       icon: Search,
       color: "#1A7FD4",
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400"
     },
     {
       question: "What is the minimum ad spend required for Google or Meta Ads?",
-      answer: "For Google Ads, we recommend a minimum monthly ad spend of ₹50,000 to generate meaningful data and results. For Meta Ads, ₹30,000 per month is the minimum effective budget. These are ad spend budgets paid directly to Google/Meta — separate from our management fee. We can work with lower budgets for testing phases.",
+      answer: "For Google Ads, we recommend a minimum monthly ad spend of ₹50,000 to generate meaningful data and results. For Meta Ads, ₹30,000 per month is the minimum effective budget. These are ad spend budgets paid directly to Google/Meta, separate from our management fee. We can work with lower budgets for testing phases.",
       icon: BarChart2,
       color: "#34C98A",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=400"
     },
     {
       question: "Do you manage the ad accounts or do we need to set them up?",
-      answer: "We handle everything — account creation, pixel setup, conversion tracking, campaign structure, creative production, and ongoing management. All ad accounts are set up under your business ownership so you retain full access and data ownership at all times. We never hold client accounts hostage.",
+      answer: "We handle everything, account creation, pixel setup, conversion tracking, campaign structure, creative production, and ongoing management. All ad accounts are set up under your business ownership so you retain full access and data ownership at all times. We never hold client accounts hostage.",
       icon: Target,
       color: "#F59E0B",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400"
     },
     {
       question: "Can you integrate marketing with our Salesforce CRM?",
-      answer: "Yes — as a certified Salesforce and Zoho partner, this is one of our key differentiators. We connect your marketing campaigns directly to your CRM — tracking leads from first click through to closed deal. This gives you true revenue attribution and helps your sales team prioritise the hottest marketing leads automatically.",
+      answer: "Yes, as a certified Salesforce and Zoho partner, this is one of our key differentiators. We connect your marketing campaigns directly to your CRM, tracking leads from first click through to closed deal. This gives you true revenue attribution and helps your sales team prioritise the hottest marketing leads automatically.",
       icon: Cloud,
       color: "#8B5CF6",
       image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=400"
     },
     {
       question: "Do you work with businesses outside India?",
-      answer: "Yes — we serve clients across India and the Middle East (UAE, Saudi Arabia, Qatar). We have local market expertise in both geographies — understanding platform preferences, content sensitivities, and digital advertising regulations in each market. Our team operates across IST and Gulf Standard Time to ensure responsive support.",
+      answer: "Yes, we serve clients across India and the Middle East (UAE, Saudi Arabia, Qatar). We have local market expertise in both geographies, understanding platform preferences, content sensitivities, and digital advertising regulations in each market. Our team operates across IST and Gulf Standard Time to ensure responsive support.",
       icon: Globe,
       color: "#1A7FD4",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400"

@@ -24,7 +24,7 @@ const CloudWhy = () => {
       icon: Search,
       color: "#34C98A",
       title: "No-Obligation Assessment",
-      desc: "We start with a free cloud audit — real findings, no sales pitch. Know your infrastructure health before you commit.",
+      desc: "We start with a free cloud audit, real findings, no sales pitch. Know your infrastructure health before you commit.",
       badge: "Free Audit",
       visual: "audit",
       image: "https://images.unsplash.com/photo-1454165833762-0204b2816718?auto=format&fit=crop&q=80&w=800"
@@ -143,7 +143,7 @@ const CloudWhy = () => {
               <span className="text-[#1A7FD4]">Our Obsession</span>
             </h2>
             <p className="text-[#4A6080] font-inter text-xs sm:text-lg leading-relaxed max-w-lg">
-              We combine deep technical certification with real-world infrastructure expertise — delivering cloud solutions that genuinely transform how your business performs.
+              We combine deep technical certification with real-world infrastructure expertise, delivering cloud solutions that genuinely transform how your business performs.
             </p>
           </div>
 

@@ -25,11 +25,11 @@ const OurExpertise = () => {
   }, []);
 
   const clouds = [
-    { title: "Sales Cloud", icon: TrendingUp, bg: "#EEF3FF", color: "#1A7FD4", desc: "Supercharge your sales pipeline with AI-driven lead scoring and opportunity management.", metric: "↑ 45% faster closure", metricBg: "#E8FFE8", metricColor: "#34C98A" },
-    { title: "Service Cloud", icon: HeadphonesIcon, bg: "#E0F7FF", color: "#29C6E0", desc: "Transform customer service with AI-powered routing and self-service portals.", metric: "↓ 60% resolution time", metricBg: "#E0F7FF", metricColor: "#29C6E0" },
-    { title: "Marketing Cloud", icon: Megaphone, bg: "#FFE8F0", color: "#EC4899", desc: "Deliver personalised customer journeys across email, SMS, and social media.", metric: "↑ 200% engagement", metricBg: "#FFE8F0", metricColor: "#EC4899" },
-    { title: "Experience Cloud", icon: Users, bg: "#F3E8FF", color: "#8B5CF6", desc: "Build branded portals for customers, partners, and self-service communities.", metric: "↑ 80% self-service", metricBg: "#F3E8FF", metricColor: "#8B5CF6" },
-    { title: "Commerce Cloud", icon: ShoppingCart, bg: "#FFF8E0", color: "#F59E0B", desc: "Launch and scale B2B/B2C commerce with AI-powered merchandising.", metric: "↑ 35% conversion", metricBg: "#FFF8E0", metricColor: "#F59E0B" },
+    { title: "Sales Cloud", icon: TrendingUp, bg: "#EEF3FF", color: "#1A7FD4", desc: "Supercharge your sales pipeline with AI-driven lead scoring and opportunity management.", metric: "45% faster closure ↑", metricBg: "#E8FFE8", metricColor: "#34C98A" },
+    { title: "Service Cloud", icon: HeadphonesIcon, bg: "#E0F7FF", color: "#29C6E0", desc: "Transform customer service with AI-powered routing and self-service portals.", metric: "60% resolution time ↓", metricBg: "#E0F7FF", metricColor: "#29C6E0" },
+    { title: "Marketing Cloud", icon: Megaphone, bg: "#FFE8F0", color: "#EC4899", desc: "Deliver personalised customer journeys across email, SMS, and social media.", metric: "200% engagement ↑", metricBg: "#FFE8F0", metricColor: "#EC4899" },
+    { title: "Experience Cloud", icon: Users, bg: "#F3E8FF", color: "#8B5CF6", desc: "Build branded portals for customers, partners, and self-service communities.", metric: "80% self-service ↑", metricBg: "#F3E8FF", metricColor: "#8B5CF6" },
+    { title: "Commerce Cloud", icon: ShoppingCart, bg: "#FFF8E0", color: "#F59E0B", desc: "Launch and scale B2B/B2C commerce with AI-powered merchandising.", metric: "35% conversion ↑", metricBg: "#FFF8E0", metricColor: "#F59E0B" },
     { title: "Analytics Cloud", icon: BarChart2, bg: "#E8FFE8", color: "#34C98A", desc: "Turn CRM data into insights with real-time Einstein Analytics dashboards.", metric: "Real-time insights", metricBg: "#E8FFE8", metricColor: "#34C98A" },
     { title: "Financial Services", icon: DollarSign, bg: "#EEF3FF", color: "#1A7FD4", desc: "Purpose-built CRM for banks, insurance, and wealth management firms.", metric: "HIPAA + GDPR Ready", metricBg: "#EEF3FF", metricColor: "#1A7FD4" },
     { title: "Health Cloud", icon: Heart, bg: "#FFE8F0", color: "#EC4899", desc: "Connect patients and care teams in a unified platform with HIPAA compliance.", metric: "Full Compliance", metricBg: "#FFE8F0", metricColor: "#EC4899" }

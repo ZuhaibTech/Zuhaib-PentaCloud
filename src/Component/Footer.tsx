@@ -198,7 +198,7 @@ const Footer = () => {
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-blue-400 transition-colors" />
                   </div>
                   <span className="text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5 sm:mt-1 group-hover:text-white transition-colors">
-                    Jagan Arcade, 4th Floor, 1st Main Road,<br />Anandnagar, RT Nagar, Bengaluru — 560032,<br />Karnataka, India
+                    Jagan Arcade, 4th Floor, 1st Main Road,<br />Anandnagar, RT Nagar, Bengaluru, 560032,<br />Karnataka, India
                   </span>
                 </li>
                 <li className="flex items-center gap-3 sm:gap-4 group cursor-pointer">

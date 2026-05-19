@@ -11,7 +11,7 @@ const CloudPlatforms = () => {
       sub: "Primary Cloud Partner",
       icon: Cloud,
       color: "#F59E0B",
-      desc: "EC2, S3, RDS, Lambda, CloudFront, VPC, IAM — certified AWS architecture deployments with cost optimisation reviews.",
+      desc: "EC2, S3, RDS, Lambda, CloudFront, VPC, IAM, certified AWS architecture deployments with cost optimisation reviews.",
       cert: "AWS Solutions Architect",
       level: 95
     },
@@ -20,7 +20,7 @@ const CloudPlatforms = () => {
       sub: "Enterprise Cloud",
       icon: Cloud,
       color: "#1A7FD4",
-      desc: "Azure AD, Virtual Machines, AKS, Azure DevOps, Microsoft 365 integration — ideal for Microsoft-first enterprises.",
+      desc: "Azure AD, Virtual Machines, AKS, Azure DevOps, Microsoft 365 integration, ideal for Microsoft-first enterprises.",
       cert: "Azure Administrator",
       level: 90
     },
@@ -29,7 +29,7 @@ const CloudPlatforms = () => {
       icon: Cloud,
       sub: "Modern Cloud",
       color: "#34C98A",
-      desc: "GKE, BigQuery, Cloud Run, Vertex AI, Firebase — GCP expertise for modern data-intensive and AI-powered workloads.",
+      desc: "GKE, BigQuery, Cloud Run, Vertex AI, Firebase, GCP expertise for modern data-intensive and AI-powered workloads.",
       cert: "GCP Cloud Engineer",
       level: 87
     },
@@ -38,7 +38,7 @@ const CloudPlatforms = () => {
       icon: Server,
       sub: "On-Premise + Cloud",
       color: "#8B5CF6",
-      desc: "VMware, Hyper-V, and OpenStack deployments — hybrid architectures bridging on-premise datacenters with public cloud.",
+      desc: "VMware, Hyper-V, and OpenStack deployments, hybrid architectures bridging on-premise datacenters with public cloud.",
       cert: "VMware VCP",
       level: 85
     }

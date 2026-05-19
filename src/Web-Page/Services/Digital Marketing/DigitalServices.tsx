@@ -16,14 +16,14 @@ const servicesData = [
   {
     icon: <TrendingUp className="text-[#29C6E0]" />,
     title: "Search Engine Marketing (PPC)",
-    body: "We manage high-performance Google Ads and Bing Ads campaigns — keyword research, ad copy, landing page alignment, bid strategy, and conversion tracking — ensuring every rupee of ad spend generates maximum leads.",
+    body: "We manage high-performance Google Ads and Bing Ads campaigns, keyword research, ad copy, landing page alignment, bid strategy, and conversion tracking, ensuring every rupee of ad spend generates maximum leads.",
     included: ["Google Ads Campaign Setup", "Keyword Research & Bidding", "Ad Copywriting & A/B Testing", "Landing Page Recommendations", "Conversion Tracking Setup", "Remarketing Campaigns", "Weekly Performance Reports", "Monthly Budget Optimisation"],
     metric: "Avg 65% reduction in cost per lead"
   },
   {
     icon: <Share2 className="text-[#8B5CF6]" />,
     title: "Social Media Management",
-    body: "We manage your brand's presence across LinkedIn, Instagram, Facebook, and X — creating content calendars, designing posts, writing captions, scheduling, and community management. Every post serves a strategic purpose.",
+    body: "We manage your brand's presence across LinkedIn, Instagram, Facebook, and X, creating content calendars, designing posts, writing captions, scheduling, and community management. Every post serves a strategic purpose.",
     included: ["Content Calendar Planning", "Graphic Design for Posts", "Caption Copywriting", "Hashtag Research & Strategy", "Scheduling & Publishing", "Community Management", "Story & Reel Creation", "Monthly Analytics Report"],
     platforms: "LinkedIn · Instagram · Facebook · X (Twitter)",
     metric: "Avg 220% increase in social engagement"
@@ -38,7 +38,7 @@ const servicesData = [
   {
     icon: <Mail className="text-[#EC4899]" />,
     title: "Email Marketing & Automation",
-    body: "Email remains the highest ROI digital channel — averaging $42 return per $1 spent. We design email campaigns, build automated nurture sequences, segment your lists, and A/B test subject lines to improve conversions.",
+    body: "Email remains the highest ROI digital channel, averaging $42 return per $1 spent. We design email campaigns, build automated nurture sequences, segment your lists, and A/B test subject lines to improve conversions.",
     included: ["Email Template Design", "Campaign Copywriting", "List Segmentation & Cleaning", "Automated Nurture Sequences", "A/B Testing (Subject + Content)", "Deliverability Optimisation", "Unsubscribe Management", "Monthly Performance Report"],
     platforms: "Mailchimp · HubSpot · Zoho Campaigns · Klaviyo",
     metric: "Avg 42% open rate vs industry avg of 21%"
@@ -46,7 +46,7 @@ const servicesData = [
   {
     icon: <Megaphone className="text-[#34C98A]" />,
     title: "Paid Social Advertising",
-    body: "We run performance-driven paid campaigns across Meta (Facebook + Instagram), LinkedIn, and YouTube — audience research, creative strategy, ad design, copywriting, and pixel setup. We focus on qualified lead generation.",
+    body: "We run performance-driven paid campaigns across Meta (Facebook + Instagram), LinkedIn, and YouTube, audience research, creative strategy, ad design, copywriting, and pixel setup. We focus on qualified lead generation.",
     included: ["Meta Ads (FB + Instagram)", "LinkedIn Lead Gen Campaigns", "YouTube Video Ads", "Audience Research & Targeting", "Creative Strategy & Design", "Pixel & Conversion API Setup", "Lookalike Audience Building", "Monthly ROI Reporting"],
     metric: "Avg 4.2x ROAS across paid campaigns"
   }
@@ -67,7 +67,7 @@ const DigitalServices = () => {
           Complete Digital Marketing <br/> <span className="text-[#1A7FD4]">Service Suite</span>
         </h2>
         <p className="text-[#4A6080] max-w-2xl mx-auto font-inter text-xs sm:text-base md:text-lg leading-relaxed px-2">
-          Every channel. Every tactic. All under one roof — strategically aligned to grow your business.
+          Every channel. Every tactic. All under one roof, strategically aligned to grow your business.
         </p>
       </div>
 

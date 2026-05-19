@@ -8,14 +8,14 @@ const ConsultingFAQ = () => {
   const faqs = [
     {
       question: "What is the difference between your consulting and implementation services?",
-      answer: "Consulting is advisory — we analyse your situation, provide recommendations, and deliver strategy documents and roadmaps that guide your decisions. Implementation is execution — we actually build, configure, and deploy the technology. Many clients start with consulting to validate their strategy, then engage us for implementation.",
+      answer: "Consulting is advisory, we analyse your situation, provide recommendations, and deliver strategy documents and roadmaps that guide your decisions. Implementation is execution, we actually build, configure, and deploy the technology. Many clients start with consulting to validate their strategy, then engage us for implementation.",
       icon: Users,
       color: "#1A7FD4",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400"
     },
     {
       question: "Can training be delivered in languages other than English?",
-      answer: "Yes — we deliver training in English, Hindi, Kannada, and Tamil for Indian clients, and English and Arabic for UAE clients. Training materials can be provided in multiple languages for corporate programmes. Please specify your language preference when booking.",
+      answer: "Yes, we deliver training in English, Hindi, Kannada, and Tamil for Indian clients, and English and Arabic for UAE clients. Training materials can be provided in multiple languages for corporate programmes. Please specify your language preference when booking.",
       icon: Globe,
       color: "#34C98A",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400"
@@ -29,7 +29,7 @@ const ConsultingFAQ = () => {
     },
     {
       question: "Can you train our team on our own Salesforce org?",
-      answer: "Yes — and we strongly recommend it. Training on your actual Salesforce org (using a sandbox copy) makes learning immediately applicable to daily work. Participants recognise the fields, processes, and layouts they use every day — dramatically improving retention and adoption.",
+      answer: "Yes, and we strongly recommend it. Training on your actual Salesforce org (using a sandbox copy) makes learning immediately applicable to daily work. Participants recognise the fields, processes, and layouts they use every day, dramatically improving retention and adoption.",
       icon: Cloud,
       color: "#8B5CF6",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=400"
@@ -43,7 +43,7 @@ const ConsultingFAQ = () => {
     },
     {
       question: "Do you offer ongoing support after engagements?",
-      answer: "Yes — every consulting engagement includes a minimum 30-day follow-up support period. Every training programme includes 30–60 days of post-training support. For clients wanting longer-term advisory, our monthly consulting retainer provides ongoing access to our experts.",
+      answer: "Yes, every consulting engagement includes a minimum 30-day follow-up support period. Every training programme includes 30–60 days of post-training support. For clients wanting longer-term advisory, our monthly consulting retainer provides ongoing access to our experts.",
       icon: Shield,
       color: "#34C98A",
       image: "https://images.unsplash.com/photo-1454165833767-131f36967718?auto=format&fit=crop&q=80&w=400"

@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import { ShieldCheck, BarChart3, Star, Zap } from "lucide-react";
 
 const differentiators = [
-  { title: "We're Technology + Marketing", body: "Unlike typical agencies, Pentacloud combines digital marketing with Salesforce CRM and automation — giving you a complete lead-to-close revenue engine." },
-  { title: "100% Transparent Reporting", body: "No vanity metrics. No fluff. Every report shows real business impact — leads generated, cost per lead, revenue attributed, and ROI calculated." },
-  { title: "Industry-Specific Strategies", body: "We build strategies tailored to your industry — Healthcare, Finance, Retail, SaaS, and Enterprise — understanding buyer journeys and competition." },
-  { title: "Integrated CRM & Marketing", body: "As a certified Salesforce and Zoho partner, we connect your campaigns directly to your CRM — tracking every lead from first click to closed deal." },
-  { title: "Creative + Data Combined", body: "We believe great marketing needs both — compelling creative that stops the scroll AND rigorous data analysis that optimises performance." },
-  { title: "No Long-Term Lock-In", body: "We work on rolling monthly engagements — no 12-month contracts that trap you. We earn your business every month through results." },
+  { title: "We're Technology + Marketing", body: "Unlike typical agencies, Pentacloud combines digital marketing with Salesforce CRM and automation, giving you a complete lead-to-close revenue engine." },
+  { title: "100% Transparent Reporting", body: "No vanity metrics. No fluff. Every report shows real business impact, leads generated, cost per lead, revenue attributed, and ROI calculated." },
+  { title: "Industry-Specific Strategies", body: "We build strategies tailored to your industry, Healthcare, Finance, Retail, SaaS, and Enterprise, understanding buyer journeys and competition." },
+  { title: "Integrated CRM & Marketing", body: "As a certified Salesforce and Zoho partner, we connect your campaigns directly to your CRM, tracking every lead from first click to closed deal." },
+  { title: "Creative + Data Combined", body: "We believe great marketing needs both, compelling creative that stops the scroll AND rigorous data analysis that optimises performance." },
+  { title: "No Long-Term Lock-In", body: "We work on rolling monthly engagements, no 12-month contracts that trap you. We earn your business every month through results." },
   { title: "Meta & Google Partner Status", body: "Our partnership gives us access to beta features, priority support, and advanced audience tools not available to standard advertisers." },
-  { title: "India + UAE Market Expertise", body: "Deep understanding of both Indian and Middle Eastern digital markets — consumer behaviour, platform preferences, and cultural nuances." }
+  { title: "India + UAE Market Expertise", body: "Deep understanding of both Indian and Middle Eastern digital markets, consumer behaviour, platform preferences, and cultural nuances." }
 ];
 
 const DigitalWhyPentacloud = () => {
