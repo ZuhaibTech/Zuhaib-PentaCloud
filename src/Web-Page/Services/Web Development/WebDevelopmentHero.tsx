@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronDown, Zap, Target, Smartphone, Globe, Shield, ShieldCheck } from "lucide-react";
+import { ArrowRight, ChevronDown, Zap, Target, Smartphone, Globe, Shield, ShieldCheck, Gauge } from "lucide-react";
 
 const CLAY_BUTTON = "rounded-[50px] shadow-[0_8px_20px_rgba(26,127,212,0.30),inset_0_-3px_0_rgba(0,0,0,0.12)]";
 
@@ -109,23 +109,23 @@ const WebDevelopmentHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="font-inter text-[10px] sm:text-[13px] text-[#8BA4BE] flex flex-wrap items-center gap-2 sm:gap-4"
+            className="font-inter text-[11px] sm:text-[13px] text-[#8BA4BE] flex flex-wrap items-center gap-3 sm:gap-4"
           >
-            <span className="flex items-center gap-1"><Shield className="w-3 h-3 text-[#34C98A]" /> Secure by Default</span>
+            <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-[#34C98A]" /> Secure by Default</span>
             <span className="hidden sm:inline text-slate-300">·</span>
-            <span className="flex items-center gap-1"><Smartphone className="w-3 h-3 text-[#1A7FD4]" /> Mobile First</span>
+            <span className="flex items-center gap-1.5"><Smartphone className="w-4 h-4 text-[#1A7FD4]" /> Mobile First</span>
             <span className="hidden sm:inline text-slate-300">·</span>
-            <span className="flex items-center gap-1"><Zap className="w-3 h-3 text-[#F59E0B]" fill="#F59E0B" /> Core Web Vitals</span>
+            <span className="flex items-center gap-1.5"><Gauge className="w-4 h-4 text-[#F59E0B]" /> Core Web Vitals</span>
           </motion.div>
         </div>
 
         {/* Right Column - Browser Mockup */}
         <div className="relative flex items-start justify-center w-full max-w-full px-2 sm:px-8 lg:px-0 mt-6 lg:mt-0 overflow-hidden sm:overflow-visible lg:self-start lg:pt-10 xl:pt-16">
-          <motion.div
+           <motion.div
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, type: "spring", delay: 0.3 }}
-            className={`relative w-full max-w-[450px] lg:max-w-[600px] aspect-[16/10] bg-white rounded-2xl sm:rounded-[32px] shadow-[12px_12px_40px_rgba(26,127,212,0.15)] group`}
+            className={`relative w-full max-w-[450px] lg:max-w-[500px] xl:max-w-[540px] aspect-[16/10] bg-white rounded-2xl sm:rounded-[32px] shadow-[12px_12px_40px_rgba(26,127,212,0.15)] group`}
           >
             {/* Browser Content Wrapper (Clipped) */}
             <div className="absolute inset-0 rounded-2xl sm:rounded-[32px] overflow-hidden">
@@ -202,7 +202,7 @@ const WebDevelopmentHero = () => {
             <motion.div
               animate={{ y: [-8, 8, -8] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-2 sm:-right-6 top-1/3 bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-[20px] shadow-xl flex flex-col gap-1.5 sm:gap-2 z-20 w-[110px] sm:w-[160px]"
+              className="absolute -right-2 sm:-right-3 top-1/3 bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-[20px] shadow-xl flex flex-col gap-1.5 sm:gap-2 z-20 w-[110px] sm:w-[160px]"
             >
               <div className="font-nunito font-bold text-[8px] sm:text-[12px] text-[#0D1B2A] truncate">Page Load Speed</div>
               <div className="flex items-center justify-between">

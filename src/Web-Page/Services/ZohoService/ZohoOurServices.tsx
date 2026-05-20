@@ -48,7 +48,7 @@ const services = [
   {
     icon: <Headphones />,
     title: "Ongoing Zoho Support",
-    body: "Monthly managed support for your Zoho environment, covering user additions, configuration changes, new workflows, and troubleshooting.",
+    body: "Pentacloud is a certified Zoho Partner delivering end-to-end consulting, implementation, integration, and training services that help businesses across India and the UAE maximize their Zoho investment and scale smarter.",
     included: ["Monthly support retainers", "4hr, 8hr, or 16hr plans", "48hr response SLA", "Zoho update management", "Quarterly optimisation reviews", "Dedicated account manager"],
     ideal: "Growing SMBs, Enterprise departments"
   }
@@ -80,7 +80,7 @@ const ServiceCard = ({ service, index }: { service: (typeof services)[0]; index:
         {/* Header Section: Icon & Title */}
         <motion.div 
           layout
-          className={`flex ${isExpanded ? "flex-row items-center gap-3 mb-4 sm:mb-6" : "flex-col items-center text-center mb-4 sm:mb-8"}`}
+          className={`flex ${isExpanded ? "flex-row items-center gap-3 mb-3 sm:mb-4" : "flex-col items-center text-center mb-2 sm:mb-4"}`}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
         >
           <motion.div 
@@ -109,7 +109,7 @@ const ServiceCard = ({ service, index }: { service: (typeof services)[0]; index:
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 className="flex flex-col items-center text-center h-full justify-center min-w-0 w-full"
               >
-                <p className="text-xs sm:text-sm text-[#4A6080] font-inter font-medium leading-relaxed max-w-[260px] mb-6 sm:mb-10 line-clamp-5 sm:line-clamp-none">
+                <p className="text-xs sm:text-sm text-[#4A6080] font-inter font-medium leading-relaxed max-w-[260px] mb-4 sm:mb-6 line-clamp-5 sm:line-clamp-none">
                   {service.body}
                 </p>
                 <button

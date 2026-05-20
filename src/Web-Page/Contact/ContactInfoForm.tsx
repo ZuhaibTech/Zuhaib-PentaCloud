@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Phone, Mail, CheckCircle2, Loader2, Clock, ShieldCheck, Zap, MessageCircle, ChevronDown, Send
+  Phone, Mail, CheckCircle2, Loader2, Clock, ShieldCheck, Zap, MessageCircle, ChevronDown, Send, Lock
 } from "lucide-react";
 import { CLAY_CARD, CLAY_INPUT } from "./Constants";
 import ContactLocations from "./ContactLocations";
@@ -110,8 +110,8 @@ const FormBlock = ({ handleSubmit, formStatus, agreed, setAgreed, formData, setF
           onChange={(val: string) => setFormData({ ...formData, source: val })}
         />
 
-        <div className="flex items-start gap-3 px-2">
-          <div className="mt-0.5 shrink-0">
+        <div className="flex items-center gap-3 px-2">
+          <div className="shrink-0 flex">
              <input 
                id="consent" 
                type="checkbox" 
@@ -121,7 +121,7 @@ const FormBlock = ({ handleSubmit, formStatus, agreed, setAgreed, formData, setF
                className="w-4 h-4 rounded border-[#1A7FD4]/20 text-[#1A7FD4] focus:ring-[#1A7FD4]/20 cursor-pointer" 
              />
           </div>
-          <label htmlFor="consent" className="text-[10px] sm:text-xs text-[#4A6080] font-inter leading-relaxed cursor-pointer select-none">
+          <label htmlFor="consent" className="text-[10px] sm:text-xs text-[#4A6080] font-inter leading-relaxed cursor-pointer select-none pt-[2px]">
             I agree to Pentacloud Consulting storing my details to respond to this enquiry.
           </label>
         </div>
@@ -211,16 +211,17 @@ const ContactInfoForm = () => {
                   Whether you have a project in mind, need expert advice, or just want to explore how Pentacloud can help your business grow.
                 </p>
                 
-                <div className="flex flex-wrap gap-2.5 sm:gap-4 mb-6">
+                <div className="flex flex-wrap gap-3 sm:gap-4 mb-8">
                   {[
-                    { text: "⚡ Response Within 24hrs", color: "text-[#1A7FD4]" },
-                    { text: "🔒 100% Confidential", color: "text-[#34C98A]" }
+                    { icon: <Zap size={14} className="text-[#1A7FD4] shrink-0 animate-pulse" />, text: "Response Within 24hrs", color: "text-[#1A7FD4]", border: "border-[#1A7FD4]/10" },
+                    { icon: <Lock size={14} className="text-[#34C98A] shrink-0" />, text: "100% Confidential", color: "text-[#34C98A]", border: "border-[#34C98A]/10" }
                   ].map((pill, i) => (
                     <div 
                       key={i} 
-                      className="bg-background px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-[1.5px_1.5px_4px_rgba(163,185,210,0.25),-1.5px_-1.5px_4px_rgba(255,255,255,0.7)] flex items-center gap-1.5"
+                      className={`bg-white/60 backdrop-blur-sm px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-full shadow-[3px_3px_10px_rgba(163,185,210,0.15),-3px_-3px_10px_rgba(255,255,255,0.8)] border ${pill.border} flex items-center gap-2 hover:scale-[1.03] hover:shadow-md transition-all duration-300`}
                     >
-                      <span className={`font-nunito font-bold text-[10px] sm:text-xs ${pill.color}`}>{pill.text}</span>
+                      {pill.icon}
+                      <span className={`font-nunito font-extrabold text-[10px] sm:text-xs tracking-wide ${pill.color}`}>{pill.text}</span>
                     </div>
                   ))}
                 </div>
@@ -257,66 +258,78 @@ const ContactInfoForm = () => {
               {/* Follow Us Section - aligned in exactly 1 line */}
               <div>
                 <span className="font-nunito font-black text-[#0D1B2A] uppercase tracking-wider text-[9px] sm:text-[10px] mb-3 block">FOLLOW US</span>
-                <div className="grid grid-cols-4 gap-2 sm:gap-4">
+                <div className="grid grid-cols-4 gap-2.5 sm:gap-4">
                   {[
                     { 
                       label: "LinkedIn", 
-                      color: "bg-[#0A66C2]", 
                       url: "https://www.linkedin.com/company/pentacloudconsulting/",
                       icon: (
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-[360deg]">
                           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                           <rect x="2" y="9" width="4" height="12" />
                           <circle cx="4" cy="4" r="2" />
                         </svg>
-                      )
+                      ),
+                      hoverClass: "group-hover:text-white group-hover:bg-[#0A66C2] group-hover:shadow-[0_8px_20px_rgba(10,102,194,0.3)]",
+                      hoverText: "group-hover:text-[#0A66C2]",
+                      borderColor: "hover:border-[#0A66C2]/40"
                     },
                     { 
                       label: "Instagram", 
-                      color: "bg-[#E4405F]", 
                       url: "https://www.instagram.com/pentacloud.in?igsh=MWt5dnF1N25iYmFnOA%3D%3D",
                       icon: (
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-[360deg]">
                           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                         </svg>
-                      )
+                      ),
+                      hoverClass: "group-hover:text-white group-hover:bg-gradient-to-tr group-hover:from-[#FD1D1D] group-hover:via-[#E1306C] group-hover:to-[#C13584] group-hover:shadow-[0_8px_20px_rgba(225,48,108,0.3)]",
+                      hoverText: "group-hover:text-[#E1306C]",
+                      borderColor: "hover:border-[#E1306C]/40"
                     },
                     { 
                       label: "Facebook", 
-                      color: "bg-[#1877F2]", 
                       url: "https://www.facebook.com/profile.php?id=61573242994665&mibextid=wwXIfr&rdid=a9vdt4aEsAkRZwBi&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CP9RauVy6%2F%3Fmibextid%3DwwXIfr#",
                       icon: (
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-[360deg]">
                           <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                         </svg>
-                      )
+                      ),
+                      hoverClass: "group-hover:text-white group-hover:bg-[#1877F2] group-hover:shadow-[0_8px_20px_rgba(24,119,242,0.3)]",
+                      hoverText: "group-hover:text-[#1877F2]",
+                      borderColor: "hover:border-[#1877F2]/40"
                     },
                     { 
-                      label: "X", 
-                      color: "bg-[#000000]", 
+                      label: "X (Twitter)", 
                       url: "https://x.com/pentacloudind?s=21",
                       icon: (
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-[360deg]">
                           <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
                           <path d="M20 4L4 20" />
                         </svg>
-                      )
+                      ),
+                      hoverClass: "group-hover:text-white group-hover:bg-[#000000] group-hover:shadow-[0_8px_20px_rgba(0,0,0,0.3)]",
+                      hoverText: "group-hover:text-black",
+                      borderColor: "hover:border-black/40"
                     }
                   ].map((social, i) => (
-                    <a 
+                    <motion.a 
                       key={i} 
                       href={social.url} 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex flex-col items-center justify-center p-2.5 sm:p-3 ${CLAY_CARD} hover:shadow-lg transition-all group rounded-[16px] sm:rounded-[20px] text-center`}
+                      whileHover={{ y: -5, scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      className={`flex flex-col items-center justify-center p-3 sm:p-4 bg-white/40 backdrop-blur-md rounded-2xl border border-white/60 shadow-[3px_3px_10px_rgba(163,185,210,0.15),-3px_-3px_10px_rgba(255,255,255,0.7)] ${social.borderColor} transition-all duration-300 group text-center cursor-pointer`}
                     >
-                      <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg ${social.color} text-white flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-transform`}>
+                      <div className={`w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-white shadow-[1px_1px_3px_rgba(163,185,210,0.15),-1px_-1px_3px_rgba(255,255,255,0.8)] text-[#4A6080] flex items-center justify-center shrink-0 transition-all duration-300 ${social.hoverClass}`}>
                         {social.icon}
                       </div>
-                      <span className="font-nunito font-black text-[9px] sm:text-[11px] text-[#0D1B2A] mt-1.5 leading-none">{social.label}</span>
-                    </a>
+                      <span className={`font-nunito font-extrabold text-[9px] sm:text-xs text-[#4A6080] ${social.hoverText} mt-2 sm:mt-2.5 transition-colors duration-300 uppercase tracking-wider`}>
+                        {social.label.split(" ")[0]}
+                      </span>
+                    </motion.a>
                   ))}
                 </div>
               </div>

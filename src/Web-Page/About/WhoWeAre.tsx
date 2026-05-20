@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe, Zap, TrendingUp } from "lucide-react";
+import { Globe, Zap, TrendingUp, Handshake, ShieldCheck, Award, MapPin, Sparkles, Layers } from "lucide-react";
 
 const WhoWeAre = () => {
   const [cards, setCards] = useState([0, 1, 2]); // Indices of the cards in order
@@ -34,39 +34,125 @@ const WhoWeAre = () => {
   };
 
   const cardContent = [
-    // Card 1 (Blue - Front)
-    <div key="front" className="w-full h-full flex flex-col justify-between p-6 sm:p-10 bg-gradient-to-br from-[#1A7FD4] to-[#0D5FA3] rounded-[24px] sm:rounded-[40px] shadow-[15px_15px_30px_rgba(26,127,212,0.25)] text-white overflow-hidden relative">
-      <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
-      <div className="font-nunito font-black italic text-xl sm:text-2xl md:text-[32px] leading-tight mt-4 sm:mt-6 relative z-10">
-        "Journey Towards Success"
+    // Card 1 (Brand/Vision Card)
+    <div key="front" className="w-full h-full flex flex-col justify-between p-8 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] rounded-[32px] sm:rounded-[40px] shadow-[0_25px_50px_-12px_rgba(26,127,212,0.3)] text-white overflow-hidden relative border border-white/10 group">
+      {/* Background Decorative Glow */}
+      <div className="absolute top-[-20%] right-[-20%] w-[180px] h-[180px] bg-blue-500/30 rounded-full filter blur-[40px] pointer-events-none group-hover:scale-110 transition-transform duration-700" />
+      <div className="absolute bottom-[-10%] left-[-10%] w-[150px] h-[150px] bg-cyan-500/20 rounded-full filter blur-[35px] pointer-events-none" />
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '16px 16px' }} />
+
+      <div className="flex justify-between items-start relative z-10 w-full">
+        <span className="text-[10px] uppercase tracking-[3px] font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
+          Our Core Vision
+        </span>
+        <Sparkles className="w-5 h-5 text-blue-400 animate-pulse" />
       </div>
-      <div className="relative z-10">
-        <img 
-          src="/Logo/Penta Logo.png" 
-          alt="Penta Logo" 
-          className="h-8 sm:h-10 object-contain brightness-0 invert opacity-45" 
-        />
+
+      <div className="font-nunito font-extrabold italic text-xl sm:text-2xl md:text-[25px] leading-snug mt-6 mb-6 text-slate-100 relative z-10 drop-shadow-sm">
+        "Empowering businesses through cutting-edge technology and human-centric engineering."
+      </div>
+
+      <div className="flex items-center justify-between relative z-10 pt-4 border-t border-white/10 w-full">
+        <div className="flex flex-col text-left">
+          <span className="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Innovation Partner</span>
+          <span className="text-xs text-white font-medium">Pentacloud Consulting</span>
+        </div>
+        <div className="bg-white/5 backdrop-blur-md border border-white/15 px-3 py-1.5 rounded-xl flex items-center justify-center">
+          <img 
+            src="/Logo/Penta Logo.png" 
+            alt="Penta Logo" 
+            className="h-5 object-contain brightness-0 invert opacity-90" 
+          />
+        </div>
       </div>
     </div>,
-    // Card 2 (Light - Middle)
-    <div key="middle" className="w-full h-full flex flex-col justify-center gap-4 sm:gap-6 p-6 sm:p-10 bg-[#E8F0F8] rounded-[24px] sm:rounded-[40px] shadow-[10px_10px_20px_rgba(163,185,210,0.35),-8px_-8px_16px_rgba(255,255,255,0.9)] border border-white/50">
-      <div className="font-nunito font-black text-sm sm:text-lg md:text-xl text-[#0D1B2A]">Founded in Bengaluru 🏙</div>
-      <div className="font-nunito font-black text-sm sm:text-lg md:text-xl text-[#0D1B2A]">Serving globally 🌍</div>
-      <div className="flex gap-2 sm:gap-4 mt-2 sm:mt-6">
-        {[Globe, Zap, TrendingUp].map((Icon, i) => (
-          <div key={i} className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.25)] flex items-center justify-center text-[#1A7FD4]">
-            <Icon className="w-5 h-5 sm:w-7 sm:h-7" />
+
+    // Card 2 (Global Operations Card)
+    <div key="middle" className="w-full h-full flex flex-col justify-between p-8 bg-white rounded-[32px] sm:rounded-[40px] shadow-[0_20px_40px_rgba(15,23,42,0.06)] border border-slate-100 overflow-hidden relative">
+      {/* Background Decorative Glow */}
+      <div className="absolute -top-12 -left-12 w-24 h-24 bg-blue-500/5 rounded-full filter blur-[20px] pointer-events-none" />
+      <div className="absolute -bottom-16 -right-16 w-36 h-36 bg-indigo-500/5 rounded-full filter blur-[30px] pointer-events-none" />
+
+      <div className="flex justify-between items-start w-full">
+        <span className="text-[10px] uppercase tracking-[3px] font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
+          Global Operations
+        </span>
+        <div className="flex items-center gap-1.5 bg-green-500/10 px-2.5 py-0.5 rounded-full border border-green-500/20">
+          <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-ping" />
+          <span className="text-[9px] text-green-600 font-bold uppercase tracking-wider">Live Hub</span>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-3 my-auto w-full text-left">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-blue-55 flex items-center justify-center text-[#1A7FD4] shrink-0 border border-blue-100 bg-blue-50">
+            <MapPin className="w-4 h-4" />
           </div>
-        ))}
+          <div className="flex flex-col">
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">HQ Location</span>
+            <span className="text-xs sm:text-sm text-slate-800 font-bold leading-tight">Bengaluru Tech Hub, India</span>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-500 shrink-0 border border-indigo-100">
+            <Globe className="w-4 h-4" />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Reach</span>
+            <span className="text-xs sm:text-sm text-slate-800 font-bold leading-tight">Global Delivery & Support</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-100 text-center w-full">
+        <div className="flex flex-col">
+          <span className="text-sm sm:text-base text-[#1A7FD4] font-black leading-none">16+</span>
+          <span className="text-[8px] sm:text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-1">Certs</span>
+        </div>
+        <div className="flex flex-col border-x border-slate-100">
+          <span className="text-sm sm:text-base text-indigo-500 font-black leading-none">50+</span>
+          <span className="text-[8px] sm:text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-1">Clients</span>
+        </div>
+        <div className="flex flex-col">
+          <span className="text-sm sm:text-base text-cyan-500 font-black leading-none">100%</span>
+          <span className="text-[8px] sm:text-[9px] text-slate-400 font-bold uppercase tracking-wider mt-1">Success</span>
+        </div>
       </div>
     </div>,
-    // Card 3 (Penta - Back)
-    <div key="back" className="w-full h-full flex items-center justify-center p-6 sm:p-10 bg-[#EEF3FF] rounded-[24px] sm:rounded-[40px] shadow-[10px_10px_20px_rgba(163,185,210,0.35),-8px_-8px_16px_rgba(255,255,255,0.9)] border border-white/20 overflow-hidden">
-      <img 
-        src="/Logo/Pentacloud logo.png" 
-        alt="Pentacloud Logo" 
-        className="max-w-[90%] max-h-[90%] object-contain"
-      />
+
+    // Card 3 (Partnership/Alliances Card)
+    <div key="back" className="w-full h-full flex flex-col justify-between p-8 bg-gradient-to-tr from-[#EEF2F6] to-[#F8FAFC] rounded-[32px] sm:rounded-[40px] shadow-[0_20px_40px_rgba(15,23,42,0.06)] border border-white overflow-hidden relative">
+      <div className="absolute top-[-20%] left-[-20%] w-[180px] h-[180px] bg-amber-500/10 rounded-full filter blur-[35px] pointer-events-none" />
+
+      <div className="flex justify-between items-start relative z-10 w-full">
+        <span className="text-[10px] uppercase tracking-[3px] font-bold text-amber-600 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+          Certified Partnerships
+        </span>
+        <Award className="w-5 h-5 text-amber-500" />
+      </div>
+
+      <div className="my-auto py-2 flex flex-col items-center justify-center relative z-10 w-full">
+        <div className="bg-white p-4 rounded-3xl shadow-[0_12px_24px_rgba(15,23,42,0.04)] border border-slate-100 max-w-[80%] flex items-center justify-center">
+          <img 
+            src="/Logo/Pentacloud logo.png" 
+            alt="Pentacloud Logo" 
+            className="w-full object-contain max-h-[45px]"
+          />
+        </div>
+        <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-4 text-center">
+          Salesforce & Zoho Official Partner
+        </span>
+      </div>
+
+      <div className="flex justify-center gap-3 relative z-10 pt-4 border-t border-slate-100 w-full">
+        <div className="flex items-center gap-1 bg-white px-2.5 py-1 rounded-xl shadow-sm border border-slate-100 text-[9px] font-bold uppercase tracking-wider text-slate-600">
+          <Layers className="w-3 h-3 text-blue-500" /> Salesforce
+        </div>
+        <div className="flex items-center gap-1 bg-white px-2.5 py-1 rounded-xl shadow-sm border border-slate-100 text-[9px] font-bold uppercase tracking-wider text-slate-600">
+          <Layers className="w-3 h-3 text-orange-500" /> Zoho
+        </div>
+      </div>
     </div>
   ];
 
@@ -109,11 +195,19 @@ const WhoWeAre = () => {
 
           {/* Grid Layout to Lock Pills on 1 Single Line */}
           <div className="grid grid-cols-3 gap-1.5 sm:gap-4 max-w-lg">
-            {['🤝 Human-Centric', '⚡ AI-Powered', '🛡 Certified Experts'].map((pill, i) => (
-              <div key={i} className="bg-background text-[#1A7FD4] font-nunito font-black text-[8px] sm:text-[10px] md:text-[11px] rounded-full px-1 py-2.5 sm:px-5 sm:py-3 shadow-[2px_2px_8px_rgba(163,185,210,0.25),-2px_-2px_8px_rgba(255,255,255,0.7)] border border-white/50 uppercase tracking-wider flex items-center justify-center gap-0.5 truncate text-center">
-                {pill}
-              </div>
-            ))}
+            {[
+              { icon: Handshake, label: 'Human-Centric' },
+              { icon: Zap, label: 'AI-Powered' },
+              { icon: ShieldCheck, label: 'Certified Experts' }
+            ].map((pill, i) => {
+              const Icon = pill.icon;
+              return (
+                <div key={i} className="bg-background text-[#1A7FD4] font-nunito font-black text-[8px] sm:text-[10px] md:text-[11px] rounded-full px-1.5 py-2.5 sm:px-5 sm:py-3 shadow-[2px_2px_8px_rgba(163,185,210,0.25),-2px_-2px_8px_rgba(255,255,255,0.7)] border border-white/50 uppercase tracking-wider flex items-center justify-center gap-1 sm:gap-1.5 truncate text-center">
+                  <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1A7FD4] flex-shrink-0" />
+                  <span>{pill.label}</span>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
 

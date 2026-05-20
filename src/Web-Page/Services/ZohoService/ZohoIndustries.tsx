@@ -180,7 +180,7 @@ const ZohoIndustries = () => {
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-slate-50 mt-4">
+                    <div className="pt-4 border-t border-slate-50 mt-4 min-h-[84px] sm:min-h-[90px] flex flex-col justify-start">
                       <p className="text-[8px] sm:text-[9px] font-black text-[#1A7FD4] uppercase tracking-widest mb-2 sm:mb-3">Core Apps</p>
                       <div className="flex flex-wrap gap-1.5">
                          {industry.apps.map((app, idx) => (

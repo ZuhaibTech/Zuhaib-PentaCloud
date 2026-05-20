@@ -415,8 +415,8 @@ const Process = () => {
 
       <div className="max-w-[1200px] mx-auto relative z-10">
         
-        <div className="mb-6 md:mb-8 flex flex-col md:flex-row justify-start items-start md:items-end gap-4 md:gap-12 lg:gap-16">
-          <div className="max-w-2xl">
+        <div className="mb-6 md:mb-8 flex flex-col justify-start items-start gap-4">
+          <div className="w-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -430,15 +430,14 @@ const Process = () => {
               transition={{ delay: 0.1 }}
               className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.2] md:leading-[1.1]"
             >
-              Comprehensive <br className="hidden sm:block" /> Solutions for <br />
-              <span className="text-blue-600">Digital Transformation</span>
+              Comprehensive Solutions for <span className="text-blue-600">Digital Transformation</span>
             </motion.h2>
           </div>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="max-w-sm"
+            className="w-full max-w-4xl"
           >
             <p className="text-slate-600 font-medium text-xs sm:text-sm md:text-base leading-relaxed">
               We combine strategic consulting with technical excellence to solve your most complex business challenges.

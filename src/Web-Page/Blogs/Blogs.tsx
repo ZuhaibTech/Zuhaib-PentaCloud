@@ -209,14 +209,14 @@ const FeaturedCard = ({ blog }: { blog: typeof BLOGS[0] }) => (
     <div className="flex flex-col lg:flex-row h-full">
       {/* Image */}
       <div
-        className="relative lg:w-1/2 h-44 sm:h-64 lg:h-auto overflow-hidden flex-shrink-0"
+        className="relative lg:w-1/2 h-44 sm:h-64 lg:h-auto overflow-hidden shrink-0"
       >
         <img 
           src={blog.image} 
           alt={blog.title} 
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className={`absolute inset-0 bg-gradient-to-br ${blog.gradient} opacity-20`} />
+        <div className={`absolute inset-0 bg-linear-to-br ${blog.gradient} opacity-20`} />
         
         {/* Featured badge */}
         <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-[#1A7FD4] text-white rounded-full px-3 py-1 text-[9px] sm:text-[11px] font-bold tracking-wider shadow-lg">
@@ -277,13 +277,13 @@ const BlogCard = ({ blog, index }: { blog: typeof BLOGS[0]; index: number }) => 
     className={`${CLAY_CARD} overflow-hidden group cursor-pointer flex flex-col`}
   >
     {/* Image */}
-    <div className="relative h-40 sm:h-52 overflow-hidden flex-shrink-0">
+    <div className="relative h-40 sm:h-52 overflow-hidden shrink-0">
       <img 
         src={blog.image} 
         alt={blog.title} 
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
-      <div className={`absolute inset-0 bg-gradient-to-br ${blog.gradient} opacity-20`} />
+      <div className={`absolute inset-0 bg-linear-to-br ${blog.gradient} opacity-20`} />
       
       <div
         className={`${CLAY_PILL} absolute top-3 left-3 px-3 py-1 text-[9px] sm:text-[11px] font-nunito font-bold tracking-wider bg-background`}
@@ -349,8 +349,8 @@ export default function Blogs() {
     <main className="relative w-full min-h-screen bg-background pt-20 sm:pt-28 pb-6 sm:pb-12 overflow-x-hidden">
 
       {/* ── Background blobs ── */}
-      <div className="fixed top-0 right-0 w-[700px] h-[700px] bg-[#C8E2FA] rounded-full mix-blend-multiply filter blur-[140px] opacity-25 pointer-events-none -z-10" />
-      <div className="fixed bottom-0 left-0 w-[500px] h-[500px] bg-[#D4EEFF] rounded-full mix-blend-multiply filter blur-[120px] opacity-25 pointer-events-none -z-10" />
+      <div className="fixed top-0 right-0 w-175 h-175 bg-[#C8E2FA] rounded-full mix-blend-multiply filter blur-[140px] opacity-25 pointer-events-none -z-10" />
+      <div className="fixed bottom-0 left-0 w-125 h-125 bg-[#D4EEFF] rounded-full mix-blend-multiply filter blur-[120px] opacity-25 pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
@@ -379,7 +379,7 @@ export default function Blogs() {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
-                className="absolute bottom-0 left-0 w-full h-[3px] bg-[#1A7FD4]/30 rounded-full origin-left block"
+                className="absolute bottom-0 left-0 w-full h-0.75 bg-[#1A7FD4]/30 rounded-full origin-left block"
               />
             </span>
           </motion.h1>
@@ -390,8 +390,8 @@ export default function Blogs() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="font-inter text-[#4A6080] max-w-2xl mx-auto text-xs sm:text-base md:text-[17px] leading-relaxed mb-6 sm:mb-10 px-2"
           >
-            Stay ahead with our latest thoughts on Salesforce excellence, cloud strategy,
-            digital marketing, and the future of enterprise technology.
+            Stay ahead with our latest thoughts on Salesforce excellence, Cloud strategy,
+            Digital marketing, and the future of enterprise technology.
           </motion.p>
 
           {/* ── Search Bar ── */}
@@ -401,7 +401,7 @@ export default function Blogs() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className={`${CLAY_CARD} flex items-center gap-2.5 max-w-md mx-auto px-4 py-2.5 rounded-full`}
           >
-            <Search size={16} className="text-[#8BA4BE] flex-shrink-0" />
+            <Search size={16} className="text-[#8BA4BE] shrink-0" />
             <input
               type="text"
               value={searchQuery}
@@ -533,7 +533,7 @@ export default function Blogs() {
               viewport={{ once: true }}
               className={`${CLAY_CARD} p-4 sm:p-6 text-center`}
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-[12px] bg-background shadow-[inset_1.5px_1.5px_3px_rgba(163,185,210,0.25),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.7)] flex items-center justify-center mx-auto mb-2 sm:mb-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-background shadow-[inset_1.5px_1.5px_3px_rgba(163,185,210,0.25),inset_-1.5px_-1.5px_3px_rgba(255,255,255,0.7)] flex items-center justify-center mx-auto mb-2 sm:mb-3">
                 <Icon size={15} className="text-[#1A7FD4]" />
               </div>
               <div className="font-nunito font-black text-lg sm:text-2xl text-[#1A7FD4] mb-0.5 sm:mb-1">{num}</div>

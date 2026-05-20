@@ -65,7 +65,7 @@ const HowWeWork = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, type: "spring" }}
               viewport={{ once: true }}
-              className={`${CLAY_CARD} p-5 sm:p-8 flex-1 relative group journey-card flex flex-col items-center justify-start md:justify-center min-h-[220px] md:min-h-[400px] transition-all duration-500`}
+              className={`${CLAY_CARD} p-4 sm:p-5 flex-1 relative group journey-card flex flex-col items-center justify-start md:justify-center min-h-[180px] md:min-h-[300px] transition-all duration-500`}
             >
               {/* Watermark (Revealed on Hover) */}
               <div 
@@ -74,8 +74,8 @@ const HowWeWork = () => {
                 {step.step}
               </div>
 
-              {/* Main Content (Centered initially, moves up significantly on hover) */}
-              <div className="flex flex-col items-center justify-center transition-all duration-700 md:group-hover:-translate-y-20 lg:group-hover:-translate-y-24 z-20">
+              {/* Main Content & Info Reveal */}
+              <div className="flex flex-col items-center justify-center w-full z-20 h-full">
                 <div 
                   className={`w-[56px] h-[56px] md:w-[68px] md:h-[68px] flex items-center justify-center rounded-xl md:rounded-[22px] mb-3 md:mb-4 shadow-[inset_4px_4px_8px_rgba(163,185,210,0.3),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] relative bg-background transition-all duration-500 md:group-hover:rotate-[10deg] md:group-hover:scale-110 shrink-0`}
                   style={{ color: step.color, border: `2px solid ${step.bg}` }}
@@ -85,20 +85,26 @@ const HowWeWork = () => {
                     <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white animate-ping" />
                   )}
                 </div>
-                <h3 className="font-nunito font-bold text-base md:text-[20px] text-[#0D1B2A] text-center transition-all duration-500 md:group-hover:scale-105">{step.title}</h3>
-              </div>
+                
+                <h3 className="font-nunito font-bold text-base md:text-[20px] text-[#0D1B2A] text-center transition-all duration-500 md:group-hover:scale-105">
+                  {step.title}
+                </h3>
 
-              {/* Info Reveal (Positions lower to avoid overlap) */}
-              <div className="md:absolute md:inset-x-6 md:bottom-8 flex flex-col items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-700 md:translate-y-10 md:group-hover:translate-y-0 z-20 mt-3 md:mt-0 w-full md:w-auto">
-                <p className="font-inter text-xs md:text-[13px] text-[#4A6080] leading-relaxed md:mb-5 text-center px-2 sm:px-4">
-                  {step.desc}
-                </p>
+                <div className="w-full grid grid-rows-[1fr] md:grid-rows-[0fr] md:group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500">
+                  <div className="overflow-hidden flex flex-col items-center">
+                    <div className="pt-2 sm:pt-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100 flex flex-col items-center">
+                      <p className="font-inter text-xs md:text-[13px] text-[#4A6080] leading-relaxed text-center px-2 sm:px-4">
+                        {step.desc}
+                      </p>
 
-                {i === 0 && (
-                  <div className="mt-2 md:mt-4 text-[9px] sm:text-[10px] font-nunito font-black text-green-500 uppercase tracking-widest animate-pulse leading-none">
-                    Most Popular
+                      {i === 0 && (
+                        <div className="mt-2 md:mt-3 text-[9px] sm:text-[10px] font-nunito font-black text-green-500 uppercase tracking-widest animate-pulse leading-none">
+                          Most Popular
+                        </div>
+                      )}
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             </motion.div>
           ))}

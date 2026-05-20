@@ -84,7 +84,7 @@ const DigitalServices = () => {
               {React.cloneElement(service.icon, { className: "w-5 h-5 sm:w-6 sm:h-6" })}
             </div>
             <h3 className="text-lg sm:text-2xl font-nunito font-black text-[#0D1B2A] mb-2 sm:mb-4">{service.title}</h3>
-            <p className="text-[#4A6080] font-inter text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 flex-grow">{service.body}</p>
+            <p className="text-[#4A6080] font-inter text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8">{service.body}</p>
             
             <div className="mb-4 sm:mb-6">
               <p className="text-[#0D1B2A] font-black text-[9px] sm:text-[10px] uppercase tracking-widest mb-2 sm:mb-3">What's Included:</p>

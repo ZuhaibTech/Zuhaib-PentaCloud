@@ -62,17 +62,26 @@ const WebTechnology = () => {
     { name: "Figma → Code", sub: "Design to Dev", icon: PenTool, color: "#8B5CF6", bg: "#F3E8FF", level: 98, desc: "Pixel-perfect translation from Figma designs to production code." }
   ];
 
+  const row1 = ["GraphQL", "Redis", "Docker", "Stripe", "Google Analytics", "Hotjar", "SendGrid", "Firebase"];
+  const row2 = ["Redux", "Zustand", "Prisma", "Supabase", "Storybook", "Jest", "Cypress", "Github Actions"];
+
   return (
     <section className="py-10 sm:py-24 bg-background relative overflow-hidden px-4 sm:px-6">
       {/* Particles bg */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.08]">
-        {[...Array(15)].map((_, i) => (
+        {[
+          { top: 10, left: 20 }, { top: 80, left: 85 }, { top: 35, left: 50 },
+          { top: 70, left: 15 }, { top: 25, left: 90 }, { top: 90, left: 40 },
+          { top: 15, left: 75 }, { top: 60, left: 8 },  { top: 45, left: 80 },
+          { top: 85, left: 25 }, { top: 5,  left: 60 }, { top: 55, left: 95 },
+          { top: 95, left: 70 }, { top: 30, left: 5 },  { top: 50, left: 30 }
+        ].map((pos, i) => (
           <motion.div 
             key={i}
             animate={{ y: [0, 50, 0], x: [0, 30, 0] }}
-            transition={{ duration: 10 + Math.random() * 5, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 10 + (i % 5), repeat: Infinity, ease: "easeInOut" }}
             className="absolute w-2 h-2 bg-[#1A7FD4] rounded-full"
-            style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%` }}
+            style={{ left: `${pos.left}%`, top: `${pos.top}%` }}
           />
         ))}
       </div>
@@ -109,21 +118,52 @@ const WebTechnology = () => {
           </div>
         </div>
 
-        {/* More Pills */}
-        <div className="mt-10 sm:mt-20 flex flex-col items-center">
-           <div className="text-xs sm:text-[13px] font-inter text-[#8BA4BE] mb-4 sm:mb-6">And more:</div>
-           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-              {["GraphQL", "Redis", "Docker", "Stripe", "Google Analytics", "Hotjar", "SendGrid", "Firebase", "Redux", "Zustand", "Prisma", "Supabase", "Storybook", "Jest", "Cypress", "Github Actions"].map((pill, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.03 }}
-                  className="bg-white px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[#4A6080] font-nunito font-bold text-[10px] sm:text-[12px] shadow-sm border border-slate-100"
-                >
-                  {pill}
-                </motion.div>
-              ))}
+        {/* More Pills (Marquee) */}
+        <div className="mt-16 sm:mt-24 w-full relative max-w-[100vw] overflow-hidden -mx-4 sm:-mx-6 px-4 sm:px-6">
+           <div className="text-center text-[10px] sm:text-[12px] font-nunito font-extrabold tracking-[3px] text-[#8BA4BE] uppercase mb-8 sm:mb-12">
+             And Expanding Horizons
+           </div>
+           
+           <div 
+             className="relative w-full overflow-hidden flex flex-col gap-4 sm:gap-5"
+             style={{
+               maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+               WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)"
+             }}
+           >
+             {/* Row 1 - Left */}
+             <motion.div 
+               className="flex w-max gap-4 sm:gap-5"
+               animate={{ x: ["0%", "-50%"] }}
+               transition={{ ease: "linear", duration: 30, repeat: Infinity }}
+             >
+               {[...row1, ...row1, ...row1].map((pill, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2 sm:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-white/40 backdrop-blur-md border border-white/60 shadow-[4px_4px_15px_rgba(163,185,210,0.3),inset_2px_2px_5px_rgba(255,255,255,0.8)] text-[#4A6080] font-nunito font-bold text-[13px] sm:text-[14px] hover:bg-white hover:text-[#1A7FD4] hover:shadow-[4px_4px_20px_rgba(26,127,212,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer shrink-0"
+                  >
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r from-[#1A7FD4] to-[#29C6E0]" />
+                    {pill}
+                  </div>
+               ))}
+             </motion.div>
+
+             {/* Row 2 - Right */}
+             <motion.div 
+               className="flex w-max gap-4 sm:gap-5"
+               animate={{ x: ["-50%", "0%"] }}
+               transition={{ ease: "linear", duration: 35, repeat: Infinity }}
+             >
+               {[...row2, ...row2, ...row2].map((pill, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2 sm:gap-3 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-white/40 backdrop-blur-md border border-white/60 shadow-[4px_4px_15px_rgba(163,185,210,0.3),inset_2px_2px_5px_rgba(255,255,255,0.8)] text-[#4A6080] font-nunito font-bold text-[13px] sm:text-[14px] hover:bg-white hover:text-[#34C98A] hover:shadow-[4px_4px_20px_rgba(52,201,138,0.15)] hover:-translate-y-1 transition-all duration-300 cursor-pointer shrink-0"
+                  >
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r from-[#34C98A] to-[#29C6E0]" />
+                    {pill}
+                  </div>
+               ))}
+             </motion.div>
            </div>
         </div>
       </div>
