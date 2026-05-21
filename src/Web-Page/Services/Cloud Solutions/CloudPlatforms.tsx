@@ -100,14 +100,14 @@ const CloudPlatforms = () => {
                 className="bg-[#E8F0F8] rounded-[20px] sm:rounded-[40px] p-5 sm:p-8 shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,0.95)] hover:shadow-[20px_20px_40px_rgba(163,185,210,0.7),-20px_-20px_40px_rgba(255,255,255,1)] group transition-all duration-500 flex flex-col"
               >
                 <div 
-                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-[24px] bg-[#E8F0F8] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.4),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] flex items-center justify-center mb-6 sm:mb-8 group-hover:shadow-[4px_4px_12px_rgba(163,185,210,0.5),-4px_-4px_12px_rgba(255,255,255,0.9)] group-hover:rotate-[15deg] transition-all duration-500 shrink-0"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-3xl bg-[#E8F0F8] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.4),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] flex items-center justify-center mb-6 sm:mb-8 group-hover:shadow-[4px_4px_12px_rgba(163,185,210,0.5),-4px_-4px_12px_rgba(255,255,255,0.9)] group-hover:rotate-15 transition-all duration-500 shrink-0"
                   style={{ color: cloud.color }}
                 >
                   <cloud.icon className="w-5.5 h-5.5 sm:w-7 sm:h-7" />
                 </div>
                 <h3 className="text-lg sm:text-[20px] font-nunito font-black text-[#0D1B2A] mb-0.5 sm:mb-1 group-hover:text-[#1A7FD4] transition-colors truncate">{cloud.name}</h3>
                 <span className="text-[8px] sm:text-[9px] font-black text-[#4A6080] uppercase tracking-widest block mb-4 sm:mb-6">{cloud.sub}</span>
-                <p className="text-xs sm:text-[13px] text-[#4A6080] font-inter leading-relaxed mb-6 sm:mb-8 h-auto sm:h-20 overflow-hidden flex-grow">
+                <p className="text-xs sm:text-[13px] text-[#4A6080] font-inter leading-relaxed mb-6 sm:mb-8 h-auto sm:h-20 overflow-hidden grow">
                   {cloud.desc}
                 </p>
                 
@@ -141,9 +141,9 @@ const CloudPlatforms = () => {
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ delay: i * 0.03 }}
                 whileHover={{ scale: 1.02 }}
-                className="bg-[#E8F0F8] rounded-xl sm:rounded-[24px] p-3.5 sm:p-6 shadow-[6px_6px_12px_rgba(163,185,210,0.4),-6px_-6px_12px_rgba(255,255,255,0.85)] group flex flex-col items-center text-center transition-all duration-300"
+                className="bg-[#E8F0F8] rounded-xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[6px_6px_12px_rgba(163,185,210,0.4),-6px_-6px_12px_rgba(255,255,255,0.85)] group flex flex-col items-center text-center transition-all duration-300"
               >
-                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-[10px] sm:rounded-[16px] bg-[#E8F0F8] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3)] flex items-center justify-center text-[#1A7FD4] mb-3 sm:mb-4 group-hover:rotate-[15deg] transition-all duration-500 shrink-0">
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-[10px] sm:rounded-2xl bg-[#E8F0F8] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3)] flex items-center justify-center text-[#1A7FD4] mb-3 sm:mb-4 group-hover:rotate-15 transition-all duration-500 shrink-0">
                   <tool.icon className="w-4.5 h-4.5 sm:w-5.5 sm:h-5.5" />
                 </div>
                 <h4 className="text-xs sm:text-[14px] font-nunito font-black text-[#0D1B2A] mb-0.5 sm:mb-1 truncate w-full">{tool.name}</h4>

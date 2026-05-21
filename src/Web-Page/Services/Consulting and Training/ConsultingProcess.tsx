@@ -60,7 +60,7 @@ const ConsultingProcess = () => {
 
       <div className="space-y-6 sm:space-y-8 relative">
         {/* Responsive Connecting Line - connected on all screen sizes */}
-        <div className="absolute left-[27px] sm:left-[39px] top-8 bottom-8 w-0.5 bg-blue-100" />
+        <div className="absolute left-6.75 sm:left-9.75 top-8 bottom-8 w-0.5 bg-blue-100" />
         
         {processSteps.map((step, idx) => (
           <motion.div
@@ -70,12 +70,12 @@ const ConsultingProcess = () => {
             transition={{ delay: idx * 0.05 }}
             className="flex flex-row gap-4 sm:gap-8 items-start relative z-10"
           >
-            <div className="flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-background shadow-xl flex flex-col items-center justify-center border border-white/50">
+            <div className="shrink-0 w-14 h-14 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-background shadow-xl flex flex-col items-center justify-center border border-white/50">
               <span className="text-[8px] sm:text-[10px] font-black text-[#1A7FD4] uppercase tracking-tighter leading-none mb-0.5">Step</span>
               <span className="text-xl sm:text-3xl font-black text-[#0D1B2A] leading-none">{step.step}</span>
             </div>
             
-            <div className={`${CLAY_CARD} p-5 sm:p-8 flex-grow rounded-[20px] sm:rounded-[32px] overflow-hidden`}>
+            <div className={`${CLAY_CARD} p-5 sm:p-8 grow rounded-[20px] sm:rounded-4xl overflow-hidden`}>
               <div className="flex flex-wrap items-center justify-between gap-3 mb-3 sm:mb-4">
                 <h4 className="text-base sm:text-2xl font-nunito font-black text-[#0D1B2A]">{step.title}</h4>
                 <div className="px-2.5 py-1 sm:px-4 sm:py-1.5 bg-blue-50 text-[#1A7FD4] rounded-lg sm:rounded-xl text-[9px] sm:text-xs font-black uppercase tracking-wider border border-blue-100">

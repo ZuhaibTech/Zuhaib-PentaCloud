@@ -36,7 +36,7 @@ const CloudServiceHub = () => {
              />
           </motion.div>
           {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
-            <div key={angle} className="absolute w-32 h-[1px] bg-[#1A7FD4]/20" style={{ transform: `rotate(${angle}deg)` }}>
+            <div key={angle} className="absolute w-32 h-px bg-[#1A7FD4]/20" style={{ transform: `rotate(${angle}deg)` }}>
               <motion.div 
                 animate={{ left: ["0%", "100%"], opacity: [0, 1, 0] }}
                 transition={{ duration: 3, repeat: Infinity, delay: angle / 360 }}
@@ -191,7 +191,7 @@ const CloudServiceHub = () => {
           <motion.div 
             animate={{ y: ["-100%", "100%"] }}
             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="absolute w-40 h-[2px] bg-[#EC4899]/30 blur-[2px]"
+            className="absolute w-40 h-0.5 bg-[#EC4899]/30 blur-[2px]"
           />
         </div>
       )
@@ -251,8 +251,8 @@ const CloudServiceHub = () => {
     <section className="py-10 sm:py-16 bg-background relative overflow-hidden px-4 sm:px-6">
       {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-40">
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#1A7FD4]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#34C98A]/5 rounded-full blur-[120px]" />
+        <div className="absolute top-[-10%] right-[-10%] w-125 h-125 bg-[#1A7FD4]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-125 h-125 bg-[#34C98A]/5 rounded-full blur-[120px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -278,7 +278,7 @@ const CloudServiceHub = () => {
         <div className="flex flex-col gap-6 sm:gap-8">
           
           {/* 1. The Horizontal Ribbon (Navigation) */}
-          <div className="bg-background/80 backdrop-blur-md p-2.5 sm:p-3 rounded-2xl sm:rounded-[32px] shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)] border border-white/50 flex justify-start sm:justify-center items-center overflow-x-auto no-scrollbar">
+          <div className="bg-background/80 backdrop-blur-md p-2.5 sm:p-3 rounded-2xl sm:rounded-4xl shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)] border border-white/50 flex justify-start sm:justify-center items-center overflow-x-auto no-scrollbar">
             <div className="flex gap-2.5 sm:gap-4 min-w-max px-2 sm:px-4">
               {services.map((service, i) => {
                 const isActive = activeIndex === i;
@@ -312,7 +312,7 @@ const CloudServiceHub = () => {
           </div>
 
           {/* 2. The Central Stage (Content) */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 min-h-[360px] sm:min-h-[450px]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 min-h-90 sm:min-h-112.5">
             
             {/* Left: Content Card */}
             <motion.div
