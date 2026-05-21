@@ -8,7 +8,7 @@ import HeroPartnersOrbit from "./HeroPartnersOrbit";
 
 const Hero = () => {
   const partners = [
-    { name: "Salesforce", logo: "/Partners/SalesforcePartner.svg" },
+    { name: "Salesforce", logo: "/Partners/Salesforceb.svg" },
     { name: "Xero", logo: "/Partners/XeroPartner.svg" },
     { name: "Zoho", logo: "/Partners/ZohoPartner.svg" },
     { name: "Meta", logo: "/Partners/MetaPartner.svg" },

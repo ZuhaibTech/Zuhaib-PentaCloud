@@ -175,10 +175,6 @@ const Industries = () => {
                     <p className="text-zinc-50 text-[11px] sm:text-sm md:text-lg max-w-md leading-relaxed border-l-2 border-white/50 pl-3 sm:pl-4 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                       {industry.description}
                     </p>
-                    <button className="mt-4 sm:mt-6 flex items-center gap-1.5 text-white font-black text-xs sm:text-sm tracking-wider uppercase group/btn drop-shadow-lg">
-                      Explore Solutions
-                      <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover/btn:translate-x-2 transition-transform" />
-                    </button>
                   </div>
                 </div>
 

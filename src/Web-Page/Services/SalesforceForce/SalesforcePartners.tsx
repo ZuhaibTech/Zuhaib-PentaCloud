@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const SalesforcePartners = () => {
   const partners = [
-    { name: "Salesforce", src: "/Partners/SalesforceConsulting.svg" },
+    { name: "Salesforce", src: "/Partners/Salesforce.svg" },
     { name: "Zoho", src: "/Partners/Zoho.svg" },
     { name: "Xero", src: "/Partners/Xero.svg" },
     { name: "Meta", src: "/Partners/Meta.svg" }

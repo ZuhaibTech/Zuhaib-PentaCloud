@@ -9,7 +9,7 @@ const HeroPartnersOrbit = () => {
   const [hoveredBadge, setHoveredBadge] = useState<string | null>(null);
 
   const partners = [
-    { name: "Salesforce", logo: "/Partners/SalesforcePartner.svg", pos: "top" },
+    { name: "Salesforce", logo: "/Partners/Salesforceb.svg", pos: "top" },
     { name: "Xero", logo: "/Partners/XeroPartner.svg", pos: "right" },
     { name: "Zoho", logo: "/Partners/ZohoPartner.svg", pos: "bottom" },
     { name: "Meta", logo: "/Partners/MetaPartner.svg", pos: "left" },
