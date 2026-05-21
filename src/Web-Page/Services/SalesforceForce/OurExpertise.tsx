@@ -45,7 +45,7 @@ const OurExpertise = () => {
   const activeCloud = clouds[activeIndex];
 
   return (
-    <section className="py-10 px-4 sm:px-6 bg-background relative overflow-hidden flex items-center">
+    <section className="pt-10 pb-6 px-4 sm:px-6 bg-background relative overflow-hidden flex items-center">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1A7FD4]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#1A7FD4]/3 rounded-full blur-[120px] pointer-events-none" />
@@ -214,7 +214,7 @@ const OurExpertise = () => {
         </div>
 
         {/* Marquee Row */}
-        <div className="relative w-full overflow-hidden py-5 mt-5 before:absolute before:left-0 before:top-0 before:h-full before:w-16 sm:before:w-32 before:bg-gradient-to-r before:from-background before:to-transparent before:z-10 after:absolute after:right-0 after:top-0 after:h-full after:w-16 sm:after:w-32 after:bg-gradient-to-l after:from-background after:to-transparent after:z-10">
+        <div className="relative w-full overflow-hidden py-3 mt-3 before:absolute before:left-0 before:top-0 before:h-full before:w-16 sm:before:w-32 before:bg-gradient-to-r before:from-background before:to-transparent before:z-10 after:absolute after:right-0 after:top-0 after:h-full after:w-16 sm:after:w-32 after:bg-gradient-to-l after:from-background after:to-transparent after:z-10">
           <motion.div
             animate={{ x: [0, -1920] }}
             transition={{ duration: 35, repeat: Infinity, ease: "linear" }}

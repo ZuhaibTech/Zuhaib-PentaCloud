@@ -66,7 +66,7 @@ const WebTechnology = () => {
   const row2 = ["Redux", "Zustand", "Prisma", "Supabase", "Storybook", "Jest", "Cypress", "Github Actions"];
 
   return (
-    <section className="py-10 sm:py-24 bg-background relative overflow-hidden px-4 sm:px-6">
+    <section className="py-8 sm:py-12 bg-background relative overflow-hidden px-4 sm:px-6">
       {/* Particles bg */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.08]">
         {[
@@ -87,7 +87,7 @@ const WebTechnology = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-8 sm:mb-16">
+        <div className="text-center mb-6 sm:mb-10">
           <div className="text-[#1A7FD4] font-nunito font-bold text-[9px] sm:text-[11px] tracking-[2px] uppercase mb-3 sm:mb-4">TECHNOLOGY</div>
           <h2 className="font-nunito font-extrabold text-2xl sm:text-[42px] text-[#0D1B2A] leading-tight">
             Built With The Best <br className="sm:hidden" /> <span className="text-[#1A7FD4]">Modern Tech Stack</span>
@@ -119,7 +119,7 @@ const WebTechnology = () => {
         </div>
 
         {/* More Pills (Marquee) */}
-        <div className="mt-16 sm:mt-24 w-full relative max-w-[100vw] overflow-hidden -mx-4 sm:-mx-6 px-4 sm:px-6">
+        <div className="mt-10 sm:mt-14 w-full relative max-w-[100vw] overflow-hidden -mx-4 sm:-mx-6 px-4 sm:px-6">
            <div className="text-center text-[10px] sm:text-[12px] font-nunito font-extrabold tracking-[3px] text-[#8BA4BE] uppercase mb-8 sm:mb-12">
              And Expanding Horizons
            </div>

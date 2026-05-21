@@ -22,7 +22,7 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section className="py-10 px-4 sm:px-6 bg-background relative overflow-hidden">
+    <section className="pt-4 pb-10 px-4 sm:px-6 bg-background relative overflow-hidden">
       {/* Background Dots */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.08]">
         {mounted && [...Array(20)].map((_, i) => (
@@ -37,7 +37,7 @@ const HowWeWork = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-8 sm:mb-20 flex flex-col items-center">
+        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
           <div className="bg-background shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)] text-[#1A7FD4] font-nunito font-bold text-[9px] sm:text-[11px] tracking-[2px] rounded-full px-4 py-1.5 mb-4 sm:mb-6 leading-none">
             HOW WE WORK
           </div>

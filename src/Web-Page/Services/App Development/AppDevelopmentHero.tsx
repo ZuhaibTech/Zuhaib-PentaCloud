@@ -118,12 +118,12 @@ const AppDevelopmentHero = () => {
         </div>
 
         {/* Right Column - App Visual Area */}
-        <div className="relative flex items-center justify-center w-full max-w-full px-4 sm:px-8 lg:px-0 mt-8 lg:mt-0 overflow-hidden sm:overflow-visible">
+        <div className="relative flex items-center justify-center w-full max-w-full px-4 sm:px-8 lg:px-0 lg:-ml-6 xl:-ml-12 mt-8 lg:mt-0 overflow-hidden sm:overflow-visible">
           <motion.div
             initial={{ opacity: 0, x: 80, rotateY: 20 }}
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ duration: 1, type: "spring", delay: 0.3 }}
-            className="relative w-full max-w-[420px] lg:max-w-[600px] min-h-[380px] sm:min-h-[520px] bg-background rounded-[24px] sm:rounded-[32px] border-2 border-dashed border-[#1A7FD4]/20 flex items-center justify-center shadow-[20px_20px_60px_rgba(163,185,210,0.2),-10px_-10px_40px_rgba(255,255,255,0.95)] overflow-visible"
+            className="relative w-full max-w-[420px] lg:max-w-[540px] xl:max-w-[600px] min-h-[380px] sm:min-h-[520px] bg-background rounded-[24px] sm:rounded-[32px] border-2 border-dashed border-[#1A7FD4]/20 flex items-center justify-center shadow-[20px_20px_60px_rgba(163,185,210,0.2),-10px_-10px_40px_rgba(255,255,255,0.95)] overflow-visible"
           >
             {/* Phone Mockups */}
             <div className="relative scale-90 md:scale-100">
@@ -209,7 +209,7 @@ const AppDevelopmentHero = () => {
             <motion.div
               animate={{ y: [-8, 8, -8] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-2 top-[15%] sm:-right-12 bg-background p-2.5 sm:p-4 rounded-xl sm:rounded-[20px] shadow-[10px_10px_20px_rgba(163,185,210,0.4),-10px_-10px_20px_rgba(255,255,255,0.9)] flex flex-col gap-1 sm:gap-2 z-20 w-[120px] sm:w-[160px]"
+              className="absolute -right-2 top-[15%] sm:-right-6 lg:-right-8 xl:-right-12 bg-background p-2.5 sm:p-4 rounded-xl sm:rounded-[20px] shadow-[10px_10px_20px_rgba(163,185,210,0.4),-10px_-10px_20px_rgba(255,255,255,0.9)] flex flex-col gap-1 sm:gap-2 z-20 w-[120px] sm:w-[160px]"
             >
               <div className="font-nunito font-bold text-[9px] sm:text-[12px] text-[#0D1B2A]">App Store Rating</div>
               <div className="flex items-center gap-1 text-[#F59E0B]">

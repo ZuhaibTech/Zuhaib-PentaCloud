@@ -9,30 +9,26 @@ const deliveryFormats = [
   {
     icon: <Building2 className="text-[#1A7FD4]" />,
     title: "On-Site Instructor-Led",
-    body: "Our certified trainers come to your office and deliver training directly to your team in your working environment, using your own Salesforce org or cloud environment where possible, making training immediately relevant and applicable to daily tasks.",
-    bestFor: "Teams of 5–30 people",
-    details: "Bengaluru · Mumbai · Delhi · Hyderabad · UAE (Dubai/Abu Dhabi)"
+    body: "Our certified trainers come to your office and deliver training directly to your team in your working environment — using your own Salesforce org or cloud environment where possible, making training immediately relevant and applicable to daily tasks.",
+    bestFor: "Teams of 5–30 people"
   },
   {
     icon: <Globe className="text-[#34C98A]" />,
     title: "Virtual Instructor-Led (VILT)",
-    body: "Live online training delivered via Zoom or Teams, interactive sessions with screen sharing, live demonstrations, breakout rooms for practice, and Q&A throughout. Recorded for participants to revisit after the session.",
-    bestFor: "Remote or distributed teams",
-    details: "Weekday & weekend batches available"
+    body: "Live online training delivered via Zoom or Teams — interactive sessions with screen sharing, live demonstrations, breakout rooms for practice, and Q&A throughout. Recorded for participants to revisit after the session.",
+    bestFor: "Remote or distributed teams"
   },
   {
     icon: <Presentation className="text-[#F59E0B]" />,
     title: "Custom Corporate Programmes",
     body: "Fully bespoke training programmes designed around your specific Salesforce configuration, business processes, and team skill levels. We use your actual org, your actual data (anonymised), and your actual workflows as training scenarios.",
-    bestFor: "Post-implementation & new rollouts",
-    details: "Custom materials & 30-day support included"
+    bestFor: "Post-implementation & new rollouts"
   },
   {
     icon: <GraduationCap className="text-[#8B5CF6]" />,
     title: "Certification Preparation",
-    body: "Structured exam preparation programmes for Salesforce and cloud certifications, covering exam topic areas, practice questions, mock exams, study guides, and expert coaching sessions. Our pass rate exceeds 85%.",
-    bestFor: "Individual or team certifications",
-    details: "85%+ first attempt pass rate"
+    body: "Structured exam preparation programmes for Salesforce and cloud certifications — covering exam topic areas, practice questions, mock exams, study guides, and expert coaching sessions. Our pass rate exceeds 85%.",
+    bestFor: "Individual or team certifications"
   }
 ];
 

@@ -21,7 +21,7 @@ const options = [
   {
     icon: <Mail />,
     title: "Email Us",
-    body: "For detailed project briefs, RFP submissions, or formal enquiries, email us and we'll respond with a thorough reply within 24 hours.",
+    body: "Whether it's a detailed project brief, a request for proposal, or a formal inquiry, send us an email. We'll get back to you with a thorough response within 24 hours.",
     cta: "Send Email →",
     href: "mailto:contact@pentacloudconsulting.com",
     color: "bg-background text-[#1A7FD4] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.35),inset_-3px_-3px_6px_rgba(255,255,255,0.7)]",

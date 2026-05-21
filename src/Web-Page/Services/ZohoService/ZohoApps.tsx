@@ -149,12 +149,12 @@ const ZohoApps = () => {
   }, [isPaused, nextSlide]);
 
   return (
-    <section className="py-10 sm:py-24 px-4 sm:px-6 bg-[#F8FBFF] overflow-hidden relative">
+    <section className="pt-8 sm:pt-14 pb-10 sm:pb-24 px-4 sm:px-6 bg-[#F8FBFF] overflow-hidden relative">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,rgba(26,127,212,0.05)_0%,transparent_70%)] pointer-events-none -z-10" />
       
       <div className="max-w-7xl mx-auto relative">
-        <div className="text-center mb-8 sm:mb-16">
+        <div className="text-center mb-6 sm:mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -194,7 +194,7 @@ const ZohoApps = () => {
           </button>
 
           {/* Cards Wrapper */}
-          <div className="overflow-hidden py-4 sm:py-8">
+          <div className="overflow-hidden py-2 sm:py-4">
             <motion.div 
               className="flex gap-4 sm:gap-8 cursor-grab active:cursor-grabbing"
               drag="x"
@@ -242,9 +242,6 @@ const ZohoApps = () => {
                                 <span className="truncate">{feature}</span>
                              </div>
                           ))}
-                          {app.features.length > 4 && (
-                             <p className="text-[8.5px] sm:text-[10px] font-black text-[#1A7FD4] pt-1 sm:pt-2 uppercase tracking-wider leading-none">+ {app.features.length - 4} MORE FEATURES</p>
-                          )}
                        </div>
                     </div>
                   </motion.div>

@@ -60,13 +60,13 @@ const CloudPlatforms = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-24 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
+    <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#1A7FD4 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-10 sm:mb-16 flex flex-col items-center">
+        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ const CloudPlatforms = () => {
         </div>
 
         {/* Public Cloud Section */}
-        <div className="mb-10 sm:mb-24">
+        <div className="mb-6 sm:mb-12">
           <div className="inline-flex items-center px-4 py-1.5 sm:px-6 sm:py-2 bg-white/60 shadow-[inset_2px_2px_5px_rgba(163,185,210,0.25)] rounded-full text-[#1A7FD4] font-black text-[9px] sm:text-[10px] uppercase tracking-[3px] mb-6 sm:mb-10">
             PUBLIC CLOUD ECOSYSTEM
           </div>
@@ -162,7 +162,7 @@ const CloudPlatforms = () => {
       </div>
 
       {/* Marquee Bottom */}
-      <div className="mt-12 sm:mt-28 border-y border-[#1A7FD4]/08 bg-[#E8F0F8]/50 backdrop-blur-sm py-6 sm:py-10 relative overflow-hidden">
+      <div className="mt-10 sm:mt-14 border-y border-[#1A7FD4]/08 bg-[#E8F0F8]/50 backdrop-blur-sm py-6 sm:py-10 relative overflow-hidden">
         <div className="flex gap-10 whitespace-nowrap animate-marquee-slow">
           {[...certifications, ...certifications].map((cert, i) => (
             <div key={i} className="px-4 py-1.5 sm:px-6 sm:py-2 bg-[#E8F0F8] shadow-[4px_4px_8px_rgba(163,185,210,0.4),-4px_-4px_8px_rgba(255,255,255,0.9)] rounded-full text-[#1A7FD4] font-nunito font-black text-[9px] sm:text-[11px] uppercase tracking-wider">

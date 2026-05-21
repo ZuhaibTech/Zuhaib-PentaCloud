@@ -249,7 +249,7 @@ const Certificates = () => {
                     className="w-full h-full object-contain p-1 transition-transform duration-300"
                   />
                 </div>
-                <h4 className="text-[10px] sm:text-xs md:text-sm font-bold text-black mb-1 group-hover:text-blue-700 transition-colors line-clamp-3 h-[38px] sm:h-[46px] md:h-[54px] flex items-start pt-0.5 leading-snug">
+                <h4 className="text-[9px] sm:text-[10px] md:text-xs font-bold text-black mb-1 group-hover:text-blue-700 transition-colors line-clamp-3 h-[38px] sm:h-[42px] md:h-[50px] flex items-start pt-0.5 leading-tight">
                   {cert.title}
                 </h4>
                 <p className="text-[8px] sm:text-[10px] text-slate-400 uppercase tracking-wider font-bold">

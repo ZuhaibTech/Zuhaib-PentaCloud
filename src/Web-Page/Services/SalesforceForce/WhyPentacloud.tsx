@@ -16,7 +16,7 @@ const WhyPentacloud = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-24 bg-background relative px-4 sm:px-6">
+    <section className="pt-10 pb-8 sm:pt-20 sm:pb-12 bg-background relative px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start relative">
         
         {/* Left Column - Sticky Wrapper - Hidden on Mobile */}

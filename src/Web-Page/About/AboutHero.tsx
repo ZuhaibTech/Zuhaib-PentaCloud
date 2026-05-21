@@ -6,7 +6,7 @@ import { ArrowDown } from "lucide-react";
 
 const AboutHero = () => {
   return (
-    <section className="relative w-full min-h-[75vh] lg:min-h-screen bg-[#E8F0F8] flex items-center justify-center overflow-hidden pt-28 pb-16 lg:py-0">
+    <section className="relative w-full min-h-[75vh] lg:min-h-screen bg-[#E8F0F8] flex items-center justify-center overflow-hidden pt-24 pb-16">
       {/* Background Blobs */}
       <motion.div 
         animate={{ y: [0, -20, 0], x: [0, 10, 0] }}

@@ -18,7 +18,7 @@ const AppWhyPentacloud = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-24 bg-background relative px-4 sm:px-6">
+    <section className="py-8 sm:py-12 bg-background relative px-4 sm:px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start relative">
         
         {/* Left Column - Visual Card (Sticky) - Hidden on Mobile to prevent layout collapse */}

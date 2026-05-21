@@ -44,7 +44,7 @@ const AppTechnology = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-24 bg-background relative overflow-hidden px-4 sm:px-6">
+    <section className="py-8 sm:py-12 bg-background relative overflow-hidden px-4 sm:px-6">
       <div className="absolute inset-0 pointer-events-none opacity-[0.06]">
         {[...Array(20)].map((_, i) => (
           <motion.div 
@@ -58,7 +58,7 @@ const AppTechnology = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-8 sm:mb-16">
+        <div className="text-center mb-6 sm:mb-10">
           <div className="text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[11px] tracking-[2px] uppercase mb-3 sm:mb-4">TECHNOLOGY</div>
           <h2 className="font-nunito font-extrabold text-2xl sm:text-[42px] text-[#0D1B2A] leading-tight">
             Built With The Best <br className="sm:hidden" /> <span className="text-[#1A7FD4]">App Technologies</span>
@@ -116,7 +116,7 @@ const AppTechnology = () => {
           </div>
         ))}
 
-        <div className="mt-12 sm:mt-20 flex flex-col items-center">
+        <div className="mt-10 sm:mt-14 flex flex-col items-center">
            <div className="text-[11px] sm:text-[13px] font-inter text-[#8BA4BE] mb-4 sm:mb-6">Also working with:</div>
            <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {["Expo", "Redux", "MobX", "Socket.io", "Twilio", "OneSignal", "Lottie", "RevenueCat", "Segment"].map((pill, i) => (

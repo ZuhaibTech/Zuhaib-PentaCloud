@@ -71,7 +71,7 @@ const CloudProcess = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-24 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
+    <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
       {/* Background Grid */}
       <div 
         className="absolute inset-0 opacity-[0.03] pointer-events-none" 
@@ -83,7 +83,7 @@ const CloudProcess = () => {
 
       <div className="max-w-7xl mx-auto relative">
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-16 flex flex-col items-center">
+        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ const CloudProcess = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-8 md:gap-24 relative">
+          <div className="flex flex-col gap-8 md:gap-14 relative">
             {steps.map((step, i) => (
               <div key={i} className={`flex items-center w-full ${step.side === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:flex-row gap-6 md:gap-8`}>
                 

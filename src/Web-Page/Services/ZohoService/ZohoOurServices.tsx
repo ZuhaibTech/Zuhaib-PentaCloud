@@ -66,7 +66,7 @@ const ServiceCard = ({ service, index }: { service: (typeof services)[0]; index:
         delay: index * 0.05,
         layout: { type: "spring", stiffness: 100, damping: 20 }
       }}
-      className={`${CLAY_CARD} relative overflow-hidden group flex flex-col h-[400px] sm:h-[480px] w-full transition-shadow duration-500 hover:shadow-2xl rounded-[20px] sm:rounded-[32px]`}
+      className={`${CLAY_CARD} relative overflow-hidden group flex flex-col h-[350px] sm:h-[430px] w-full transition-shadow duration-500 hover:shadow-2xl rounded-[20px] sm:rounded-[32px]`}
     >
       {/* User's idea: Colored top border */}
       <motion.div 
@@ -107,14 +107,14 @@ const ServiceCard = ({ service, index }: { service: (typeof services)[0]; index:
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: -10 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="flex flex-col items-center text-center h-full justify-center min-w-0 w-full"
+                className="flex flex-col items-center text-center h-full min-w-0 w-full pt-2 sm:pt-4"
               >
-                <p className="text-xs sm:text-sm text-[#4A6080] font-inter font-medium leading-relaxed max-w-[260px] mb-4 sm:mb-6 line-clamp-5 sm:line-clamp-none">
+                <p className="text-xs sm:text-sm text-[#4A6080] font-inter font-medium leading-relaxed max-w-[260px] mb-4 line-clamp-5 sm:line-clamp-none">
                   {service.body}
                 </p>
                 <button
                   onClick={() => setIsExpanded(true)}
-                  className={`${NEUMORPHIC_BUTTON} px-5 py-2.5 sm:px-8 sm:py-3 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-black text-[#1A7FD4] uppercase tracking-wider flex items-center gap-1.5 active:scale-95 transition-all duration-300 cursor-pointer`}
+                  className={`${NEUMORPHIC_BUTTON} px-5 py-2.5 sm:px-8 sm:py-3 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-black text-[#1A7FD4] uppercase tracking-wider flex items-center gap-1.5 active:scale-95 transition-all duration-300 cursor-pointer mt-auto mb-2`}
                 >
                   <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" strokeWidth={3} />
                   <span>View Details</span>

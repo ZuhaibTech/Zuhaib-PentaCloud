@@ -46,9 +46,9 @@ const SalesforceQuestions = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-10 sm:py-24 bg-[#E8F0F8] px-4 sm:px-6">
+    <section className="pt-10 pb-16 sm:pt-14 sm:pb-20 bg-[#E8F0F8] px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8 sm:mb-16 flex flex-col items-center">
+        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

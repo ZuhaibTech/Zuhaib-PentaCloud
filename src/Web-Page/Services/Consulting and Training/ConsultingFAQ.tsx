@@ -7,43 +7,36 @@ import { ChevronDown, Users, Globe, GraduationCap, Cloud, BarChart2, Shield } fr
 const ConsultingFAQ = () => {
   const faqs = [
     {
-      question: "What is the difference between your consulting and implementation services?",
-      answer: "Consulting is advisory, we analyse your situation, provide recommendations, and deliver strategy documents and roadmaps that guide your decisions. Implementation is execution, we actually build, configure, and deploy the technology. Many clients start with consulting to validate their strategy, then engage us for implementation.",
+      question: "What's the difference between consulting and implementation?",
+      answer: "Consulting is advisory — we analyse your situation and deliver strategy documents and roadmaps. Implementation is execution — we build and deploy the technology. Many clients start with consulting, then engage us for implementation.",
       icon: Users,
       color: "#1A7FD4",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400"
     },
     {
-      question: "Can training be delivered in languages other than English?",
-      answer: "Yes, we deliver training in English, Hindi, Kannada, and Tamil for Indian clients, and English and Arabic for UAE clients. Training materials can be provided in multiple languages for corporate programmes. Please specify your language preference when booking.",
+      question: "Can training be delivered in local languages?",
+      answer: "Yes — we deliver in English, Hindi, Kannada, and Tamil for Indian clients, and English and Arabic for UAE clients. Please specify your language preference when booking.",
       icon: Globe,
       color: "#34C98A",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400"
     },
     {
-      question: "Do participants need prior Salesforce or cloud knowledge for training?",
-      answer: "It depends on the programme. Our Salesforce User Training and Zoho Training require no prior technical knowledge. Salesforce Admin Training requires basic familiarity with Salesforce. Developer Training requires programming experience (any language). We assess participant backgrounds before every programme.",
+      question: "Do participants need prior knowledge for training?",
+      answer: "It depends on the programme. User training requires no prior knowledge. Admin training needs basic Salesforce familiarity. Developer training requires programming experience. We assess participant backgrounds before every session.",
       icon: GraduationCap,
       color: "#F59E0B",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400"
     },
     {
       question: "Can you train our team on our own Salesforce org?",
-      answer: "Yes, and we strongly recommend it. Training on your actual Salesforce org (using a sandbox copy) makes learning immediately applicable to daily work. Participants recognise the fields, processes, and layouts they use every day, dramatically improving retention and adoption.",
+      answer: "Yes — and we strongly recommend it. Training on your actual org makes learning immediately applicable to daily work. We set up a training sandbox from your production org before each session.",
       icon: Cloud,
       color: "#8B5CF6",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=400"
     },
     {
-      question: "How do you measure training effectiveness?",
-      answer: "We measure training effectiveness through three mechanisms: immediate assessment (knowledge check quiz), a 30-day adoption review measuring actual platform usage metrics (login rates, record creation), and participant feedback. For certification prep, exam pass rate is the primary metric (85%+).",
-      icon: BarChart2,
-      color: "#1A7FD4",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=400"
-    },
-    {
-      question: "Do you offer ongoing support after engagements?",
-      answer: "Yes, every consulting engagement includes a minimum 30-day follow-up support period. Every training programme includes 30–60 days of post-training support. For clients wanting longer-term advisory, our monthly consulting retainer provides ongoing access to our experts.",
+      question: "What support do you give after training?",
+      answer: "Every programme includes 30–60 days of post-training support — questions answered within 24 hours. We also measure adoption at 30 days to ensure the training actually stuck.",
       icon: Shield,
       color: "#34C98A",
       image: "https://images.unsplash.com/photo-1454165833767-131f36967718?auto=format&fit=crop&q=80&w=400"

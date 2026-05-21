@@ -6,7 +6,7 @@ import { Target, Eye, Shield, Zap, Users, Award } from "lucide-react";
 
 const WhatDriveUs = () => {
   return (
-    <section className="relative w-full py-10 sm:py-16 md:py-24 bg-[#E8F0F8] overflow-hidden">
+    <section className="relative w-full py-6 md:py-12 bg-[#E8F0F8] overflow-hidden">
       {/* Soft Ambient Blurs */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#1A7FD4] rounded-full filter blur-[120px] opacity-[0.03] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#29C6E0] rounded-full filter blur-[120px] opacity-[0.03] pointer-events-none" />
@@ -79,9 +79,9 @@ const WhatDriveUs = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
           {[
             { icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#34C98A', title: 'Integrity', text: 'We operate with radical transparency, keeping promises to every client, every time.' },
-            { icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#F59E0B', title: 'Innovation', text: 'We challenge conventions and embrace AI to deliver future-ready solutions today.' },
-            { icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#8B5CF6', title: 'Client First', text: 'Every decision we make is guided by what creates maximum value for our clients.' },
-            { icon: <Award className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#EC4899', title: 'Excellence', text: 'With 16+ certifications, we hold ourselves to the highest technical mastery.' },
+            { icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#F59E0B', title: 'Innovation', text: 'We challenge conventions and leverage AI to deliver future-ready solutions.' },
+            { icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#8B5CF6', title: 'Client First', text: 'We put client success at the center of every decision we make.' },
+            { icon: <Award className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#EC4899', title: 'Excellence', text: 'Backed by 16+ certifications, we uphold the highest standards of technical excellence.' },
           ].map((val, i) => (
             <motion.div
               key={i}

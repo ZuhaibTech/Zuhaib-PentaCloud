@@ -71,7 +71,7 @@ const WhatWeOffer = () => {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#29C6E0] blur-[120px] opacity-[0.05] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-8 sm:mb-20 flex flex-col items-center">
+        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ const WhatWeOffer = () => {
                 {service.desc}
               </p>
 
-              <div className="flex flex-wrap gap-1.5 mb-4 sm:mb-8">
+              <div className="flex flex-wrap gap-3 sm:gap-3.5 mb-4 sm:mb-8">
                 {service.tags.map((tag, j) => (
                   <span key={j} className="bg-[#E8F0F8] text-[#1A7FD4] font-nunito font-bold text-[8.5px] sm:text-[10px] px-2.5 py-1 rounded-full shadow-[3px_3px_6px_rgba(163,185,210,0.4),-3px_-3px_6px_rgba(255,255,255,0.85)] uppercase tracking-wider group-hover:scale-105 transition-transform leading-none">
                     {tag}

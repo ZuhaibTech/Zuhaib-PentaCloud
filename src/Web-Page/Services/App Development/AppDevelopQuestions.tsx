@@ -38,9 +38,9 @@ const AppDevelopQuestions = () => {
   ];
 
   return (
-    <section className="py-10 sm:py-24 bg-background px-4 sm:px-6">
+    <section className="py-8 sm:py-12 bg-background px-4 sm:px-6">
       <div className="max-w-[800px] mx-auto">
-        <div className="text-center mb-8 sm:mb-12">
+        <div className="text-center mb-6 sm:mb-10">
           <div className="bg-background shadow-[3px_3px_8px_rgba(163,185,210,0.3),-3px_-3px_8px_rgba(255,255,255,0.85)] text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[11px] tracking-[2px] uppercase mb-3 sm:mb-4 w-fit mx-auto px-4 py-1.5 rounded-full">COMMON QUESTIONS</div>
           <h2 className="font-nunito font-extrabold text-2xl sm:text-[36px] text-[#0D1B2A] leading-tight">
             App Development, <br className="sm:hidden" /> Answered Honestly

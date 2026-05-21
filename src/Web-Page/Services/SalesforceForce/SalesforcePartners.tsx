@@ -12,9 +12,9 @@ const SalesforcePartners = () => {
   ];
 
   return (
-    <div className="py-10 bg-white px-4 sm:px-6 border-t border-slate-50">
+    <div className="py-6 sm:py-8 bg-white px-4 sm:px-6 border-t border-slate-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-6 sm:mb-16">
+        <div className="text-center mb-0">
           <div className="text-[9px] sm:text-[11px] font-nunito font-bold text-[#1A7FD4] tracking-[3px] uppercase mb-6 sm:mb-12 leading-none">OFFICIAL TECHNOLOGY PARTNERS</div>
           <div className="relative overflow-hidden py-4 sm:py-8">
             <div className="absolute inset-y-0 left-0 w-12 sm:w-40 bg-gradient-to-r from-white to-transparent z-10" />

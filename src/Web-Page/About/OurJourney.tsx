@@ -63,7 +63,7 @@ const OurJourney = () => {
   ];
 
   return (
-    <section className="relative w-full py-10 sm:py-16 md:py-24 bg-[#E8F0F8] overflow-hidden">
+    <section className="relative w-full py-6 md:py-12 bg-[#E8F0F8] overflow-hidden">
       {/* Soft Light effects */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#1A7FD4] blur-[150px] opacity-[0.05] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#29C6E0] blur-[150px] opacity-[0.05] pointer-events-none" />

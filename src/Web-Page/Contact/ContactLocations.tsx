@@ -28,7 +28,7 @@ const locations = [
 
 const ContactLocations = () => {
   return (
-    <section className="py-6 sm:py-16 px-0 bg-background">
+    <section className="py-4 sm:py-8 px-0 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {locations.map((loc, idx) => (

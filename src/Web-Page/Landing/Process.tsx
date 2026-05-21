@@ -482,14 +482,14 @@ const Process = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             
             <div className="relative z-20 flex flex-col h-full">
-            <div className="w-8 h-8 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-auto border border-indigo-500/20">
-              <Radio className="w-4 h-4 text-indigo-400" />
+            <div className="w-8 h-8 rounded-xl bg-blue-500/10 flex items-center justify-center mb-auto border border-blue-500/20">
+              <Radio className="w-4 h-4 text-blue-400" />
             </div>
             <ServerNodes />
             <div className="mt-auto pt-2">
               <h3 className="text-slate-900 font-bold text-sm sm:text-base">Cloud Solutions</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">Scalable infrastructure setup.</p>
-              <Link href="/services/cloud" className="inline-flex items-center gap-2 text-indigo-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
+              <Link href="/services/cloud" className="inline-flex items-center gap-2 text-blue-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -532,14 +532,14 @@ const Process = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             
             <div className="relative z-20 flex flex-col h-full">
-            <div className="w-8 h-8 rounded-xl bg-green-500/10 flex items-center justify-center mb-auto border border-green-500/20">
-              <Code className="w-4 h-4 text-green-400" />
+            <div className="w-8 h-8 rounded-xl bg-blue-500/10 flex items-center justify-center mb-auto border border-blue-500/20">
+              <Code className="w-4 h-4 text-blue-400" />
             </div>
             <BrowserMockup />
             <div className="mt-auto pt-2">
               <h3 className="text-slate-900 font-bold text-sm sm:text-base">Web Development</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">High-performance platforms.</p>
-              <Link href="/services/web" className="inline-flex items-center gap-2 text-green-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
+              <Link href="/services/web" className="inline-flex items-center gap-2 text-blue-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -557,14 +557,14 @@ const Process = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             
             <div className="relative z-20 flex flex-col h-full">
-            <div className="w-8 h-8 rounded-xl bg-amber-500/10 flex items-center justify-center mb-auto border border-amber-500/20">
-              <Database className="w-4 h-4 text-amber-400" />
+            <div className="w-8 h-8 rounded-xl bg-blue-500/10 flex items-center justify-center mb-auto border border-blue-500/20">
+              <Database className="w-4 h-4 text-blue-400" />
             </div>
             <DataMigrationFlow />
             <div className="mt-auto pt-2">
               <h3 className="text-slate-900 font-bold text-sm sm:text-base">Data Migration</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">Secure, zero-downtime transfers.</p>
-              <Link href="/services/data-migration" className="inline-flex items-center gap-2 text-amber-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
+              <Link href="/services/data-migration" className="inline-flex items-center gap-2 text-blue-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -582,14 +582,14 @@ const Process = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             
             <div className="relative z-20 flex flex-col h-full">
-            <div className="w-8 h-8 rounded-xl bg-purple-500/10 flex items-center justify-center mb-auto border border-purple-500/20">
-              <Smartphone className="w-4 h-4 text-purple-400" />
+            <div className="w-8 h-8 rounded-xl bg-blue-500/10 flex items-center justify-center mb-auto border border-blue-500/20">
+              <Smartphone className="w-4 h-4 text-blue-400" />
             </div>
             <PhoneMockup />
             <div className="mt-auto pt-2">
               <h3 className="text-slate-900 font-bold text-sm sm:text-base">App Development</h3>
               <p className="text-slate-500 font-medium text-[11px] mt-1">Native & Cross-platform apps.</p>
-              <Link href="/services/app" className="inline-flex items-center gap-2 text-purple-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
+              <Link href="/services/app" className="inline-flex items-center gap-2 text-blue-500 font-bold text-[10px] mt-2 hover:gap-3 transition-all group/btn">
                  Explore Service <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -608,13 +608,13 @@ const Process = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             
             <div className="flex-1 flex flex-col h-full w-full relative z-20">
-              <div className="w-10 h-10 rounded-xl bg-pink-500/10 flex items-center justify-center mb-auto border border-pink-500/20">
-                <BarChart3 className="w-5 h-5 text-pink-400" />
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mb-auto border border-blue-500/20">
+                <BarChart3 className="w-5 h-5 text-blue-400" />
               </div>
               <div className="mt-auto pt-4">
                 <h3 className="text-slate-900 font-bold text-base sm:text-lg">Digital Marketing</h3>
                 <p className="text-slate-500 font-medium text-xs sm:text-[13px] mt-1 max-w-[200px]">Data-driven marketing to maximize your brand reach and ROI.</p>
-                <Link href="/services/digital-marketing" className="inline-flex items-center gap-2 text-pink-500 font-bold text-xs mt-4 hover:gap-3 transition-all group/btn">
+                <Link href="/services/digital-marketing" className="inline-flex items-center gap-2 text-blue-500 font-bold text-xs mt-4 hover:gap-3 transition-all group/btn">
                    Explore Service <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -635,13 +635,13 @@ const Process = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             
             <div className="flex-1 flex flex-col h-full w-full relative z-20">
-              <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center mb-auto border border-orange-500/20">
-                <Globe className="w-5 h-5 text-orange-400" />
+              <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center mb-auto border border-blue-500/20">
+                <Globe className="w-5 h-5 text-blue-400" />
               </div>
               <div className="mt-auto pt-4">
                 <h3 className="text-slate-900 font-bold text-base sm:text-lg">Zoho Services</h3>
                 <p className="text-slate-500 font-medium text-xs sm:text-[13px] mt-1 max-w-[200px]">Unified business workflows with custom ecosystem implementations.</p>
-                <Link href="/services/zoho" className="inline-flex items-center gap-2 text-orange-500 font-bold text-xs mt-4 hover:gap-3 transition-all group/btn">
+                <Link href="/services/zoho" className="inline-flex items-center gap-2 text-blue-500 font-bold text-xs mt-4 hover:gap-3 transition-all group/btn">
                    Explore Service <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                 </Link>
               </div>

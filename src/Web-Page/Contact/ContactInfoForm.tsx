@@ -164,7 +164,7 @@ const ContactInfoForm = () => {
   };
 
   return (
-    <div className="bg-background min-h-screen pt-20 sm:pt-32 pb-16 sm:pb-32 px-4 sm:px-6">
+    <div className="bg-background min-h-screen pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {formStatus === "success" ? (
           <motion.div
@@ -371,7 +371,7 @@ const ContactInfoForm = () => {
         )}
         
         {/* Office Locations Section */}
-        <div className="mt-12 sm:mt-24">
+        <div className="mt-8 sm:mt-12">
           <ContactLocations />
         </div>
       </div>

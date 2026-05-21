@@ -7,7 +7,7 @@ import { CLAY_CARD, NEUMORPHIC_BUTTON } from "./Constants";
 
 const ZohoHero = () => {
   return (
-    <section className="relative w-full pt-10 sm:pt-28 md:pt-32 pb-10 sm:pb-16 md:pb-24 overflow-hidden px-4 sm:px-6">
+    <section className="relative w-full pt-10 sm:pt-28 md:pt-32 pb-6 sm:pb-8 md:pb-12 overflow-hidden px-4 sm:px-6">
       {/* Background blobs */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/50 rounded-full blur-[120px] -z-10 animate-pulse" />
       <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-indigo-100/40 rounded-full blur-[100px] -z-10" />

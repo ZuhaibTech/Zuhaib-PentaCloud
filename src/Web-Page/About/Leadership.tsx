@@ -67,7 +67,7 @@ const TeamCard = ({ member, index }: { member: any, index: number }) => {
             {member.bio}
           </p>
           
-          <div className="flex flex-wrap gap-1.5 mb-4 sm:mb-6">
+          <div className="flex flex-wrap gap-2.5 sm:gap-3 mb-4 sm:mb-6">
             {member.tags.map((tag:string, i:number) => (
               <span key={i} className="bg-background shadow-[1px_1px_3px_rgba(163,185,210,0.3),-1px_-1px_3px_rgba(255,255,255,0.7)] text-[#1A7FD4] font-nunito font-bold text-[9px] sm:text-[11px] px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full group-hover:scale-105 transition-transform">
                 {tag}
@@ -115,7 +115,7 @@ const Leadership = () => {
   ];
 
   return (
-    <section className="w-full py-10 sm:py-16 bg-background">
+    <section className="w-full py-6 md:py-12 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         <div className="text-center mb-8 sm:mb-16">

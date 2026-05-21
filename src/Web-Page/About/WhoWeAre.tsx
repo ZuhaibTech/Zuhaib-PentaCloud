@@ -157,7 +157,7 @@ const WhoWeAre = () => {
   ];
 
   return (
-    <section className="relative w-full py-10 sm:py-16 md:py-24 bg-background overflow-hidden">
+    <section className="relative w-full py-6 md:py-12 bg-background overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#1A7FD4] rounded-full filter blur-[120px] opacity-[0.05] pointer-events-none" />
       <div className="absolute -bottom-40 -left-40 w-[600px] h-[600px] bg-[#29C6E0] rounded-full filter blur-[120px] opacity-[0.03] pointer-events-none" />
