@@ -22,13 +22,13 @@ const getIcon = (iconName: string) => {
 };
 
 type NavItem = { name: string; href: string; hasDropdown?: boolean; subItems?: { name: string; href: string, icon?: string, description?: string }[] };
-interface NavProps { items: NavItem[]; className?: string }
+interface NavProps { items: NavItem[]; className?: string; textLight?: boolean; }
 
 // ============================================================================
 // 4. THE "SWIPE MASK" NAV
 // Physics: Diagonal color fill mask + Glassmorphic Dropdown.
 // ============================================================================
-export const SwipeMaskNav = ({ items, className }: NavProps) => {
+export const SwipeMaskNav = ({ items, className, textLight }: NavProps) => {
     const [hoveredItem, setHoveredItem] = React.useState<string | null>(null);
 
     return (
@@ -44,13 +44,21 @@ export const SwipeMaskNav = ({ items, className }: NavProps) => {
                         href={item.href} 
                         className="relative px-4 py-2 overflow-hidden rounded-full flex items-center gap-2 transition-all duration-300"
                     >
-                        <span className="relative z-10 text-slate-600 transition-colors duration-500 group-hover:text-blue-700 font-medium flex items-center gap-1.5">
+                        <span className={`relative z-10 transition-colors duration-500 font-medium flex items-center gap-1.5 ${
+                            textLight
+                              ? 'text-white/90 group-hover:text-white'
+                              : 'text-slate-600 group-hover:text-blue-700'
+                          }`}>
                             {item.name}
                             {item.hasDropdown && (
-                                <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-700 transition-all duration-300 group-hover:rotate-180" />
+                                <ChevronDown className={`w-3.5 h-3.5 transition-all duration-300 group-hover:rotate-180 ${
+                                    textLight ? 'text-white/70 group-hover:text-white' : 'text-slate-400 group-hover:text-blue-700'
+                                }`} />
                             )}
                         </span>
-                        <span className="absolute inset-0 bg-blue-50 translate-y-[110%] group-hover:translate-y-0 transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) rounded-full" />
+                        <span className={`absolute inset-0 translate-y-[110%] group-hover:translate-y-0 transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) rounded-full ${
+                            textLight ? 'bg-white/20' : 'bg-blue-50'
+                        }`} />
                     </Link>
 
                     {/* Premium Mega Dropdown */}

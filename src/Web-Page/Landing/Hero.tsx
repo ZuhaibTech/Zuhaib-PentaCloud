@@ -15,12 +15,15 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative w-full min-h-[80vh] lg:min-h-screen py-8 sm:py-16 md:py-24 lg:py-0 overflow-hidden flex items-center justify-center bg-slate-50">
-      {/* Background Theme */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/90 z-10" />
-      </div>
+    <section className="relative w-full min-h-[80vh] lg:min-h-screen py-8 sm:py-16 md:py-24 lg:py-0 overflow-hidden flex items-center justify-center">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
+        style={{ backgroundImage: "url('/Hero/Hero.jpeg')" }}
+      />
+      {/* Overlays: left white fade for text legibility + subtle dark bottom fade */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/60 to-white/10 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/60 z-10" />
 
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-[1fr_1fr] gap-6 md:gap-8 lg:gap-12 items-center px-6 md:px-10 relative z-20 pt-20 sm:pt-24 md:pt-28 lg:pt-20 pb-6 lg:pb-0">
         {/* Left Column */}
@@ -101,9 +104,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Decorative Blur Elements */}
-      <div className="absolute right-[-10%] top-[-10%] w-1/2 h-full bg-blue-400/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute left-[-5%] bottom-[-5%] w-1/3 h-1/2 bg-cyan-400/5 blur-[100px] rounded-full pointer-events-none" />
+
 
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes marquee-fast {

@@ -101,7 +101,7 @@ const Navbar = () => {
       <nav
         className={`w-full transition-all duration-500 relative ${
           isScrolled
-            ? "max-w-[98%] xl:max-w-[98%] bg-background/90 backdrop-blur-xl shadow-[10px_10px_30px_rgba(163,185,210,0.4)] rounded-2xl py-2.5 sm:py-3 px-4 sm:px-6 md:px-8"
+            ? "max-w-[98%] xl:max-w-[98%] bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)] rounded-2xl py-2.5 sm:py-3 px-4 sm:px-6 md:px-8"
             : "max-w-full bg-transparent py-4 sm:py-6 px-4 sm:px-8 md:px-12"
         }`}
       >

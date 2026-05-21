@@ -20,7 +20,7 @@ const industries = [
     icon: <Bot className="w-5 h-5 sm:w-8 sm:h-8" />,
     description: "Streamlining operations with intelligent RPA and workflow automation.",
     color: "from-blue-600 to-cyan-500",
-    bgImage: "bg-[url('/Industries/Automation.jpeg')]"
+    bgImage: "bg-[url('/Industries/Automation.webp')]"
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const industries = [
     icon: <Activity className="w-5 h-5 sm:w-8 sm:h-8" />,
     description: "Secure, compliant cloud solutions for modern patient care and data management.",
     color: "from-emerald-500 to-teal-400",
-    bgImage: "bg-[url('/Industries/Health%20Care.jpeg')]"
+    bgImage: "bg-[url('/Industries/Health%20Care.webp')]"
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const industries = [
     icon: <ShoppingCart className="w-5 h-5 sm:w-8 sm:h-8" />,
     description: "Scalable architectures to handle peak traffic and personalize shopping experiences.",
     color: "from-orange-500 to-pink-500",
-    bgImage: "bg-[url('/Industries/Retail%20&%20eCommerce.jpeg')]"
+    bgImage: "bg-[url('/Industries/Retail%20&%20eCommerce.webp')]"
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const industries = [
     icon: <Target className="w-5 h-5 sm:w-8 sm:h-8" />,
     description: "Data-driven platforms for real-time analytics and global campaign delivery.",
     color: "from-purple-600 to-pink-400",
-    bgImage: "bg-[url('/Industries/Marketing%20&%20Advertising.jpeg')]"
+    bgImage: "bg-[url('/Industries/Marketing%20&%20Advertising.webp')]"
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const industries = [
     icon: <Building2 className="w-5 h-5 sm:w-8 sm:h-8" />,
     description: "Enterprise-grade digital transformation and legacy system modernization.",
     color: "from-blue-800 to-indigo-600",
-    bgImage: "bg-[url('/Industries/Corporate%20Enterprises.jpeg')]"
+    bgImage: "bg-[url('/Industries/Corporate%20Enterprises.webp')]"
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const industries = [
     icon: <Landmark className="w-5 h-5 sm:w-8 sm:h-8" />,
     description: "Ultra-secure, high-performance infrastructure for fintech and banking.",
     color: "from-amber-500 to-orange-400",
-    bgImage: "bg-[url('/Industries/Financial%20Institutions.jpeg')]"
+    bgImage: "bg-[url('/Industries/Financial%20Institutions.webp')]"
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const industries = [
     icon: <Network className="w-5 h-5 sm:w-8 sm:h-8" />,
     description: "Comprehensive architectural guidance from concept to global deployment.",
     color: "from-indigo-500 to-blue-500",
-    bgImage: "bg-[url('/Industries/End%20to%20End%20IT%20Consulting.jpeg')]"
+    bgImage: "bg-[url('/Industries/End%20to%20End%20IT%20Consulting.webp')]"
   },
 ];
 
@@ -135,7 +135,7 @@ const Industries = () => {
                 />
                 
                 {/* Gradient Overlays for legibility */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-800/30 to-blue-950/10 opacity-85" />
                 
                 {/* Subtle Active Tint Overlay */}
                 <motion.div 
@@ -153,7 +153,7 @@ const Industries = () => {
                     <div className={`flex items-center justify-center rounded-xl sm:rounded-2xl backdrop-blur-md transition-all duration-500 origin-bottom-left ${
                       isActive 
                         ? 'w-10 h-10 sm:w-16 sm:h-16 bg-white/30 shadow-[0_0_20px_rgba(255,255,255,0.2)]' 
-                        : 'w-8 h-8 sm:w-12 sm:h-12 bg-white/10'
+                        : 'w-8 h-8 sm:w-12 sm:h-12 bg-white/20 shadow-[0_0_12px_rgba(255,255,255,0.1)]'
                     }`}>
                       <div className="text-white">
                         {industry.icon}
@@ -179,13 +179,13 @@ const Industries = () => {
                 </div>
 
                 {/* Inactive Shade Overlay for vertical text readability */}
-                <div className={`absolute inset-0 bg-slate-900/50 transition-opacity duration-500 ${isActive ? 'opacity-0' : 'opacity-100'}`} />
+                <div className={`absolute inset-0 bg-gradient-to-b from-blue-950/40 via-indigo-900/30 to-slate-900/60 transition-opacity duration-500 ${isActive ? 'opacity-0' : 'opacity-100'}`} />
 
                 {/* Inactive Vertical Title (Desktop Only) */}
                 {!isActive && (
                   <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none pb-16">
                     <div className="-rotate-90 whitespace-nowrap transform origin-center">
-                      <span className="text-white font-bold text-[13px] md:text-sm tracking-[0.15em] uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                      <span className="text-white/95 font-bold text-[13px] md:text-sm tracking-[0.15em] uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,1)] [text-shadow:0_0_12px_rgba(99,179,237,0.6)]">
                         {industry.title}
                       </span>
                     </div>
