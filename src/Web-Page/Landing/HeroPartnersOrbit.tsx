@@ -75,7 +75,7 @@ const HeroPartnersOrbit = () => {
               }}
               whileHover={{ scale: 1.15 }}
             >
-              <div className="relative w-[84px] h-[84px] bg-white rounded-full border-2 border-blue-500/12 shadow-[8px_8px_20px_rgba(26,127,212,0.2),-4px_-4px_12px_rgba(255,255,255,0.95)] flex items-center justify-center p-3 cursor-pointer transition-shadow hover:shadow-[12px_12px_28px_rgba(26,127,212,0.25)]">
+              <div className="relative w-[84px] h-[84px] bg-white rounded-full border-2 border-blue-500/12 shadow-[8px_8px_20px_rgba(26,127,212,0.12)] flex items-center justify-center p-3 cursor-pointer transition-all hover:shadow-[10px_10px_24px_rgba(26,127,212,0.18)]">
                 <div className="relative w-14 h-14">
                   <Image
                     src={partner.logo}
