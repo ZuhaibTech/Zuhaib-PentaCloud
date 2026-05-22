@@ -11,35 +11,35 @@ const SalesforceQuestions = () => {
       answer: "Timelines vary by complexity, a standard Sales Cloud implementation typically takes 4–8 weeks. Larger multi-cloud projects with custom integrations can take 3–6 months.",
       icon: Rocket,
       color: "#1A7FD4",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Salesforce/Sales-Queston-1.webp"
     },
     { 
       question: "Do we need to already be on Salesforce to work with you?", 
       answer: "Not at all. We work with businesses at every stage, whether you're evaluating Salesforce for the first time, migrating from another CRM, or looking to optimise an existing Salesforce org.",
       icon: Target,
       color: "#34C98A",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Salesforce/Sales-Queston-2.webp"
     },
     { 
       question: "What Salesforce certifications does your team hold?", 
       answer: "Our team collectively holds 16+ active Salesforce certifications spanning Salesforce Certified Administrator, Platform Developer I & II, Sales Cloud Consultant, and more.",
       icon: Shield,
       color: "#F59E0B",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Salesforce/Sales-Queston-3.webp"
     },
     { 
       question: "How do you ensure our data is safe during migration?", 
       answer: "Data security is non-negotiable. We follow strict protocols including full backups, sandbox testing, encrypted transfer, and a zero-data-loss guarantee.",
       icon: Users,
       color: "#8B5CF6",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Salesforce/Sales-Queston-4.webp"
     },
     { 
       question: "What happens after our Salesforce goes live?", 
       answer: "We offer three post-launch options: 30-day hypercare, monthly managed support retainers, and ad-hoc support for specific requirements.",
       icon: Heart,
       color: "#EC4899",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Salesforce/Sales-Queston-5.webp"
     }
   ];
 

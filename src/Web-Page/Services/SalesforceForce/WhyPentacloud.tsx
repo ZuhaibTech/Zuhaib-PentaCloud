@@ -7,12 +7,12 @@ import { Shield, Zap, Users, RefreshCw, Globe, Heart } from "lucide-react";
 const WhyPentacloud = () => {
   const [activeWhy, setActiveWhy] = useState(0);
   const differentiators = [
-    { title: "16+ Active Salesforce Certifications", icon: Shield, bg: "#EEF3FF", color: "#1A7FD4", desc: "Our team holds certifications across Admin, Developer, Architect, and Consultant tracks.", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" },
-    { title: "48-Hour Response Guarantee", icon: Zap, bg: "#FFF8E0", color: "#F59E0B", desc: "Every support request is acknowledged within 48 hours, with critical issues escalated immediately.", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800" },
-    { title: "Industry-Specific Expertise", icon: Users, bg: "#F3E8FF", color: "#8B5CF6", desc: "Deep domain knowledge across Healthcare, Finance, Retail, and Corporate Enterprise.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" },
-    { title: "Agile Delivery, Always On Time", icon: RefreshCw, bg: "#E0F7FF", color: "#29C6E0", desc: "2-week sprint cycles with full client visibility, no black-box development.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" },
-    { title: "India + UAE Presence", icon: Globe, bg: "#E8FFE8", color: "#34C98A", desc: "Offices in Bengaluru and UAE presence, serving clients across India and the Middle East.", image: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=800" },
-    { title: "Post Go-Live Partnership", icon: Heart, bg: "#FFE8F0", color: "#EC4899", desc: "We don't disappear after launch. Our managed support ensures your Salesforce evolves.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" }
+    { title: "16+ Active Salesforce Certifications", icon: Shield, bg: "#EEF3FF", color: "#1A7FD4", desc: "Our team holds certifications across Admin, Developer, Architect, and Consultant tracks.", image: "/Images/Salesforce/Sales-WhyPenta-1.webp" },
+    { title: "48-Hour Response Guarantee", icon: Zap, bg: "#FFF8E0", color: "#F59E0B", desc: "Every support request is acknowledged within 48 hours, with critical issues escalated immediately.", image: "/Images/Salesforce/Sales-WhyPenta-2.webp" },
+    { title: "Industry-Specific Expertise", icon: Users, bg: "#F3E8FF", color: "#8B5CF6", desc: "Deep domain knowledge across Healthcare, Finance, Retail, and Corporate Enterprise.", image: "/Images/Salesforce/Sales-WhyPenta-3.webp" },
+    { title: "Agile Delivery, Always On Time", icon: RefreshCw, bg: "#E0F7FF", color: "#29C6E0", desc: "2-week sprint cycles with full client visibility, no black-box development.", image: "/Images/Salesforce/Sales-WhyPenta-4.webp" },
+    { title: "India + UAE Presence", icon: Globe, bg: "#E8FFE8", color: "#34C98A", desc: "Offices in Bengaluru and UAE presence, serving clients across India and the Middle East.", image: "/Images/Salesforce/Sales-WhyPenta-5.webp" },
+    { title: "Post Go-Live Partnership", icon: Heart, bg: "#FFE8F0", color: "#EC4899", desc: "We don't disappear after launch. Our managed support ensures your Salesforce evolves.", image: "/Images/Salesforce/Sales-WhyPenta-6.webp" }
   ];
 
   return (

@@ -9,32 +9,32 @@ const faqs = [
   {
     question: "How long does it take for you to respond to an enquiry?",
     answer: "We acknowledge every enquiry within 4 business hours. You will receive a detailed response from a certified consultant within 24 business hours to schedule a discovery call or answer your specific questions.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400"
+    image: "/Images/Contactpage/Contact Q-1.webp"
   },
   {
     question: "Is the initial 30-minute discovery call really free?",
     answer: "Yes, absolutely. The discovery call is completely free and carries no obligation to proceed. It's designed to understand your needs and for us to provide initial expert advice on the best path forward for your business.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400"
+    image: "/Images/Contactpage/Contact Q-2.webp"
   },
   {
     question: "Do you sign Non-Disclosure Agreements (NDAs)?",
     answer: "Yes. We understand that your project details and business data are sensitive. We are happy to sign an NDA before any detailed technical discussions or project briefs are shared.",
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400"
+    image: "/Images/Contactpage/Contact Q-3.webp"
   },
   {
     question: "Can we visit your office in Bengaluru or meet in the UAE?",
     answer: "Yes! For clients in India, you are welcome to visit our Bengaluru headquarters. For clients in the UAE, we can arrange to meet at your office or a convenient business hub across Dubai or Abu Dhabi.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400"
+    image: "/Images/Contactpage/Contact Q-4.webp"
   },
   {
     question: "What information should I include in my initial message?",
     answer: "The more detail, the better. Ideally, include which service you're interested in, your primary business challenge, any specific technology you're currently using, your desired timeline, and an estimated budget range.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400"
+    image: "/Images/Contactpage/Contact Q-5.webp"
   },
   {
     question: "How do you handle emergency support for existing clients?",
     answer: "Existing managed service clients have access to an emergency escalation contact. Critical issues are acknowledged immediately and assigned to senior engineers according to your specific SLA agreement.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400"
+    image: "/Images/Contactpage/Contact Q-6.webp"
   }
 ];
 
