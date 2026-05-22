@@ -19,11 +19,13 @@ const Hero = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: "url('/Hero/Hero.jpeg')" }}
+        style={{ backgroundImage: "url('/Hero/Hero-BG.webp')" }}
       />
-      {/* Overlays: left white fade for text legibility + subtle dark bottom fade */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/60 to-white/10 z-10" />
+      {/* Overlays: soft left white fade for text legibility + subtle dark bottom fade */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/40 to-transparent z-10" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/60 z-10" />
+      {/* White top shade for navbar readability */}
+      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/30 to-transparent pointer-events-none z-10" />
 
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-[1fr_1fr] gap-6 md:gap-8 lg:gap-12 items-center px-6 md:px-10 relative z-20 pt-20 sm:pt-24 md:pt-28 lg:pt-20 pb-6 lg:pb-0">
         {/* Left Column */}

@@ -102,13 +102,7 @@ const FormBlock = ({ handleSubmit, formStatus, agreed, setAgreed, formData, setF
           <textarea required minLength={20} rows={4} placeholder="Briefly describe what you're looking to achieve, any challenges you're facing, and what success looks like for you..." className={`${CLAY_INPUT} px-4 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm`}></textarea>
         </div>
 
-        <CustomSelect 
-          label="How Did You Hear About Us?"
-          placeholder="Select an option"
-          options={["Google Search", "LinkedIn", "Instagram", "Facebook", "Referral from someone", "Existing client", "Industry event", "Other"]}
-          value={formData.source}
-          onChange={(val: string) => setFormData({ ...formData, source: val })}
-        />
+
 
         <div className="flex items-center gap-3 px-2">
           <div className="shrink-0 flex">

@@ -16,6 +16,8 @@ const AboutHero = () => {
       {/* Layered overlays: dark gradient bottom-up + subtle blue wash */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/80 via-[#0D1B2A]/40 to-[#0D1B2A]/20" />
       <div className="absolute inset-0 bg-[#1A7FD4]/15" />
+      {/* White top shade for navbar readability */}
+      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center flex flex-col items-center">
         {/* Top Label */}

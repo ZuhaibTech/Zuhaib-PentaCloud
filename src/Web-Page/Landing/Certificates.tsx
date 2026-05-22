@@ -92,15 +92,15 @@ const certificates = [
   { 
     id: 13, 
     title: "Salesforce Certified Associate (L1)", 
-    issuer: "Salesforce", 
+    issuer: "Xero", 
     image: "/Certificates/L1 Certified Associate.webp", 
     color: "from-sky-500/20" 
   },
   { 
     id: 14, 
     title: "Salesforce Certified Specialist (L1)", 
-    issuer: "Salesforce", 
-    image: "/Certificates/L1 Certified Specialist.webp", 
+    issuer: "Xero", 
+    image: "/Certificates/L3 Certified Specialist.webp", 
     color: "from-sky-500/20" 
   },
   { 
@@ -190,7 +190,7 @@ const certificates = [
   { 
     id: 27, 
     title: "Slack Certified Administrator", 
-    issuer: "Slack", 
+    issuer: "Salesforce", 
     image: "/Certificates/Slack Administrator.webp", 
     color: "from-sky-500/20" 
   },
@@ -236,30 +236,22 @@ const Certificates = () => {
           {scrollingList.map((cert, index) => (
             <div
               key={`${cert.id}-${index}`}
-              className="flex-shrink-0 w-40 sm:w-52 md:w-64 p-3.5 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-background border-2 border-white/50 shadow-[4px_4px_8px_rgba(163,185,210,0.3),-4px_-4px_8px_rgba(255,255,255,0.95)] hover:shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden"
+              className="flex-shrink-0 w-28 sm:w-36 md:w-44 p-3 sm:p-4 md:p-5 rounded-xl sm:rounded-2xl bg-background border-2 border-white/50 shadow-[4px_4px_8px_rgba(163,185,210,0.3),-4px_-4px_8px_rgba(255,255,255,0.95)] hover:shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,1)] transition-all duration-500 group relative overflow-hidden flex items-center justify-center"
             >
               {/* Uniform Blue Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-100/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               
-              <div className="relative z-20">
-                <div className="w-9 h-9 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl md:rounded-2xl bg-[#f8fafc] border border-white shadow-[2px_2px_4px_#e2e8f0,-2px_-2px_4px_#ffffff,inset_0.5px_0.5px_1px_#ffffff,inset_-0.5px_-0.5px_1px_#e2e8f0] flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 group-hover:bg-blue-50 transition-all duration-300 overflow-hidden">
+              <div className="relative z-20 flex flex-col items-center justify-center w-full gap-2">
+                <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-34 md:h-34 flex items-center justify-center group-hover:scale-110 transition-all duration-300 overflow-hidden">
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-contain p-1 transition-transform duration-300"
+                    className="w-full h-full object-contain transition-transform duration-300"
                   />
                 </div>
-                <h4 className="text-[9px] sm:text-[10px] md:text-xs font-bold text-black mb-1 group-hover:text-blue-700 transition-colors line-clamp-3 h-[38px] sm:h-[42px] md:h-[50px] flex items-start pt-0.5 leading-tight">
-                  {cert.title}
-                </h4>
-                <p className="text-[8px] sm:text-[10px] text-slate-400 uppercase tracking-wider font-bold">
+                <p className="text-[8px] sm:text-[9px] text-slate-400 uppercase tracking-wider font-bold text-center">
                   {cert.issuer}
                 </p>
-              </div>
-
-              {/* Decorative Corner Element */}
-              <div className="absolute top-0 right-0 p-1.5 sm:p-2.5 opacity-20">
-                <CheckCircle2 className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 text-slate-200" />
               </div>
             </div>
           ))}
