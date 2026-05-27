@@ -13,27 +13,27 @@ const AppDevelopQuestions = () => {
     { 
       q: "How long does it take to build an app?", 
       a: "An MVP app typically takes 6–8 weeks for a single platform. A full cross-platform app with backend takes 10–14 weeks. Enterprise apps with complex integrations take 16–24 weeks. We share a detailed milestone timeline in your project proposal.",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/App Devlopment Images/AppDevelopment-Question-1.webp"
     },
     { 
       q: "Do you build for both iOS and Android?", 
       a: "Yes, we build for both simultaneously using React Native, which shares ~90% of the codebase between platforms. This means significantly lower cost and faster delivery than building two separate native apps.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/App Devlopment Images/AppDevelopment-Question-2.webp"
     },
     { 
       q: "Do you handle App Store submission?", 
       a: "Absolutely, App Store and Play Store submission is included in every project. We handle developer account setup, app screenshots, metadata writing, content ratings, and the review process.",
-      image: "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/App Devlopment Images/AppDevelopment-Question-3.webp"
     },
     { 
       q: "Can you integrate my app with Salesforce?", 
       a: "Yes, as a certified Salesforce partner, we specialise in building mobile apps that connect directly to Salesforce. Whether it's a custom field service app, a client portal, or a sales enablement tool.",
-      image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/App Devlopment Images/AppDevelopment-Question-4.webp"
     },
     { 
       q: "What support do you provide after launch?", 
       a: "Every app project includes 30-day post-launch support covering crash monitoring, bug fixes, and App Store update submissions. We then offer monthly maintenance retainers.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/App Devlopment Images/AppDevelopment-Question-5.webp"
     }
   ];
 

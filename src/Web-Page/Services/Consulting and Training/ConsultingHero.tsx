@@ -58,7 +58,7 @@ const ConsultingHero = () => {
         <div className="bg-gradient-to-br from-white to-blue-50 p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white aspect-[4/3] flex items-center justify-center relative group">
            <div className="absolute inset-0 rounded-[24px] sm:rounded-[48px] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" 
+                src="/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-Hero.webp" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 alt="Consulting Team" 
               />

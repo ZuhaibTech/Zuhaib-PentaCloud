@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Presentation, Globe, Building2, GraduationCap } from "lucide-react";
+import { Presentation, Globe, Building2, GraduationCap, Target, Laptop, RefreshCw, Video, Phone } from "lucide-react";
 import { CLAY_CARD } from "./Constants";
 
 const deliveryFormats = [
@@ -33,11 +33,11 @@ const deliveryFormats = [
 ];
 
 const trainingPrinciples = [
-  { icon: "🎯", title: "Role-Specific Content", sub: "Not one-size-fits-all" },
-  { icon: "💻", title: "Hands-On Practice", sub: "Learn by doing, not watching" },
-  { icon: "🔄", title: "Real Scenarios", sub: "Using your actual systems" },
-  { icon: "📹", title: "Recorded Sessions", sub: "Review anytime after" },
-  { icon: "📞", title: "30-Day Support", sub: "Post-training questions answered" }
+  { icon: Target, title: "Role-Specific Content", sub: "Not one-size-fits-all", bg: "#FFE8F0", color: "#EC4899" },
+  { icon: Laptop, title: "Hands-On Practice", sub: "Learn by doing, not watching", bg: "#E0F7FF", color: "#29C6E0" },
+  { icon: RefreshCw, title: "Real Scenarios", sub: "Using your actual systems", bg: "#EEF3FF", color: "#1A7FD4" },
+  { icon: Video, title: "Recorded Sessions", sub: "Review anytime after", bg: "#F3E8FF", color: "#8B5CF6" },
+  { icon: Phone, title: "30-Day Support", sub: "Post-training questions answered", bg: "#FFF8E0", color: "#F59E0B" }
 ];
 
 const TrainingDelivery = () => {
@@ -87,12 +87,14 @@ const TrainingDelivery = () => {
           whileInView={{ opacity: 1, x: 0 }}
           className="relative"
         >
-           <div className="bg-background p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white/50 aspect-[4/5] flex items-center justify-center relative overflow-hidden group">
-              <div className="absolute inset-0 bg-background flex items-center justify-center">
-                 <div className="text-center opacity-20 group-hover:opacity-30 transition-opacity px-6 sm:px-12">
-                    <Presentation className="mx-auto mb-4 text-[#1A7FD4] w-16 h-16 sm:w-28 sm:h-28" />
-                    <p className="font-nunito font-black uppercase tracking-widest text-center text-xs sm:text-sm">Training Delivery Image</p>
-                 </div>
+           <div className="bg-gradient-to-br from-white to-blue-50 p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white aspect-[4/5] flex items-center justify-center relative overflow-hidden group">
+              <div className="absolute inset-0 rounded-[24px] sm:rounded-[48px] overflow-hidden">
+                 <img 
+                   src="/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-why.webp" 
+                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                   alt="Training Delivery" 
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
               </div>
            </div>
         </motion.div>
@@ -106,7 +108,9 @@ const TrainingDelivery = () => {
                 key={i} 
                 className={`flex flex-col items-center text-center gap-1.5 ${i === 4 ? 'col-span-2 sm:col-span-1' : ''}`}
               >
-                 <span className="text-2xl sm:text-3xl mb-1 sm:mb-2">{principle.icon}</span>
+                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center mb-2 sm:mb-3 shadow-inner" style={{ backgroundColor: principle.bg, color: principle.color }}>
+                   <principle.icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                 </div>
                  <p className="text-[10px] sm:text-xs font-black text-[#0D1B2A] uppercase tracking-wider">{principle.title}</p>
                  <p className="text-[9px] sm:text-[10px] font-bold text-[#4A6080]">{principle.sub}</p>
               </div>

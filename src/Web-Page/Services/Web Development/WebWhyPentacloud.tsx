@@ -7,14 +7,14 @@ import { Zap, Smartphone, Search, Shield, RefreshCw, BarChart2, Clock, Headphone
 const WebWhyPentacloud = () => {
   const [activeWhy, setActiveWhy] = useState(0);
   const differentiators = [
-    { title: "Performance-First Development", icon: Zap, bg: "#FFF8E0", color: "#F59E0B", desc: "Every site achieves 90+ Google PageSpeed on both mobile and desktop as standard.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" },
-    { title: "Mobile-First, Always", icon: Smartphone, bg: "#E0F7FF", color: "#29C6E0", desc: "Designed and built mobile-first, every breakpoint tested on real devices.", image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800" },
-    { title: "SEO Foundation Built-In", icon: Search, bg: "#E8FFE8", color: "#34C98A", desc: "Semantic HTML, schema markup, meta structure, and Core Web Vitals all handled.", image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800" },
-    { title: "Enterprise-Grade Security", icon: Shield, bg: "#EEF3FF", color: "#1A7FD4", desc: "SSL, CSP headers, HTTPS enforcement, and regular audits, protected from the ground up.", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" },
-    { title: "CMS-Powered Updates", icon: RefreshCw, bg: "#F3E8FF", color: "#8B5CF6", desc: "Update content without touching code. We integrate your preferred CMS platforms.", image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800" },
-    { title: "Analytics & Tracking", icon: BarChart2, bg: "#FFE8F0", color: "#EC4899", desc: "GA4, Pixel, GTM, and heatmaps configured at launch for data-driven decisions.", image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800" },
-    { title: "On-Time, Every Time", icon: Clock, bg: "#FFF8E0", color: "#F59E0B", desc: "Fixed timelines, milestones, and weekly progress updates, zero surprises.", image: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&q=80&w=800" },
-    { title: "Post-Launch Support", icon: HeadphonesIcon, bg: "#E8FFE8", color: "#34C98A", desc: "30-day support included on every project for bugs, updates, and monitoring.", image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=800" }
+    { title: "Performance-First Development", icon: Zap, bg: "#FFF8E0", color: "#F59E0B", desc: "Every site achieves 90+ Google PageSpeed on both mobile and desktop as standard.", image: "/Images/Web Development images/WebDevelopment-why-1.webp" },
+    { title: "Mobile-First, Always", icon: Smartphone, bg: "#E0F7FF", color: "#29C6E0", desc: "Designed and built mobile-first, every breakpoint tested on real devices.", image: "/Images/Web Development images/WebDevelopment-why-2.webp" },
+    { title: "SEO Foundation Built-In", icon: Search, bg: "#E8FFE8", color: "#34C98A", desc: "Semantic HTML, schema markup, meta structure, and Core Web Vitals all handled.", image: "/Images/Web Development images/WebDevelopment-why-3.webp" },
+    { title: "Enterprise-Grade Security", icon: Shield, bg: "#EEF3FF", color: "#1A7FD4", desc: "SSL, CSP headers, HTTPS enforcement, and regular audits, protected from the ground up.", image: "/Images/Web Development images/WebDevelopment-why-4.webp" },
+    { title: "CMS-Powered Updates", icon: RefreshCw, bg: "#F3E8FF", color: "#8B5CF6", desc: "Update content without touching code. We integrate your preferred CMS platforms.", image: "/Images/Web Development images/WebDevelopment-why-5.webp" },
+    { title: "Analytics & Tracking", icon: BarChart2, bg: "#FFE8F0", color: "#EC4899", desc: "GA4, Pixel, GTM, and heatmaps configured at launch for data-driven decisions.", image: "/Images/Web Development images/WebDevelopment-why-6.webp" },
+    { title: "On-Time, Every Time", icon: Clock, bg: "#FFF8E0", color: "#F59E0B", desc: "Fixed timelines, milestones, and weekly progress updates, zero surprises.", image: "/Images/Web Development images/WebDevelopment-why-7.webp" },
+    { title: "Post-Launch Support", icon: HeadphonesIcon, bg: "#E8FFE8", color: "#34C98A", desc: "30-day support included on every project for bugs, updates, and monitoring.", image: "/Images/Web Development images/WebDevelopment-why-8.webp" }
   ];
 
   return (

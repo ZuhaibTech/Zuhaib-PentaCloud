@@ -18,7 +18,7 @@ const CloudWhy = () => {
       desc: "Every cloud project is led by Tier 3 certified engineers with hands-on expertise in AWS, Azure, and GCP.",
       badge: "SLA Guaranteed",
       visual: "tier3",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800"
+      image: "/Images/CloudSolution images/CloudSolution.why-1.webp"
     },
     {
       icon: Search,
@@ -27,7 +27,7 @@ const CloudWhy = () => {
       desc: "We start with a free cloud audit, real findings, no sales pitch. Know your infrastructure health before you commit.",
       badge: "Free Audit",
       visual: "audit",
-      image: "https://images.unsplash.com/photo-1454165833762-0204b2816718?auto=format&fit=crop&q=80&w=800"
+      image: "/Images/CloudSolution images/CloudSolution.why-2.webp"
     },
     {
       icon: TrendingDown,
@@ -36,7 +36,7 @@ const CloudWhy = () => {
       desc: "Right-sizing and automated governance deliver massive savings within 90 days of implementation.",
       badge: "ROI Focused",
       visual: "cost",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800"
+      image: "/Images/CloudSolution images/CloudSolution.why-3.webp"
     },
     {
       icon: Lock,
@@ -45,7 +45,7 @@ const CloudWhy = () => {
       desc: "Compliance-ready architecture (GDPR, HIPAA) with hardened security protocols from day one.",
       badge: "SOC2 Ready",
       visual: "security",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+      image: "/Images/CloudSolution images/CloudSolution.why-4.webp"
     }
   ];
 

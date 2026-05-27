@@ -7,14 +7,14 @@ import { Smartphone, Eye, Shield, Zap, BarChart2, RefreshCw, Lock, Users } from 
 const AppWhyPentacloud = () => {
   const [activeWhy, setActiveWhy] = useState(0);
   const differentiators = [
-    { title: "True Cross-Platform Expertise", icon: Smartphone, bg: "#EEF3FF", color: "#1A7FD4", desc: "Certified in React Native, Swift, and Kotlin, we choose the right technology for your app.", image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800" },
-    { title: "Weekly Test Builds Shared", icon: Eye, bg: "#E0F7FF", color: "#29C6E0", desc: "Every 2 weeks you receive a TestFlight build to test on your real device.", image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800" },
-    { title: "App Store Submission Managed", icon: Shield, bg: "#EEF3FF", color: "#1A7FD4", desc: "We handle every aspect of submission, screenshots, metadata, and rejection handling.", image: "https://images.unsplash.com/photo-1523206489230-c012c45b1580?auto=format&fit=crop&q=80&w=800" },
-    { title: "Performance Obsessed", icon: Zap, bg: "#FFF8E0", color: "#F59E0B", desc: "< 0.8s cold start, smooth 60fps animations, and minimal battery drain.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" },
-    { title: "Analytics Built-In", icon: BarChart2, bg: "#E8FFE8", color: "#34C98A", desc: "Mixpanel, Firebase, or your preferred tool configured at launch for data-driven decisions.", image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800" },
-    { title: "Post-Launch Updates", icon: RefreshCw, bg: "#EEF3FF", color: "#1A7FD4", desc: "Every project ends with a prioritised feature roadmap to keep your app fresh.", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800" },
-    { title: "Security & Privacy First", icon: Lock, bg: "#FFE8F0", color: "#EC4899", desc: "Encrypted storage, secure APIs, and GDPR-compliant data handling.", image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" },
-    { title: "Salesforce-Connected Apps", icon: Users, bg: "#EEF3FF", color: "#1A7FD4", desc: "As certified partners, we build apps that connect directly to your Salesforce org.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" }
+    { title: "True Cross-Platform Expertise", icon: Smartphone, bg: "#EEF3FF", color: "#1A7FD4", desc: "Certified in React Native, Swift, and Kotlin, we choose the right technology for your app.", image: "/Images/App Devlopment Images/AppDevelopment-Why-1.webp" },
+    { title: "Weekly Test Builds Shared", icon: Eye, bg: "#E0F7FF", color: "#29C6E0", desc: "Every 2 weeks you receive a TestFlight build to test on your real device.", image: "/Images/App Devlopment Images/AppDevelopment-Why-2.webp" },
+    { title: "App Store Submission Managed", icon: Shield, bg: "#EEF3FF", color: "#1A7FD4", desc: "We handle every aspect of submission, screenshots, metadata, and rejection handling.", image: "/Images/App Devlopment Images/AppDevelopment-Why-3.webp" },
+    { title: "Performance Obsessed", icon: Zap, bg: "#FFF8E0", color: "#F59E0B", desc: "< 0.8s cold start, smooth 60fps animations, and minimal battery drain.", image: "/Images/App Devlopment Images/AppDevelopment-Why-4.webp" },
+    { title: "Analytics Built-In", icon: BarChart2, bg: "#E8FFE8", color: "#34C98A", desc: "Mixpanel, Firebase, or your preferred tool configured at launch for data-driven decisions.", image: "/Images/App Devlopment Images/AppDevelopment-Why-5.webp" },
+    { title: "Post-Launch Updates", icon: RefreshCw, bg: "#EEF3FF", color: "#1A7FD4", desc: "Every project ends with a prioritised feature roadmap to keep your app fresh.", image: "/Images/App Devlopment Images/AppDevelopment-Why-6.webp" },
+    { title: "Security & Privacy First", icon: Lock, bg: "#FFE8F0", color: "#EC4899", desc: "Encrypted storage, secure APIs, and GDPR-compliant data handling.", image: "/Images/App Devlopment Images/AppDevelopment-Why-7.webp" },
+    { title: "Salesforce-Connected Apps", icon: Users, bg: "#EEF3FF", color: "#1A7FD4", desc: "As certified partners, we build apps that connect directly to your Salesforce org.", image: "/Images/App Devlopment Images/AppDevelopment-Why-8.webp" }
   ];
 
   return (

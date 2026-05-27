@@ -6,7 +6,6 @@ import ConsultingOffer from "./ConsultingOffer";
 import ConsultingProcess from "./ConsultingProcess";
 import TrainingDelivery from "./TrainingDelivery";
 import ConsultingWhyPentacloud from "./ConsultingWhyPentacloud";
-import ConsultingPackages from "./ConsultingPackages";
 import ConsultingFAQ from "./ConsultingFAQ";
 
 const ConsultingAndTraining = () => {
@@ -22,7 +21,6 @@ const ConsultingAndTraining = () => {
         <ConsultingProcess />
         <TrainingDelivery />
         <ConsultingWhyPentacloud />
-        <ConsultingPackages />
         <ConsultingFAQ />
       </div>
     </div>

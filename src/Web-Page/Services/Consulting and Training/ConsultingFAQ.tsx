@@ -11,35 +11,35 @@ const ConsultingFAQ = () => {
       answer: "Consulting is advisory — we analyse your situation and deliver strategy documents and roadmaps. Implementation is execution — we build and deploy the technology. Many clients start with consulting, then engage us for implementation.",
       icon: Users,
       color: "#1A7FD4",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-1.webp"
     },
     {
       question: "Can training be delivered in local languages?",
       answer: "Yes — we deliver in English, Hindi, Kannada, and Tamil for Indian clients, and English and Arabic for UAE clients. Please specify your language preference when booking.",
       icon: Globe,
       color: "#34C98A",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-2.webp"
     },
     {
       question: "Do participants need prior knowledge for training?",
       answer: "It depends on the programme. User training requires no prior knowledge. Admin training needs basic Salesforce familiarity. Developer training requires programming experience. We assess participant backgrounds before every session.",
       icon: GraduationCap,
       color: "#F59E0B",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-3.webp"
     },
     {
       question: "Can you train our team on our own Salesforce org?",
       answer: "Yes — and we strongly recommend it. Training on your actual org makes learning immediately applicable to daily work. We set up a training sandbox from your production org before each session.",
       icon: Cloud,
       color: "#8B5CF6",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-4.webp"
     },
     {
       question: "What support do you give after training?",
       answer: "Every programme includes 30–60 days of post-training support — questions answered within 24 hours. We also measure adoption at 30 days to ensure the training actually stuck.",
       icon: Shield,
       color: "#34C98A",
-      image: "https://images.unsplash.com/photo-1454165833767-131f36967718?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-5.webp"
     }
   ];
 

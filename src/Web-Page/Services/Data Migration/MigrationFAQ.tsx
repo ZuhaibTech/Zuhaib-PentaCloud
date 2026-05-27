@@ -19,42 +19,42 @@ const MigrationFAQ = () => {
       answer: "Our zero data loss guarantee is backed by three layers of protection: First, a complete verified backup of your source system before we touch anything, giving us a full restore point at all times. Second, a full test migration in a sandbox environment that validates every field mapping and relationship before production. Third, a post-migration reconciliation report that compares record counts, financial totals, and data samples between source and target to mathematically prove completeness.",
       icon: Lock,
       color: "#1A7FD4",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Data Migration Images/data migration-question-1.webp"
     },
     {
       question: "How long does a data migration take?",
       answer: "Timeline depends on data volume and complexity. A standard CRM migration (under 500,000 records) typically takes 3–5 weeks from assessment to go-live. Complex ERP or database migrations with high volumes and transformation requirements take 6–12 weeks. Cloud infrastructure migrations with multiple workloads take 4–8 weeks. We provide a precise timeline in your Migration Readiness Report after the initial assessment.",
       icon: Zap,
       color: "#34C98A",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Data Migration Images/data migration-question-2.webp"
     },
     {
       question: "Will there be any downtime during migration?",
       answer: "For most migrations, we achieve zero downtime using delta migration techniques, where we migrate the bulk of data while your system stays live, then capture only the changes made during migration in a final cutover delta. For migrations that require a cutover window, we plan this during off-peak hours, typically weekends, and the window is rarely more than 2–4 hours for standard migrations.",
       icon: RefreshCw,
       color: "#F59E0B",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Data Migration Images/data migration-question-3.webp"
     },
     {
       question: "Can you migrate from any CRM to Salesforce?",
       answer: "Yes, we have migrated data to Salesforce from virtually every major CRM including HubSpot, Microsoft Dynamics, Zoho CRM, SugarCRM, Pipedrive, legacy in-house CRMs, and even Excel-based contact databases. As a certified Salesforce partner, Salesforce migrations are one of our core specialisations, we understand Salesforce data architecture, governor limits, and metadata relationships deeply enough to handle even the most complex migration scenarios.",
       icon: Cloud,
       color: "#8B5CF6",
-      image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Data Migration Images/data migration-question-4.webp"
     },
     {
       question: "What happens if something goes wrong during migration?",
       answer: "This is exactly why our methodology includes rollback capability at every stage. If anything unexpected occurs during production migration, we have the ability to roll back to your source system immediately, restoring full operational status within minutes. No migration is declared complete until your team has signed off on data accuracy in the target system. Additionally, our 30-day post-migration support covers any issues identified after go-live at no additional cost.",
       icon: Shield,
       color: "#1A7FD4",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Data Migration Images/data migration-question-5.webp"
     },
     {
       question: "Do you handle the decommission of the old system after migration?",
       answer: "Yes, source system decommission is included in our full-service migration engagements. After your team confirms migration completeness and a safe parallel-run period, we manage the controlled shutdown of the source system, including data archiving for compliance retention periods, licence cancellation recommendations, and a formal decommission certificate documenting data destruction where required for GDPR or other compliance frameworks.",
       icon: HelpCircle,
       color: "#34C98A",
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Data Migration Images/data migration-question-6.webp"
     }
   ];
 

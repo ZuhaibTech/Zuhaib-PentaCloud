@@ -59,7 +59,7 @@ const MigrationHero = () => {
         <div className="bg-gradient-to-br from-white to-blue-50 p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white aspect-[4/3] flex items-center justify-center relative group max-w-[420px] lg:max-w-none mx-auto w-full">
            <div className="absolute inset-0 rounded-[24px] sm:rounded-[48px] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800" 
+                src="/Images/Data Migration Images/data migration Hero.webp" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 alt="Cloud Infrastructure" 
               />

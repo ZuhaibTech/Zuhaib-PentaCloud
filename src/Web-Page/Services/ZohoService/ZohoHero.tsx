@@ -76,7 +76,7 @@ const ZohoHero = () => {
             {/* Main Image Area */}
             <div className="bg-white p-2 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white/80 relative overflow-hidden aspect-[4/3] flex items-center justify-center group">
                <img 
-                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" 
+                 src="/Images/Zoho Images/Zoho-Hero.webp" 
                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                  alt="Zoho Dashboard" 
                />

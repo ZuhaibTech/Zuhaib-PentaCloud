@@ -59,7 +59,7 @@ const DigitalHero = () => {
         <div className="bg-gradient-to-br from-white to-blue-50 p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white aspect-[4/3] flex items-center justify-center relative group max-w-[420px] lg:max-w-none mx-auto w-full">
            <div className="absolute inset-0 rounded-[24px] sm:rounded-[48px] overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" 
+                src="/Images/Digital marketing images/digital marketing Hero.webp" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 alt="Marketing Analytics" 
               />

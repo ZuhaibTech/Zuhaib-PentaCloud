@@ -11,42 +11,42 @@ const ZohoFAQ = () => {
       answer: "Zoho CRM is a single application focused on sales, marketing, and customer relationship management. Zoho One is a complete business operating suite containing 40+ integrated Zoho applications covering sales, marketing, finance, HR, project management, and more, all under one subscription. Zoho One is significantly better value for growing businesses that need multiple functions.",
       icon: Settings,
       color: "#1A7FD4",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Zoho Images/Zoho-Question-1.webp"
     },
     {
       question: "How long does a Zoho CRM implementation take?",
       answer: "A standard Zoho CRM implementation for an SMB takes 2–4 weeks from kickoff to go-live. More complex implementations with custom modules, Deluge scripting, and multiple integrations take 5–8 weeks. A full Zoho One deployment across multiple departments takes 8–16 weeks depending on business complexity.",
       icon: Zap,
       color: "#34C98A",
-      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Zoho Images/Zoho-Question-2.webp"
     },
     {
       question: "Can you migrate our data from Salesforce to Zoho?",
       answer: "Yes, Salesforce to Zoho CRM migration is one of our most common requests. We migrate all standard objects as well as custom objects, fields, attachments, and historical data, maintaining all relationships between records. We run a full test migration in a Zoho sandbox before touching production data.",
       icon: Database,
       color: "#F59E0B",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Zoho Images/Zoho-Question-3.webp"
     },
     {
       question: "Is Zoho Books GST compliant for Indian businesses?",
       answer: "Yes, Zoho Books is fully GST compliant and is approved by the Indian government for GST e-invoicing. We configure Zoho Books with correct GST tax rates, HSN/SAC codes, e-invoice generation, and GSTR report generation. For UAE clients, we set up VAT compliance per Federal Tax Authority requirements.",
       icon: Shield,
       color: "#8B5CF6",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Zoho Images/Zoho-Question-4.webp"
     },
     {
       question: "Can Zoho integrate with our existing tools?",
       answer: "Zoho has native integrations with hundreds of popular business tools and connects to 800+ apps through Zoho Flow. Commonly requested integrations include Zoho CRM with Xero, WhatsApp Business, Google Workspace, Microsoft 365, Shopify, Stripe, and Slack.",
       icon: Cloud,
       color: "#1A7FD4",
-      image: "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Zoho Images/Zoho-Question-5.webp"
     },
     {
       question: "Do you provide ongoing Zoho support after implementation?",
       answer: "Yes, ongoing Zoho managed support is one of our core offerings. We offer monthly retainer plans starting from 4 hours per month, covering user management, configuration changes, new automation builds, and troubleshooting. Most growing businesses find the Standard plan (8hrs/month) sufficient for day-to-day management.",
       icon: HelpCircle,
       color: "#34C98A",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400"
+      image: "/Images/Zoho Images/Zoho-Question-6.webp"
     }
   ];
 
