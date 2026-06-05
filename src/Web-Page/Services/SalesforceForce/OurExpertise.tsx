@@ -195,14 +195,7 @@ const OurExpertise = () => {
                   {activeCloud.desc}
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
-                  <button className="bg-[#1A7FD4] text-white font-nunito font-bold text-xs sm:text-[15px] px-6 py-3 sm:px-10 sm:py-4 rounded-xl shadow-[0_10px_20px_rgba(26,127,212,0.3)] hover:shadow-[0_15px_30px_rgba(26,127,212,0.4)] hover:-translate-y-1 active:scale-95 transition-all cursor-pointer">
-                    Request Strategy Call
-                  </button>
-                  <button className="bg-white text-[#1A7FD4] border-2 border-[#1A7FD4]/10 font-nunito font-bold text-xs sm:text-[15px] px-6 py-3 sm:px-10 sm:py-4 rounded-xl hover:bg-[#F8FAFC] hover:border-[#1A7FD4]/30 transition-all cursor-pointer">
-                    Download Case Study
-                  </button>
-                </div>
+
               </motion.div>
             </AnimatePresence>
 

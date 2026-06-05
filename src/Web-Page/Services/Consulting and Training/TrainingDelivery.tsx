@@ -2,120 +2,105 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Presentation, Globe, Building2, GraduationCap, Target, Laptop, RefreshCw, Video, Phone } from "lucide-react";
-import { CLAY_CARD } from "./Constants";
+import { Building2, Globe, Presentation, GraduationCap, Target, Laptop, RefreshCw, Video, Phone } from "lucide-react";
 
 const deliveryFormats = [
   {
-    icon: <Building2 className="text-[#1A7FD4]" />,
-    title: "On-Site Instructor-Led",
-    body: "Our certified trainers come to your office and deliver training directly to your team in your working environment — using your own Salesforce org or cloud environment where possible, making training immediately relevant and applicable to daily tasks.",
-    bestFor: "Teams of 5–30 people"
+    icon: Building2,
+    color: "#1A7FD4",
+    title: "On-Site",
+    desc: "In-person training using your actual systems for relevance.",
   },
   {
-    icon: <Globe className="text-[#34C98A]" />,
-    title: "Virtual Instructor-Led (VILT)",
-    body: "Live online training delivered via Zoom or Teams — interactive sessions with screen sharing, live demonstrations, breakout rooms for practice, and Q&A throughout. Recorded for participants to revisit after the session.",
-    bestFor: "Remote or distributed teams"
+    icon: Globe,
+    color: "#34C98A",
+    title: "Virtual",
+    desc: "Interactive live sessions with full recording support.",
   },
   {
-    icon: <Presentation className="text-[#F59E0B]" />,
-    title: "Custom Corporate Programmes",
-    body: "Fully bespoke training programmes designed around your specific Salesforce configuration, business processes, and team skill levels. We use your actual org, your actual data (anonymised), and your actual workflows as training scenarios.",
-    bestFor: "Post-implementation & new rollouts"
+    icon: Presentation,
+    color: "#F59E0B",
+    title: "Custom",
+    desc: "Bespoke programmes built for your business logic.",
   },
   {
-    icon: <GraduationCap className="text-[#8B5CF6]" />,
-    title: "Certification Preparation",
-    body: "Structured exam preparation programmes for Salesforce and cloud certifications — covering exam topic areas, practice questions, mock exams, study guides, and expert coaching sessions. Our pass rate exceeds 85%.",
-    bestFor: "Individual or team certifications"
+    icon: GraduationCap,
+    color: "#8B5CF6",
+    title: "Certification",
+    desc: "Structured exam prep with 85%+ pass rate.",
   }
 ];
 
 const trainingPrinciples = [
-  { icon: Target, title: "Role-Specific Content", sub: "Not one-size-fits-all", bg: "#FFE8F0", color: "#EC4899" },
-  { icon: Laptop, title: "Hands-On Practice", sub: "Learn by doing, not watching", bg: "#E0F7FF", color: "#29C6E0" },
-  { icon: RefreshCw, title: "Real Scenarios", sub: "Using your actual systems", bg: "#EEF3FF", color: "#1A7FD4" },
-  { icon: Video, title: "Recorded Sessions", sub: "Review anytime after", bg: "#F3E8FF", color: "#8B5CF6" },
-  { icon: Phone, title: "30-Day Support", sub: "Post-training questions answered", bg: "#FFF8E0", color: "#F59E0B" }
+  { icon: Target, title: "Role-Specific", bg: "#FFE8F0", color: "#EC4899" },
+  { icon: Laptop, title: "Hands-On", bg: "#E0F7FF", color: "#29C6E0" },
+  { icon: RefreshCw, title: "Real Scenarios", bg: "#EEF3FF", color: "#1A7FD4" },
+  { icon: Video, title: "Recorded", bg: "#F3E8FF", color: "#8B5CF6" },
+  { icon: Phone, title: "Post-Support", bg: "#FFF8E0", color: "#F59E0B" }
 ];
 
 const TrainingDelivery = () => {
   return (
-    <section className="mb-12 sm:mb-24 md:mb-32">
-      <div className="text-center mb-10 sm:mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="inline-block px-4 py-1.5 bg-blue-50 text-[#1A7FD4] rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-[2px] sm:tracking-[3px] mb-4 sm:mb-6"
-        >
-          HOW WE TRAIN
-        </motion.div>
-        <h2 className="text-2xl sm:text-4xl md:text-6xl font-nunito font-black text-[#0D1B2A] mb-4 sm:mb-6 leading-tight">
-          Training That Actually <br/> <span className="text-[#1A7FD4]">Changes Behaviour</span>
-        </h2>
-        <p className="text-[#4A6080] max-w-2xl mx-auto font-inter text-xs sm:text-base md:text-lg leading-relaxed px-2">
-          We design every training programme around adult learning principles, hands-on practice, real-world scenarios, and immediate application.
-        </p>
-      </div>
+    <section className="py-8 sm:py-12 relative overflow-hidden px-4 sm:px-6 bg-[#E8F0F8] rounded-[48px]">
+      {/* Background Decor */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1A7FD4 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-12 sm:mb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-10 sm:mb-16 flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-sm text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[4px] uppercase mb-4"
+          >
+            TRAINING DELIVERY
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[40px] md:text-[44px] text-[#0D1B2A] leading-tight mb-5"
+          >
+            Learning That <span className="text-[#1A7FD4]">Changes Behaviour</span>
+          </motion.h2>
+          <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-base leading-relaxed font-medium px-4">
+            Hands-on programmes built around real-world scenarios and immediate application.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-10 sm:mb-12">
           {deliveryFormats.map((format, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: idx * 0.05 }}
-              className={`${CLAY_CARD} p-5 sm:p-8 group rounded-[20px] sm:rounded-[32px]`}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white/40 backdrop-blur-sm rounded-[32px] p-6 sm:p-7 border border-white/60 shadow-[10px_10px_25px_rgba(163,185,210,0.1),-5px_-5px_15px_rgba(255,255,255,0.5)] transition-all duration-500 flex flex-col"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-50 text-[#1A7FD4] flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform shrink-0">
-                {React.cloneElement(format.icon, { className: "w-5 h-5 sm:w-6 sm:h-6" })}
+              <div 
+                className="w-11 h-11 rounded-xl bg-white shadow-sm flex items-center justify-center mb-5 group-hover:scale-105 group-hover:rotate-6 transition-all duration-500 shrink-0"
+                style={{ color: format.color }}
+              >
+                <format.icon size={22} strokeWidth={2.5} />
               </div>
-              <h4 className="text-base sm:text-lg font-nunito font-black text-[#0D1B2A] mb-2 sm:mb-3 leading-tight">{format.title}</h4>
-              <p className="text-[10px] sm:text-[11px] text-[#4A6080] font-inter leading-relaxed mb-3 sm:mb-4">{format.body}</p>
-              <div className="pt-3 sm:pt-4 border-t border-blue-50">
-                 <p className="text-[9px] sm:text-[10px] font-black text-[#0D1B2A] uppercase tracking-widest mb-0.5 sm:mb-1">Best For:</p>
-                 <p className="text-[9px] sm:text-[10px] font-bold text-[#1A7FD4]">{format.bestFor}</p>
-              </div>
+              <h3 className="text-lg font-nunito font-black text-[#0D1B2A] mb-2 group-hover:text-[#1A7FD4] transition-colors uppercase tracking-wider">{format.title}</h3>
+              <p className="text-[#4A6080] font-inter text-[13px] leading-relaxed font-medium">{format.desc}</p>
             </motion.div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          className="relative"
-        >
-           <div className="bg-gradient-to-br from-white to-blue-50 p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white aspect-[4/5] flex items-center justify-center relative overflow-hidden group">
-              <div className="absolute inset-0 rounded-[24px] sm:rounded-[48px] overflow-hidden">
-                 <img 
-                   src="/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-why.webp" 
-                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                   alt="Training Delivery" 
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
-              </div>
+        <div className="bg-white/40 backdrop-blur-md p-6 sm:p-8 rounded-[40px] border border-white/60 shadow-[10px_10px_20px_rgba(163,185,210,0.1)]">
+           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+              {trainingPrinciples.map((principle, i) => (
+                <div key={i} className="flex flex-col items-center text-center group">
+                   <div className="w-10 h-10 rounded-2xl flex items-center justify-center mb-3 transition-all duration-500 group-hover:scale-110 shadow-sm" style={{ backgroundColor: principle.bg, color: principle.color }}>
+                     <principle.icon size={20} strokeWidth={2.5} />
+                   </div>
+                   <p className="text-[10px] font-black text-[#0D1B2A] uppercase tracking-wider">{principle.title}</p>
+                </div>
+              ))}
            </div>
-        </motion.div>
-      </div>
-
-      {/* Principles Row - Dynamic Grid Symmetry */}
-      <div className={`${CLAY_CARD} p-6 sm:p-10 rounded-[20px] sm:rounded-[32px]`}>
-         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-10">
-            {trainingPrinciples.map((principle, i) => (
-              <div 
-                key={i} 
-                className={`flex flex-col items-center text-center gap-1.5 ${i === 4 ? 'col-span-2 sm:col-span-1' : ''}`}
-              >
-                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center mb-2 sm:mb-3 shadow-inner" style={{ backgroundColor: principle.bg, color: principle.color }}>
-                   <principle.icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                 </div>
-                 <p className="text-[10px] sm:text-xs font-black text-[#0D1B2A] uppercase tracking-wider">{principle.title}</p>
-                 <p className="text-[9px] sm:text-[10px] font-bold text-[#4A6080]">{principle.sub}</p>
-              </div>
-            ))}
-         </div>
+        </div>
       </div>
     </section>
   );

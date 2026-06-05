@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, animate } from "framer-motion";
-import { Building2, ShoppingCart, Target, LayoutDashboard, Code2 } from "lucide-react";
+import { Building2, ShoppingCart, Target, LayoutDashboard, Code2, Star, CheckCircle2 } from "lucide-react";
 
 // --- Custom Counter Component ---
 const Counter = ({ from, to, duration = 2.5 }: { from: number, to: number | string, duration?: number }) => {
@@ -32,194 +32,178 @@ const Counter = ({ from, to, duration = 2.5 }: { from: number, to: number | stri
 const WebWhatWeBuild = () => {
   const services = [
     {
-      title: "Corporate & Business Websites",
-      desc: "Professional, conversion-focused corporate websites that establish your brand authority and turn visitors into qualified leads. Built with performance-first architecture, SEO foundations, and CMS integration.",
+      title: "Corporate Websites",
+      desc: "Professional, conversion-focused sites that establish brand authority and turn visitors into leads with performance-first architecture.",
       icon: Building2,
-      color: "white",
-      bg: "linear-gradient(135deg, #0D1B2A, #1A7FD4)",
-      tags: ["Next.js", "CMS Integration", "SEO Ready", "Lead Generation"],
+      color: "#1A7FD4",
+      tags: ["Next.js", "CMS", "SEO Ready"],
       isWide: true,
       visual: "browser"
     },
     {
-      title: "eCommerce Websites",
-      desc: "High-converting online stores with seamless payment gateways, inventory management, and personalised shopping experiences.",
+      title: "eCommerce",
+      desc: "High-converting online stores with seamless payments, inventory management, and personalised shopping.",
       icon: ShoppingCart,
       color: "#F59E0B",
-      bg: "#E8F0F8",
-      tags: ["Shopify", "WooCommerce", "Payment"],
-      visual: "product"
+      tags: ["Shopify", "Payment"],
+      visual: "cart"
     },
     {
-      title: "Landing Pages & Funnels",
-      desc: "High-converting landing pages engineered for your campaigns, A/B test-ready and built around your conversion goals.",
+      title: "Landing Pages",
+      desc: "High-performing pages engineered for campaigns, A/B test-ready and built for maximum conversion rates.",
       icon: Target,
       color: "#34C98A",
-      bg: "#E8F0F8",
-      tags: ["Conversion", "A/B Ready"],
-      visual: "funnel"
+      tags: ["Funnels", "A/B Ready"],
+      visual: "conversion"
     },
     {
-      title: "Web Portals & Dashboards",
-      desc: "Complex client portals, admin dashboards, and internal tools, built with real-time data and role-based access control.",
+      title: "Web Portals",
+      desc: "Complex client portals and admin dashboards built with real-time data and role-based access control.",
       icon: LayoutDashboard,
       color: "#8B5CF6",
-      bg: "#E8F0F8",
-      tags: ["RBAC", "Real-time", "Dashboards"],
+      tags: ["RBAC", "Real-time"],
       visual: "dashboard"
     },
     {
-      title: "Custom Web Applications",
-      desc: "Bespoke web applications built from scratch for your unique business logic, scalable architecture and API-first design.",
+      title: "Custom Apps",
+      desc: "Bespoke web applications built from scratch for your unique business logic and scalable architecture.",
       icon: Code2,
       color: "#29C6E0",
-      bg: "#E8F0F8",
-      tags: ["React", "Node.js", "API First", "Cloud Native"],
+      tags: ["React", "API First"],
       visual: "code"
     }
   ];
 
   return (
-    <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
+    <section className="py-16 sm:py-24 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
       {/* Background Decor */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#1A7FD4 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#1A7FD4] blur-[130px] opacity-[0.05] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#29C6E0] blur-[130px] opacity-[0.05] pointer-events-none translate-x-1/2 translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
+        <div className="text-center mb-12 sm:mb-20 flex flex-col items-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="px-4 py-1.5 sm:px-6 sm:py-2 bg-white/60 shadow-[inset_2px_2px_5px_rgba(163,185,210,0.25)] rounded-full text-[#1A7FD4] text-[9px] sm:text-xs font-bold tracking-widest uppercase mb-3 sm:mb-6"
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-[2px_2px_8px_rgba(163,185,210,0.15)] text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[4px] uppercase mb-4 sm:mb-6"
           >
             WHAT WE BUILD
           </motion.div>
           <motion.h2
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="font-nunito font-extrabold text-2xl sm:text-[42px] md:text-[52px] text-[#0D1B2A] leading-tight mb-2 sm:mb-4"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[40px] md:text-[52px] text-[#0D1B2A] leading-[1.1] mb-5 sm:mb-6"
           >
-            Every Type of Web <span className="text-[#1A7FD4]">Experience, Built Right</span>
+            Web Experiences <br className="hidden sm:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A7FD4] to-[#29C6E0]">Built for Results</span>
           </motion.h2>
-          <p className="font-inter text-xs sm:text-[16px] text-[#4A6080] max-w-[620px] leading-relaxed pr-2">
-            From marketing websites to complex enterprise portals, we build web experiences that convert visitors into customers.
+          <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-lg leading-relaxed font-medium px-4">
+            From marketing sites to complex enterprise portals, we engineer digital assets that generate leads and build brand trust.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {services.map((service, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: i * 0.05, type: "spring" }}
-              whileHover={{ y: -6, scale: 1.01 }}
-              className={`rounded-2xl sm:rounded-[32px] p-5 sm:p-8 group relative overflow-hidden transition-all duration-500 ${service.isWide ? 'md:col-span-2 bg-[#0D1B2A] shadow-[15px_15px_30px_rgba(13,27,42,0.3)] hover:shadow-[25px_25px_50px_rgba(13,27,42,0.4)]' : 'bg-[#E8F0F8] shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,0.95)] hover:shadow-[20px_20px_40px_rgba(163,185,210,0.7),-20px_-20px_40px_rgba(255,255,255,1)]'}`}
-              style={service.isWide ? { background: service.bg } : {}}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              whileHover={{ y: -8 }}
+              className={`group relative bg-white/40 backdrop-blur-sm rounded-[32px] p-6 sm:p-8 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-500 flex flex-col overflow-hidden h-full ${service.isWide ? 'sm:col-span-2' : ''}`}
             >
-              {service.isWide && (
-                 <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
-              )}
+              {/* Decorative Glow */}
+              <div 
+                className="absolute -top-16 -right-16 w-32 h-32 rounded-full blur-[60px] opacity-0 group-hover:opacity-15 transition-opacity duration-700 pointer-events-none"
+                style={{ backgroundColor: service.color }}
+              />
 
               <div 
-                className={`w-12 h-12 sm:w-[60px] sm:h-[60px] flex items-center justify-center mb-6 sm:mb-8 rounded-xl sm:rounded-[20px] transition-all duration-500 group-hover:rotate-[15deg] shrink-0 ${service.isWide ? 'bg-white/10 text-white border border-white/20' : 'bg-[#E8F0F8] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.4),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] group-hover:shadow-[4px_4px_12px_rgba(163,185,210,0.5),-4px_-4px_12px_rgba(255,255,255,0.9)]'}`}
-                style={!service.isWide ? { color: service.color } : {}}
+                className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center mb-6 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] group-hover:scale-105 group-hover:rotate-3 transition-all duration-500 shrink-0"
+                style={{ color: service.color }}
               >
-                <service.icon className="w-5.5 h-5.5 sm:w-7 sm:h-7" />
+                <service.icon size={26} strokeWidth={2.5} className="sm:w-7 sm:h-7" />
               </div>
 
-              <h3 className={`font-nunito font-black text-lg sm:text-[24px] mb-2 sm:mb-4 transition-colors group-hover:text-[#1A7FD4] ${service.isWide ? 'text-white group-hover:text-white' : 'text-[#0D1B2A]'}`}>{service.title}</h3>
-              <p className={`font-inter text-xs sm:text-[14px] leading-relaxed mb-6 sm:mb-8 ${service.isWide ? 'text-white/70' : 'text-[#4A6080]'}`}>
+              <h3 className="font-nunito font-black text-xl text-[#0D1B2A] mb-3 group-hover:text-[#1A7FD4] transition-colors duration-300 leading-tight">
+                {service.title}
+              </h3>
+              
+              <p className="font-inter text-[13px] text-[#4A6080] leading-relaxed mb-6 font-medium flex-1">
                 {service.desc}
               </p>
 
-              <div className="flex flex-wrap gap-1.5 sm:gap-2.5 mb-6 sm:mb-8">
+              <div className="flex flex-wrap gap-2 mb-8 content-start">
                 {service.tags.map((tag, j) => (
-                  <span key={j} className={`font-nunito font-bold text-[8px] sm:text-[10px] px-3 py-1 sm:px-4 sm:py-1.5 rounded-full uppercase tracking-wider group-hover:scale-105 transition-transform ${service.isWide ? 'bg-white/10 text-white border border-white/10' : 'bg-[#E8F0F8] text-[#1A7FD4] shadow-[3px_3px_6px_rgba(163,185,210,0.4),-3px_-3px_6px_rgba(255,255,255,0.85)]'}`}>
+                  <span 
+                    key={j} 
+                    className="px-2.5 py-1 bg-white/60 rounded-lg border border-white shadow-sm text-[9px] font-nunito font-black text-[#1A7FD4] uppercase tracking-wider group-hover:bg-white transition-colors"
+                  >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              {/* Mini Visuals */}
-              <div className={`h-20 sm:h-24 pt-4 sm:pt-6 border-t ${service.isWide ? 'border-white/10' : 'border-[#1A7FD4]/08'}`}>
+              {/* Enhanced Visual Footer */}
+              <div className="pt-6 border-t border-white/40 mt-auto">
                 {service.visual === "browser" && (
-                   <div className="w-full h-full bg-black/20 rounded-xl overflow-hidden border border-white/10 p-2.5 space-y-2 backdrop-blur-sm flex flex-col">
-                      <div className="flex gap-1.5">
-                        {[...Array(3)].map((_, i) => <div key={i} className="w-1.5 h-1.5 rounded-full bg-white/20" />)}
+                   <div className="w-full flex items-center justify-between bg-white/30 p-2.5 rounded-2xl border border-white/50">
+                      <div className="flex gap-1">
+                         {[...Array(3)].map((_, idx) => <div key={idx} className="w-1.5 h-1.5 rounded-full bg-[#1A7FD4]/20" />)}
                       </div>
-                      <div className="flex items-center justify-between">
-                         <div className="text-[8px] sm:text-[10px] font-black text-white/40 uppercase tracking-widest truncate max-w-[150px] sm:max-w-none">Premium Business Solutions</div>
-                         <div className="w-10 h-1 bg-white/10 rounded-full" />
-                      </div>
-                      <div className="grid grid-cols-3 gap-2 flex-grow">
-                         {[
-                           { url: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=200", label: "Global" },
-                           { url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=200", label: "Strategy" },
-                           { url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=200", label: "ROI" }
-                         ].map((item, idx) => (
-                           <div key={idx} className="relative rounded-lg overflow-hidden border border-white/05 group/item">
-                              <img src={item.url} alt={item.label} className="w-full h-full object-cover opacity-50 group-hover/item:opacity-80 transition-opacity" />
-                              <div className="absolute bottom-1 left-1 bg-black/40 backdrop-blur-md px-1.5 py-0.5 rounded text-[5px] sm:text-[6px] font-black text-white uppercase tracking-tighter">
-                                 {item.label}
-                              </div>
-                           </div>
-                         ))}
+                      <div className="flex items-center gap-3">
+                         <div className="w-12 h-1.5 bg-[#1A7FD4]/10 rounded-full overflow-hidden">
+                            <motion.div animate={{ x: [-50, 50] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }} className="w-full h-full bg-[#1A7FD4]/40" />
+                         </div>
+                         <CheckCircle2 size={14} className="text-[#1A7FD4]" />
                       </div>
                    </div>
                 )}
-                {service.visual === "product" && (
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-lg sm:rounded-2xl bg-[#E8F0F8] shadow-[4px_4px_8px_rgba(163,185,210,0.4)] flex items-center justify-center text-amber-500 group-hover:rotate-12 transition-transform shrink-0">
-                       <ShoppingCart className="w-4.5 h-4.5 sm:w-6 sm:h-6" />
-                    </div>
-                    <div className="flex-1 space-y-1.5 sm:space-y-2 min-w-0">
-                       <div className="h-1.5 w-full bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] rounded-full" />
-                       <motion.div 
-                          animate={{ scale: [1, 1.05, 1] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                          className="h-6 sm:h-8 w-20 sm:w-28 bg-[#1A7FD4] rounded-full text-[9px] sm:text-[11px] text-white flex items-center justify-center font-bold shadow-lg"
-                       >
-                          Add to Cart
-                       </motion.div>
-                    </div>
+                {service.visual === "cart" && (
+                  <div className="flex items-center justify-between">
+                     <div className="flex flex-col gap-0.5">
+                        <span className="text-[8px] font-black text-[#4A6080]/40 uppercase tracking-widest leading-none">Checkout Flow</span>
+                        <div className="flex gap-0.5 text-amber-500">
+                           {[...Array(5)].map((_, idx) => <Star key={idx} size={10} fill="currentColor" />)}
+                        </div>
+                     </div>
+                     <motion.div whileHover={{ scale: 1.05 }} className="px-4 py-1.5 bg-[#F59E0B] rounded-full text-[10px] font-black text-white shadow-lg shadow-orange-500/20">
+                        Add to Cart
+                     </motion.div>
                   </div>
                 )}
-                {service.visual === "funnel" && (
-                   <div className="flex flex-col items-center gap-1 sm:gap-1.5 w-full max-w-[120px] sm:max-w-[140px] mx-auto group-hover:translate-y-[-3px] transition-transform">
-                      <div className="w-full h-3 sm:h-4 bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] rounded-full overflow-hidden">
-                         <motion.div initial={{ width: 0 }} whileInView={{ width: '100%' }} className="h-full bg-[#34C98A]" />
+                {service.visual === "conversion" && (
+                   <div className="space-y-2">
+                      <div className="flex justify-between items-end px-0.5">
+                         <span className="text-[9px] font-black text-[#4A6080]/40 uppercase tracking-widest">Growth Rate</span>
+                         <span className="text-[14px] font-black text-[#34C98A] leading-none">+12.5%</span>
                       </div>
-                      <div className="w-3/4 h-3 sm:h-4 bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] rounded-full overflow-hidden">
-                         <motion.div initial={{ width: 0 }} whileInView={{ width: '100%' }} transition={{ delay: 0.2 }} className="h-full bg-[#34C98A]" />
-                      </div>
-                      <div className="w-1/2 h-3 sm:h-4 bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] rounded-full overflow-hidden flex items-center justify-center">
-                         <motion.div initial={{ width: 0 }} whileInView={{ width: '100%' }} transition={{ delay: 0.4 }} className="h-full bg-[#34C98A] flex items-center justify-center">
-                            <span className="text-[6.5px] sm:text-[8px] text-white font-black uppercase tracking-tighter">Win!</span>
-                         </motion.div>
+                      <div className="h-1.5 w-full bg-white/50 rounded-full overflow-hidden border border-white/50">
+                        <motion.div 
+                          initial={{ width: 0 }}
+                          whileInView={{ width: "85%" }}
+                          transition={{ duration: 1.5, ease: "easeOut" }}
+                          className="h-full bg-gradient-to-r from-[#34C98A] to-[#10B981] rounded-full" 
+                        />
                       </div>
                    </div>
                 )}
                 {service.visual === "dashboard" && (
-                   <div className="grid grid-cols-3 gap-2 sm:gap-3 h-full group-hover:scale-105 transition-transform">
-                      {[0, 1, 2].map((i) => (
-                        <div key={i} className="bg-[#E8F0F8] shadow-[3px_3px_6px_rgba(163,185,210,0.4)] rounded-lg sm:rounded-xl p-1.5 sm:p-2 flex flex-col justify-between min-w-0">
-                           <div className="h-1 w-2/3 bg-[#8B5CF6]/20 rounded" />
-                           <div className="text-xs sm:text-[14px] font-black text-[#8B5CF6] truncate">
-                             <Counter from={0} to={82 + i * 4} duration={1.5} />%
-                           </div>
-                        </div>
-                      ))}
+                   <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 flex items-center justify-center">
+                         <LayoutDashboard size={18} className="text-[#8B5CF6]" />
+                      </div>
+                      <div className="flex-1 space-y-1.5">
+                         <div className="w-full h-1 bg-white/60 rounded-full" />
+                         <div className="w-2/3 h-1 bg-white/40 rounded-full" />
+                      </div>
                    </div>
                 )}
                 {service.visual === "code" && (
-                   <div className="w-full h-full bg-[#0D1B2A] rounded-xl p-3 sm:p-4 font-mono text-[9px] sm:text-[11px] text-[#29C6E0] overflow-hidden relative border border-white/05 shadow-2xl group-hover:border-[#1A7FD4]/30 transition-colors">
-                      <div className="animate-pulse flex items-center gap-1.5 mb-0.5 sm:mb-1 shrink-0">
-                         <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                         <div className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
-                         <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                      </div>
-                      <div className="text-white/40 truncate">{"// Rendering custom app..."}</div>
-                      <div className="text-cyan-400 truncate">{"<App data={realtime} />"}</div>
+                   <div className="bg-[#0D1B2A] rounded-xl p-3 border border-white/5 font-mono text-[10px] text-[#29C6E0] flex items-center justify-between">
+                      <span className="opacity-60">{"<Code />"}</span>
+                      <motion.div animate={{ opacity: [1, 0, 1] }} transition={{ duration: 1, repeat: Infinity }} className="w-1 h-3 bg-[#1A7FD4] rounded-full" />
                    </div>
                 )}
               </div>
@@ -228,25 +212,25 @@ const WebWhatWeBuild = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-8 sm:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-8">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
-              { label: "Websites Delivered", value: "50+" },
+              { label: "Sites Delivered", value: "50+" },
               { label: "Avg Load Time", value: "< 1.5s" },
-              { label: "Google PageSpeed Score", value: "98+" },
+              { label: "PageSpeed Score", value: "98+" },
               { label: "Mobile Responsive", value: "100%" }
             ].map((stat, i) => (
               <motion.div
                 key={i}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: i * 0.05 }}
-                whileHover={{ y: -3, scale: 1.02 }}
-                className="bg-[#E8F0F8] rounded-xl sm:rounded-[24px] p-4 sm:p-6 shadow-[6px_6px_12px_rgba(163,185,210,0.6),-6px_-6px_12px_rgba(255,255,255,0.9)] hover:shadow-[12px_12px_24px_rgba(163,185,210,0.5)] transition-all duration-300 flex flex-col items-center text-center group min-w-0"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="bg-white/40 backdrop-blur-md rounded-[24px] p-5 sm:p-6 border border-white/60 shadow-[10px_10px_20px_rgba(163,185,210,0.1)] hover:shadow-[15px_15px_30px_rgba(163,185,210,0.2)] transition-all duration-300 flex flex-col items-center text-center group"
               >
-                <div className="text-2xl sm:text-[36px] font-nunito font-black text-[#1A7FD4] leading-none mb-1 sm:mb-2 group-hover:scale-105 transition-transform truncate w-full">
+                <div className="text-2xl sm:text-[32px] font-nunito font-black text-[#1A7FD4] leading-none mb-2 group-hover:scale-110 transition-transform">
                   <Counter from={0} to={stat.value} />
                 </div>
-                <div className="text-[9px] sm:text-[12px] font-inter text-[#4A6080] font-bold uppercase tracking-widest leading-tight">{stat.label}</div>
+                <div className="text-[9px] sm:text-[10px] font-black text-[#4A6080]/60 uppercase tracking-[2px] leading-tight">{stat.label}</div>
               </motion.div>
             ))}
         </div>

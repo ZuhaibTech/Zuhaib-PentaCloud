@@ -39,15 +39,7 @@ const ZohoHero = () => {
               Pentacloud is a certified Zoho partner delivering end-to-end Zoho consulting, implementation, integration, and training services, helping businesses across India and the UAE maximise their Zoho investment and run smarter, faster, and more profitably.
             </p>
 
-            <div className="flex flex-row items-center gap-2 sm:gap-3 mb-6 sm:mb-8 w-full sm:w-auto">
-              <button className="flex-1 bg-[#1A7FD4] hover:bg-blue-600 active:bg-blue-700 text-white px-3 py-3 sm:px-8 sm:py-4 rounded-xl font-nunito font-black text-[11px] sm:text-base shadow-[0_8px_16px_rgba(26,127,212,0.2)] hover:shadow-lg active:scale-95 transition-all flex items-center justify-center gap-1.5 group cursor-pointer truncate">
-                <span>Get Free Zoho Consultation</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform shrink-0" />
-              </button>
-              <button className={`flex-1 ${NEUMORPHIC_BUTTON} text-[#1A7FD4] px-3 py-3 sm:px-8 sm:py-4 rounded-xl font-nunito font-bold text-[11px] sm:text-base flex items-center justify-center cursor-pointer truncate`}>
-                Explore Zoho Services
-              </button>
-            </div>
+
 
             <div className="flex flex-row items-center justify-between sm:justify-start gap-1.5 sm:gap-6 text-[8px] sm:text-[11px] md:text-[12px] font-bold text-[#4A6080] border-t border-slate-200 pt-5 sm:pt-6 w-full">
                <div className="flex items-center gap-1 sm:gap-2 min-w-0">
@@ -88,7 +80,7 @@ const ZohoHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className={`${CLAY_CARD} absolute -top-2 -right-2 sm:-top-8 sm:-right-8 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px] border-[#1A7FD4]/10`}
+              className="bg-white rounded-[32px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute -top-2 -right-2 sm:-top-8 sm:-right-8 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px]"
             >
                <p className="text-[7px] sm:text-[10px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-2 leading-none">Apps Expertise</p>
                <h4 className="text-sm sm:text-3xl font-nunito font-black text-[#1A7FD4] mb-0.5 leading-none">45+ Apps</h4>
@@ -99,7 +91,7 @@ const ZohoHero = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8 }}
-              className={`${CLAY_CARD} absolute bottom-6 -left-2 sm:bottom-12 sm:-left-12 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px] border-amber-200/50`}
+              className="bg-white rounded-[32px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute bottom-6 -left-2 sm:bottom-12 sm:-left-12 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px]"
             >
                <p className="text-[7px] sm:text-[10px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-2 leading-none">Projects</p>
                <h4 className="text-sm sm:text-3xl font-nunito font-black text-amber-500 mb-0.5 leading-none">40+ Projects</h4>
@@ -110,7 +102,7 @@ const ZohoHero = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0 }}
-              className={`${CLAY_CARD} absolute -bottom-2 right-2 sm:-bottom-8 sm:right-12 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px] border-green-200/50`}
+              className="bg-white rounded-[32px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute -bottom-2 right-2 sm:-bottom-8 sm:right-12 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px]"
             >
                <p className="text-[7px] sm:text-[10px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-2 leading-none">Avg ROI</p>
                <h4 className="text-sm sm:text-3xl font-nunito font-black text-[#34C98A] mb-0.5 leading-none">250% ↑</h4>

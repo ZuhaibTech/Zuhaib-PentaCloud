@@ -114,21 +114,7 @@ const CloudHero = () => {
             Pentacloud designs, deploys, and manages enterprise-grade cloud infrastructure, from architecture blueprints to 24/7 managed operations. Scalable, secure, and optimised for performance from day one.
           </motion.p>
 
-          {/* CTA Row */}
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto"
-          >
-            <button className="w-full sm:w-auto bg-[#1A7FD4] text-white font-nunito font-bold px-5 py-3 sm:px-8 sm:py-4 rounded-full shadow-[0_8px_24px_rgba(26,127,212,0.35),inset_0_-3px_0_rgba(0,0,0,0.12)] hover:-translate-y-0.5 active:translate-y-[2px] transition-all text-xs sm:text-base cursor-pointer flex items-center justify-center gap-2">
-              <span>Get Free Cloud Assessment</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="w-full sm:w-auto bg-transparent text-[#1A7FD4] font-nunito font-bold px-5 py-3 sm:px-8 sm:py-4 rounded-full border-2 border-[#1A7FD4] hover:bg-[#1A7FD4] hover:text-white transition-all text-xs sm:text-base cursor-pointer flex items-center justify-center">
-              View Cloud Services
-            </button>
-          </motion.div>
+
 
           {/* Trust Line */}
           <motion.div 

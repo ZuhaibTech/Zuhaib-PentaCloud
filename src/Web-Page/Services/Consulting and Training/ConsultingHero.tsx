@@ -7,7 +7,7 @@ import { NEUMORPHIC_BUTTON } from "./Constants";
 
 const ConsultingHero = () => {
   return (
-    <section className="py-6 sm:py-12 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-10 sm:mb-16 md:mb-24">
+    <section className="py-6 sm:py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -25,26 +25,19 @@ const ConsultingHero = () => {
           We consult on the right technology decisions and train your team to execute them — delivered by the same certified experts who build real systems.
         </p>
         
-        <div className="flex flex-wrap gap-3 sm:gap-6 mb-6 sm:mb-10">
-          <button className="bg-[#1A7FD4] text-white px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl sm:rounded-2xl font-nunito font-black text-sm sm:text-xl shadow-[0_10px_20px_rgba(26,127,212,0.25)] hover:-translate-y-0.5 active:scale-95 transition-all flex items-center gap-2">
-            Book Free Consultation <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-          </button>
-          <button className={`px-6 py-3.5 sm:px-10 sm:py-5 rounded-xl sm:rounded-2xl font-nunito font-bold text-xs sm:text-base md:text-lg text-[#1A7FD4] transition-all active:scale-95 ${NEUMORPHIC_BUTTON}`}>
-            See Training Programmes
-          </button>
-        </div>
 
-        <div className="flex flex-col xl:flex-row xl:items-center gap-3 xl:gap-6 py-3.5 px-5 xl:py-4 xl:px-8 bg-white/40 backdrop-blur-sm rounded-2xl border border-white/40 w-full xl:w-fit shadow-[2px_2px_5px_rgba(163,185,210,0.15)] overflow-x-auto hide-scrollbar">
-           <span className="text-[#4A6080] text-xs sm:text-sm font-bold flex items-center gap-2 whitespace-nowrap">
-             <Trophy className="w-4 h-4 text-[#F59E0B] shrink-0" /> 16+ Certifications
+
+        <div className="flex flex-row items-center gap-2 sm:gap-4 py-2 px-4 bg-white/40 backdrop-blur-sm rounded-xl border border-white/40 w-fit shadow-[2px_2px_5px_rgba(163,185,210,0.15)] overflow-x-auto hide-scrollbar">
+           <span className="text-[#4A6080] text-[10px] sm:text-xs font-bold flex items-center gap-1.5 whitespace-nowrap">
+             <Trophy className="w-3 h-3 text-[#F59E0B] shrink-0" /> 16+ Certifications
            </span>
-           <span className="text-gray-300 hidden xl:block">|</span>
-           <span className="text-[#4A6080] text-xs sm:text-sm font-bold flex items-center gap-2 whitespace-nowrap">
-             <Users className="w-4 h-4 text-[#1A7FD4] shrink-0" /> 500+ Professionals Trained
+           <span className="text-gray-300">|</span>
+           <span className="text-[#4A6080] text-[10px] sm:text-xs font-bold flex items-center gap-1.5 whitespace-nowrap">
+             <Users className="w-3 h-3 text-[#1A7FD4] shrink-0" /> 500+ Professionals Trained
            </span>
-           <span className="text-gray-300 hidden xl:block">|</span>
-           <span className="text-[#1A7FD4] text-xs sm:text-sm font-black flex items-center gap-2 whitespace-nowrap">
-             <Star className="w-4 h-4 text-[#34C98A] fill-[#34C98A] shrink-0" /> Certified Tier 3 Experts
+           <span className="text-gray-300">|</span>
+           <span className="text-[#1A7FD4] text-[10px] sm:text-xs font-black flex items-center gap-1.5 whitespace-nowrap">
+             <Star className="w-3 h-3 text-[#34C98A] fill-[#34C98A] shrink-0" /> Certified Tier 3 Experts
            </span>
         </div>
       </motion.div>

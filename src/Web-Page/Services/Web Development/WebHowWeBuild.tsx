@@ -3,177 +3,192 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { 
-  MessageSquare, PenTool, Paintbrush, Code2, TestTube2, Rocket 
+  MessageSquare, PenTool, Paintbrush, Code2, TestTube2, Rocket, CheckCircle2 
 } from "lucide-react";
 
 const WebHowWeBuild = () => {
   const steps = [
     {
       num: "01",
-      title: "Discovery & Briefing",
+      title: "Discovery",
       duration: "Day 1–3",
       icon: MessageSquare,
       color: "#1A7FD4",
-      body: "Structured discovery session covering business goals, target audience, brand guidelines, and technical requirements, resulting in a clear project brief.",
+      body: "Deep-dive session to define goals, audience, and technical scope, resulting in a solidified project roadmap.",
       deliverable: "Project Brief",
       side: "left"
     },
     {
       num: "02",
-      title: "UX Wireframing",
+      title: "Wireframing",
       duration: "Day 3–7",
       icon: PenTool,
       color: "#8B5CF6",
-      body: "Mapping every page as a wireframe, defining information architecture, user flows, and conversion paths before any visual design.",
-      deliverable: "Wireframe Deck",
+      body: "Architecting the site structure, defining user flows, and conversion paths before any visual work begins.",
+      deliverable: "UX Blueprint",
       side: "right"
     },
     {
       num: "03",
-      title: "UI Design in Figma",
+      title: "UI Design",
       duration: "Day 7–14",
       icon: Paintbrush,
       color: "#29C6E0",
-      body: "Pixel-perfect UI design responsive across all devices. Fully interactive prototype provided for feedback and approval.",
+      body: "High-fidelity Figma designs with interactive prototypes to visualise exactly how your site will look and feel.",
       deliverable: "Figma Prototype",
       side: "left"
     },
     {
       num: "04",
-      title: "Development & Build",
+      title: "Build Phase",
       duration: "Week 2–5",
       icon: Code2,
       color: "#34C98A",
-      body: "Clean, documented code translating Figma designs into production-ready components using Next.js and Tailwind CSS.",
-      deliverable: "Staging Website",
+      body: "Engineered development using Next.js and Tailwind, creating a high-performance, mobile-first experience.",
+      deliverable: "Staging Site",
       side: "right"
     },
     {
       num: "05",
-      title: "Testing & Optimisation",
+      title: "Optimisation",
       duration: "Week 5–6",
       icon: TestTube2,
       color: "#F59E0B",
-      body: "Comprehensive cross-browser testing, Core Web Vitals optimisation, SEO audit, security hardening, and accessibility checks.",
+      body: "Cross-browser testing, SEO audit, security hardening, and Core Web Vitals profiling for peak performance.",
       deliverable: "QA Report",
       side: "left"
     },
     {
       num: "06",
-      title: "Launch & Handover",
+      title: "Handover",
       duration: "Week 6–7",
       icon: Rocket,
       color: "#EC4899",
-      body: "Zero-downtime deployment, analytics integration, and full handover session including CMS training for your team.",
-      deliverable: "Live Website",
+      body: "Final deployment with full analytics integration, CMS training, and documentation for your in-house team.",
+      deliverable: "Live Launch",
       side: "right"
     }
   ];
 
   return (
     <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
-      {/* Background Grid */}
-      <div 
-        className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-        style={{ 
-          backgroundImage: `linear-gradient(#1A7FD4 1px, transparent 1px), linear-gradient(90deg, #1A7FD4 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }} 
-      />
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1A7FD4] blur-[130px] opacity-[0.05] pointer-events-none -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#29C6E0] blur-[130px] opacity-[0.05] pointer-events-none translate-y-1/2 -translate-x-1/4" />
 
-      <div className="max-w-7xl mx-auto relative">
-        {/* Header */}
-        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header Section */}
+        <div className="text-center mb-16 sm:mb-24 flex flex-col items-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="px-4 py-1.5 sm:px-6 sm:py-2 bg-white/60 shadow-[inset_2px_2px_5px_rgba(163,185,210,0.25)] rounded-full text-[#1A7FD4] text-[9px] sm:text-xs font-bold tracking-widest uppercase mb-3 sm:mb-6"
+            viewport={{ once: true }}
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-sm text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[4px] uppercase mb-4"
           >
-            HOW WE BUILD
+            OUR WEB PROCESS
           </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="text-2xl sm:text-4xl md:text-5xl font-nunito font-black text-[#0D1B2A] mb-2 sm:mb-4 leading-tight"
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[40px] md:text-[48px] text-[#0D1B2A] leading-[1.1] mb-5"
           >
-            Your Website Journey <br />
-            From Brief to <span className="text-[#1A7FD4]">Browser in 6 Steps</span>
+            From Brief to <br className="hidden sm:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A7FD4] to-[#29C6E0]">Browser in 6 Steps</span>
           </motion.h2>
+          <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-lg leading-relaxed font-medium px-4">
+            A transparent, agile workflow designed to deliver high-converting web experiences on time and within budget.
+          </p>
         </div>
 
-        {/* Timeline */}
+        {/* Timeline Section */}
         <div className="relative">
-          {/* Center Line - left-aligned on mobile, centered on desktop */}
-          <div className="absolute left-[27px] sm:left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-[#D0DDE8] shadow-[1px_0_3px_rgba(255,255,255,0.8),-1px_0_3px_rgba(163,185,210,0.5)] overflow-hidden">
+          {/* Main Vertical Track */}
+          <div className="absolute left-[27px] sm:left-1/2 -translate-x-1/2 top-4 bottom-4 w-[2px] bg-white/40 shadow-inner rounded-full overflow-hidden">
             <motion.div 
               initial={{ height: 0 }}
               whileInView={{ height: '100%' }}
               transition={{ duration: 2, ease: "easeInOut" }}
-              className="w-full bg-[#1A7FD4] shadow-[0_0_10px_#1A7FD4]"
+              className="w-full bg-gradient-to-b from-[#1A7FD4] via-[#29C6E0] to-[#EC4899] shadow-[0_0_15px_rgba(26,127,212,0.4)]"
             />
           </div>
 
-          <div className="flex flex-col gap-8 md:gap-24 relative">
+          <div className="flex flex-col gap-12 sm:gap-24 relative">
             {steps.map((step, i) => (
-              <div key={i} className={`flex items-center w-full ${step.side === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:flex-row gap-6 md:gap-8`}>
+              <div key={i} className={`flex items-center w-full ${step.side === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col gap-8`}>
                 
-                {/* Card - padded to the right of left-aligned timeline center line on mobile */}
+                {/* Content Card */}
                 <motion.div 
-                  initial={{ x: step.side === 'left' ? -50 : 50, opacity: 0 }}
+                  initial={{ x: step.side === 'left' ? -40 : 40, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, type: "spring" }}
-                  whileHover={{ y: -6, scale: 1.01 }}
-                  className={`w-[calc(100%-54px)] ml-[54px] sm:w-full sm:ml-0 md:w-[44%] bg-[#E8F0F8] rounded-[20px] sm:rounded-[32px] p-5 sm:p-8 shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,0.95)] hover:shadow-[20px_20px_40px_rgba(163,185,210,0.7),-20px_-20px_40px_rgba(255,255,255,1)] relative group transition-all duration-500 overflow-hidden`}
+                  transition={{ duration: 0.6, type: "spring", bounce: 0.2 }}
+                  whileHover={{ y: -8 }}
+                  viewport={{ once: true }}
+                  className={`w-[calc(100%-54px)] ml-[54px] sm:w-full sm:ml-0 md:w-[45%] group relative bg-white/40 backdrop-blur-sm rounded-[32px] p-6 sm:p-8 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-500 flex flex-col overflow-hidden`}
                 >
-                  <span className="absolute top-3 right-4 text-4xl sm:text-6xl font-black text-[#0D1B2A] opacity-[0.04] pointer-events-none group-hover:opacity-10 transition-opacity">
+                  {/* Step Number */}
+                  <div className="absolute top-4 right-6 text-5xl sm:text-6xl font-nunito font-black text-[#1A7FD4] opacity-[0.03] group-hover:opacity-[0.06] pointer-events-none transition-opacity">
                     {step.num}
-                  </span>
+                  </div>
 
-                  <div className="flex flex-col gap-3.5 sm:gap-4">
-                    <div className="flex items-center gap-3.5 sm:gap-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-[#E8F0F8] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.4),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] flex items-center justify-center text-[#1A7FD4] group-hover:shadow-[4px_4px_12px_rgba(163,185,210,0.5),-4px_-4px_12px_rgba(255,255,255,0.9)] group-hover:rotate-[15deg] transition-all duration-500 shrink-0">
-                        <step.icon className="w-5 h-5 sm:w-6 sm:h-6" color={step.color} />
-                      </div>
-                      <div className="flex flex-col min-w-0">
-                        <h3 className="font-nunito font-bold text-sm sm:text-lg text-[#0D1B2A] group-hover:text-[#1A7FD4] transition-colors truncate">{step.title}</h3>
-                        <div className="px-2.5 py-0.5 bg-[#E8F0F8] rounded-full shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3),inset_-2px_-2px_4px_rgba(255,255,255,0.8)] text-[8px] sm:text-[9px] font-bold text-[#1A7FD4]/60 w-fit">
-                          {step.duration}
-                        </div>
+                  {/* Decorative Glow */}
+                  <div 
+                    className="absolute -top-16 -right-16 w-32 h-32 rounded-full blur-[60px] opacity-0 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none"
+                    style={{ backgroundColor: step.color }}
+                  />
+
+                  <div className="flex items-center gap-4 mb-6">
+                    <div 
+                      className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center group-hover:scale-105 group-hover:rotate-3 transition-all duration-500 shrink-0"
+                      style={{ color: step.color }}
+                    >
+                      <step.icon size={26} strokeWidth={2.5} />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="font-nunito font-black text-lg sm:text-xl text-[#0D1B2A] group-hover:text-[#1A7FD4] transition-colors leading-tight">{step.title}</h3>
+                      <div className="px-2.5 py-0.5 bg-white/60 rounded-full border border-white shadow-sm text-[9px] font-black text-[#1A7FD4] uppercase tracking-wider mt-1 w-fit">
+                        {step.duration}
                       </div>
                     </div>
+                  </div>
 
-                    <p className="text-[10px] sm:text-xs text-[#4A6080] font-inter leading-relaxed">
-                      {step.body}
-                    </p>
+                  <p className="font-inter text-[13px] text-[#4A6080] leading-relaxed mb-6 font-medium flex-1">
+                    {step.body}
+                  </p>
 
-                    <div className="px-3 py-1.5 bg-[#E8F0F8] rounded-lg sm:rounded-full shadow-[4px_4px_8px_rgba(163,185,210,0.4),-4px_-4px_8px_rgba(255,255,255,0.9)] text-[8.5px] sm:text-[10px] font-bold text-[#1A7FD4] w-fit mt-1 sm:mt-2 group-hover:scale-105 transition-transform origin-left flex items-center gap-1.5">
-                      <step.icon className="w-3.5 h-3.5 shrink-0" color={step.color} />
-                      <span>{step.deliverable}</span>
-                    </div>
+                  <div 
+                    className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white shadow-sm border border-white text-[10px] font-nunito font-black uppercase tracking-wider w-fit group-hover:bg-white transition-colors"
+                    style={{ color: step.color }}
+                  >
+                    <CheckCircle2 size={14} strokeWidth={3} className="shrink-0 opacity-60" />
+                    <span className="truncate">{step.deliverable}</span>
                   </div>
                 </motion.div>
 
-                {/* Center Dot Container - aligned left on mobile, center on desktop */}
-                <div className="absolute left-[27px] sm:left-1/2 -translate-x-1/2 w-10 h-10 sm:w-12 sm:h-12 items-center justify-center flex z-20">
-                  <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-[#E8F0F8] shadow-[6px_6px_12px_rgba(163,185,210,0.6),-6px_-6px_12px_rgba(255,255,255,0.9)] flex items-center justify-center relative">
-                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#1A7FD4] shadow-[0_0_10px_#1A7FD4]" />
+                {/* Timeline Intersection Node */}
+                <div className="absolute left-[27px] sm:left-1/2 -translate-x-1/2 w-10 h-10 items-center justify-center flex z-20">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white shadow-lg border border-white/60 flex items-center justify-center relative">
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full shadow-inner transition-colors duration-500" style={{ backgroundColor: step.color }} />
                     <motion.div 
-                      animate={{ scale: [1, 1.8], opacity: [1, 0] }}
+                      animate={{ scale: [1, 1.8], opacity: [0.6, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}
-                      className="absolute inset-0 rounded-full border-2 border-[#1A7FD4]/40"
+                      className="absolute inset-0 rounded-full"
+                      style={{ backgroundColor: step.color }}
                     />
                   </div>
-                  {/* Connector Line - only shown on desktop */}
+                  
+                  {/* Decorative H-Line Connector (Desktop Only) */}
                   <motion.div 
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
-                    transition={{ delay: 0.5, duration: 0.5 }}
-                    className={`hidden md:block absolute h-[2px] w-12 bg-transparent border-t-2 border-dashed border-[#1A7FD4]/20 ${step.side === 'left' ? 'right-12 origin-right' : 'left-12 origin-left'}`}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    className={`hidden md:block absolute h-[1px] w-12 bg-white/60 ${step.side === 'left' ? 'right-10 origin-right' : 'left-10 origin-left'}`}
                   />
                 </div>
 
-                {/* Empty space for zigzag */}
-                <div className="hidden md:block w-[44%]" />
+                {/* Grid Spacer */}
+                <div className="hidden md:block md:w-[45%]" />
               </div>
             ))}
           </div>

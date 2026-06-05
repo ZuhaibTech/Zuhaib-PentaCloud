@@ -3,134 +3,112 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FileText, ClipboardList, FlaskConical, ShieldCheck, Rocket, CheckCircle2 } from "lucide-react";
-import { CLAY_CARD } from "./Constants";
 
 const processSteps = [
   {
-    step: "1",
-    duration: "Day 1–5",
-    title: "Discovery & Data Audit",
-    body: "We begin with a thorough audit of your source system, mapping all data objects, relationships, volumes, data quality issues, duplicate records, and dependencies. We assess data complexity, identify transformation requirements, and calculate migration effort and timeline. You receive a complete Migration Readiness Report before any work begins.",
-    deliverable: "Migration Readiness Report",
-    activities: ["Source system inventory", "Data volume assessment", "Data quality analysis", "Duplicate identification", "Dependency mapping", "Compliance requirements review"]
+    title: "Discovery",
+    duration: "1-5 Days",
+    icon: FileText,
+    color: "#1A7FD4",
+    desc: "Complete audit of source data, relationships, and dependencies to map out technical requirements.",
   },
   {
-    step: "2",
-    duration: "Day 5–10",
-    title: "Migration Strategy & Planning",
-    body: "We design your migration strategy, defining the migration approach (big bang vs phased), cutover windows, rollback plan, data transformation rules, field mapping specifications, and a detailed runbook with task-by-task execution steps. Nothing is left to chance or improvisation.",
-    deliverable: "Migration Runbook",
-    activities: ["Migration approach selection", "Cutover window planning", "Field mapping documentation", "Transformation rule design", "Rollback strategy definition", "Stakeholder communication plan"]
+    title: "Strategy",
+    duration: "5-10 Days",
+    icon: ClipboardList,
+    color: "#8B5CF6",
+    desc: "Detailed runbook design, including transformation rules, cutover windows, and rollback planning.",
   },
   {
-    step: "3",
-    duration: "Week 2–3",
-    title: "Environment Setup & Test Migration",
-    body: "We configure the target environment and run a full test migration in a sandbox, migrating a representative sample of data to validate field mappings, transformation rules, data relationships, and application behaviour in the target system before a single byte of production data is touched.",
-    deliverable: "Test Migration Report",
-    activities: ["Target environment setup", "Sandbox migration execution", "Field mapping validation", "Relationship integrity check", "Application testing on migrated data", "Performance benchmarking"]
+    title: "Testing",
+    duration: "Week 2-3",
+    icon: FlaskConical,
+    color: "#29C6E0",
+    desc: "Full sandbox execution to validate field mapping and integrity before touching production data.",
   },
   {
-    step: "4",
-    duration: "Week 3–4",
-    title: "Data Cleansing & Preparation",
-    body: "Before production migration, we cleanse and prepare your source data, removing duplicates, standardising formats, filling mandatory fields, archiving obsolete records, and applying transformation rules to ensure only clean, accurate data arrives in the target system.",
-    deliverable: "Cleansed Data Set",
-    activities: ["Duplicate record removal", "Data format standardisation", "Mandatory field population", "Obsolete record archiving", "Data transformation execution", "Pre-migration quality report"]
+    title: "Cleansing",
+    duration: "Week 3-4",
+    icon: ShieldCheck,
+    color: "#34C98A",
+    desc: "Standardising formats, removing duplicates, and applying final transformation rules for high-quality data.",
   },
   {
-    step: "5",
-    duration: "Week 4–5",
-    title: "Production Migration & Cutover",
-    body: "The production migration is executed during a pre-agreed cutover window, minimising business disruption. We run migration in phases, monitoring every step in real time. Full rollback capability is maintained until final validation sign-off from your team. No cutover is declared complete until your team confirms data accuracy in production.",
-    deliverable: "Live Target System",
-    activities: ["Pre-migration final backup", "Phased data migration execution", "Real-time progress monitoring", "Immediate post-migration validation", "User acceptance testing (UAT)", "Go/no-go decision with client"]
+    title: "Migration",
+    duration: "Week 4-5",
+    icon: Rocket,
+    color: "#F59E0B",
+    desc: "Production cutover during pre-agreed window with real-time monitoring and 100% rollback safety.",
   },
   {
-    step: "6",
-    duration: "Week 5–6",
-    title: "Validation, Reconciliation & Handover",
-    body: "After go-live, we run a comprehensive reconciliation, comparing record counts, financial totals, relationship integrity, and data samples between source and target to prove 100% migration completeness. We also decommission the source system safely and provide full documentation of the completed migration for your records and compliance requirements.",
-    deliverable: "Migration Completion Report",
-    activities: ["Record count reconciliation", "Financial total validation", "Random sample audit", "Source system decommission", "Full documentation handover", "30-day post-migration support"]
+    title: "Validation",
+    duration: "Week 5-6",
+    icon: CheckCircle2,
+    color: "#EC4899",
+    desc: "Comprehensive reconciliation audit and handover of complete migration documentation.",
   }
-];
-
-const deliverableIcons = [
-  <FileText className="w-3.5 h-3.5 text-[#1A7FD4] shrink-0" key="1" />,
-  <ClipboardList className="w-3.5 h-3.5 text-[#1A7FD4] shrink-0" key="2" />,
-  <FlaskConical className="w-3.5 h-3.5 text-[#1A7FD4] shrink-0" key="3" />,
-  <ShieldCheck className="w-3.5 h-3.5 text-[#34C98A] shrink-0" key="4" />,
-  <Rocket className="w-3.5 h-3.5 text-[#34C98A] shrink-0" key="5" />,
-  <CheckCircle2 className="w-3.5 h-3.5 text-[#34C98A] shrink-0" key="6" />
 ];
 
 const MigrationProcess = () => {
   return (
-    <section className="mb-12 sm:mb-24 md:mb-32">
-      <div className="text-center mb-10 sm:mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="inline-block px-4 py-1.5 bg-blue-50 text-[#1A7FD4] rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-[2px] sm:tracking-[3px] mb-4 sm:mb-6"
-        >
-          HOW WE MIGRATE
-        </motion.div>
-        <h2 className="text-2xl sm:text-4xl md:text-6xl font-nunito font-black text-[#0D1B2A] mb-4 sm:mb-6 leading-tight">
-          Our Proven 6-Step <br/> <span className="text-[#1A7FD4]">Migration Methodology</span>
-        </h2>
-        <p className="text-[#4A6080] max-w-2xl mx-auto font-inter text-xs sm:text-base md:text-lg leading-relaxed px-2">
-          Every migration follows our battle-tested methodology, built from 100+ successful migrations with zero data loss record.
-        </p>
-      </div>
+    <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6 rounded-[48px]">
+      {/* Background Decor */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1A7FD4 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
-      <div className="space-y-6 sm:space-y-8 relative">
-        {/* Responsive Connecting Line - connected on all screen sizes */}
-        <div className="absolute left-[27px] sm:left-[39px] top-8 bottom-8 w-0.5 bg-blue-100" />
-        
-        {processSteps.map((step, idx) => (
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-12 sm:mb-20 flex flex-col items-center">
           <motion.div
-            key={idx}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: idx * 0.05 }}
-            className="flex flex-row gap-4 sm:gap-8 items-start relative z-10"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-sm text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[4px] uppercase mb-4"
           >
-            <div className="flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-white shadow-xl flex flex-col items-center justify-center border border-blue-50">
-              <span className="text-[8px] sm:text-[10px] font-black text-[#1A7FD4] uppercase tracking-tighter leading-none mb-0.5">Step</span>
-              <span className="text-xl sm:text-3xl font-black text-[#0D1B2A] leading-none">{step.step}</span>
-            </div>
-            
-            <div className={`${CLAY_CARD} p-5 sm:p-8 flex-grow rounded-[20px] sm:rounded-[32px] overflow-hidden`}>
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-3 sm:mb-4">
-                <h4 className="text-base sm:text-2xl font-nunito font-black text-[#0D1B2A]">{step.title}</h4>
-                <div className="px-2.5 py-1 sm:px-4 sm:py-1.5 bg-blue-50 text-[#1A7FD4] rounded-lg sm:rounded-xl text-[9px] sm:text-xs font-black uppercase tracking-wider border border-blue-100">
-                  {step.duration}
-                </div>
-              </div>
-              <p className="text-[#4A6080] font-inter text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 max-w-4xl">{step.body}</p>
-              
-              <div className="mb-4 sm:mb-6">
-                <p className="text-[#0D1B2A] font-black text-[9px] sm:text-[10px] uppercase tracking-widest mb-2 sm:mb-3">Key Activities:</p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 sm:gap-y-2">
-                   {step.activities.map((act, i) => (
-                     <li key={i} className="flex items-center gap-2 text-[10px] sm:text-[11px] text-[#4A6080]">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-200 shrink-0" /> <span className="truncate">{act}</span>
-                     </li>
-                   ))}
-                </ul>
+            HOW WE MIGRATE
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[40px] md:text-[48px] text-[#0D1B2A] leading-tight mb-5"
+          >
+            Our 6-Step <span className="text-[#1A7FD4]">Migration Blueprint</span>
+          </motion.h2>
+          <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-base leading-relaxed font-medium">
+            A battle-tested methodology built from 100+ successful migrations with a zero data loss record.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {processSteps.map((step, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white/40 backdrop-blur-sm rounded-[32px] p-6 sm:p-8 border border-white/60 shadow-[10px_10px_25px_rgba(163,185,210,0.1),-5px_-5px_15px_rgba(255,255,255,0.5)] transition-all duration-500 flex flex-col"
+            >
+              <div className="absolute top-4 right-6 text-5xl font-nunito font-black text-[#1A7FD4] opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
+                {`0${idx + 1}`}
               </div>
 
-              <div className="flex sm:inline-flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 bg-slate-50 rounded-xl sm:rounded-2xl border border-slate-100 w-fit">
-                 <span className="text-[9px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest shrink-0">Deliverable:</span>
-                 <div className="flex items-center gap-1.5 min-w-0">
-                    {deliverableIcons[idx]}
-                    <span className="text-xs sm:text-sm font-bold text-[#0D1B2A] truncate">{step.deliverable}</span>
-                 </div>
+              <div 
+                className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-5 group-hover:scale-105 group-hover:rotate-3 transition-all duration-500"
+                style={{ color: step.color }}
+              >
+                <step.icon size={26} strokeWidth={2.5} />
               </div>
-            </div>
-          </motion.div>
-        ))}
+
+              <div className="flex flex-wrap items-center gap-3 mb-2">
+                <h3 className="text-lg font-nunito font-black text-[#0D1B2A] leading-none">{step.title}</h3>
+                <span className="px-2 py-0.5 bg-white/60 rounded-full border border-white text-[9px] font-black text-[#1A7FD4] uppercase tracking-wider">
+                  {step.duration}
+                </span>
+              </div>
+              
+              <p className="text-[#4A6080] font-inter text-[13.5px] leading-relaxed font-medium mt-2">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

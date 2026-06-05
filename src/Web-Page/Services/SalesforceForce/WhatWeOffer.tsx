@@ -66,143 +66,180 @@ const WhatWeOffer = () => {
   ];
 
   return (
-    <section className="py-10 px-4 sm:px-6 bg-[#E8F0F8] relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1A7FD4] blur-[120px] opacity-[0.05] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#29C6E0] blur-[120px] opacity-[0.05] pointer-events-none" />
+    <section className="py-12 sm:py-20 px-4 sm:px-6 bg-[#E8F0F8] relative overflow-hidden">
+      {/* Dynamic Background Elements */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#1A7FD4] blur-[100px] sm:blur-[150px] opacity-[0.06] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#29C6E0] blur-[100px] sm:blur-[150px] opacity-[0.06] pointer-events-none translate-y-1/2 -translate-x-1/3" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
+        <div className="text-center mb-10 sm:mb-16 flex flex-col items-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="px-4 py-1.5 bg-[#E8F0F8] rounded-full shadow-[6px_6px_12px_rgba(163,185,210,0.6),-6px_-6px_12px_rgba(255,255,255,0.9)] text-[#1A7FD4] text-[9px] sm:text-xs font-bold tracking-widest uppercase mb-4 sm:mb-6 leading-none"
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-[2px_2px_8px_rgba(163,185,210,0.15)] text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[3px] uppercase mb-4 sm:mb-6"
           >
             WHAT WE OFFER
           </motion.div>
           <motion.h2
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-nunito font-extrabold text-2xl sm:text-[42px] text-[#0D1B2A] leading-tight"
+            className="font-nunito font-black text-2xl sm:text-[36px] md:text-[44px] text-[#0D1B2A] leading-[1.2] mb-4 sm:mb-6"
           >
-            Complete Salesforce <span className="text-[#1A7FD4]">Service Ecosystem</span>
+            Complete Salesforce <br className="hidden sm:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A7FD4] to-[#29C6E0]">Service Ecosystem</span>
           </motion.h2>
-          <p className="font-inter text-[#4A6080] max-w-[560px] text-xs sm:text-[16px] leading-relaxed mt-2 sm:mt-4">
-            From initial implementation to ongoing optimisation, we cover every aspect of your Salesforce journey.
+          <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-base leading-relaxed font-medium px-4">
+            From initial implementation to ongoing optimisation, we cover every aspect of your Salesforce journey with precision and expertise.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {services.map((service, i) => (
             <motion.div
               key={i}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: i * 0.05, duration: 0.8, type: "spring" }}
-              whileHover={{ y: -6, scale: 1.01 }}
-              className="bg-[#E8F0F8] rounded-[20px] sm:rounded-[32px] p-5 sm:p-8 shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,0.95)] hover:shadow-[20px_20px_40px_rgba(163,185,210,0.7),-20px_-20px_40px_rgba(255,255,255,1)] group relative overflow-hidden transition-all duration-500 flex flex-col min-w-0"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.08, duration: 0.5 }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white/40 backdrop-blur-sm rounded-[32px] p-6 sm:p-7 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25),-15px_-15px_50px_rgba(255,255,255,0.8)] transition-all duration-500 flex flex-col overflow-hidden"
             >
+              {/* Decorative Glow */}
               <div 
-                className={`w-[48px] h-[48px] sm:w-[60px] sm:h-[60px] flex items-center justify-center mb-5 sm:mb-8 rounded-xl sm:rounded-[20px] bg-[#E8F0F8] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.4),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] group-hover:shadow-[4px_4px_12px_rgba(163,185,210,0.5),-4px_-4px_12px_rgba(255,255,255,0.9)] group-hover:rotate-[15deg] transition-all duration-500 shrink-0 [&_svg]:w-5.5 [&_svg]:h-5.5 [&_svg]:sm:w-7 [&_svg]:sm:h-7`}
+                className="absolute -top-16 -right-16 w-40 h-40 rounded-full blur-[70px] opacity-0 group-hover:opacity-15 transition-opacity duration-700 pointer-events-none"
+                style={{ backgroundColor: service.color }}
+              />
+
+              <div 
+                className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center mb-6 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] group-hover:scale-105 transition-all duration-500"
                 style={{ color: service.color }}
               >
-                <service.icon />
+                <service.icon size={26} strokeWidth={2.5} className="sm:w-7 sm:h-7" />
               </div>
 
-              <h3 className="font-nunito font-black text-lg sm:text-[22px] text-[#0D1B2A] mb-2 sm:mb-4 group-hover:text-[#1A7FD4] transition-colors">{service.title}</h3>
-              <p className="font-inter text-xs sm:text-[14px] text-[#4A6080] leading-[1.8] mb-4 sm:mb-8">
+              <h3 className="font-nunito font-black text-xl sm:text-[22px] text-[#0D1B2A] mb-3 group-hover:text-[#1A7FD4] transition-colors duration-300 leading-tight">
+                {service.title}
+              </h3>
+              
+              <p className="font-inter text-[13px] sm:text-[13.5px] text-[#4A6080] leading-relaxed mb-6 font-medium">
                 {service.desc}
               </p>
 
-              <div className="flex flex-wrap gap-3 sm:gap-3.5 mb-4 sm:mb-8">
+              <div className="flex flex-wrap gap-2 mb-8 mt-auto">
                 {service.tags.map((tag, j) => (
-                  <span key={j} className="bg-[#E8F0F8] text-[#1A7FD4] font-nunito font-bold text-[8.5px] sm:text-[10px] px-2.5 py-1 rounded-full shadow-[3px_3px_6px_rgba(163,185,210,0.4),-3px_-3px_6px_rgba(255,255,255,0.85)] uppercase tracking-wider group-hover:scale-105 transition-transform leading-none">
+                  <span 
+                    key={j} 
+                    className="px-2.5 py-1 bg-white/60 rounded-lg border border-white shadow-sm text-[9px] font-nunito font-black text-[#1A7FD4] uppercase tracking-wider group-hover:bg-white transition-colors"
+                  >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              {/* Mini Visuals */}
-              <div className="pt-4 border-t border-[#1A7FD4]/10 flex items-center overflow-hidden mt-auto min-h-[48px] w-full min-w-0">
+              {/* Enhanced Visual Footer */}
+              <div className="pt-6 border-t border-white/40 mt-auto">
                 {service.visual === "steps" && (
-                  <div className="flex items-center gap-2 sm:gap-3 text-[8.5px] sm:text-[10px] font-bold text-[#1A7FD4] min-w-0 truncate">
-                    <span className="animate-pulse px-2 py-0.5 bg-[#E8F0F8] rounded shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)]">Discovery</span>
-                    <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
-                    <span className="opacity-50">Build</span>
-                    <ArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
-                    <span className="opacity-50">Launch</span>
+                  <div className="flex items-center justify-between w-full px-1">
+                    {["Discovery", "Build", "Launch"].map((step, idx) => (
+                      <React.Fragment key={idx}>
+                        <div className="flex flex-col items-center gap-1">
+                          <div className={`w-1.5 h-1.5 rounded-full ${idx === 0 ? 'bg-[#1A7FD4] shadow-[0_0_8px_#1A7FD4]' : 'bg-[#1A7FD4]/20'}`} />
+                          <span className={`text-[9px] font-black uppercase tracking-tighter ${idx === 0 ? 'text-[#1A7FD4]' : 'text-[#4A6080]/30'}`}>{step}</span>
+                        </div>
+                        {idx < 2 && <div className="h-[1px] flex-1 bg-gradient-to-r from-[#1A7FD4]/20 to-[#1A7FD4]/10 mx-2" />}
+                      </React.Fragment>
+                    ))}
                   </div>
                 )}
+
                 {service.visual === "gears" && (
-                  <div className="flex items-center gap-3 sm:gap-4 w-full min-w-0">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E8F0F8] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3)] flex items-center justify-center shrink-0">
+                  <div className="flex items-center gap-4 w-full">
+                    <div className="relative w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center overflow-hidden shrink-0">
                       <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                        className="flex items-center justify-center"
                       >
-                        <Settings className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#29C6E0]" />
+                        <Settings size={18} className="text-[#29C6E0]" />
                       </motion.div>
                     </div>
-                    <div className="flex-1 h-2 bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] rounded-full overflow-hidden">
-                      <motion.div 
-                        initial={{ width: 0 }}
-                        whileInView={{ width: "85%" }}
-                        className="h-full bg-gradient-to-r from-[#29C6E0] to-[#1A7FD4]" 
-                      />
+                    <div className="flex-1 space-y-1.5">
+                       <div className="flex justify-between text-[9px] font-black text-[#29C6E0] uppercase tracking-widest">
+                          <span>Progress</span>
+                          <span>85%</span>
+                       </div>
+                       <div className="h-1.5 w-full bg-white/50 rounded-full overflow-hidden border border-white/50">
+                          <motion.div 
+                            initial={{ width: 0 }}
+                            whileInView={{ width: "85%" }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            className="h-full bg-gradient-to-r from-[#29C6E0] to-[#1A7FD4]" 
+                          />
+                       </div>
                     </div>
                   </div>
                 )}
+
                 {service.visual === "health" && (
-                  <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-                    <div className="relative w-10 h-10 sm:w-12 sm:h-12 bg-[#E8F0F8] rounded-full shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3)] flex items-center justify-center shrink-0">
-                      <svg viewBox="0 0 36 36" className="w-8 h-8 sm:w-10 sm:h-10 transform -rotate-90">
-                        <circle cx="18" cy="18" r="16" fill="transparent" stroke="rgba(52,201,138,0.1)" strokeWidth="3" />
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center shrink-0">
+                      <svg viewBox="0 0 36 36" className="w-8 h-8 transform -rotate-90">
+                        <circle cx="18" cy="18" r="16" fill="transparent" stroke="#E8F0F8" strokeWidth="4" />
                         <motion.circle 
                           initial={{ strokeDashoffset: 100 }}
                           whileInView={{ strokeDashoffset: 13 }}
-                          cx="18" cy="18" r="16" fill="transparent" stroke="#34C98A" strokeWidth="3" strokeDasharray="100" className="transition-all duration-1000" 
+                          cx="18" cy="18" r="16" fill="transparent" stroke="#34C98A" strokeWidth="4" strokeDasharray="100" className="transition-all duration-1000 ease-out" 
                         />
                       </svg>
-                      <div className="absolute inset-0 flex items-center justify-center text-[9px] sm:text-[11px] font-black text-[#34C98A] leading-none">87%</div>
+                      <div className="absolute inset-0 flex items-center justify-center text-[10px] font-black text-[#34C98A]">87%</div>
                     </div>
-                    <span className="text-[10px] sm:text-[12px] font-black text-[#34C98A] uppercase tracking-widest truncate">Health Score</span>
+                    <div>
+                       <div className="text-[8px] font-black text-[#4A6080]/40 uppercase tracking-widest mb-0.5">Cloud Vitality</div>
+                       <div className="text-[12px] font-black text-[#34C98A] uppercase tracking-wider">High Stability</div>
+                    </div>
                   </div>
                 )}
+
                 {service.visual === "apps" && (
-                  <div className="flex items-center gap-3 sm:gap-4 min-w-0 w-full">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#E8F0F8] shadow-[4px_4px_8px_rgba(163,185,210,0.4)] flex items-center justify-center text-[9.5px] sm:text-[11px] font-black text-[#1A7FD4] shrink-0">SF</div>
-                    <div className="flex gap-1">
-                      {[0, 1, 2].map((dot) => (
+                  <div className="flex items-center justify-between w-full bg-white/30 p-2 rounded-xl border border-white/50">
+                    <div className="w-8 h-8 rounded-lg bg-white shadow-sm flex items-center justify-center text-[10px] font-black text-[#1A7FD4]">SF</div>
+                    <div className="flex-1 flex justify-center gap-1 px-3">
+                      {[0, 1, 2, 3].map((dot) => (
                         <motion.div 
                           key={dot}
-                          animate={{ scale: [1, 1.4, 1], opacity: [0.3, 1, 0.3] }}
-                          transition={{ duration: 1.5, repeat: Infinity, delay: dot * 0.3 }}
-                          className="w-1.5 h-1.5 rounded-full bg-[#1A7FD4]" 
+                          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 1, 0.3] }}
+                          transition={{ duration: 1.5, repeat: Infinity, delay: dot * 0.2 }}
+                          className="w-1 h-1 rounded-full bg-[#1A7FD4]" 
                         />
                       ))}
                     </div>
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#E8F0F8] shadow-[4px_4px_8px_rgba(163,185,210,0.4)] flex items-center justify-center text-[9.5px] sm:text-[11px] font-black text-[#8B5CF6] shrink-0">ERP</div>
+                    <div className="w-8 h-8 rounded-lg bg-[#8B5CF6] shadow-sm flex items-center justify-center text-[10px] font-black text-white">ERP</div>
                   </div>
                 )}
+
                 {service.visual === "ticket" && (
-                  <div className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-[#E8F0F8] rounded-xl shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] text-[8.5px] sm:text-[10px] font-black text-[#34C98A] uppercase tracking-wider min-w-0 truncate">
-                    <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
-                    <span className="truncate">Ticket #ID132 Resolved</span>
+                  <div className="flex items-center justify-between w-full bg-[#34C98A]/10 px-3 py-2 rounded-xl border border-[#34C98A]/20">
+                    <div className="flex items-center gap-2">
+                       <div className="w-5 h-5 rounded-full bg-[#34C98A] flex items-center justify-center text-white">
+                          <CheckCircle size={12} strokeWidth={3} />
+                       </div>
+                       <span className="text-[10px] font-black text-[#0D1B2A] tracking-tight uppercase">Ticket #4282 Resolved</span>
+                    </div>
+                    <span className="text-[9px] font-black text-[#34C98A] opacity-60">12:40 PM</span>
                   </div>
                 )}
+
                 {service.visual === "progress" && (
-                  <div className="flex flex-col gap-1 sm:gap-2 w-full min-w-0">
-                    <div className="flex justify-between text-[8.5px] sm:text-[10px] font-black text-[#EC4899] uppercase tracking-widest leading-none">
-                      <span className="truncate">Admin Training</span>
-                      <span>100%</span>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-end px-0.5">
+                       <span className="text-[9px] font-black text-[#4A6080] uppercase tracking-widest">Team Adoption Rate</span>
+                       <span className="text-[14px] font-black text-[#EC4899] leading-none">94%</span>
                     </div>
-                    <div className="h-2 bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] rounded-full overflow-hidden w-full">
+                    <div className="h-1.5 w-full bg-white/50 rounded-full overflow-hidden border border-white/50 p-[1px]">
                       <motion.div 
                         initial={{ width: 0 }}
-                        whileInView={{ width: "100%" }}
-                        transition={{ duration: 1.5 }}
-                        className="h-full bg-gradient-to-r from-[#EC4899] to-[#EC4899]/60" 
+                        whileInView={{ width: "94%" }}
+                        transition={{ duration: 1.5, ease: "circOut" }}
+                        className="h-full bg-gradient-to-r from-[#EC4899] to-[#FF75B5] rounded-full" 
                       />
                     </div>
                   </div>

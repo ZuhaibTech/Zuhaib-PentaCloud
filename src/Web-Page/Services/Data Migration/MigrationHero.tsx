@@ -7,7 +7,7 @@ import { NEUMORPHIC_BUTTON } from "./Constants";
 
 const MigrationHero = () => {
   return (
-    <section className="py-6 sm:py-12 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-10 sm:mb-16 md:mb-24">
+    <section className="py-6 sm:py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -26,14 +26,7 @@ const MigrationHero = () => {
           Pentacloud delivers secure, compliant, and seamless data migration across platforms, systems, and clouds, protecting every record, every relationship, and every byte of your business-critical data through every stage of the migration journey.
         </p>
         
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6 sm:mb-8 w-full sm:w-auto">
-          <button className="bg-[#1A7FD4] hover:bg-blue-600 active:bg-blue-700 text-white px-5 py-3 sm:px-8 sm:py-4 rounded-xl font-nunito font-black text-sm sm:text-base md:text-lg shadow-[0_8px_16px_rgba(26,127,212,0.2)] hover:shadow-lg active:scale-95 transition-all flex items-center justify-center gap-2 group w-full sm:w-auto cursor-pointer">
-            Get Free Migration Assessment <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button className={`px-5 py-3 sm:px-8 sm:py-4 rounded-xl font-nunito font-bold text-sm sm:text-base md:text-lg text-[#1A7FD4] w-full sm:w-auto flex items-center justify-center cursor-pointer ${NEUMORPHIC_BUTTON}`}>
-            Talk to Our Experts
-          </button>
-        </div>
+
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-4 py-3.5 px-5 sm:py-4 sm:px-8 bg-white/40 backdrop-blur-sm rounded-2xl border border-white/40 w-full sm:w-fit justify-center sm:justify-start text-[11px] sm:text-xs shadow-[2px_2px_5px_rgba(163,185,210,0.15)]">
            <span className="text-[#4A6080] font-bold flex items-center gap-2">

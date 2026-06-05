@@ -5,7 +5,6 @@ import DigitalHero from "./DigitalHero";
 import DigitalServices from "./DigitalServices";
 import DigitalProcess from "./DigitalProcess";
 import DigitalWhyPentacloud from "./DigitalWhyPentacloud";
-import DigitalResults from "./DigitalResults";
 import DigitalFAQ from "./DigitalFAQ";
 
 const DigitalMarketing = () => {
@@ -20,7 +19,6 @@ const DigitalMarketing = () => {
         <DigitalServices />
         <DigitalProcess />
         <DigitalWhyPentacloud />
-        <DigitalResults />
         <DigitalFAQ />
       </div>
     </div>

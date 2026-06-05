@@ -2,116 +2,175 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Lightbulb, Users, Palette, Code2, TestTube2, Rocket, Apple, Smartphone } from "lucide-react";
-
-const CLAY_CARD = "bg-background rounded-[20px] sm:rounded-[28px] shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)]";
+import { Lightbulb, Users, Palette, Code2, TestTube2, Rocket, Apple, Smartphone, CheckCircle2 } from "lucide-react";
 
 const AppHowWeBuild = () => {
   const steps = [
-    { title: "Idea Validation", duration: "Day 1–3", icon: Lightbulb, bg: "#EEF3FF", color: "#1A7FD4", deliverable: "Validation Report", desc: "We analyse your app idea, market size, competitor apps, technical feasibility, and monetisation potential.", visual: "lightbulb" },
-    { title: "UX Wireframes", duration: "Day 3–10", icon: Users, bg: "#EEF3FF", color: "#1A7FD4", deliverable: "User Flow Diagrams", desc: "User journey mapping, persona definition, and low-fidelity wireframes across every screen.", visual: "userflow" },
-    { title: "UI Design", duration: "Day 10–20", icon: Palette, bg: "#FFE8F0", color: "#EC4899", deliverable: "Interactive Prototype", desc: "High-fidelity mobile UI designs across all screens, animations, micro-interactions, and empty states.", visual: "uidesign" },
-    { title: "Development Sprints", duration: "Week 3–8", icon: Code2, bg: "#E8FFE8", color: "#34C98A", deliverable: "Weekly Test Builds", desc: "2-week agile sprints with weekly TestFlight / internal builds shared for your review.", visual: "sprints" },
-    { title: "QA & Testing", duration: "Week 8–9", icon: TestTube2, bg: "#FFF8E0", color: "#F59E0B", deliverable: "QA Test Report", desc: "Testing on 30+ real devices, functional testing, performance profiling, and battery usage.", visual: "qa" },
-    { title: "Launch & Growth", duration: "Week 9–10", icon: Rocket, bg: "#FFE8F0", color: "#EC4899", deliverable: "Live on App Stores", desc: "End-to-end App Store and Play Store submission, screenshots, descriptions, and metadata.", visual: "launch" }
+    { title: "Idea Validation", duration: "Day 1–3", icon: Lightbulb, color: "#1A7FD4", deliverable: "Validation Report", desc: "We analyse your app idea, market size, competitor apps, technical feasibility, and monetisation potential.", visual: "validate" },
+    { title: "UX Wireframes", duration: "Day 3–10", icon: Users, color: "#1A7FD4", deliverable: "User Flow Diagrams", desc: "User journey mapping, persona definition, and low-fidelity wireframes across every screen.", visual: "wireframe" },
+    { title: "UI Design", duration: "Day 10–20", icon: Palette, color: "#EC4899", deliverable: "Interactive Prototype", desc: "High-fidelity mobile UI designs across all screens, animations, micro-interactions, and empty states.", visual: "design" },
+    { title: "Development Sprints", duration: "Week 3–8", icon: Code2, color: "#34C98A", deliverable: "Weekly Test Builds", desc: "2-week agile sprints with weekly TestFlight / internal builds shared for your review.", visual: "sprints" },
+    { title: "QA & Testing", duration: "Week 8–9", icon: TestTube2, color: "#F59E0B", deliverable: "QA Test Report", desc: "Testing on 30+ real devices, functional testing, performance profiling, and battery usage.", visual: "qa" },
+    { title: "Launch & Growth", duration: "Week 9–10", icon: Rocket, color: "#EC4899", deliverable: "Live on App Stores", desc: "End-to-end App Store and Play Store submission, screenshots, descriptions, and metadata.", visual: "launch" }
   ];
 
   return (
-    <section className="py-8 sm:py-12 bg-background relative overflow-hidden px-4 sm:px-6">
+    <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
+      {/* Dynamic Background Elements */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1A7FD4] blur-[130px] opacity-[0.05] pointer-events-none -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#29C6E0] blur-[130px] opacity-[0.05] pointer-events-none translate-y-1/2 -translate-x-1/4" />
+
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-6 sm:mb-10">
-          <div className="bg-background shadow-[3px_3px_8px_rgba(163,185,210,0.3),-3px_-3px_8px_rgba(255,255,255,0.85)] text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[11px] tracking-[2px] rounded-full px-4 py-1.5 mb-4 sm:mb-6 w-fit mx-auto">
-            HOW WE BUILD
-          </div>
-          <h2 className="font-nunito font-extrabold text-2xl sm:text-[42px] text-[#0D1B2A] leading-tight">
-            From Idea to <span className="text-[#1A7FD4]">App Store in 6 Steps</span>
-          </h2>
+        <div className="text-center mb-12 sm:mb-20 flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-[2px_2px_8px_rgba(163,185,210,0.15)] text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[3px] uppercase mb-4 sm:mb-6"
+          >
+            OUR PROCESS
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[40px] md:text-[52px] text-[#0D1B2A] leading-[1.1] mb-5 sm:mb-6"
+          >
+            From Idea to <br className="hidden sm:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A7FD4] to-[#29C6E0]">App Store in 6 Steps</span>
+          </motion.h2>
+          <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-lg leading-relaxed font-medium px-4">
+            We follow a rigorous, transparent development cycle to ensure your app is built correctly, tested thoroughly, and launched successfully.
+          </p>
         </div>
 
-        <div className="relative pt-6 lg:pt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 relative z-10">
-            {steps.map((step, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, type: "spring", delay: i * 0.05 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -6 }}
-                className={`${CLAY_CARD} p-6 sm:p-8 group transition-all relative flex flex-col h-full overflow-hidden`}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+          {steps.map((step, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white/40 backdrop-blur-sm rounded-[32px] p-6 sm:p-7 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-500 flex flex-col overflow-hidden h-full"
+            >
+              {/* Step Number Backdrop */}
+              <div className="absolute top-4 right-6 text-6xl sm:text-7xl font-nunito font-black text-[#1A7FD4] opacity-[0.03] group-hover:opacity-[0.06] pointer-events-none transition-opacity">
+                {`0${i + 1}`}
+              </div>
+
+              {/* Decorative Glow */}
+              <div 
+                className="absolute -top-16 -right-16 w-32 h-32 rounded-full blur-[60px] opacity-0 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none"
+                style={{ backgroundColor: step.color }}
+              />
+
+              <div 
+                className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center mb-6 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] group-hover:scale-105 group-hover:rotate-3 transition-all duration-500 shrink-0"
+                style={{ color: step.color }}
               >
+                <step.icon size={26} strokeWidth={2.5} className="sm:w-7 sm:h-7" />
+              </div>
 
-                <div className="absolute top-4 right-5 text-5xl sm:text-7xl font-nunito font-black text-[#1A7FD4] opacity-[0.04] group-hover:opacity-[0.08] pointer-events-none transition-opacity">
-                  {`0${i + 1}`}
-                </div>
+              <h3 className="font-nunito font-black text-xl text-[#0D1B2A] mb-2 group-hover:text-[#1A7FD4] transition-colors duration-300 leading-tight">
+                {step.title}
+              </h3>
 
-                <div className="mb-5 sm:mb-6">
-                  <div 
-                    className={`w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl sm:rounded-[20px] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.3),inset_-4px_-4px_8px_rgba(255,255,255,0.85)] transition-transform group-hover:rotate-[10deg] shrink-0`}
-                    style={{ backgroundColor: 'transparent', color: step.color }}
+              <div className="px-2.5 py-0.5 bg-white/60 rounded-full border border-white shadow-sm text-[9px] font-nunito font-black text-[#1A7FD4] uppercase tracking-widest w-fit mb-4">
+                {step.duration}
+              </div>
+              
+              <p className="font-inter text-[13px] text-[#4A6080] leading-relaxed mb-6 font-medium flex-1">
+                {step.desc}
+              </p>
+
+              <div 
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white shadow-sm border border-white text-[10px] font-nunito font-black uppercase tracking-wider mb-8 w-fit group-hover:bg-white transition-colors"
+                style={{ color: step.color }}
+              >
+                <step.icon size={14} strokeWidth={3} className="shrink-0" />
+                <span className="truncate">{step.deliverable}</span>
+              </div>
+
+              {/* Enhanced Visual Footer */}
+              <div className="pt-6 border-t border-white/40 mt-auto flex items-center justify-center h-16 sm:h-20 overflow-hidden">
+                {step.visual === "validate" && (
+                  <motion.div 
+                    animate={{ scale: [1, 1.05, 1], opacity: [0.7, 1, 0.7] }} 
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="flex items-center gap-2 bg-[#34C98A]/10 px-4 py-2 rounded-full border border-[#34C98A]/20"
                   >
-                    <step.icon className="w-6 h-6 sm:w-8 sm:h-8" />
+                     <CheckCircle2 size={16} className="text-[#34C98A]" />
+                     <span className="text-[11px] font-black text-[#34C98A] uppercase tracking-wider">Feasibility Passed</span>
+                  </motion.div>
+                )}
+
+                {step.visual === "wireframe" && (
+                  <div className="flex gap-2">
+                    {[0, 1, 2].map((j) => (
+                      <motion.div 
+                        key={j} 
+                        initial={{ height: 20 }}
+                        animate={{ height: [20, 35, 20], opacity: [0.3, 1, 0.3] }}
+                        transition={{ duration: 1.5, repeat: Infinity, delay: j * 0.2 }}
+                        className="w-5 border-2 border-[#1A7FD4]/20 rounded-md bg-white/40"
+                      />
+                    ))}
                   </div>
-                </div>
+                )}
 
-                <h3 className="font-nunito font-bold text-[18px] sm:text-[22px] text-[#0D1B2A] mb-2 leading-tight">{step.title}</h3>
-                <div className="font-nunito font-bold text-[10px] sm:text-[11px] text-[#1A7FD4] bg-background shadow-[2px_2px_4px_rgba(163,185,210,0.3),-2px_-2px_4px_rgba(255,255,255,0.85)] px-3 py-1 rounded-full uppercase tracking-wider w-fit mb-4 sm:mb-5">
-                  {step.duration}
-                </div>
-                <p className="font-inter text-xs sm:text-[14px] text-[#4A6080] leading-relaxed mb-6 sm:mb-8 flex-1">
-                  {step.desc}
-                </p>
+                {step.visual === "design" && (
+                  <div className="flex items-center gap-3">
+                     <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#EC4899] to-[#FF75B5] shadow-lg shadow-pink-500/20" />
+                     <div className="flex flex-col gap-1">
+                        <div className="w-12 h-1.5 bg-white/60 rounded-full" />
+                        <div className="w-8 h-1.5 bg-white/40 rounded-full" />
+                     </div>
+                  </div>
+                )}
 
-                <div 
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg sm:rounded-full font-nunito font-bold text-[10px] sm:text-[12px] bg-background shadow-[3px_3px_6px_rgba(163,185,210,0.3),-3px_-3px_6px_rgba(255,255,255,0.85)] transition-transform group-hover:scale-105 mb-5 sm:mb-6 w-fit"
-                  style={{ color: step.color }}
-                >
-                  <step.icon className="w-4 h-4 shrink-0" />
-                  <span className="truncate">{step.deliverable}</span>
-                </div>
+                {step.visual === "sprints" && (
+                  <div className="flex items-center gap-2 w-full max-w-[120px]">
+                    {[0, 1, 2].map((j) => (
+                      <div key={j} className="flex-1 h-8 bg-white/40 rounded-lg border border-white/50 p-1 flex items-end">
+                        <motion.div 
+                          animate={{ height: j === 1 ? ['40%', '90%', '40%'] : '60%' }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className={`w-full rounded-sm ${j === 1 ? 'bg-[#34C98A]' : 'bg-[#34C98A]/30'}`}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
 
-                {/* Mini Visuals */}
-                <div className="h-16 sm:h-20 border-t border-slate-50 pt-4 sm:pt-5 flex items-center justify-center shrink-0">
-                   {step.visual === "lightbulb" && (
-                      <motion.div animate={{ scale: [1, 1.1, 1] }} transition={{ duration: 2, repeat: Infinity }}>
-                         <div className="text-[12px] sm:text-[14px] font-bold text-[#8B5CF6]">Validated ✓</div>
+                {step.visual === "qa" && (
+                  <div className="grid grid-cols-4 gap-1.5">
+                    {[...Array(8)].map((_, j) => (
+                      <motion.div 
+                        key={j} 
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ delay: j * 0.1 }}
+                        className="w-3.5 h-3.5 rounded-full bg-[#F59E0B] flex items-center justify-center text-white text-[7px] font-black"
+                      >
+                        ✓
                       </motion.div>
-                   )}
-                   {step.visual === "userflow" && (
-                      <div className="flex gap-2 sm:gap-3">
-                         {[1, 2, 3].map(j => <motion.div key={j} animate={{ x: [0, 4, 0] }} transition={{ duration: 1.5, repeat: Infinity, delay: j * 0.2 }} className="w-5 h-10 sm:w-8 sm:h-12 border border-[#1A7FD4]/30 rounded-sm" />)}
-                      </div>
-                   )}
-                   {step.visual === "uidesign" && (
-                      <div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-pink-400 to-purple-500 rounded-xl shadow-inner group-hover:scale-110 transition-transform" />
-                   )}
-                   {step.visual === "sprints" && (
-                      <div className="grid grid-cols-3 gap-1.5 w-full max-w-[80px] sm:max-w-[100px]">
-                         {[...Array(3)].map((_, j) => <div key={j} className="h-8 sm:h-10 bg-green-50 border border-green-100 rounded p-1.5 flex flex-col gap-1.5">
-                            <motion.div 
-                               animate={{ x: j === 1 ? [0, 10, 10] : 0 }}
-                               transition={{ duration: 4, repeat: Infinity }}
-                               className={`h-1.5 sm:h-2 rounded-full ${j === 1 ? 'bg-green-400' : 'bg-green-200'}`} 
-                               style={{ width: '80%' }}
-                            />
-                         </div>)}
-                      </div>
-                   )}
-                   {step.visual === "qa" && (
-                      <div className="grid grid-cols-3 gap-1.5">
-                         {[...Array(6)].map((_, j) => <motion.div key={j} animate={{ opacity: [0, 1] }} transition={{ duration: 0.5, delay: j * 0.3, repeat: Infinity, repeatDelay: 2 }} className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-amber-400 flex items-center justify-center text-white text-[8px] sm:text-[10px]">✓</motion.div>)}
-                      </div>
-                   )}
-                   {step.visual === "launch" && (
-                      <div className="flex gap-2 sm:gap-3">
-                         <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-slate-100 flex items-center justify-center"><Apple className="w-4 h-4 sm:w-5 sm:h-5" /></div>
-                         <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-slate-100 flex items-center justify-center"><Smartphone className="w-4 h-4 sm:w-5 sm:h-5" /></div>
-                      </div>
-                   )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                    ))}
+                  </div>
+                )}
+
+                {step.visual === "launch" && (
+                  <div className="flex gap-4">
+                     <motion.div whileHover={{ y: -5 }} className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#0D1B2A]">
+                        <Apple size={20} />
+                     </motion.div>
+                     <motion.div whileHover={{ y: -5 }} className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#34C98A]">
+                        <Smartphone size={20} />
+                     </motion.div>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

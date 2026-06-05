@@ -2,91 +2,84 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, BarChart3, Star, Zap } from "lucide-react";
+import { ShieldCheck, BarChart3, Star, Zap, Users, MessageCircle, Heart, Globe } from "lucide-react";
 
 const differentiators = [
-  { title: "We're Technology + Marketing", body: "Unlike typical agencies, Pentacloud combines digital marketing with Salesforce CRM and automation, giving you a complete lead-to-close revenue engine." },
-  { title: "100% Transparent Reporting", body: "No vanity metrics. No fluff. Every report shows real business impact, leads generated, cost per lead, revenue attributed, and ROI calculated." },
-  { title: "Industry-Specific Strategies", body: "We build strategies tailored to your industry, Healthcare, Finance, Retail, SaaS, and Enterprise, understanding buyer journeys and competition." },
-  { title: "Integrated CRM & Marketing", body: "As a certified Salesforce and Zoho partner, we connect your campaigns directly to your CRM, tracking every lead from first click to closed deal." },
-  { title: "Creative + Data Combined", body: "We believe great marketing needs both, compelling creative that stops the scroll AND rigorous data analysis that optimises performance." },
-  { title: "No Long-Term Lock-In", body: "We work on rolling monthly engagements, no 12-month contracts that trap you. We earn your business every month through results." },
-  { title: "Meta & Google Partner Status", body: "Our partnership gives us access to beta features, priority support, and advanced audience tools not available to standard advertisers." },
-  { title: "India + UAE Market Expertise", body: "Deep understanding of both Indian and Middle Eastern digital markets, consumer behaviour, platform preferences, and cultural nuances." }
+  { title: "Tech + Marketing", icon: BarChart3, color: "#1A7FD4", body: "We combine digital strategy with CRM automation for a complete revenue engine." },
+  { title: "ROI-Focused", icon: Zap, color: "#F59E0B", body: "No vanity metrics. We track and report real business impact and attributed revenue." },
+  { title: "Industry Experts", icon: Globe, color: "#8B5CF6", body: "Tailored strategies for Healthcare, Finance, and SaaS with deep market understanding." },
+  { title: "CRM Integrated", icon: ShieldCheck, color: "#34C98A", body: "Direct connection to Salesforce and Zoho to track leads from first click to close." },
+  { title: "Creative & Data", icon: Heart, color: "#EC4899", body: "Compelling scroll-stopping creative backed by rigorous performance analysis." },
+  { title: "Zero Lock-In", icon: MessageCircle, color: "#1A7FD4", body: "Rolling monthly engagements. We earn your business through measurable results." },
+  { title: "Partner Status", icon: Star, color: "#F59E0B", body: "Access to beta features and priority support as Meta and Google partners." },
+  { title: "Dual Markets", icon: Users, color: "#8B5CF6", body: "Deep expertise across both Indian and Middle Eastern digital landscapes." }
 ];
 
 const DigitalWhyPentacloud = () => {
   return (
-    <section className="mb-12 sm:mb-24 md:mb-32">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+    <section className="py-8 sm:py-12 relative overflow-hidden px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.8fr_1fr] gap-12 lg:gap-20 items-center">
+        
+        {/* Visual Column */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           className="relative"
         >
-          <div className="bg-gradient-to-br from-white to-blue-50 p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white aspect-[4/5] flex items-center justify-center relative group">
-             <div className="absolute inset-0 rounded-[24px] sm:rounded-[48px] overflow-hidden">
-                <img 
-                  src="/Images/Digital marketing images/digital marketing-why.webp" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                  alt="Marketing Strategy" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
-             </div>
+          <div className="relative rounded-[48px] overflow-hidden shadow-[20px_20px_60px_rgba(163,185,210,0.3)] group aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
+             <img 
+               src="/Images/Digital marketing images/digital marketing-why.webp" 
+               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+               alt="Marketing Strategy" 
+             />
+             <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/60 via-transparent to-transparent" />
              
-             {/* Floating Badges - Optimized for Mobile Screen Bounds to prevent overflow */}
-             <div className="absolute top-4 left-3 sm:top-12 sm:left-8 p-2.5 sm:p-4 bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-lg border border-blue-50 flex items-center gap-2 sm:gap-3">
-                <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-blue-50 text-[#1A7FD4] flex items-center justify-center shrink-0">
-                  <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
-                </div>
-                <div>
-                   <p className="text-[8px] sm:text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-0.5 sm:mb-1">Data-Driven Decisions</p>
-                   <p className="text-[7px] sm:text-[9px] text-slate-400 font-bold leading-none">Every strategy backed by data</p>
-                </div>
-             </div>
-
-             <div className="absolute top-1/2 right-3 sm:-right-8 sm:-translate-y-1/2 p-2.5 sm:p-4 bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-lg border border-blue-50 flex items-center gap-2 sm:gap-3">
-                <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-green-50 text-[#34C98A] flex items-center justify-center shrink-0">
-                  <Star className="w-4 h-4 sm:w-5 sm:h-5" />
-                </div>
-                <div>
-                   <p className="text-[8px] sm:text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-0.5 sm:mb-1">ROI Guaranteed Focus</p>
-                   <p className="text-[7px] sm:text-[9px] text-slate-400 font-bold leading-none">We track what matters</p>
-                </div>
-             </div>
-
-             <div className="absolute bottom-4 left-3 sm:bottom-12 sm:left-10 p-2.5 sm:p-4 bg-white/90 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-lg border border-blue-50 flex items-center gap-2 sm:gap-3">
-                <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-50 text-[#F59E0B] flex items-center justify-center shrink-0">
-                  <Zap className="w-4 h-4 sm:w-5 sm:h-5" />
-                </div>
-                <div>
-                   <p className="text-[8px] sm:text-[10px] font-black text-[#0D1B2A] uppercase leading-none mb-0.5 sm:mb-1">48hr Campaign Launch</p>
-                   <p className="text-[7px] sm:text-[9px] text-slate-400 font-bold leading-none">Fastest in the industry</p>
+             {/* Dynamic Badge */}
+             <div className="absolute bottom-8 left-8 right-8 bg-white/40 backdrop-blur-md p-6 rounded-3xl border border-white/60 shadow-xl">
+                <div className="flex items-center gap-4">
+                   <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#1A7FD4]">
+                      <BarChart3 size={28} strokeWidth={2.5} />
+                   </div>
+                   <div>
+                      <p className="text-sm font-black text-[#0D1B2A] uppercase tracking-wider mb-0.5">Data Driven</p>
+                      <p className="text-[11px] font-bold text-[#4A6080]/80 uppercase tracking-tighter">ROI Focused Performance</p>
+                   </div>
                 </div>
              </div>
           </div>
         </motion.div>
 
-        <div className="pt-6 lg:pt-0">
+        {/* Content Column */}
+        <div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 bg-blue-50 text-[#1A7FD4] rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-[2px] sm:tracking-[3px] mb-4 sm:mb-6"
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-sm text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[4px] uppercase mb-4 w-fit"
           >
             WHY PENTACLOUD
           </motion.div>
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-nunito font-black text-[#0D1B2A] mb-6 sm:mb-12 leading-tight">
-            Marketing That Works <br/> <span className="text-[#1A7FD4]">For Your Business</span>
+          <h2 className="text-2xl sm:text-[40px] md:text-[48px] font-nunito font-black text-[#0D1B2A] mb-8 leading-[1.1]">
+            Marketing Built <span className="text-[#1A7FD4]">on Results</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
             {differentiators.map((item, i) => (
-              <div key={i} className="group">
-                <h4 className="font-nunito font-black text-sm sm:text-base text-[#0D1B2A] mb-1.5 sm:mb-2 flex items-center gap-2 group-hover:text-[#1A7FD4] transition-colors leading-tight">
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#1A7FD4] flex-shrink-0" /> {item.title}
-                </h4>
-                <p className="text-[10px] sm:text-[11px] text-[#4A6080] font-inter leading-relaxed">{item.body}</p>
-              </div>
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+                className="group flex gap-4"
+              >
+                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-[#1A7FD4] shrink-0 group-hover:scale-150 transition-transform" />
+                <div className="min-w-0">
+                  <h4 className="font-nunito font-black text-sm text-[#0D1B2A] mb-1 group-hover:text-[#1A7FD4] transition-colors uppercase tracking-wider">
+                    {item.title}
+                  </h4>
+                  <p className="text-[12.5px] text-[#4A6080] font-inter leading-relaxed font-medium">{item.body}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>

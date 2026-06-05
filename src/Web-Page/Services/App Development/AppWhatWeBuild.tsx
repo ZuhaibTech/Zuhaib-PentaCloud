@@ -1,13 +1,11 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion, useInView, animate } from "framer-motion";
 import { 
-  Smartphone, Tablet, Cpu, Cloud, ShieldCheck, Zap, 
-  Layers, AppWindow, Code2, Users, ArrowRight, Star
+  Smartphone, Tablet, ShieldCheck, Zap, 
+  Star, Users, CheckCircle2
 } from "lucide-react";
-import { useRef, useEffect } from "react";
-import { useInView, animate } from "framer-motion";
 
 // --- Custom Counter Component ---
 const Counter = ({ from, to, duration = 2 }: { from: number, to: number | string, duration?: number }) => {
@@ -41,145 +39,169 @@ const AppWhatWeBuild = () => {
       desc: "Native-quality cross-platform applications built with React Native and Flutter. Single codebase, dual-platform dominance.",
       icon: Smartphone,
       color: "#1A7FD4",
-      tags: ["React Native", "Flutter", "App Store", "Play Store"],
-      visual: "ios"
+      tags: ["React Native", "Flutter", "Store Ready"],
+      visual: "rating"
     },
     {
       title: "Enterprise Solutions",
-      desc: "Secure, scalable internal applications for workforce management, logistics, and data collection.",
+      desc: "Secure, scalable internal applications for workforce management, logistics, and real-time data collection.",
       icon: Tablet,
       color: "#8B5CF6",
-      tags: ["RBAC", "Offline Sync", "Custom ERP", "Internal"],
-      visual: "enterprise"
+      tags: ["RBAC", "Offline Sync", "ERP Link"],
+      visual: "performance"
     },
     {
       title: "FinTech & Payments",
       desc: "PCI-compliant applications with high-security biometric authentication and real-time transaction processing.",
       icon: ShieldCheck,
       color: "#34C98A",
-      tags: ["PCI-DSS", "Biometrics", "Stripe", "Ledger"],
-      visual: "fintech"
+      tags: ["PCI-DSS", "Biometrics", "Stripe"],
+      visual: "security"
     },
     {
       title: "Real-time Social Apps",
-      desc: "Applications requiring low-latency communication, real-time notifications, and high concurrent user handling.",
+      desc: "Applications requiring low-latency communication, push notifications, and high concurrent user handling.",
       icon: Zap,
       color: "#F59E0B",
-      tags: ["WebSockets", "Push API", "Live Chat", "Scalable"],
-      visual: "social"
+      tags: ["WebSockets", "Live Chat", "Scalable"],
+      visual: "active"
     }
   ];
 
   return (
-    <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-10 rounded-[24px] sm:rounded-[48px]">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#1A7FD4 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+    <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6">
+      {/* Soft Background Accents */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#1A7FD4] blur-[130px] opacity-[0.06] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#8B5CF6] blur-[130px] opacity-[0.06] pointer-events-none translate-x-1/2 translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-6 sm:mb-10 flex flex-col items-center">
+        <div className="text-center mb-12 sm:mb-20 flex flex-col items-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="px-4 py-1.5 bg-[#E8F0F8] rounded-full shadow-[3px_3px_6px_rgba(163,185,210,0.4),-3px_-3px_6px_rgba(255,255,255,0.85)] text-[#1A7FD4] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-4 sm:mb-6"
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-[2px_2px_8px_rgba(163,185,210,0.15)] text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[4px] uppercase mb-4 sm:mb-6"
           >
             MOBILE INNOVATION
           </motion.div>
           <motion.h2
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="font-nunito font-extrabold text-2xl sm:text-[42px] md:text-[52px] text-[#0D1B2A] leading-tight mb-3 sm:mb-4"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[40px] md:text-[52px] text-[#0D1B2A] leading-[1.1] mb-5 sm:mb-6"
           >
-            Mobile Experiences <span className="text-[#1A7FD4]">Built for Scale</span>
+            Mobile Experiences <br className="hidden sm:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A7FD4] to-[#8B5CF6]">Built for Scale</span>
           </motion.h2>
-          <p className="font-inter text-[#4A6080] max-w-[620px] text-xs sm:text-[16px] leading-relaxed px-2">
+          <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-lg leading-relaxed font-medium px-4">
             We transform your ideas into powerful, pocket-sized experiences that engage users and drive business results.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {apps.map((app, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05, duration: 0.8, type: "spring" }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              className="bg-[#E8F0F8] p-5 sm:p-8 rounded-[20px] sm:rounded-[40px] shadow-[10px_10px_20px_rgba(163,185,210,0.6),-10px_-10px_20px_rgba(255,255,255,0.95)] hover:shadow-[20px_20px_40px_rgba(163,185,210,0.7),-20px_-20px_40px_rgba(255,255,255,1)] group transition-all duration-500 overflow-hidden flex flex-col h-full"
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white/40 backdrop-blur-sm rounded-[32px] p-6 sm:p-7 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-500 flex flex-col overflow-hidden h-full"
             >
+              {/* Decorative Glow */}
               <div 
-                className="w-10 h-10 sm:w-16 sm:h-16 rounded-xl sm:rounded-[24px] bg-[#E8F0F8] shadow-[inset_4px_4px_8px_rgba(163,185,210,0.4),inset_-4px_-4px_8px_rgba(255,255,255,0.8)] group-hover:shadow-[4px_4px_12px_rgba(163,185,210,0.5),-4px_-4px_12px_rgba(255,255,255,0.9)] flex items-center justify-center mb-4 sm:mb-8 group-hover:rotate-[15deg] transition-all duration-500 shrink-0"
+                className="absolute -top-16 -right-16 w-32 h-32 rounded-full blur-[60px] opacity-0 group-hover:opacity-15 transition-opacity duration-700 pointer-events-none"
+                style={{ backgroundColor: app.color }}
+              />
+
+              <div 
+                className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center mb-6 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] group-hover:scale-105 group-hover:rotate-3 transition-all duration-500 shrink-0"
                 style={{ color: app.color }}
               >
-                <app.icon className="w-5 h-5 sm:w-[30px] sm:h-[30px]" />
+                <app.icon size={26} strokeWidth={2.5} className="sm:w-7 sm:h-7" />
               </div>
 
-              <h3 className="font-nunito font-black text-lg sm:text-[22px] text-[#0D1B2A] mb-2 sm:mb-4 group-hover:text-[#1A7FD4] transition-colors leading-tight">{app.title}</h3>
-              <p className="font-inter text-xs sm:text-sm leading-relaxed text-[#4A6080] mb-4 sm:mb-8 flex-1">
+              <h3 className="font-nunito font-black text-xl text-[#0D1B2A] mb-3 group-hover:text-[#1A7FD4] transition-colors duration-300 leading-tight">
+                {app.title}
+              </h3>
+              
+              <p className="font-inter text-[13px] text-[#4A6080] leading-relaxed mb-6 font-medium flex-1">
                 {app.desc}
               </p>
 
-              <div className="flex flex-wrap gap-2.5 sm:gap-3.5 mb-4 sm:mb-8 min-h-[4rem] content-start">
+              <div className="flex flex-wrap gap-2 mb-8 content-start">
                 {app.tags.map((tag, j) => (
-                  <span key={j} className="bg-[#E8F0F8] shadow-[2px_2px_4px_rgba(163,185,210,0.3),-2px_-2px_4px_rgba(255,255,255,0.8)] text-[#1A7FD4] font-nunito font-bold text-[8px] sm:text-[9px] px-2.5 py-1 rounded-full uppercase tracking-wider group-hover:scale-105 transition-transform">
+                  <span 
+                    key={j} 
+                    className="px-2.5 py-1 bg-white/60 rounded-lg border border-white shadow-sm text-[9px] font-nunito font-black text-[#1A7FD4] uppercase tracking-wider group-hover:bg-white transition-colors"
+                  >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              {/* Mini Visuals */}
-              <div className="pt-4 sm:pt-6 border-t border-[#1A7FD4]/08 mt-auto">
-                {app.visual === "ios" && (
+              {/* Enhanced Visual Footer */}
+              <div className="pt-6 border-t border-white/40 mt-auto">
+                {app.visual === "rating" && (
                   <div className="flex items-center justify-between">
                     <div className="flex flex-col gap-0.5">
-                       <div className="text-[8px] sm:text-[10px] font-bold text-[#4A6080] uppercase tracking-tighter">App Rating</div>
+                       <div className="text-[8px] font-black text-[#4A6080]/40 uppercase tracking-widest">Store Rating</div>
                        <div className="flex gap-0.5 text-amber-500">
-                          {[...Array(5)].map((_, j) => <Star key={j} size={10} fill="currentColor" className="w-2.5 h-2.5" />)}
+                          {[...Array(5)].map((_, j) => <Star key={j} size={10} fill="currentColor" />)}
                        </div>
                     </div>
-                    <div className="text-base sm:text-[20px] font-black text-[#0D1B2A] flex items-baseline">
-                      4.9<span className="text-[9px] sm:text-[10px] text-[#4A6080] font-bold ml-0.5">/5</span>
+                    <div className="text-xl font-black text-[#0D1B2A] flex items-baseline">
+                      4.9<span className="text-[10px] text-[#4A6080]/40 font-black ml-0.5">/5</span>
                     </div>
                   </div>
                 )}
-                {app.visual === "enterprise" && (
-                   <div className="w-full flex flex-col gap-1.5">
-                      <div className="h-1.5 w-full bg-[#E8F0F8] shadow-inner rounded-full overflow-hidden">
-                         <motion.div initial={{ width: 0 }} whileInView={{ width: '85%' }} transition={{ duration: 1.5 }} className="h-full bg-[#8B5CF6]" />
-                      </div>
-                      <div className="flex justify-between text-[8px] sm:text-[9px] font-black text-[#4A6080] uppercase">
-                         <span>CPU usage</span>
-                         <span className="text-[#8B5CF6]">Optimized</span>
-                      </div>
-                   </div>
+
+                {app.visual === "performance" && (
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-end px-0.5">
+                       <span className="text-[9px] font-black text-[#4A6080]/40 uppercase tracking-widest">Perf Core</span>
+                       <span className="text-[14px] font-black text-[#8B5CF6]">98%</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-white/50 rounded-full overflow-hidden border border-white/50">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "98%" }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                        className="h-full bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] rounded-full" 
+                      />
+                    </div>
+                  </div>
                 )}
-                {app.visual === "fintech" && (
-                   <div className="flex items-center gap-2 sm:gap-3">
-                      <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.3)] flex items-center justify-center text-[#34C98A] shrink-0">
-                         <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                         <div className="h-1 w-full bg-[#E8F0F8] shadow-inner rounded-full mb-1" />
-                         <div className="text-[7px] sm:text-[8px] font-black text-[#34C98A] uppercase tracking-widest truncate">Biometric Encrypted</div>
-                      </div>
-                   </div>
+
+                {app.visual === "security" && (
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#34C98A]/10 border border-[#34C98A]/20 flex items-center justify-center text-[#34C98A]">
+                       <CheckCircle2 size={20} strokeWidth={3} />
+                    </div>
+                    <div>
+                       <div className="text-[8px] font-black text-[#4A6080]/40 uppercase tracking-widest mb-0.5">Security Level</div>
+                       <div className="text-[12px] font-black text-[#34C98A] uppercase tracking-wider">PCI Compliant</div>
+                    </div>
+                  </div>
                 )}
-                {app.visual === "social" && (
-                   <div className="flex items-center gap-2">
-                      <div className="flex -space-x-1.5">
-                         {[
-                           "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=50",
-                           "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=50",
-                           "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=50"
-                         ].map((src, j) => (
-                           <div key={j} className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-[#E8F0F8] bg-slate-200 shadow-md overflow-hidden shrink-0">
-                              <img src={src} className="w-full h-full object-cover" alt={`User ${j}`} />
-                           </div>
-                         ))}
-                      </div>
-                      <div className="text-[8px] sm:text-[9px] font-black text-[#F59E0B] uppercase truncate">
-                        +1.2k Active Now
-                      </div>
-                   </div>
+
+                {app.visual === "active" && (
+                  <div className="flex items-center justify-between">
+                    <div className="flex -space-x-2">
+                       {[
+                         "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=50",
+                         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=50",
+                         "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=50"
+                       ].map((src, j) => (
+                         <div key={j} className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 overflow-hidden shrink-0 shadow-sm">
+                            <img src={src} className="w-full h-full object-cover" alt="" />
+                         </div>
+                       ))}
+                    </div>
+                    <div className="text-[10px] font-black text-[#F59E0B] uppercase tracking-tighter text-right">
+                       <span className="block text-[14px] text-[#0D1B2A] leading-none mb-0.5">1.2k+</span>
+                       Live Users
+                    </div>
+                  </div>
                 )}
               </div>
             </motion.div>
@@ -187,7 +209,7 @@ const AppWhatWeBuild = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-8 sm:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               { label: "Successful Deployments", value: "30+" },
               { label: "Crash-Free Rate", value: "99.9%" },
@@ -196,16 +218,16 @@ const AppWhatWeBuild = () => {
             ].map((stat, i) => (
               <motion.div
                 key={i}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: i * 0.05 }}
-                whileHover={{ y: -5, scale: 1.05 }}
-                className="bg-[#E8F0F8] rounded-[20px] sm:rounded-[24px] p-4 sm:p-6 shadow-[6px_6px_12px_rgba(163,185,210,0.6),-6px_-6px_12px_rgba(255,255,255,0.9)] hover:shadow-[12px_12px_24px_rgba(163,185,210,0.5)] transition-all duration-300 flex flex-col items-center text-center group overflow-hidden"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="bg-white/40 backdrop-blur-md rounded-[24px] p-5 sm:p-6 border border-white/60 shadow-[10px_10px_20px_rgba(163,185,210,0.1)] hover:shadow-[15px_15px_30px_rgba(163,185,210,0.2)] transition-all duration-300 flex flex-col items-center text-center group"
               >
-                <div className="text-2xl sm:text-[36px] font-nunito font-black text-[#1A7FD4] leading-none mb-1.5 sm:mb-2 group-hover:scale-110 transition-transform">
+                <div className="text-2xl sm:text-[32px] font-nunito font-black text-[#1A7FD4] leading-none mb-2 group-hover:scale-110 transition-transform">
                   <Counter from={0} to={stat.value} />
                 </div>
-                <div className="text-[9px] sm:text-[12px] font-inter text-[#4A6080] font-bold uppercase tracking-widest leading-tight">{stat.label}</div>
+                <div className="text-[9px] sm:text-[10px] font-black text-[#4A6080]/60 uppercase tracking-[2px] leading-tight">{stat.label}</div>
               </motion.div>
             ))}
         </div>

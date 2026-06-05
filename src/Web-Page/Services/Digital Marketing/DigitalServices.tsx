@@ -220,7 +220,7 @@ const DigitalServices = () => {
   const activeService = servicesData[activeIndex];
 
   return (
-    <section className="mb-12 sm:mb-24 md:mb-32 relative overflow-hidden">
+    <section className="py-8 sm:py-12 relative overflow-hidden">
       <div className="text-center mb-8 sm:mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -337,18 +337,7 @@ const DigitalServices = () => {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 mt-auto w-full sm:w-auto">
-              <button
-                className="px-5 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl text-white font-nunito font-bold shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center gap-2 text-xs sm:text-base w-full sm:w-auto cursor-pointer"
-                style={{
-                  backgroundColor: activeService.color,
-                  boxShadow: `0 10px 30px ${activeService.color}40`,
-                }}
-              >
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4 shrink-0" />
-              </button>
-            </div>
+
           </motion.div>
 
           {/* Right: Visual Stage */}

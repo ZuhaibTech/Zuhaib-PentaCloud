@@ -46,7 +46,7 @@ const DigitalFAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-10 sm:py-24 bg-[#E8F0F8] px-4 sm:px-10 rounded-[24px] sm:rounded-[48px]">
+    <section className="py-8 sm:py-12 bg-[#E8F0F8] px-4 sm:px-10 rounded-[24px] sm:rounded-[48px]">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8 sm:mb-16">
           <motion.div

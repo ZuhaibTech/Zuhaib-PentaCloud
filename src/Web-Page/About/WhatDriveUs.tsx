@@ -5,101 +5,136 @@ import { motion } from "framer-motion";
 import { Target, Eye, Shield, Zap, Users, Award } from "lucide-react";
 
 const WhatDriveUs = () => {
+  const coreValues = [
+    { 
+      icon: Shield, 
+      color: '#34C98A', 
+      title: 'Integrity', 
+      text: 'We operate with radical transparency, keeping promises to every client, every time.' 
+    },
+    { 
+      icon: Zap, 
+      color: '#F59E0B', 
+      title: 'Innovation', 
+      text: 'We challenge conventions and leverage AI to deliver future-ready solutions.' 
+    },
+    { 
+      icon: Users, 
+      color: '#8B5CF6', 
+      title: 'Client First', 
+      text: 'We put client success at the center of every decision we make.' 
+    },
+    { 
+      icon: Award, 
+      color: '#EC4899', 
+      title: 'Excellence', 
+      text: 'Backed by 16+ certifications, we uphold the highest standards of technical excellence.' 
+    },
+  ];
+
   return (
-    <section className="relative w-full py-6 md:py-12 bg-[#E8F0F8] overflow-hidden">
-      {/* Soft Ambient Blurs */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#1A7FD4] rounded-full filter blur-[120px] opacity-[0.03] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#29C6E0] rounded-full filter blur-[120px] opacity-[0.03] pointer-events-none" />
+    <section className="relative w-full py-12 sm:py-24 bg-[#E8F0F8] overflow-hidden">
+      {/* Dynamic Ambient Backgrounds */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#1A7FD4] rounded-full filter blur-[100px] sm:blur-[150px] opacity-[0.05] pointer-events-none -translate-y-1/2 translate-x-1/4" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#29C6E0] rounded-full filter blur-[100px] sm:blur-[150px] opacity-[0.05] pointer-events-none translate-y-1/2 -translate-x-1/4" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
-        {/* Header */}
-        <div className="flex flex-col items-center text-center mb-8 sm:mb-16 md:mb-20">
+        {/* Header Section */}
+        <div className="flex flex-col items-center text-center mb-10 sm:mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="px-4 py-1.5 bg-[#E8F0F8] rounded-full shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)] text-[#1A7FD4] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-4 sm:mb-6"
+            viewport={{ once: true }}
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-[2px_2px_8px_rgba(163,185,210,0.15)] text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[3px] uppercase mb-4 sm:mb-6"
           >
             WHAT DRIVES US
           </motion.div>
           <motion.h2 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="font-nunito font-extrabold text-2xl sm:text-4xl md:text-5xl lg:text-[52px] leading-tight text-[#0D1B2A] px-2"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[36px] md:text-[44px] leading-[1.2] text-[#0D1B2A] max-w-3xl"
           >
-            Our Mission, Vision & <span className="text-[#1A7FD4]">Core Values</span>
+            Our Mission, Vision & <br className="hidden sm:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A7FD4] to-[#29C6E0]">Core Values</span>
           </motion.h2>
         </div>
 
-        {/* Mission & Vision */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 mb-10 sm:mb-16">
+        {/* Mission & Vision Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-16">
           
-          {/* Mission */}
+          {/* Mission Card */}
           <motion.div 
-            initial={{ x: -50, opacity: 0 }}
+            initial={{ x: -40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, type: "spring" }}
+            transition={{ duration: 0.6, type: "spring", bounce: 0.2 }}
             viewport={{ once: true }}
-            whileHover={{ y: -12, scale: 1.02 }}
-            className="bg-[#E8F0F8] rounded-[20px] sm:rounded-[40px] p-6 sm:p-10 shadow-[10px_10px_20px_rgba(163,185,210,0.4),-10px_-10px_20px_rgba(255,255,255,0.9)] hover:shadow-[18px_18px_36px_rgba(163,185,210,0.5),-18px_-18px_36px_rgba(255,255,255,1)] group relative overflow-hidden h-full transition-all duration-500"
+            whileHover={{ y: -8 }}
+            className="group relative bg-white/50 backdrop-blur-sm rounded-[32px] p-7 sm:p-9 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-500 overflow-hidden"
           >
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#1A7FD4] to-transparent" />
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-[24px] bg-[#E8F0F8] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] text-[#1A7FD4] flex items-center justify-center mb-6 sm:mb-8 group-hover:rotate-[15deg] transition-all duration-500 group-hover:shadow-[3px_3px_10px_rgba(163,185,210,0.4),-3px_-3px_10px_rgba(255,255,255,0.8)]">
-              <Target className="w-6 h-6 sm:w-8 sm:h-8" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1A7FD4] to-transparent opacity-50" />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] text-[#1A7FD4] flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-500">
+              <Target size={28} strokeWidth={2.5} className="sm:w-8 sm:h-8" />
             </div>
-            <div className="font-nunito font-black text-[10px] sm:text-[12px] tracking-[3px] text-[#1A7FD4] mb-2 sm:mb-3 uppercase">OUR MISSION</div>
-            <h3 className="font-nunito font-black text-lg sm:text-[26px] text-[#0D1B2A] mb-3 sm:mb-4 group-hover:text-[#1A7FD4] transition-colors">Driving Digital Excellence</h3>
-            <p className="font-inter text-xs sm:text-[15px] text-[#4A6080] leading-relaxed sm:leading-[1.9]">
+            <div className="font-nunito font-black text-[10px] sm:text-[11px] tracking-[3px] text-[#1A7FD4] mb-3 uppercase">OUR MISSION</div>
+            <h3 className="font-nunito font-black text-xl sm:text-[24px] text-[#0D1B2A] mb-4 group-hover:text-[#1A7FD4] transition-colors leading-tight">Driving Digital Excellence</h3>
+            <p className="font-inter text-[13.5px] sm:text-[15px] text-[#4A6080] leading-relaxed font-medium">
               To empower businesses with cutting-edge Salesforce, Cloud, and AI solutions, delivering measurable transformation that scales with ambition and drives sustainable growth.
             </p>
           </motion.div>
 
-          {/* Vision */}
+          {/* Vision Card */}
           <motion.div 
-            initial={{ x: 50, opacity: 0 }}
+            initial={{ x: 40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, type: "spring" }}
+            transition={{ duration: 0.6, type: "spring", bounce: 0.2 }}
             viewport={{ once: true }}
-            whileHover={{ y: -12, scale: 1.02 }}
-            className="bg-[#E8F0F8] rounded-[20px] sm:rounded-[40px] p-6 sm:p-10 shadow-[10px_10px_20px_rgba(163,185,210,0.4),-10px_-10px_20px_rgba(255,255,255,0.9)] hover:shadow-[18px_18px_36px_rgba(163,185,210,0.5),-18px_-18px_36px_rgba(255,255,255,1)] group relative overflow-hidden h-full transition-all duration-500"
+            whileHover={{ y: -8 }}
+            className="group relative bg-white/50 backdrop-blur-sm rounded-[32px] p-7 sm:p-9 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-500 overflow-hidden"
           >
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#29C6E0] to-transparent" />
-            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-[24px] bg-[#E8F0F8] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.3),inset_-3px_-3px_6px_rgba(255,255,255,0.7)] text-[#29C6E0] flex items-center justify-center mb-6 sm:mb-8 group-hover:rotate-[-15deg] transition-all duration-500 group-hover:shadow-[3px_3px_10px_rgba(163,185,210,0.4),-3px_-3px_10px_rgba(255,255,255,0.8)]">
-              <Eye className="w-6 h-6 sm:w-8 sm:h-8" />
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#29C6E0] to-transparent opacity-50" />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] text-[#29C6E0] flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-500">
+              <Eye size={28} strokeWidth={2.5} className="sm:w-8 sm:h-8" />
             </div>
-            <div className="font-nunito font-black text-[10px] sm:text-[12px] tracking-[3px] text-[#29C6E0] mb-2 sm:mb-3 uppercase">OUR VISION</div>
-            <h3 className="font-nunito font-black text-lg sm:text-[26px] text-[#0D1B2A] mb-3 sm:mb-4 group-hover:text-[#29C6E0] transition-colors">Technology for Every Business</h3>
-            <p className="font-inter text-xs sm:text-[15px] text-[#4A6080] leading-relaxed sm:leading-[1.9]">
+            <div className="font-nunito font-black text-[10px] sm:text-[11px] tracking-[3px] text-[#29C6E0] mb-3 uppercase">OUR VISION</div>
+            <h3 className="font-nunito font-black text-xl sm:text-[24px] text-[#0D1B2A] mb-4 group-hover:text-[#29C6E0] transition-colors leading-tight">Technology for Every Business</h3>
+            <p className="font-inter text-[13.5px] sm:text-[15px] text-[#4A6080] leading-relaxed font-medium">
               To be the most trusted technology partner in Asia, making enterprise-grade Salesforce and Cloud solutions accessible to businesses of every size.
             </p>
           </motion.div>
         </div>
 
-        {/* 4 Core Values */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-          {[
-            { icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#34C98A', title: 'Integrity', text: 'We operate with radical transparency, keeping promises to every client, every time.' },
-            { icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#F59E0B', title: 'Innovation', text: 'We challenge conventions and leverage AI to deliver future-ready solutions.' },
-            { icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#8B5CF6', title: 'Client First', text: 'We put client success at the center of every decision we make.' },
-            { icon: <Award className="w-5 h-5 sm:w-6 sm:h-6" />, color: '#EC4899', title: 'Excellence', text: 'Backed by 16+ certifications, we uphold the highest standards of technical excellence.' },
-          ].map((val, i) => (
+        {/* Core Values Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          {coreValues.map((val, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: i * 0.05 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
               viewport={{ once: true }}
-              whileHover={{ y: -12, scale: 1.02 }}
-              className="bg-[#E8F0F8] rounded-[20px] sm:rounded-[32px] p-5 sm:p-8 shadow-[6px_6px_12px_rgba(163,185,210,0.4),-6px_-6px_12px_rgba(255,255,255,0.85)] hover:shadow-[12px_12px_24px_rgba(163,185,210,0.35),-12px_-12px_24px_rgba(255,255,255,0.95)] group transition-all duration-500"
+              whileHover={{ y: -8 }}
+              className="group relative bg-white/40 backdrop-blur-sm rounded-[28px] p-6 sm:p-7 border border-white/60 shadow-[10px_10px_20px_rgba(163,185,210,0.1),-8px_-8px_20px_rgba(255,255,255,0.5)] hover:shadow-[15px_15px_30px_rgba(163,185,210,0.15)] transition-all duration-500 overflow-hidden"
             >
+              {/* Decorative Glow */}
               <div 
-                className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-[20px] bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.25),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center mb-4 sm:mb-6 transition-all duration-500 group-hover:shadow-[2px_2px_6px_rgba(163,185,210,0.25)] group-hover:rotate-[15deg]"
+                className="absolute -top-10 -right-10 w-20 h-20 rounded-full blur-[40px] opacity-0 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none"
+                style={{ backgroundColor: val.color }}
+              />
+
+              <div 
+                className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white shadow-[4px_4px_8px_rgba(163,185,210,0.08),-4px_-4px_8px_rgba(255,255,255,0.6)] flex items-center justify-center mb-5 transition-all duration-500 group-hover:scale-105"
                 style={{ color: val.color }}
               >
-                {val.icon}
+                <val.icon size={22} strokeWidth={2.5} className="sm:w-6 sm:h-6" />
               </div>
-              <h4 className="font-nunito font-black text-base sm:text-xl text-[#0D1B2A] mb-2 sm:mb-3 group-hover:text-[#1A7FD4] transition-colors">{val.title}</h4>
-              <p className="font-inter text-xs sm:text-[14px] text-[#4A6080] leading-relaxed sm:leading-[1.7]">{val.text}</p>
+              <h4 className="font-nunito font-black text-lg text-[#0D1B2A] mb-2 group-hover:text-[#1A7FD4] transition-colors duration-300">
+                {val.title}
+              </h4>
+              <p className="font-inter text-[13px] text-[#4A6080] leading-relaxed font-medium">
+                {val.text}
+              </p>
             </motion.div>
           ))}
         </div>

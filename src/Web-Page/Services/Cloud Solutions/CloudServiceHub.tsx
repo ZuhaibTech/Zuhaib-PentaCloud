@@ -364,19 +364,7 @@ const CloudServiceHub = () => {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 mt-auto w-full sm:w-auto">
-                <button 
-                  className="px-5 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl text-white font-nunito font-bold shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center gap-2 text-xs sm:text-base w-full sm:w-auto cursor-pointer"
-                  style={{ backgroundColor: activeService.color, boxShadow: `0 10px 30px ${activeService.color}40` }}
-                >
-                  <span>Get Started</span>
-                  <ArrowRight className="w-4 h-4 shrink-0" />
-                </button>
-                <button className="px-5 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl text-slate-600 font-nunito font-bold border-2 border-slate-100 hover:bg-slate-50 transition-all flex items-center justify-center gap-2 text-xs sm:text-base w-full sm:w-auto cursor-pointer">
-                  <span>Technical Docs</span>
-                  <ExternalLink className="w-4 h-4 shrink-0" />
-                </button>
-              </div>
+
             </motion.div>
 
             {/* Right: Visual Stage */}

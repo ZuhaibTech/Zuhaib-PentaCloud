@@ -114,27 +114,10 @@ const AppTechnology = () => {
               ))}
             </div>
           </div>
-        ))}
+          ))}
+          </div>
+          </section>
+          );
+          };
 
-        <div className="mt-10 sm:mt-14 flex flex-col items-center">
-           <div className="text-[11px] sm:text-[13px] font-inter text-[#8BA4BE] mb-4 sm:mb-6">Also working with:</div>
-           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-              {["Expo", "Redux", "MobX", "Socket.io", "Twilio", "OneSignal", "Lottie", "RevenueCat", "Segment"].map((pill, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.05 }}
-                  className="bg-background px-3.5 py-1.5 sm:px-4 sm:py-1.5 rounded-full text-[#1A7FD4] font-nunito font-bold text-[10px] sm:text-[12px] shadow-[2px_2px_5px_rgba(163,185,210,0.4),-2px_-2px_5px_rgba(255,255,255,0.8)] hover:scale-105 transition-transform cursor-default"
-                >
-                  {pill}
-                </motion.div>
-              ))}
-           </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default AppTechnology;
+          export default AppTechnology;

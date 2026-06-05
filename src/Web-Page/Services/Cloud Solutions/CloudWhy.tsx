@@ -85,24 +85,6 @@ const CloudWhy = () => {
                      alt={features[activeFeature].title} 
                      className="absolute inset-0 w-full h-full object-cover"
                    />
-                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/20 to-transparent opacity-80" />
-                   
-                   <div className="relative z-10 flex flex-col items-center text-center px-8">
-                      <div className="w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-8 shadow-2xl border border-white/20">
-                         {React.createElement(features[activeFeature].icon, { className: "w-10 h-10 text-white" })}
-                      </div>
-                      <h3 className="text-white font-nunito font-black text-3xl mb-4 tracking-tight">
-                         {features[activeFeature].title}
-                      </h3>
-                      <div className="px-6 py-2 bg-white/10 rounded-full text-white/80 font-black text-[10px] uppercase tracking-[3px] border border-white/20">
-                         {features[activeFeature].badge}
-                      </div>
-                   </div>
-
-                   {/* Background Number */}
-                   <div className="absolute top-0 right-0 p-12">
-                      <div className="text-white/05 font-nunito font-black text-[180px] leading-none select-none">0{activeFeature + 1}</div>
-                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -193,14 +175,6 @@ const CloudWhy = () => {
                         {/* Premium Inline Visual Card - Only rendered on mobile/tablet viewports */}
                         <div className="lg:hidden w-full aspect-video rounded-xl overflow-hidden relative border border-slate-100 shadow-sm mt-3">
                            <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                           <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/40 to-transparent opacity-85" />
-                           <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm border border-slate-100/50">
-                              <item.icon className="w-3.5 h-3.5 text-[#1A7FD4]" />
-                              <span className="text-[10px] font-nunito font-black text-[#0D1B2A] uppercase tracking-wider">{item.badge}</span>
-                           </div>
-                           <div className="absolute top-2 right-2 px-2 py-0.5 bg-[#0D1B2A]/70 backdrop-blur-md rounded-md text-[9px] font-black text-white/90">
-                              0{i + 1}
-                           </div>
                         </div>
                       </motion.div>
                     )}

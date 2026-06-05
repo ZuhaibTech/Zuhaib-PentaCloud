@@ -51,20 +51,6 @@ const AppWhyPentacloud = () => {
                      alt={differentiators[activeWhy].title} 
                      className="absolute inset-0 w-full h-full object-cover"
                    />
-                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/40 to-transparent opacity-80" />
-                   
-                   <div className="relative z-10 flex flex-col items-center text-center px-8">
-                      <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 border border-white/20 shadow-2xl">
-                         {React.createElement(differentiators[activeWhy].icon, { className: "w-8 h-8 text-white" })}
-                      </div>
-                      <div className="text-white font-nunito font-black text-2xl uppercase tracking-[2px] leading-tight mb-2">{differentiators[activeWhy].title}</div>
-                      <div className="text-white/60 font-inter text-sm max-w-[280px] leading-relaxed">{differentiators[activeWhy].desc}</div>
-                   </div>
-
-                 {/* Corner Accents */}
-                 <div className="absolute top-0 right-0 p-8">
-                    <div className="text-white/10 font-nunito font-black text-8xl leading-none">0{activeWhy + 1}</div>
-                 </div>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -180,14 +166,6 @@ const AppWhyPentacloud = () => {
                         {/* Premium Inline Visual Card - Only rendered on mobile/tablet viewports */}
                         <div className="lg:hidden w-full aspect-video rounded-xl overflow-hidden relative border border-slate-100 shadow-sm mt-3">
                            <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                           <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-[#0D1B2A]/40 to-transparent opacity-85" />
-                           <div className="absolute bottom-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm border border-slate-100/50">
-                              <item.icon className="w-3.5 h-3.5 text-[#1A7FD4]" />
-                              <span className="text-[10px] font-nunito font-black text-[#0D1B2A] uppercase tracking-wider">{item.title}</span>
-                           </div>
-                           <div className="absolute top-2 right-2 px-2 py-0.5 bg-[#0D1B2A]/70 backdrop-blur-md rounded-md text-[9px] font-black text-white/90">
-                              0{i + 1}
-                           </div>
                         </div>
                       </motion.div>
                     )}

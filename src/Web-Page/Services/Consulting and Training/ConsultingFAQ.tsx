@@ -2,124 +2,107 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Users, Globe, GraduationCap, Cloud, BarChart2, Shield } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
+
+const CLAY_CARD = "bg-background rounded-[20px] sm:rounded-[28px] shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)]";
 
 const ConsultingFAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   const faqs = [
     {
-      question: "What's the difference between consulting and implementation?",
-      answer: "Consulting is advisory — we analyse your situation and deliver strategy documents and roadmaps. Implementation is execution — we build and deploy the technology. Many clients start with consulting, then engage us for implementation.",
-      icon: Users,
-      color: "#1A7FD4",
+      q: "How do you customise training for our org?",
+      a: "We use your actual sandbox or production environment, including your custom fields and workflows, making the training immediately applicable to your team's daily tasks.",
       image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-1.webp"
     },
     {
-      question: "Can training be delivered in local languages?",
-      answer: "Yes — we deliver in English, Hindi, Kannada, and Tamil for Indian clients, and English and Arabic for UAE clients. Please specify your language preference when booking.",
-      icon: Globe,
-      color: "#34C98A",
+      q: "What is your consulting methodology?",
+      a: "We follow a 4-step process: Discovery, Deep Assessment, Strategic Recommendation, and Implementation Support, ensuring advice is grounded in your specific reality.",
       image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-2.webp"
     },
     {
-      question: "Do participants need prior knowledge for training?",
-      answer: "It depends on the programme. User training requires no prior knowledge. Admin training needs basic Salesforce familiarity. Developer training requires programming experience. We assess participant backgrounds before every session.",
-      icon: GraduationCap,
-      color: "#F59E0B",
+      q: "Do you offer post-training support?",
+      a: "Yes, every programme includes 30 days of follow-up support to answer questions that arise as your team begins applying their new skills in real scenarios.",
       image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-3.webp"
     },
     {
-      question: "Can you train our team on our own Salesforce org?",
-      answer: "Yes — and we strongly recommend it. Training on your actual org makes learning immediately applicable to daily work. We set up a training sandbox from your production org before each session.",
-      icon: Cloud,
-      color: "#8B5CF6",
+      q: "Are your consultants certified?",
+      a: "Every member of our team holds multiple active certifications across Salesforce, Cloud platforms, and cybersecurity, maintained through regular vendor-validated exams.",
       image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-4.webp"
     },
     {
-      question: "What support do you give after training?",
-      answer: "Every programme includes 30–60 days of post-training support — questions answered within 24 hours. We also measure adoption at 30 days to ensure the training actually stuck.",
-      icon: Shield,
-      color: "#34C98A",
+      q: "Can you train teams across different timezones?",
+      a: "Absolutely. We offer flexible scheduling for virtual instructor-led sessions to accommodate teams in India, the UAE, Europe, and North America with minimal disruption.",
       image: "/Images/CONSULTING & TRAINING Images/CONSULTING & TRAINING-question-5.webp"
     }
   ];
 
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
-
   return (
-    <section className="py-10 sm:py-24 bg-[#E8F0F8] px-4 sm:px-10 rounded-[24px] sm:rounded-[48px]">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8 sm:mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+    <section className="pt-0 sm:pt-4 pb-8 sm:pb-12 bg-background px-4 sm:px-6">
+      <div className="max-w-[800px] mx-auto">
+        <div className="text-center mb-10 sm:mb-16">
+
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="px-4 py-1.5 bg-[#E8F0F8] rounded-full shadow-[3px_3px_6px_rgba(163,185,210,0.4),-3px_-3px_6px_rgba(255,255,255,0.85)] text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-widest uppercase mb-4 sm:mb-6 inline-block"
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[36px] md:text-[44px] text-[#0D1B2A] leading-tight"
           >
-            COMMON QUESTIONS
-          </motion.div>
-          <h2 className="text-2xl sm:text-[42px] font-nunito font-black text-[#0D1B2A] leading-tight">
-            Consulting & Training, <br />
-            <span className="text-[#1A7FD4]">Answered Honestly</span>
-          </h2>
+            Common <span className="text-[#1A7FD4]">Questions</span>
+          </motion.h2>
         </div>
 
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, i) => (
-            <motion.div
-              key={i}
+            <motion.div 
+              key={i} 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
-              className={`bg-[#E8F0F8] rounded-[20px] sm:rounded-[32px] overflow-hidden transition-all duration-500 ${
-                activeIndex === i 
-                ? "shadow-[inset_4px_4px_8px_rgba(163,185,210,0.25),inset_-4px_-4px_8px_rgba(255,255,255,0.7)]" 
-                : "shadow-[6px_6px_12px_rgba(163,185,210,0.4),-6px_-6px_12px_rgba(255,255,255,0.85)]"
-              }`}
+              viewport={{ once: true }}
+              className={`transition-all duration-500 overflow-hidden ${openIndex === i ? `${CLAY_CARD}` : 'bg-background hover:bg-background rounded-2xl sm:rounded-[32px] shadow-[4px_4px_10px_rgba(163,185,210,0.15),-4px_-4px_10px_rgba(255,255,255,0.8)]'}`}
             >
-              <button
-                onClick={() => setActiveIndex(activeIndex === i ? null : i)}
-                className="w-full px-4 py-5 sm:px-10 sm:py-8 flex items-center justify-between text-left group focus:outline-none focus-visible:ring-0 gap-3"
+              <button 
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full flex justify-between items-center text-left p-4 sm:p-6 group gap-3"
               >
-                <div className="flex items-center gap-3 sm:gap-6 flex-1 min-w-0">
-                   <div className={`w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#E8F0F8] shadow-[3px_3px_6px_rgba(163,185,210,0.3),-3px_-3px_6px_rgba(255,255,255,0.8)] flex items-center justify-center transition-all duration-500 shrink-0 ${activeIndex === i ? 'rotate-[15deg] shadow-inner scale-90' : 'group-hover:rotate-12'}`} style={{ color: faq.color }}>
-                      <faq.icon className="w-4 h-4 sm:w-6 sm:h-6" />
-                   </div>
-                   <span className={`font-nunito font-black text-sm sm:text-lg md:text-xl transition-colors duration-300 truncate ${activeIndex === i ? 'text-[#1A7FD4]' : 'text-[#0D1B2A]'}`}>
-                     {faq.question}
-                   </span>
-                </div>
-                <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#E8F0F8] shadow-[3px_3px_6px_rgba(163,185,210,0.3),-3px_-3px_6px_rgba(255,255,255,0.8)] flex items-center justify-center text-[#1A7FD4] transition-all duration-500 shrink-0 ${activeIndex === i ? 'rotate-180 shadow-inner' : ''}`}>
-                  <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className={`font-nunito font-bold text-sm sm:text-[17px] transition-colors leading-tight ${openIndex === i ? 'text-[#1A7FD4]' : 'text-[#0D1B2A] group-hover:text-[#1A7FD4]'}`}>
+                  {faq.q}
+                </span>
+                <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all duration-300 shrink-0 ${openIndex === i ? 'bg-background text-[#1A7FD4] shadow-[inset_2px_2px_5px_rgba(163,185,210,0.4),inset_-2px_-2px_5px_rgba(255,255,255,0.8)]' : 'bg-background text-[#1A7FD4] shadow-[2px_2px_5px_rgba(163,185,210,0.4),-2px_-2px_5px_rgba(255,255,255,0.8)]'}`}>
+                  <ChevronDown size={16} className={`transition-transform duration-300 ${openIndex === i ? 'rotate-180' : 'rotate-0'}`} />
                 </div>
               </button>
-
+              
               <AnimatePresence>
-                {activeIndex === i && (
+                {openIndex === i && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
                   >
-                    <div className="px-4 pb-5 pt-1 sm:px-10 sm:pb-10 sm:pt-2 flex flex-col md:flex-row gap-4 sm:gap-8 items-start">
-                        <div className="w-24 sm:w-48 h-16 sm:h-32 rounded-xl sm:rounded-2xl bg-[#E8F0F8] shadow-[inset_3px_3px_6px_rgba(163,185,210,0.25)] flex items-center justify-center overflow-hidden shrink-0">
+                    <div className="px-4 pb-6 sm:px-6 sm:pb-8">
+                      <div className="h-px w-full bg-[#1A7FD4]/05 mb-4 sm:mb-6" />
+                      <div className="flex flex-col md:flex-row gap-5 sm:gap-8">
+                        <div className="w-full md:w-[260px] aspect-video md:aspect-[4/3] rounded-xl sm:rounded-[20px] bg-[#EEF3FF] overflow-hidden shrink-0 shadow-inner">
                            <motion.img 
-                             whileHover={{ scale: 1.1 }}
+                             whileHover={{ scale: 1.05 }}
                              src={faq.image} 
-                             alt={faq.question} 
+                             alt={faq.q} 
                              className="w-full h-full object-cover"
                            />
-                        </div>
-                       <div className="flex-1 min-w-0">
-                          <p className="font-inter text-[#4A6080] text-xs sm:text-base leading-relaxed">
-                            {faq.answer}
-                          </p>
-                          <motion.button
-                            whileHover={{ x: 5 }}
-                            className="mt-4 sm:mt-6 flex items-center gap-1.5 text-[#1A7FD4] font-nunito font-black text-xs sm:text-sm uppercase tracking-wider"
-                          >
-                            View more detail <span>→</span>
-                          </motion.button>
-                       </div>
+                         </div>
+                         
+                         <div className="flex flex-col justify-center min-w-0">
+                           <p className="font-inter text-xs sm:text-[15px] text-[#4A6080] leading-relaxed">
+                             {faq.a}
+                           </p>
+                           <button className="text-[#1A7FD4] font-nunito font-bold text-xs sm:text-[14px] mt-4 sm:mt-6 flex items-center gap-2 hover:gap-3 transition-all group/btn w-fit">
+                             View more <ArrowRight size={14} className="transition-transform" />
+                           </button>
+                         </div>
+                      </div>
                     </div>
                   </motion.div>
                 )}

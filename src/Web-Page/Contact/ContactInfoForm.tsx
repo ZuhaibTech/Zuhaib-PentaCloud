@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Phone, Mail, CheckCircle2, Loader2, Clock, ShieldCheck, Zap, MessageCircle, ChevronDown, Send, Lock
+  Mail, CheckCircle2, Loader2, Zap, MessageCircle, ChevronDown, Send, Lock
 } from "lucide-react";
 import { CLAY_CARD, CLAY_INPUT } from "./Constants";
 import ContactLocations from "./ContactLocations";
@@ -96,13 +96,6 @@ const FormBlock = ({ handleSubmit, formStatus, agreed, setAgreed, formData, setF
           value={formData.service}
           onChange={(val: string) => setFormData({ ...formData, service: val })}
         />
-
-        <div className="space-y-1.5">
-          <label className="font-nunito font-black text-[#0D1B2A] text-xs sm:text-sm ml-2">Tell Us About Your Project *</label>
-          <textarea required minLength={20} rows={4} placeholder="Briefly describe what you're looking to achieve, any challenges you're facing, and what success looks like for you..." className={`${CLAY_INPUT} px-4 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm`}></textarea>
-        </div>
-
-
 
         <div className="flex items-center gap-3 px-2">
           <div className="shrink-0 flex">
@@ -324,27 +317,6 @@ const ContactInfoForm = () => {
                         {social.label.split(" ")[0]}
                       </span>
                     </motion.a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Response Promise Section */}
-              <div className="bg-[#0D1B2A] p-5 sm:p-8 rounded-[20px] sm:rounded-[32px] text-white relative overflow-hidden shadow-2xl">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#1A7FD4] rounded-full blur-[60px] opacity-20" />
-                <div className="flex items-center gap-2.5 mb-5 sm:mb-8 relative z-10">
-                  <ShieldCheck size={18} className="text-[#1A7FD4] shrink-0" />
-                  <span className="font-nunito font-black text-[9px] sm:text-[10px] tracking-[2px] sm:tracking-[3px] uppercase">OUR RESPONSE PROMISE</span>
-                </div>
-                <div className="space-y-4 sm:space-y-6 relative z-10">
-                  {[
-                    { text: "All enquiries acknowledged within 4 hours", icon: <Zap size={13} className="text-amber-400 shrink-0" /> },
-                    { text: "Phone calls answered during business hours", icon: <Phone size={13} className="text-[#34C98A]" /> },
-                    { text: "WhatsApp responded within 2 hours", icon: <MessageCircle size={13} className="text-[#1A7FD4]" /> }
-                  ].map((p, i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                      <div className="mt-0.5">{p.icon}</div>
-                      <p className="text-xs sm:text-sm font-bold opacity-80 leading-relaxed">{p.text}</p>
-                    </div>
                   ))}
                 </div>
               </div>

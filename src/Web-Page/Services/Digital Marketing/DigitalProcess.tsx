@@ -2,107 +2,106 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FileText, Map, Palette, Rocket, TrendingUp } from "lucide-react";
-import { CLAY_CARD } from "./Constants";
+import { FileSearch, Map, Palette, Rocket, TrendingUp } from "lucide-react";
 
 const processSteps = [
   {
-    step: "1",
+    title: "Audit",
     duration: "Week 1",
-    title: "Discovery & Marketing Audit",
-    body: "We begin by understanding your business, target audience, competitors, and current marketing performance. We audit your existing digital presence, website SEO health, social media performance, ad account history, and email metrics, delivering a clear picture of where you stand.",
-    deliverable: "Marketing Audit Report"
+    icon: FileSearch,
+    color: "#1A7FD4",
+    desc: "Complete audit of your digital presence, SEO health, and ad history to identify growth gaps.",
   },
   {
-    step: "2",
+    title: "Strategy",
     duration: "Week 2",
-    title: "Strategy & Channel Planning",
-    body: "Based on the audit, we build a custom 90-day marketing strategy, selecting the right channels for your business, defining monthly targets, content themes, campaign calendars, and KPIs. You receive a complete marketing roadmap with clear milestones.",
-    deliverable: "90-Day Marketing Roadmap"
+    icon: Map,
+    color: "#8B5CF6",
+    desc: "Custom 90-day roadmap selecting the right channels and defining clear KPI targets.",
   },
   {
-    step: "3",
-    duration: "Week 2–3",
-    title: "Creative & Content Production",
-    body: "Our team of designers and copywriters produce all campaign assets, ad creatives, social media graphics, email templates, blog posts, and landing page copy. All creative is reviewed and approved by you before any campaign goes live.",
-    deliverable: "Campaign Creative Assets"
+    title: "Creative",
+    duration: "Week 2-3",
+    icon: Palette,
+    color: "#EC4899",
+    desc: "Production of high-converting ad creatives, graphics, and copy tailored to your audience.",
   },
   {
-    step: "4",
-    duration: "Week 3–4",
-    title: "Campaign Launch & Execution",
-    body: "We launch campaigns across all agreed channels, Google Ads, Meta Ads, email sequences, social media publishing, and SEO implementation, with all tracking, pixels, and analytics configured before go-live to ensure zero data is missed.",
-    deliverable: "Live Campaigns"
+    title: "Launch",
+    duration: "Week 4",
+    icon: Rocket,
+    color: "#34C98A",
+    desc: "Multi-channel campaign deployment with full pixel and analytics tracking configured.",
   },
   {
-    step: "5",
-    duration: "Ongoing Monthly",
-    title: "Optimisation & Reporting",
-    body: "Every campaign is continuously monitored and optimised, A/B testing ad creatives, adjusting bid strategies, refining audience targeting, and improving content performance. You receive a comprehensive monthly report covering all KPIs.",
-    deliverable: "Monthly Performance Report"
+    title: "Growth",
+    duration: "Ongoing",
+    icon: TrendingUp,
+    color: "#F59E0B",
+    desc: "Continuous A/B testing and bid optimisation to maximise ROI and lead quality.",
   }
-];
-
-const deliverableIcons = [
-  <FileText className="w-3.5 h-3.5 text-[#1A7FD4] shrink-0" key="1" />,
-  <Map className="w-3.5 h-3.5 text-[#1A7FD4] shrink-0" key="2" />,
-  <Palette className="w-3.5 h-3.5 text-[#1A7FD4] shrink-0" key="3" />,
-  <Rocket className="w-3.5 h-3.5 text-[#34C98A] shrink-0" key="4" />,
-  <TrendingUp className="w-3.5 h-3.5 text-[#34C98A] shrink-0" key="5" />
 ];
 
 const DigitalProcess = () => {
   return (
-    <section className="mb-12 sm:mb-24 md:mb-32">
-      <div className="text-center mb-10 sm:mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="inline-block px-4 py-1.5 bg-blue-50 text-[#1A7FD4] rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-[2px] sm:tracking-[3px] mb-4 sm:mb-6"
-        >
-          HOW WE WORK
-        </motion.div>
-        <h2 className="text-2xl sm:text-4xl md:text-6xl font-nunito font-black text-[#0D1B2A] mb-4 sm:mb-6 leading-tight">
-          Your Marketing Journey <br/> <span className="text-[#1A7FD4]">In 5 Clear Steps</span>
-        </h2>
-      </div>
+    <section className="py-8 sm:py-12 bg-[#E8F0F8] relative overflow-hidden px-4 sm:px-6 rounded-[48px]">
+      {/* Background Decor */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#1A7FD4 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
-      <div className="space-y-6 sm:space-y-8 relative">
-        {/* Responsive Connecting Line - connected on all screen sizes */}
-        <div className="absolute left-[27px] sm:left-[39px] top-8 bottom-8 w-0.5 bg-blue-100" />
-        
-        {processSteps.map((step, idx) => (
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-12 sm:mb-20 flex flex-col items-center">
           <motion.div
-            key={idx}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: idx * 0.05 }}
-            className="flex flex-row gap-4 sm:gap-8 items-start relative z-10"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="px-4 py-1.5 bg-white/40 backdrop-blur-md rounded-full border border-white/60 shadow-sm text-[#1A7FD4] text-[9px] sm:text-[10px] font-black tracking-[4px] uppercase mb-4"
           >
-            <div className="flex-shrink-0 w-14 h-14 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-white shadow-xl flex flex-col items-center justify-center border border-blue-50">
-              <span className="text-[8px] sm:text-[10px] font-black text-[#1A7FD4] uppercase tracking-tighter leading-none mb-0.5">Step</span>
-              <span className="text-xl sm:text-3xl font-black text-[#0D1B2A] leading-none">{step.step}</span>
-            </div>
-            
-            <div className={`${CLAY_CARD} p-5 sm:p-8 flex-grow rounded-[20px] sm:rounded-[32px] overflow-hidden`}>
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-3 sm:mb-4">
-                <h4 className="text-base sm:text-2xl font-nunito font-black text-[#0D1B2A]">{step.title}</h4>
-                <div className="px-2.5 py-1 sm:px-4 sm:py-1.5 bg-blue-50 text-[#1A7FD4] rounded-lg sm:rounded-xl text-[9px] sm:text-xs font-black uppercase tracking-wider border border-blue-100">
-                  {step.duration}
-                </div>
-              </div>
-              <p className="text-[#4A6080] font-inter text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 max-w-4xl">{step.body}</p>
-              
-              <div className="flex sm:inline-flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 bg-slate-50 rounded-xl sm:rounded-2xl border border-slate-100 w-fit">
-                 <span className="text-[9px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest shrink-0">Deliverable:</span>
-                 <div className="flex items-center gap-1.5 min-w-0">
-                    {deliverableIcons[idx]}
-                    <span className="text-xs sm:text-sm font-bold text-[#0D1B2A] truncate">{step.deliverable}</span>
-                 </div>
-              </div>
-            </div>
+            OUR WORKFLOW
           </motion.div>
-        ))}
+          <motion.h2
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-nunito font-black text-2xl sm:text-[40px] md:text-[48px] text-[#0D1B2A] leading-tight mb-5"
+          >
+            Your Marketing <span className="text-[#1A7FD4]">Growth Engine</span>
+          </motion.h2>
+          <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-lg leading-relaxed font-medium px-4">
+            A transparent, data-driven approach to scaling your digital presence and generating consistent leads.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6">
+          {processSteps.map((step, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white/40 backdrop-blur-sm rounded-[32px] p-6 sm:p-7 border border-white/60 shadow-[10px_10px_25px_rgba(163,185,210,0.1),-5px_-5px_15px_rgba(255,255,255,0.5)] transition-all duration-500 flex flex-col"
+            >
+              <div className="absolute top-4 right-6 text-5xl font-nunito font-black text-[#1A7FD4] opacity-[0.03] group-hover:opacity-[0.06] transition-opacity">
+                {`0${idx + 1}`}
+              </div>
+
+              <div 
+                className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-5 group-hover:scale-105 group-hover:rotate-3 transition-all duration-500 shrink-0"
+                style={{ color: step.color }}
+              >
+                <step.icon size={26} strokeWidth={2.5} />
+              </div>
+
+              <div className="flex flex-col gap-1 mb-2">
+                <h3 className="text-lg font-nunito font-black text-[#0D1B2A] leading-none">{step.title}</h3>
+                <span className="text-[9px] font-black text-[#1A7FD4] uppercase tracking-widest mt-1">
+                  {step.duration}
+                </span>
+              </div>
+              
+              <p className="text-[#4A6080] font-inter text-[13px] leading-relaxed font-medium mt-2">{step.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
