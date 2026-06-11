@@ -27,7 +27,7 @@ const WhatWeOffer = () => {
       title: "Customisation & Optimisation",
       desc: "Your business is unique, your Salesforce should be too. We build custom objects, flows, validation rules, and Lightning components that perfectly mirror your business processes and eliminate every manual workaround.",
       icon: Sliders,
-      color: "#29C6E0",
+      color: "#1A7FD4",
       tags: ["Custom Objects", "Lightning", "Process Builder", "Flows"],
       visual: "gears"
     },
@@ -35,7 +35,7 @@ const WhatWeOffer = () => {
       title: "Salesforce Health Check",
       desc: "Is your Salesforce underperforming? Our certified Tier 3 engineers conduct a comprehensive no-obligation audit covering data quality, security settings, automation efficiency, and adoption rates, delivering an actionable improvement roadmap.",
       icon: Activity,
-      color: "#34C98A",
+      color: "#1A7FD4",
       tags: ["Free Audit", "Security Review", "Performance Report"],
       visual: "health"
     },
@@ -43,7 +43,7 @@ const WhatWeOffer = () => {
       title: "System Integration",
       desc: "We seamlessly connect Salesforce with your existing tech stack, ERP systems, marketing tools, accounting software like Xero, Zoho, and custom APIs. Data flows automatically, eliminating silos and giving you a single source of business truth.",
       icon: GitMerge,
-      color: "#8B5CF6",
+      color: "#1A7FD4",
       tags: ["API Integration", "Xero", "Zoho", "ERP", "REST/SOAP"],
       visual: "apps"
     },
@@ -51,7 +51,7 @@ const WhatWeOffer = () => {
       title: "Support & Maintenance",
       desc: "Your Salesforce journey doesn't end at go-live. We provide dedicated ongoing support with guaranteed 48-hour response SLA, proactive monitoring, release management, and continuous improvement, so your CRM stays ahead of your business needs.",
       icon: HeadphonesIcon,
-      color: "#F59E0B",
+      color: "#1A7FD4",
       tags: ["48hr SLA", "Release Mgmt", "Proactive Monitoring"],
       visual: "ticket"
     },
@@ -59,7 +59,7 @@ const WhatWeOffer = () => {
       title: "Training & Enablement",
       desc: "User adoption is where most Salesforce investments fail. Our certified trainers deliver role-specific training programs, Admin, Sales Rep, Manager, ensuring your team uses Salesforce confidently and productively from day one.",
       icon: GraduationCap,
-      color: "#EC4899",
+      color: "#1A7FD4",
       tags: ["Admin Training", "User Adoption", "Role-Based", "Certified Trainers"],
       visual: "progress"
     }
@@ -69,7 +69,7 @@ const WhatWeOffer = () => {
     <section className="py-12 sm:py-20 px-4 sm:px-6 bg-[#E8F0F8] relative overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#1A7FD4] blur-[100px] sm:blur-[150px] opacity-[0.06] pointer-events-none -translate-y-1/2 translate-x-1/3" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#29C6E0] blur-[100px] sm:blur-[150px] opacity-[0.06] pointer-events-none translate-y-1/2 -translate-x-1/3" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-[#1A7FD4] blur-[100px] sm:blur-[150px] opacity-[0.06] pointer-events-none translate-y-1/2 -translate-x-1/3" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-10 sm:mb-16 flex flex-col items-center">
@@ -87,7 +87,7 @@ const WhatWeOffer = () => {
             className="font-nunito font-black text-2xl sm:text-[36px] md:text-[44px] text-[#0D1B2A] leading-[1.2] mb-4 sm:mb-6"
           >
             Complete Salesforce <br className="hidden sm:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1A7FD4] to-[#29C6E0]">Service Ecosystem</span>
+            <span className="text-[#1A7FD4]">Service Ecosystem</span>
           </motion.h2>
           <p className="font-inter text-[#4A6080] max-w-xl text-xs sm:text-base leading-relaxed font-medium px-4">
             From initial implementation to ongoing optimisation, we cover every aspect of your Salesforce journey with precision and expertise.
@@ -159,11 +159,11 @@ const WhatWeOffer = () => {
                         animate={{ rotate: 360 }}
                         transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                       >
-                        <Settings size={18} className="text-[#29C6E0]" />
+                        <Settings size={18} className="text-[#1A7FD4]" />
                       </motion.div>
                     </div>
                     <div className="flex-1 space-y-1.5">
-                       <div className="flex justify-between text-[9px] font-black text-[#29C6E0] uppercase tracking-widest">
+                       <div className="flex justify-between text-[9px] font-black text-[#1A7FD4] uppercase tracking-widest">
                           <span>Progress</span>
                           <span>85%</span>
                        </div>
@@ -172,7 +172,7 @@ const WhatWeOffer = () => {
                             initial={{ width: 0 }}
                             whileInView={{ width: "85%" }}
                             transition={{ duration: 1.5, ease: "easeOut" }}
-                            className="h-full bg-gradient-to-r from-[#29C6E0] to-[#1A7FD4]" 
+                            className="h-full bg-[#1A7FD4]" 
                           />
                        </div>
                     </div>
@@ -187,14 +187,14 @@ const WhatWeOffer = () => {
                         <motion.circle 
                           initial={{ strokeDashoffset: 100 }}
                           whileInView={{ strokeDashoffset: 13 }}
-                          cx="18" cy="18" r="16" fill="transparent" stroke="#34C98A" strokeWidth="4" strokeDasharray="100" className="transition-all duration-1000 ease-out" 
+                          cx="18" cy="18" r="16" fill="transparent" stroke="#1A7FD4" strokeWidth="4" strokeDasharray="100" className="transition-all duration-1000 ease-out" 
                         />
                       </svg>
-                      <div className="absolute inset-0 flex items-center justify-center text-[10px] font-black text-[#34C98A]">87%</div>
+                      <div className="absolute inset-0 flex items-center justify-center text-[10px] font-black text-[#1A7FD4]">87%</div>
                     </div>
                     <div>
                        <div className="text-[8px] font-black text-[#4A6080]/40 uppercase tracking-widest mb-0.5">Cloud Vitality</div>
-                       <div className="text-[12px] font-black text-[#34C98A] uppercase tracking-wider">High Stability</div>
+                       <div className="text-[12px] font-black text-[#1A7FD4] uppercase tracking-wider">High Stability</div>
                     </div>
                   </div>
                 )}
@@ -212,19 +212,19 @@ const WhatWeOffer = () => {
                         />
                       ))}
                     </div>
-                    <div className="w-8 h-8 rounded-lg bg-[#8B5CF6] shadow-sm flex items-center justify-center text-[10px] font-black text-white">ERP</div>
+                    <div className="w-8 h-8 rounded-lg bg-[#1A7FD4] shadow-sm flex items-center justify-center text-[10px] font-black text-white">ERP</div>
                   </div>
                 )}
 
                 {service.visual === "ticket" && (
-                  <div className="flex items-center justify-between w-full bg-[#34C98A]/10 px-3 py-2 rounded-xl border border-[#34C98A]/20">
+                  <div className="flex items-center justify-between w-full bg-[#1A7FD4]/10 px-3 py-2 rounded-xl border border-[#1A7FD4]/20">
                     <div className="flex items-center gap-2">
-                       <div className="w-5 h-5 rounded-full bg-[#34C98A] flex items-center justify-center text-white">
+                       <div className="w-5 h-5 rounded-full bg-[#1A7FD4] flex items-center justify-center text-white">
                           <CheckCircle size={12} strokeWidth={3} />
                        </div>
                        <span className="text-[10px] font-black text-[#0D1B2A] tracking-tight uppercase">Ticket #4282 Resolved</span>
                     </div>
-                    <span className="text-[9px] font-black text-[#34C98A] opacity-60">12:40 PM</span>
+                    <span className="text-[9px] font-black text-[#1A7FD4] opacity-60">12:40 PM</span>
                   </div>
                 )}
 
@@ -232,14 +232,14 @@ const WhatWeOffer = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between items-end px-0.5">
                        <span className="text-[9px] font-black text-[#4A6080] uppercase tracking-widest">Team Adoption Rate</span>
-                       <span className="text-[14px] font-black text-[#EC4899] leading-none">94%</span>
+                       <span className="text-[14px] font-black text-[#1A7FD4] leading-none">94%</span>
                     </div>
                     <div className="h-1.5 w-full bg-white/50 rounded-full overflow-hidden border border-white/50 p-[1px]">
                       <motion.div 
                         initial={{ width: 0 }}
                         whileInView={{ width: "94%" }}
                         transition={{ duration: 1.5, ease: "circOut" }}
-                        className="h-full bg-gradient-to-r from-[#EC4899] to-[#FF75B5] rounded-full" 
+                        className="h-full bg-[#1A7FD4] rounded-full" 
                       />
                     </div>
                   </div>

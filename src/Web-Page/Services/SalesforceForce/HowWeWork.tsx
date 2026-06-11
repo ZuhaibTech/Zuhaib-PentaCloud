@@ -15,10 +15,10 @@ const HowWeWork = () => {
 
   const steps = [
     { step: "01", title: "Discovery & Audit", icon: Search, bg: "#EEF3FF", color: "#1A7FD4", desc: "Deep-dive discovery to understand goals, tech stack, and pain points, followed by a free audit." },
-    { step: "02", title: "Solution Architecture", icon: Layout, bg: "#E0F7FF", color: "#29C6E0", desc: "Designing custom solutions, data models, integration points, and security architecture." },
-    { step: "03", title: "Agile Build & Configure", icon: Code, bg: "#E8FFE8", color: "#34C98A", desc: "Building in 2-week sprints with continuous reviews, configuring flows, objects, and integrations." },
-    { step: "04", title: "Testing & Training", icon: CheckCircle, bg: "#FFF8E0", color: "#F59E0B", desc: "Rigorous UAT testing and data validation followed by role-specific team training sessions." },
-    { step: "05", title: "Go-Live & Support", icon: Rocket, bg: "#FFE8F0", color: "#EC4899", desc: "Zero-downtime deployment, hypercare support, and transition into managed support models." }
+    { step: "02", title: "Solution Architecture", icon: Layout, bg: "#EEF3FF", color: "#1A7FD4", desc: "Designing custom solutions, data models, integration points, and security architecture." },
+    { step: "03", title: "Agile Build & Configure", icon: Code, bg: "#EEF3FF", color: "#1A7FD4", desc: "Building in 2-week sprints with continuous reviews, configuring flows, objects, and integrations." },
+    { step: "04", title: "Testing & Training", icon: CheckCircle, bg: "#EEF3FF", color: "#1A7FD4", desc: "Rigorous UAT testing and data validation followed by role-specific team training sessions." },
+    { step: "05", title: "Go-Live & Support", icon: Rocket, bg: "#EEF3FF", color: "#1A7FD4", desc: "Zero-downtime deployment, hypercare support, and transition into managed support models." }
   ];
 
   return (
@@ -54,7 +54,7 @@ const HowWeWork = () => {
                initial={{ scaleX: 0 }}
                whileInView={{ scaleX: 1 }}
                transition={{ duration: 1.5, ease: "easeInOut" }}
-               className="h-full bg-gradient-to-r from-[#1A7FD4] to-[#29C6E0] origin-left"
+               className="h-full bg-gradient-to-r from-[#1A7FD4] to-[#1A7FD4] origin-left"
              />
           </div>
 

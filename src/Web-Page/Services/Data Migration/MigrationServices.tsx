@@ -33,18 +33,18 @@ const MigrationServices = () => {
     },
     {
       icon: Cloud,
-      color: "#29C6E0",
-      bg: "#E0F7FF",
+      color: "#1A7FD4",
+      bg: "#EEF3FF",
       title: "Cloud Data Migration",
       desc: "We migrate on-premise workloads, databases, and applications to cloud environments, AWS, Azure, and GCP, using a phased approach that ensures business continuity throughout. Includes lift-and-shift, re-platforming, and re-architecture migrations depending on your long-term cloud strategy.",
       tags: ["AWS, Azure, GCP", "Lift-and-Shift", "Hybrid Cloud Setup"],
       metric: "Zero-Downtime Migration",
       visual: (
         <div className="relative w-full h-full flex flex-col items-center justify-center">
-          <Cloud size={64} className="text-[#29C6E0] z-10 drop-shadow-xl" />
+          <Cloud size={64} className="text-[#1A7FD4] z-10 drop-shadow-xl" />
           <div className="absolute bottom-8 flex justify-center gap-4 w-32">
              {[1, 2, 3, 4].map(i => (
-               <motion.div key={i} animate={{ y: [40, -10], opacity: [0, 1, 0] }} transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.3 }} className="w-2 h-2 rounded-full bg-[#29C6E0]" />
+               <motion.div key={i} animate={{ y: [40, -10], opacity: [0, 1, 0] }} transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.3 }} className="w-2 h-2 rounded-full bg-[#1A7FD4]" />
              ))}
           </div>
         </div>
@@ -52,8 +52,8 @@ const MigrationServices = () => {
     },
     {
       icon: Database,
-      color: "#8B5CF6",
-      bg: "#F3E8FF",
+      color: "#1A7FD4",
+      bg: "#EEF3FF",
       title: "Database Migration",
       desc: "We migrate databases across engines and platforms, MySQL, PostgreSQL, Microsoft SQL Server, Oracle, MongoDB, and more, handling schema conversion, data type mapping, stored procedure migration, and post-migration validation to ensure your applications run flawlessly on the new database.",
       tags: ["MySQL to PostgreSQL", "Oracle to AWS RDS", "Schema Conversion"],
@@ -62,8 +62,8 @@ const MigrationServices = () => {
         <div className="relative w-full h-full flex items-center justify-center">
           <div className="flex flex-col gap-2">
             {[1, 2, 3, 4].map(i => (
-               <motion.div key={i} animate={{ y: [20, 0], opacity: [0, 1] }} transition={{ duration: 0.5, delay: i * 0.2, repeat: Infinity, repeatDelay: 2 }} className="w-24 h-6 rounded-full border-2 border-[#8B5CF6]/40 bg-[#F3E8FF] flex items-center justify-center shadow-sm">
-                 <Database size={14} className="text-[#8B5CF6]/50" />
+               <motion.div key={i} animate={{ y: [20, 0], opacity: [0, 1] }} transition={{ duration: 0.5, delay: i * 0.2, repeat: Infinity, repeatDelay: 2 }} className="w-24 h-6 rounded-full border-2 border-[#1A7FD4]/40 bg-[#EEF3FF] flex items-center justify-center shadow-sm">
+                 <Database size={14} className="text-[#1A7FD4]/50" />
                </motion.div>
             ))}
           </div>
@@ -72,18 +72,18 @@ const MigrationServices = () => {
     },
     {
       icon: Settings,
-      color: "#F59E0B",
-      bg: "#FFF8E0",
+      color: "#1A7FD4",
+      bg: "#EEF3FF",
       title: "ERP & Business System",
       desc: "We migrate complex ERP and business system data, financial records, inventory, HR data, purchase orders, and customer master data, between platforms like SAP, Oracle ERP, Microsoft Dynamics, Tally, and cloud ERP solutions. Every migration includes a parallel-run period to validate data accuracy before full cutover.",
       tags: ["SAP, Oracle, Dynamics", "Financial Data", "Dual-Run Validation"],
       metric: "100% Financial Accuracy",
       visual: (
         <div className="relative w-full h-full flex items-center justify-center">
-          <motion.div animate={{ rotate: 360 }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} className="text-[#F59E0B] drop-shadow-xl z-10">
+          <motion.div animate={{ rotate: 360 }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} className="text-[#1A7FD4] drop-shadow-xl z-10">
             <Settings size={64} />
           </motion.div>
-          <motion.div animate={{ rotate: -360 }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} className="absolute text-[#F59E0B]/50 ml-16 mt-16">
+          <motion.div animate={{ rotate: -360 }} transition={{ duration: 4, repeat: Infinity, ease: "linear" }} className="absolute text-[#1A7FD4]/50 ml-16 mt-16">
             <Settings size={40} />
           </motion.div>
         </div>
@@ -91,30 +91,30 @@ const MigrationServices = () => {
     },
     {
       icon: Mail,
-      color: "#EC4899",
-      bg: "#FFE8F0",
+      color: "#1A7FD4",
+      bg: "#EEF3FF",
       title: "Email & Collaboration",
       desc: "We migrate complete email environments, emails, calendars, contacts, distribution lists, shared mailboxes, and archived data, between platforms with zero message loss and minimal disruption to daily operations. Including migrations to Microsoft 365 and Google Workspace.",
       tags: ["M365 & Google Workspace", "Shared Mailboxes", "Email Archives"],
       metric: "Zero Email Loss",
       visual: (
         <div className="relative w-full h-full flex items-center justify-center gap-6">
-           <div className="w-16 h-16 rounded-xl border-2 border-dashed border-[#EC4899]/30 flex items-center justify-center bg-[#EC4899]/5">
-              <Mail size={32} className="text-[#EC4899]/30" />
+           <div className="w-16 h-16 rounded-xl border-2 border-dashed border-[#1A7FD4]/30 flex items-center justify-center bg-[#1A7FD4]/5">
+              <Mail size={32} className="text-[#1A7FD4]/30" />
            </div>
            <motion.div animate={{ x: [-50, 50], opacity: [0, 1, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="absolute z-10">
-              <Mail size={32} className="text-[#EC4899] drop-shadow-md" />
+              <Mail size={32} className="text-[#1A7FD4] drop-shadow-md" />
            </motion.div>
-           <div className="w-16 h-16 rounded-xl border-2 border-[#EC4899]/20 flex items-center justify-center bg-[#EC4899]/10">
-              <CheckCircle2 size={32} className="text-[#EC4899]" />
+           <div className="w-16 h-16 rounded-xl border-2 border-[#1A7FD4]/20 flex items-center justify-center bg-[#1A7FD4]/10">
+              <CheckCircle2 size={32} className="text-[#1A7FD4]" />
            </div>
         </div>
       )
     },
     {
       icon: Archive,
-      color: "#34C98A",
-      bg: "#E8FFE8",
+      color: "#1A7FD4",
+      bg: "#EEF3FF",
       title: "Legacy System & File",
       desc: "We decommission legacy systems and migrate unstructured data, file shares, document management systems, SharePoint environments, and on-premise storage, to modern cloud storage platforms including SharePoint Online, AWS S3, Google Drive, and OneDrive for Business.",
       tags: ["SharePoint Online", "AWS S3 & OneDrive", "Metadata Preservation"],
@@ -122,9 +122,9 @@ const MigrationServices = () => {
       visual: (
         <div className="relative w-full h-full flex items-center justify-center">
           <div className="relative">
-            <Archive size={64} className="text-[#34C98A] z-20 relative drop-shadow-xl" />
-            <motion.div animate={{ y: [-40, 10], opacity: [0, 1, 0], scale: [1, 0.5, 0.2] }} transition={{ duration: 1.5, repeat: Infinity }} className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-[#34C98A]/20 rounded-md border border-[#34C98A]/50 z-10 flex items-center justify-center backdrop-blur-sm">
-               <div className="w-4 h-1 bg-[#34C98A]/50 rounded-full" />
+            <Archive size={64} className="text-[#1A7FD4] z-20 relative drop-shadow-xl" />
+            <motion.div animate={{ y: [-40, 10], opacity: [0, 1, 0], scale: [1, 0.5, 0.2] }} transition={{ duration: 1.5, repeat: Infinity }} className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-[#1A7FD4]/20 rounded-md border border-[#1A7FD4]/50 z-10 flex items-center justify-center backdrop-blur-sm">
+               <div className="w-4 h-1 bg-[#1A7FD4]/50 rounded-full" />
             </motion.div>
           </div>
         </div>

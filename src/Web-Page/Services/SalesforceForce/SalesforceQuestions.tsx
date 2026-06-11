@@ -17,28 +17,28 @@ const SalesforceQuestions = () => {
       question: "Do we need to already be on Salesforce to work with you?", 
       answer: "Not at all. We work with businesses at every stage, whether you're evaluating Salesforce for the first time, migrating from another CRM, or looking to optimise an existing Salesforce org.",
       icon: Target,
-      color: "#34C98A",
+      color: "#1A7FD4",
       image: "/Images/Salesforce/Sales-Queston-2.webp"
     },
     { 
       question: "What Salesforce certifications does your team hold?", 
       answer: "Our team collectively holds 16+ active Salesforce certifications spanning Salesforce Certified Administrator, Platform Developer I & II, Sales Cloud Consultant, and more.",
       icon: Shield,
-      color: "#F59E0B",
+      color: "#1A7FD4",
       image: "/Images/Salesforce/Sales-Queston-3.webp"
     },
     { 
       question: "How do you ensure our data is safe during migration?", 
       answer: "Data security is non-negotiable. We follow strict protocols including full backups, sandbox testing, encrypted transfer, and a zero-data-loss guarantee.",
       icon: Users,
-      color: "#8B5CF6",
+      color: "#1A7FD4",
       image: "/Images/Salesforce/Sales-Queston-4.webp"
     },
     { 
       question: "What happens after our Salesforce goes live?", 
       answer: "We offer three post-launch options: 30-day hypercare, monthly managed support retainers, and ad-hoc support for specific requirements.",
       icon: Heart,
-      color: "#EC4899",
+      color: "#1A7FD4",
       image: "/Images/Salesforce/Sales-Queston-5.webp"
     }
   ];
