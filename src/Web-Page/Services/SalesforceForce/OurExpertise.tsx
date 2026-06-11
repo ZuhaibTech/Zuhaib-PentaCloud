@@ -13,8 +13,195 @@ import {
   Heart,
   ChevronRight,
   Files,
-  Cloud
+  Cloud,
+  ArrowRight,
+  CheckCircle2,
+  Zap,
+  ShieldCheck
 } from "lucide-react";
+
+// --- Custom Animated Visual Stage for each Cloud ---
+const CloudVisual = ({ type, color }: { type: string, color: string }) => {
+  switch (type) {
+    case "pipeline":
+      return (
+        <div className="relative w-full h-48 flex items-center justify-center">
+          <div className="absolute w-64 h-32 border-2 border-dashed border-slate-200 rounded-[2rem] flex items-center justify-around px-4">
+             {[0, 1, 2, 3].map(i => (
+               <motion.div 
+                 key={i}
+                 animate={{ 
+                   height: [20, 40, 20],
+                   backgroundColor: [color + "20", color, color + "20"]
+                 }}
+                 transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
+                 className="w-4 rounded-full"
+               />
+             ))}
+          </div>
+          <motion.div 
+            animate={{ x: [-120, 120] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+            className="absolute"
+            style={{ color }}
+          >
+            <TrendingUp size={32} />
+          </motion.div>
+        </div>
+      );
+    case "service":
+      return (
+        <div className="relative w-full h-48 flex items-center justify-center">
+          <motion.div 
+            animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 3, repeat: Infinity }}
+            className="w-32 h-32 rounded-full border-4 border-dashed flex items-center justify-center"
+            style={{ borderColor: color + "40" }}
+          >
+            <HeadphonesIcon size={48} style={{ color }} />
+          </motion.div>
+          {[0, 90, 180, 270].map(angle => (
+            <motion.div 
+              key={angle}
+              className="absolute w-2 h-2 rounded-full"
+              style={{ backgroundColor: color }}
+              animate={{ 
+                scale: [0, 1.5, 0],
+                x: [0, 60 * Math.cos(angle * Math.PI / 180)],
+                y: [0, 60 * Math.sin(angle * Math.PI / 180)]
+              }}
+              transition={{ duration: 2, repeat: Infinity, delay: angle / 360 }}
+            />
+          ))}
+        </div>
+      );
+    case "marketing":
+      return (
+        <div className="relative w-full h-48 flex items-center justify-center">
+          <svg className="w-64 h-32">
+            <motion.path 
+              d="M 10 80 Q 80 10, 160 80 T 310 80" 
+              fill="none" 
+              stroke={color + "40"} 
+              strokeWidth="4" 
+              strokeDasharray="8 8" 
+            />
+            <motion.circle 
+              r="6" 
+              fill={color}
+              animate={{ 
+                offsetDistance: ["0%", "100%"]
+              }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+              style={{ offsetPath: "path('M 10 80 Q 80 10, 160 80 T 310 80')" }}
+            />
+          </svg>
+          <Megaphone size={32} className="absolute top-4 left-1/2 -translate-x-1/2" style={{ color }} />
+        </div>
+      );
+    case "experience":
+      return (
+        <div className="relative w-full h-48 flex items-center justify-center">
+           <div className="grid grid-cols-3 gap-6">
+              {[...Array(6)].map((_, i) => (
+                <motion.div 
+                  key={i}
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    boxShadow: [`0 0 0px ${color}00`, `0 0 15px ${color}40`, `0 0 0px ${color}00`]
+                  }}
+                  transition={{ duration: 2 + i * 0.2, repeat: Infinity }}
+                  className="w-10 h-10 rounded-xl bg-white border border-slate-100 flex items-center justify-center"
+                  style={{ color }}
+                >
+                  <Users size={18} />
+                </motion.div>
+              ))}
+           </div>
+        </div>
+      );
+    case "commerce":
+      return (
+        <div className="relative w-full h-48 flex items-center justify-center">
+           <motion.div 
+             animate={{ rotate: 360 }}
+             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+             className="w-40 h-40 border border-dashed rounded-full flex items-center justify-center"
+             style={{ borderColor: color + "40" }}
+           >
+              <ShoppingCart size={40} style={{ color }} />
+           </motion.div>
+           {[0, 120, 240].map(i => (
+             <motion.div 
+               key={i}
+               animate={{ y: [0, -10, 0] }}
+               transition={{ duration: 2, repeat: Infinity, delay: i / 120 }}
+               className="absolute w-8 h-8 bg-white rounded-lg shadow-md flex items-center justify-center"
+               style={{ 
+                 left: `${50 + 40 * Math.cos(i * Math.PI / 180)}%`,
+                 top: `${50 + 40 * Math.sin(i * Math.PI / 180)}%`,
+                 color 
+               }}
+             >
+               <Zap size={14} />
+             </motion.div>
+           ))}
+        </div>
+      );
+    case "analytics":
+      return (
+        <div className="relative w-full h-48 flex items-center justify-center gap-2 items-end pb-8">
+           {[40, 70, 50, 90, 60].map((h, i) => (
+             <motion.div 
+               key={i}
+               initial={{ height: 0 }}
+               whileInView={{ height: `${h}%` }}
+               transition={{ duration: 1, delay: i * 0.1 }}
+               className="w-8 rounded-t-lg"
+               style={{ backgroundColor: color }}
+             />
+           ))}
+           <BarChart2 size={32} className="absolute top-8 right-8" style={{ color }} />
+        </div>
+      );
+    case "financial":
+      return (
+        <div className="relative w-full h-48 flex items-center justify-center">
+           <motion.div 
+             animate={{ y: [0, -10, 0] }}
+             transition={{ duration: 3, repeat: Infinity }}
+             className="w-32 h-32 bg-white rounded-[2rem] shadow-2xl flex items-center justify-center border-2"
+             style={{ borderColor: color + "20" }}
+           >
+              <DollarSign size={48} style={{ color }} />
+           </motion.div>
+           <ShieldCheck size={24} className="absolute bottom-12 right-1/2 translate-x-12" style={{ color: "#34C98A" }} />
+        </div>
+      );
+    case "health":
+      return (
+        <div className="relative w-full h-48 flex items-center justify-center">
+           <div className="relative w-32 h-32">
+              <motion.div 
+                animate={{ opacity: [0.3, 1, 0.3] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute inset-0 rounded-full bg-blue-50"
+              />
+              <Heart size={64} className="absolute inset-0 m-auto" style={{ color }} />
+           </div>
+           <motion.div 
+             animate={{ x: [-100, 100] }}
+             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+             className="absolute w-full h-px bg-slate-200"
+           >
+              <div className="w-4 h-4 rounded-full bg-blue-500 blur-[2px] -translate-y-1/2" />
+           </motion.div>
+        </div>
+      );
+    default:
+      return null;
+  }
+};
 
 const OurExpertise = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -25,14 +212,102 @@ const OurExpertise = () => {
   }, []);
 
   const clouds = [
-    { title: "Sales Cloud", icon: TrendingUp, bg: "#EEF3FF", color: "#1A7FD4", desc: "Supercharge your sales pipeline with AI-driven lead scoring and opportunity management.", metric: "45% faster closure ↑", metricBg: "#E8FFE8", metricColor: "#34C98A" },
-    { title: "Service Cloud", icon: HeadphonesIcon, bg: "#E0F7FF", color: "#29C6E0", desc: "Transform customer service with AI-powered routing and self-service portals.", metric: "60% resolution time ↓", metricBg: "#E0F7FF", metricColor: "#29C6E0" },
-    { title: "Marketing Cloud", icon: Megaphone, bg: "#FFE8F0", color: "#EC4899", desc: "Deliver personalised customer journeys across email, SMS, and social media.", metric: "200% engagement ↑", metricBg: "#FFE8F0", metricColor: "#EC4899" },
-    { title: "Experience Cloud", icon: Users, bg: "#F3E8FF", color: "#8B5CF6", desc: "Build branded portals for customers, partners, and self-service communities.", metric: "80% self-service ↑", metricBg: "#F3E8FF", metricColor: "#8B5CF6" },
-    { title: "Commerce Cloud", icon: ShoppingCart, bg: "#FFF8E0", color: "#F59E0B", desc: "Launch and scale B2B/B2C commerce with AI-powered merchandising.", metric: "35% conversion ↑", metricBg: "#FFF8E0", metricColor: "#F59E0B" },
-    { title: "Analytics Cloud", icon: BarChart2, bg: "#E8FFE8", color: "#34C98A", desc: "Turn CRM data into insights with real-time Einstein Analytics dashboards.", metric: "Real-time insights", metricBg: "#E8FFE8", metricColor: "#34C98A" },
-    { title: "Financial Services", icon: DollarSign, bg: "#EEF3FF", color: "#1A7FD4", desc: "Purpose-built CRM for banks, insurance, and wealth management firms.", metric: "HIPAA + GDPR Ready", metricBg: "#EEF3FF", metricColor: "#1A7FD4" },
-    { title: "Health Cloud", icon: Heart, bg: "#FFE8F0", color: "#EC4899", desc: "Connect patients and care teams in a unified platform with HIPAA compliance.", metric: "Full Compliance", metricBg: "#FFE8F0", metricColor: "#EC4899" }
+    { 
+      title: "Sales Cloud", 
+      icon: TrendingUp, 
+      bg: "#EEF3FF", 
+      color: "#1A7FD4", 
+      desc: "Supercharge your sales pipeline with AI-driven lead scoring and opportunity management. We optimize every stage from lead generation to final closure.", 
+      metric: "45% faster closure ↑", 
+      metricBg: "#E8FFE8", 
+      metricColor: "#34C98A",
+      features: ["Lead & Opportunity Management", "Sales Forecasting", "Einstein AI Scoring", "Mobile Sales App"],
+      visual: "pipeline"
+    },
+    { 
+      title: "Service Cloud", 
+      icon: HeadphonesIcon, 
+      bg: "#EEF3FF", 
+      color: "#1A7FD4", 
+      desc: "Transform customer service with AI-powered routing and self-service portals. Deliver personalized support experiences at scale.", 
+      metric: "60% resolution time ↓", 
+      metricBg: "#E8FFE8", 
+      metricColor: "#34C98A",
+      features: ["Omni-channel Support", "Case Management", "Knowledge Base", "Service Analytics"],
+      visual: "service"
+    },
+    { 
+      title: "Marketing Cloud", 
+      icon: Megaphone, 
+      bg: "#EEF3FF", 
+      color: "#1A7FD4", 
+      desc: "Deliver personalised customer journeys across email, SMS, and social media. Build 1-to-1 relationships with your audience.", 
+      metric: "200% engagement ↑", 
+      metricBg: "#E8FFE8", 
+      metricColor: "#34C98A",
+      features: ["Journey Builder", "Email Studio", "Audience Studio", "Social Media Marketing"],
+      visual: "marketing"
+    },
+    { 
+      title: "Experience Cloud", 
+      icon: Users, 
+      bg: "#EEF3FF", 
+      color: "#1A7FD4", 
+      desc: "Build branded portals for customers, partners, and self-service communities. Enhance collaboration and user adoption.", 
+      metric: "80% self-service ↑", 
+      metricBg: "#E8FFE8", 
+      metricColor: "#34C98A",
+      features: ["Customer Portals", "Partner Communities", "Help Centers", "Mobile Experience"],
+      visual: "experience"
+    },
+    { 
+      title: "Commerce Cloud", 
+      icon: ShoppingCart, 
+      bg: "#EEF3FF", 
+      color: "#1A7FD4", 
+      desc: "Launch and scale B2B/B2C commerce with AI-powered merchandising. Create seamless shopping experiences across all channels.", 
+      metric: "35% conversion ↑", 
+      metricBg: "#E8FFE8", 
+      metricColor: "#34C98A",
+      features: ["B2C & B2B Commerce", "Order Management", "AI Personalization", "Multi-site Management"],
+      visual: "commerce"
+    },
+    { 
+      title: "Analytics Cloud", 
+      icon: BarChart2, 
+      bg: "#EEF3FF", 
+      color: "#1A7FD4", 
+      desc: "Turn CRM data into insights with real-time Einstein Analytics dashboards. Make data-driven decisions with ease.", 
+      metric: "Real-time insights", 
+      metricBg: "#E8FFE8", 
+      metricColor: "#34C98A",
+      features: ["Einstein Discovery", "Custom Dashboards", "Predictive Insights", "Data Integration"],
+      visual: "analytics"
+    },
+    { 
+      title: "Financial Services", 
+      icon: DollarSign, 
+      bg: "#EEF3FF", 
+      color: "#1A7FD4", 
+      desc: "Purpose-built CRM for banks, insurance, and wealth management firms. Ensure regulatory compliance while growing client trust.", 
+      metric: "HIPAA + GDPR Ready", 
+      metricBg: "#E8FFE8", 
+      metricColor: "#34C98A",
+      features: ["Wealth Management", "Insurance Service", "Banking Compliance", "Actionable Insights"],
+      visual: "financial"
+    },
+    { 
+      title: "Health Cloud", 
+      icon: Heart, 
+      bg: "#EEF3FF", 
+      color: "#1A7FD4", 
+      desc: "Connect patients and care teams in a unified platform with HIPAA compliance. Deliver patient-centric care across all touchpoints.", 
+      metric: "Full Compliance", 
+      metricBg: "#E8FFE8", 
+      metricColor: "#34C98A",
+      features: ["Patient 360", "Care Management", "Provider Relationship", "Health Analytics"],
+      visual: "health"
+    }
   ];
 
   const certs = [
@@ -123,7 +398,7 @@ const OurExpertise = () => {
           </div>
 
           {/* Right Area: Content Sheet */}
-          <div className="p-5 sm:p-10 lg:p-16 bg-background relative flex items-center justify-center min-h-[380px] md:min-h-[500px] overflow-hidden w-full">
+          <div className="p-5 sm:p-10 lg:p-12 bg-background relative flex items-center justify-center min-h-[450px] md:min-h-[550px] overflow-hidden w-full">
             
             {/* Floating Clouds Background Animation */}
             <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
@@ -155,47 +430,82 @@ const OurExpertise = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="w-full max-w-2xl relative z-10"
+                className="w-full relative z-10 grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 items-center"
               >
-                <div className="flex flex-col md:flex-row items-center md:items-start gap-4 sm:gap-8 mb-6 sm:mb-10">
-                  <motion.div 
-                    initial={{ scale: 0.8, rotate: -10 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    className="w-16 h-16 md:w-24 md:h-24 rounded-2xl md:rounded-[32px] flex items-center justify-center shadow-2xl relative bg-white border-4 border-white overflow-hidden shrink-0 [&_svg]:w-8 [&_svg]:h-8 [&_svg]:md:w-11 [&_svg]:md:h-11"
-                    style={{ boxShadow: `0 20px 40px ${activeCloud.bg}80`, color: activeCloud.color }}
-                  >
-                    <div className="absolute inset-0 opacity-10" style={{ backgroundColor: activeCloud.bg }} />
-                    <activeCloud.icon className="relative z-10" />
-                  </motion.div>
-
-                  <div className="text-center md:text-left flex-1 min-w-0">
-                    <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                      <div className="w-8 h-[1px] bg-[#1A7FD4]/30" />
-                      <span className="text-[#1A7FD4] font-nunito font-black text-[8.5px] sm:text-[10px] tracking-[3px] uppercase leading-none">Expertise Module</span>
-                      <div className="w-8 h-[1px] bg-[#1A7FD4]/30" />
-                    </div>
-                    <h3 className="font-nunito font-black text-xl sm:text-[32px] md:text-[44px] text-[#0D1B2A] leading-tight mb-2 sm:mb-4 truncate">
-                      {activeCloud.title}
-                    </h3>
+                <div className="flex flex-col">
+                  <div className="flex flex-col md:flex-row items-center md:items-start gap-4 sm:gap-6 mb-6">
                     <motion.div 
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-nunito font-bold text-[11px] sm:text-[13px] shadow-sm border leading-none"
-                      style={{ backgroundColor: activeCloud.metricBg, color: activeCloud.metricColor, borderColor: `${activeCloud.metricColor}20` }}
+                      initial={{ scale: 0.8, rotate: -10 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-[24px] flex items-center justify-center shadow-2xl relative bg-white border-4 border-white overflow-hidden shrink-0 [&_svg]:w-8 [&_svg]:h-8 [&_svg]:md:w-10 [&_svg]:md:h-10"
+                      style={{ boxShadow: `0 20px 40px ${activeCloud.bg}80`, color: activeCloud.color }}
                     >
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: activeCloud.metricColor }} />
-                      <span>{activeCloud.metric}</span>
+                      <div className="absolute inset-0 opacity-10" style={{ backgroundColor: activeCloud.bg }} />
+                      <activeCloud.icon className="relative z-10" />
                     </motion.div>
+
+                    <div className="text-center md:text-left flex-1 min-w-0">
+                      <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                        <div className="w-8 h-[1px] bg-[#1A7FD4]/30" />
+                        <span className="text-[#1A7FD4] font-nunito font-black text-[8.5px] sm:text-[10px] tracking-[3px] uppercase leading-none">Expertise Module</span>
+                        <div className="w-8 h-[1px] bg-[#1A7FD4]/30" />
+                      </div>
+                      <h3 className="font-nunito font-black text-xl sm:text-[32px] md:text-[40px] text-[#0D1B2A] leading-tight mb-2 sm:mb-4 truncate">
+                        {activeCloud.title}
+                      </h3>
+                      <motion.div 
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-nunito font-bold text-[11px] sm:text-[13px] shadow-sm border leading-none"
+                        style={{ backgroundColor: activeCloud.metricBg, color: activeCloud.metricColor, borderColor: `${activeCloud.metricColor}20` }}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: activeCloud.metricColor }} />
+                        <span>{activeCloud.metric}</span>
+                      </motion.div>
+                    </div>
                   </div>
+
+                  <p className="font-inter text-xs sm:text-[16px] md:text-[18px] text-[#4A6080] leading-[1.6] mb-8 max-w-xl">
+                    {activeCloud.desc}
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    {activeCloud.features.map((feature, i) => (
+                      <motion.div 
+                        key={i}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.1 }}
+                        className="flex items-center gap-3 bg-slate-50/50 p-3 rounded-xl border border-slate-100/50"
+                      >
+                         <CheckCircle2 size={16} className="text-[#34C98A] shrink-0" />
+                         <span className="text-[12px] sm:text-[13px] font-bold text-[#4A6080]">{feature}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <motion.button
+                    whileHover={{ gap: "1.25rem" }}
+                    className="flex items-center gap-3 text-white font-nunito font-black text-xs sm:text-sm px-6 py-3 rounded-xl transition-all duration-300 w-fit group"
+                    style={{ backgroundColor: activeCloud.color }}
+                  >
+                    <span>Transform your business</span>
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </motion.button>
                 </div>
 
-                <div className="w-full h-[1px] bg-slate-100 mb-6 sm:mb-10" />
-
-                <p className="font-inter text-xs sm:text-[17px] md:text-[20px] text-[#4A6080] leading-[1.8] mb-6 sm:mb-12">
-                  {activeCloud.desc}
-                </p>
-
-
+                {/* Right Visual Area (Desktop Only) */}
+                <div className="hidden lg:flex flex-col items-center justify-center">
+                   <CloudVisual type={activeCloud.visual} color={activeCloud.color} />
+                   <div className="mt-8 flex flex-col items-center text-center">
+                      <div className="flex gap-1 mb-2">
+                         {[...Array(3)].map((_, i) => (
+                           <div key={i} className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
+                         ))}
+                      </div>
+                      <span className="text-[9px] font-black text-[#8BA4BE] uppercase tracking-[2px]">Cloud Instance Active</span>
+                   </div>
+                </div>
               </motion.div>
             </AnimatePresence>
 
@@ -221,6 +531,24 @@ const OurExpertise = () => {
           </motion.div>
         </div>
       </div>
+      <style dangerouslySetInnerHTML={{__html: `
+        .custom-scrollbar::-webkit-scrollbar {
+          height: 0px;
+          width: 0px;
+        }
+        @media (min-width: 768px) {
+          .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+          }
+          .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+          }
+          .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #E2E8F0;
+            border-radius: 10px;
+          }
+        }
+      `}} />
     </section>
   );
 };
