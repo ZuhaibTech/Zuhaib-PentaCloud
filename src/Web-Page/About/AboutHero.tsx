@@ -71,7 +71,7 @@ const AboutHero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="font-inter text-sm sm:text-base md:text-lg lg:text-xl text-white/85 max-w-[640px] leading-relaxed mb-10 md:mb-16 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
         >
-          Bengaluru-based technology consulting firm dedicated to driving digital transformation through AI-powered solutions and a human-centric approach.
+          A global technology consulting firm driving digital transformation through AI-powered solutions and a human-centric approach, with a presence across India and the Middle East.
         </motion.p>
 
         {/* Scroll Indicator Moved into Flow */}

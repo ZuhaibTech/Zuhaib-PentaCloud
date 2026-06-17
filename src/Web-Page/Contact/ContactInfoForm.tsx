@@ -232,7 +232,7 @@ const ContactInfoForm = () => {
                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white shadow-sm border border-[#1A7FD4]/10 flex items-center justify-center text-[#1A7FD4] group-hover:scale-105 transition-transform shrink-0">
                        <Mail size={15} />
                     </div>
-                    <span className="font-nunito font-black text-[#0D1B2A] text-xs sm:text-sm break-all">contact@pentacloudconsulting.com</span>
+                    <span className="font-nunito font-black text-[#0D1B2A] text-xs sm:text-sm break-all">contactus@pentacloudconsulting.com</span>
                  </div>
                  <div className="flex items-center gap-3 sm:gap-4 group">
                     <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white shadow-sm border border-[#34C98A]/10 flex items-center justify-center text-[#34C98A] group-hover:scale-105 transition-transform shrink-0">
