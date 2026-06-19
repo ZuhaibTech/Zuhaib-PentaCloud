@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { 
-  Cloud, Shield, Server, Activity, ArrowRight, CheckCircle2, Zap 
+  Cloud, Shield, Server, Activity, ArrowRight, CheckCircle2, Zap, Laptop, Smartphone
 } from "lucide-react";
 
 const CloudHero = () => {
@@ -165,7 +165,7 @@ const CloudHero = () => {
           <div className="bg-gradient-to-br from-[#EEF3FF] to-[#E0EEFF] rounded-2xl sm:rounded-[32px] p-4 sm:p-12 min-h-[280px] sm:min-h-[540px] max-w-[420px] lg:max-w-none w-full border-2 border-dashed border-[#1A7FD4]/15 shadow-[12px_12px_32px_rgba(26,127,212,0.15),-6px_-6px_16px_rgba(255,255,255,0.95)] relative flex flex-col items-center justify-center">
             
             {/* Diagram */}
-            <div className="w-full flex flex-col items-center gap-10 sm:gap-16 relative">
+            <div className="w-full flex flex-col items-center gap-8 sm:gap-12 relative -translate-y-4">
               {/* Cloud Icon */}
               <motion.div 
                 animate={{ boxShadow: ["0 0 0px rgba(26,127,212,0)", "0 0 20px rgba(26,127,212,0.4)", "0 0 0px rgba(26,127,212,0)"] }}
@@ -175,8 +175,8 @@ const CloudHero = () => {
                 <Cloud className="w-8 h-8 sm:w-12 sm:h-12" />
               </motion.div>
 
-              {/* Connection Lines */}
-              <svg className="absolute top-14 sm:top-20 w-full h-24 sm:h-32 -z-0" viewBox="0 0 200 80">
+              {/* Connection Lines (Top) */}
+              <svg className="absolute top-12 sm:top-[70px] w-full h-[60px] sm:h-[80px] -z-0" viewBox="0 0 200 60" preserveAspectRatio="none">
                 <motion.path 
                   d="M 100 0 L 30 60" 
                   stroke="#1A7FD4" strokeWidth="1" strokeDasharray="4 4" fill="none" opacity="0.3"
@@ -192,7 +192,7 @@ const CloudHero = () => {
                 {/* Data Dots */}
                 {[0, 1, 2].map((i) => (
                   <motion.circle
-                    key={i}
+                    key={`top-${i}`}
                     r="2"
                     fill="#1A7FD4"
                     animate={{ 
@@ -206,7 +206,7 @@ const CloudHero = () => {
               </svg>
 
               {/* Server Blocks */}
-              <div className="flex gap-4 sm:gap-6 w-full justify-center">
+              <div className="flex gap-4 sm:gap-6 w-full justify-center relative z-10">
                 {["Web", "API", "DB"].map((label, i) => (
                   <motion.div
                     key={i}
@@ -218,6 +218,46 @@ const CloudHero = () => {
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
                   </motion.div>
                 ))}
+              </div>
+
+              {/* Connection Lines (Bottom) */}
+              <svg className="absolute top-[160px] sm:top-[225px] w-full h-[50px] sm:h-[65px] -z-0" viewBox="0 0 200 60" preserveAspectRatio="none">
+                <motion.path 
+                  d="M 30 0 L 70 60" 
+                  stroke="#34C98A" strokeWidth="1" strokeDasharray="4 4" fill="none" opacity="0.3"
+                />
+                <motion.path 
+                  d="M 100 0 L 130 60" 
+                  stroke="#34C98A" strokeWidth="1" strokeDasharray="4 4" fill="none" opacity="0.3"
+                />
+                <motion.path 
+                  d="M 170 0 L 130 60" 
+                  stroke="#34C98A" strokeWidth="1" strokeDasharray="4 4" fill="none" opacity="0.3"
+                />
+                {/* Data Dots up */}
+                {[0, 1, 2].map((i) => (
+                  <motion.circle
+                    key={`bot-${i}`}
+                    r="2"
+                    fill="#34C98A"
+                    animate={{ 
+                      offsetDistance: ["100%", "0%"],
+                      opacity: [0, 1, 0]
+                    }}
+                    transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.5, ease: "linear" }}
+                    style={{ offsetPath: `path('${i === 0 ? "M 30 0 L 70 60" : i === 1 ? "M 100 0 L 130 60" : "M 170 0 L 130 60"}')` }}
+                  />
+                ))}
+              </svg>
+
+              {/* End User Devices */}
+              <div className="flex gap-4 sm:gap-6 w-full justify-center pt-2 relative z-10">
+                 <motion.div whileHover={{ scale: 1.05 }} className="bg-white rounded-xl p-3 shadow-sm border border-slate-100 flex items-center justify-center text-[#4A6080]">
+                   <Laptop className="w-5 h-5 sm:w-6 sm:h-6" />
+                 </motion.div>
+                 <motion.div whileHover={{ scale: 1.05 }} className="bg-white rounded-xl p-3 shadow-sm border border-slate-100 flex items-center justify-center text-[#4A6080]">
+                   <Smartphone className="w-5 h-5 sm:w-6 sm:h-6" />
+                 </motion.div>
               </div>
             </div>
 

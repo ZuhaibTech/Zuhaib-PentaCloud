@@ -111,8 +111,8 @@ const ZohoIndustries = () => {
   return (
     <section className="py-10 px-4 sm:px-6 bg-[#E8F0F8] relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-8 mb-8 sm:mb-16">
-          <div className="max-w-2xl">
+        <div className="flex flex-col gap-6 sm:gap-8 mb-8 sm:mb-12">
+          <div className="max-w-4xl lg:max-w-none w-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -120,8 +120,8 @@ const ZohoIndustries = () => {
             >
               INDUSTRIES
             </motion.div>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-nunito font-black text-[#0D1B2A] leading-tight">
-              Zoho Solutions Built <br/> <span className="text-[#1A7FD4]">for Your Industry</span>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[44px] font-nunito font-black text-[#0D1B2A] leading-tight">
+              Zoho Solutions Built <span className="text-[#1A7FD4]">for Your Industry</span>
             </h2>
           </div>
           

@@ -35,7 +35,7 @@ const TimelineCard = ({ milestone, index }: { milestone: any, index: number }) =
         transition={{ duration: 0.8, type: "spring" }}
         whileHover={{ y: -10, scale: 1.02 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="w-[calc(100%-55px)] ml-[55px] md:ml-0 md:w-[45%] bg-[#E8F0F8] rounded-[20px] sm:rounded-[32px] p-5 sm:p-8 shadow-[8px_8px_16px_rgba(163,185,210,0.45),-8px_-8px_16px_rgba(255,255,255,0.9)] hover:shadow-[16px_16px_32px_rgba(163,185,210,0.5),-16px_-16px_32px_rgba(255,255,255,0.95)] group transition-all duration-500"
+        className="w-[calc(100%-55px)] ml-[55px] md:ml-0 md:w-[45%] bg-white rounded-[20px] sm:rounded-[32px] p-5 sm:p-8 shadow-[10px_10px_20px_rgba(163,185,210,0.25),-10px_-10px_20px_rgba(255,255,255,0.9)] hover:shadow-[16px_16px_32px_rgba(163,185,210,0.35),-16px_-16px_32px_rgba(255,255,255,1)] group transition-all duration-500 border border-slate-100"
       >
         <div className="flex justify-between items-start mb-4 sm:mb-6">
           <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-[20px] bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.25),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center transition-all group-hover:rotate-[15deg] group-hover:shadow-[3px_3px_8px_rgba(163,185,210,0.3)] duration-500" style={{ color: milestone.color }}>
@@ -54,12 +54,15 @@ const TimelineCard = ({ milestone, index }: { milestone: any, index: number }) =
 
 const OurJourney = () => {
   const milestones = [
-    { year: 2020, title: "The Beginning", text: "Pentacloud Consulting founded in Bengaluru with a vision to democratise enterprise technology solutions.", stat: "Day 1", icon: <Rocket />, color: '#1A7FD4' },
-    { year: 2021, title: "First Certifications", text: "Achieved first 5 Salesforce certifications, establishing ourselves as a credible partner in South India.", stat: "5 Certs", icon: <Award />, color: '#F59E0B' },
-    { year: 2022, title: "Expanding Horizons", text: "Expanded service offerings to include Cloud Infrastructure, DevOps, and Cybersecurity, serving 25+ clients.", stat: "25+ Clients", icon: <Globe />, color: '#34C98A' },
-    { year: 2023, title: "Partnership Milestones", text: "Became official partners with Salesforce, Zoho, Xero, and Meta, unlocking enterprise capabilities.", stat: "4 Partnerships", icon: <Handshake />, color: '#8B5CF6' },
-    { year: 2024, title: "100+ Projects", text: "Crossed the landmark of 100+ successful project deliveries with 16+ certifications and zero data loss.", stat: "100+ Projects", icon: <Trophy />, color: '#EC4899' },
-    { year: 2025, title: "Going Global", text: "Established UAE presence and expanded digital marketing capabilities, now serving clients globally.", stat: "UAE Expansion", icon: <Star />, color: '#29C6E0' },
+    { year: "01", title: "Discovery & Analysis", text: "Understand business goals, challenges, and project requirements through stakeholder discussions and detailed analysis.", stat: "Step 1", icon: <Rocket />, color: '#1A7FD4' },
+    { year: "02", title: "Strategy & Planning", text: "Define the project roadmap, technology stack, timelines, resources, and execution strategy for successful delivery.", stat: "Step 2", icon: <Globe />, color: '#F59E0B' },
+    { year: "03", title: "Solution Architecture", text: "Design a scalable, secure, and future-ready architecture that aligns with your business objectives and technical requirements.", stat: "Step 3", icon: <Handshake />, color: '#34C98A' },
+    { year: "04", title: "UI/UX Design", text: "Create intuitive user experiences, wireframes, prototypes, and modern interface designs that enhance customer engagement.", stat: "Step 4", icon: <Trophy />, color: '#8B5CF6' },
+    { year: "05", title: "Agile Development", text: "Develop the solution using Agile methodologies with iterative sprints, continuous collaboration, and regular client feedback.", stat: "Step 5", icon: <Star />, color: '#EC4899' },
+    { year: "06", title: "QA & Testing", text: "Perform comprehensive functional, performance, security, and usability testing to ensure a reliable, bug-free product.", stat: "Step 6", icon: <Award />, color: '#29C6E0' },
+    { year: "07", title: "Deployment", text: "Deploy the solution into the production environment with seamless configuration, integration, and performance validation.", stat: "Step 7", icon: <Rocket />, color: '#1A7FD4' },
+    { year: "08", title: "Go Live & Launch", text: "Successfully launch the solution while monitoring system stability and ensuring a smooth transition for end users.", stat: "Step 8", icon: <Globe />, color: '#F59E0B' },
+    { year: "09", title: "Support & Handover", text: "Provide complete documentation, user training, project handover, and continuous maintenance to ensure long-term success.", stat: "Step 9", icon: <Handshake />, color: '#34C98A' },
   ];
 
   return (
@@ -75,11 +78,14 @@ const OurJourney = () => {
             whileInView={{ opacity: 1, y: 0 }}
             className="px-4 py-1.5 bg-[#E8F0F8] rounded-full shadow-[4px_4px_10px_rgba(163,185,210,0.4),-4px_-4px_10px_rgba(255,255,255,0.8)] text-[#1A7FD4] text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-4 sm:mb-6"
           >
-            OUR JOURNEY
+            DELIVERY PROCESS
           </motion.div>
-          <h2 className="font-nunito font-extrabold text-2xl sm:text-4xl md:text-[52px] text-[#0D1B2A] leading-tight px-2">
-            Milestones That <span className="text-[#1A7FD4]">Define Us</span>
+          <h2 className="font-nunito font-extrabold text-2xl sm:text-4xl md:text-[52px] text-[#0D1B2A] leading-tight px-2 mb-4">
+            Our Delivery <span className="text-[#1A7FD4]">Process</span>
           </h2>
+          <p className="font-inter text-sm md:text-base text-[#4A6080] max-w-2xl text-center px-4">
+            A proven approach that transforms your vision into a successful digital solution.
+          </p>
         </div>
 
         <div className="relative">

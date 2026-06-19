@@ -124,10 +124,10 @@ const Navbar = () => {
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <button className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 hover:shadow-xl hover:shadow-blue-500/20 transition-all active:scale-95 group">
+            <Link href="/contact" className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold flex items-center gap-2 hover:shadow-xl hover:shadow-blue-500/20 transition-all active:scale-95 group">
               Get Started
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -226,9 +226,9 @@ const Navbar = () => {
                 ))}
                 <hr className="border-slate-100/80 my-1" />
                 <div className="flex flex-col pt-1">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl text-center font-bold text-sm shadow-lg shadow-blue-500/10 active:scale-[0.98] transition-all">
+                  <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl text-center font-bold text-sm shadow-lg shadow-blue-500/10 active:scale-[0.98] transition-all block w-full">
                     Get Started
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

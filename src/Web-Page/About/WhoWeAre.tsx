@@ -233,9 +233,9 @@ const WhoWeAre = () => {
                   animate={{ 
                     scale: isFront ? 1 : isMiddle ? 0.9 : 0.8,
                     opacity: isFront ? 1 : isMiddle ? 0.7 : 0.4,
-                    x: isFront ? 0 : isMiddle ? 15 : 30,
+                    x: isFront ? 0 : isMiddle ? 20 : 40,
                     y: isFront ? 0 : isMiddle ? -10 : -20,
-                    rotate: isFront ? 0 : isMiddle ? 2.5 : 5,
+                    rotate: isFront ? 0 : isMiddle ? -6 : 8,
                     zIndex: cards.length - i,
                   }}
                   exit={{ 

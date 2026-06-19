@@ -72,10 +72,10 @@ const CTA = () => {
               viewport={{ once: true }}
               className="flex flex-row items-center gap-3 w-full sm:w-auto"
             >
-              <button className="bg-white text-[#1A7FD4] font-['Nunito'] font-bold text-[12px] sm:text-[14px] px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 whitespace-nowrap flex-1 sm:flex-initial text-center">
+              <Link href="/contact" className="bg-white text-[#1A7FD4] font-['Nunito'] font-bold text-[12px] sm:text-[14px] px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-lg hover:-translate-y-1 transition-all duration-300 whitespace-nowrap flex-1 sm:flex-initial text-center block">
                 Start Your Journey →
-              </button>
-              <Link href="/services/salesforce" className="bg-transparent border-2 border-white/40 text-white font-['Nunito'] font-bold text-[12px] sm:text-[14px] px-4 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm whitespace-nowrap flex-1 sm:flex-initial text-center">
+              </Link>
+              <Link href="/services/salesforce" className="bg-transparent border-2 border-white/40 text-white font-['Nunito'] font-bold text-[12px] sm:text-[14px] px-4 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm whitespace-nowrap flex-1 sm:flex-initial text-center block">
                 Explore Services
               </Link>
             </motion.div>

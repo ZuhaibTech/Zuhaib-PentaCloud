@@ -7,7 +7,7 @@ import { TrendingUp, Globe2, Briefcase } from "lucide-react";
 const stats = [
   { 
     id: 1, 
-    value: 25, 
+    value: 10, 
     suffix: "+", 
     label: "Industries Served",
     description: "Deep domain expertise across diverse global markets.",
@@ -15,7 +15,7 @@ const stats = [
   },
   { 
     id: 2, 
-    value: 100, 
+    value: 25, 
     suffix: "+", 
     label: "Projects Completed",
     description: "Successful delivery of complex enterprise solutions.",

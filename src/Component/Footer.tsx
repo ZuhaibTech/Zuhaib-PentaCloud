@@ -117,7 +117,7 @@ const Footer = () => {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-8 mb-8 sm:mb-10"
           >
             {/* Brand Info */}
-            <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-4 flex flex-col items-start gap-4 sm:gap-6">
+            <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-3 flex flex-col items-start gap-4 sm:gap-6">
               <Image 
                 src="/Logo/Pentacloud logo.png" 
                 alt="Pentacloud Logo" 
@@ -147,7 +147,7 @@ const Footer = () => {
             </motion.div>
 
             {/* Explore Links */}
-            <motion.div variants={itemVariants} className="lg:col-span-2 lg:col-start-6 flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-0">
+            <motion.div variants={itemVariants} className="lg:col-span-2 flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-0">
               <h4 className="text-white font-bold text-base sm:text-lg lg:text-xl tracking-wide mb-1 sm:mb-2">Explore</h4>
               <ul className="flex flex-col gap-2.5">
                 {[
@@ -166,9 +166,9 @@ const Footer = () => {
             </motion.div>
 
             {/* Services Links */}
-            <motion.div variants={itemVariants} className="lg:col-span-2 flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-0">
+            <motion.div variants={itemVariants} className="lg:col-span-4 flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-0">
               <h4 className="text-white font-bold text-base sm:text-lg lg:text-xl tracking-wide mb-1 sm:mb-2">Services</h4>
-              <ul className="flex flex-col gap-2.5">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5">
                 {[
                   { name: 'Salesforce Consulting', href: '/services/salesforce' },
                   { name: 'Zoho Service', href: '/services/zoho' },
@@ -193,13 +193,27 @@ const Footer = () => {
             <motion.div variants={itemVariants} className="lg:col-span-3 flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-0">
               <h4 className="text-white font-bold text-base sm:text-lg lg:text-xl tracking-wide mb-1 sm:mb-2">Contact</h4>
               <ul className="flex flex-col gap-4">
-                <li className="flex items-start gap-3 sm:gap-4 group cursor-pointer">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blue-500/20 group-hover:border-blue-500/50 transition-all duration-300 shrink-0">
-                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-blue-400 transition-colors" />
+                <li className="flex flex-col gap-2 group cursor-pointer w-full">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-blue-500/20 group-hover:border-blue-500/50 transition-all duration-300 shrink-0">
+                      <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-blue-400 transition-colors" />
+                    </div>
+                    <span className="text-slate-400 text-xs sm:text-sm font-semibold group-hover:text-white transition-colors">Locations</span>
                   </div>
-                  <span className="text-slate-400 text-xs sm:text-sm leading-relaxed mt-0.5 sm:mt-1 group-hover:text-white transition-colors">
-                    Jagan Arcade, 4th Floor, 1st Main Road,<br />Anandnagar, RT Nagar, Bengaluru, 560032,<br />Karnataka, India
-                  </span>
+                  <div className="flex flex-col gap-3 pl-[44px] sm:pl-[56px] text-slate-400 text-xs sm:text-sm mt-1">
+                    <div className="flex items-center gap-3 hover:text-white transition-colors group/loc">
+                      <img src="https://flagcdn.com/w20/in.png" alt="India Flag" className="w-4 h-auto rounded-[2px] opacity-70 group-hover/loc:opacity-100 transition-opacity" />
+                      <span>Bangalore, India</span>
+                    </div>
+                    <div className="flex items-center gap-3 hover:text-white transition-colors group/loc">
+                      <img src="https://flagcdn.com/w20/ae.png" alt="Dubai Flag" className="w-4 h-auto rounded-[2px] opacity-70 group-hover/loc:opacity-100 transition-opacity" />
+                      <span>Dubai, UAE</span>
+                    </div>
+                    <div className="flex items-center gap-3 hover:text-white transition-colors group/loc">
+                      <img src="https://flagcdn.com/w20/qa.png" alt="Qatar Flag" className="w-4 h-auto rounded-[2px] opacity-70 group-hover/loc:opacity-100 transition-opacity" />
+                      <span>Doha, Qatar</span>
+                    </div>
+                  </div>
                 </li>
                 <li className="flex items-center gap-3 sm:gap-4 group cursor-pointer">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-indigo-500/20 group-hover:border-indigo-500/50 transition-all duration-300 shrink-0">
@@ -220,6 +234,13 @@ const Footer = () => {
               </ul>
             </motion.div>
           </motion.div>
+
+          {/* Big Center Text */}
+          <div className="flex justify-center w-full mt-10 mb-6 pointer-events-none select-none overflow-hidden">
+            <span className="text-[8vw] leading-none font-black text-white/5 tracking-[0.05em] text-center w-full">
+              PENTACLOUD
+            </span>
+          </div>
 
           {/* Bottom Bar */}
           <div className="relative border-t border-white/10 pt-4 flex flex-col md:flex-row items-center justify-between gap-4">

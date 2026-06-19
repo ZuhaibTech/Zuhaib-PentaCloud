@@ -15,6 +15,14 @@ import {
 
 const industries = [
   {
+    id: 6,
+    title: "Automotive",
+    icon: <Landmark className="w-5 h-5 sm:w-8 sm:h-8" />,
+    description: "High-performance, connected infrastructure for automotive innovation.",
+    color: "from-amber-500 to-orange-400",
+    bgImage: "bg-[url('/Industries/Financial%20Institutions.webp')]"
+  },
+  {
     id: 1,
     title: "Automation",
     icon: <Bot className="w-5 h-5 sm:w-8 sm:h-8" />,
@@ -48,19 +56,11 @@ const industries = [
   },
   {
     id: 5,
-    title: "Corporate Enterprises",
+    title: "Real Estate",
     icon: <Building2 className="w-5 h-5 sm:w-8 sm:h-8" />,
-    description: "Enterprise-grade digital transformation and legacy system modernization.",
+    description: "Enterprise-grade real estate technology solutions and property management modernization.",
     color: "from-blue-800 to-indigo-600",
     bgImage: "bg-[url('/Industries/Corporate%20Enterprises.webp')]"
-  },
-  {
-    id: 6,
-    title: "Financial Institutions",
-    icon: <Landmark className="w-5 h-5 sm:w-8 sm:h-8" />,
-    description: "Ultra-secure, high-performance infrastructure for fintech and banking.",
-    color: "from-amber-500 to-orange-400",
-    bgImage: "bg-[url('/Industries/Financial%20Institutions.webp')]"
   },
   {
     id: 7,

@@ -140,7 +140,7 @@ const WhatWeOffer = () => {
               <div className="pt-6 border-t border-white/40 mt-auto">
                 {service.visual === "steps" && (
                   <div className="flex items-center justify-between w-full px-1">
-                    {["Discovery", "Build", "Launch"].map((step, idx) => (
+                    {["Architect", "Build", "Deploy"].map((step, idx) => (
                       <React.Fragment key={idx}>
                         <div className="flex flex-col items-center gap-1">
                           <div className={`w-1.5 h-1.5 rounded-full ${idx === 0 ? 'bg-[#1A7FD4] shadow-[0_0_8px_#1A7FD4]' : 'bg-[#1A7FD4]/20'}`} />
