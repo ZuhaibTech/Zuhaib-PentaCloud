@@ -34,7 +34,7 @@ const socialLinks = [
   },
   {
     name: "Instagram",
-    url: "https://www.instagram.com/pentacloud.in?igsh=MWt5dnF1N25iYmFnOA%3D%3D",
+    url: "https://www.instagram.com/pentacloudconsulting/",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -114,10 +114,10 @@ const Footer = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-8 mb-8 sm:mb-10"
+            className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0 mb-8 sm:mb-10 w-full"
           >
             {/* Brand Info */}
-            <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-3 flex flex-col items-start gap-4 sm:gap-6">
+            <motion.div variants={itemVariants} className="flex flex-col items-start gap-4 sm:gap-6 w-full lg:w-[35%] lg:pr-8">
               <Image 
                 src="/Logo/Pentacloud logo.png" 
                 alt="Pentacloud Logo" 
@@ -125,7 +125,7 @@ const Footer = () => {
                 height={38} 
                 className="h-8 sm:h-10 w-auto object-contain brightness-0 invert"
               />
-              <p className="text-slate-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-sm">
+              <p className="text-slate-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-[280px] lg:max-w-[320px]">
                 Architecting the future of business with cutting-edge cloud infrastructure, automation, and enterprise integrations.
               </p>
               <div className="flex items-center gap-3">
@@ -144,10 +144,17 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
+
+              {/* Big Background Text */}
+              <div className="w-[1200px] lg:w-[1400px] pointer-events-none select-none z-0 mt-2 sm:mt-6 -ml-1">
+                <span className="text-[16vw] sm:text-[140px] lg:text-[9vw] leading-[0.75] font-black text-white/5 tracking-tight text-left block">
+                  PENTACLOUD
+                </span>
+              </div>
             </motion.div>
 
             {/* Explore Links */}
-            <motion.div variants={itemVariants} className="lg:col-span-2 flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-0">
+            <motion.div variants={itemVariants} className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[12%]">
               <h4 className="text-white font-bold text-base sm:text-lg lg:text-xl tracking-wide mb-1 sm:mb-2">Explore</h4>
               <ul className="flex flex-col gap-2.5">
                 {[
@@ -166,7 +173,7 @@ const Footer = () => {
             </motion.div>
 
             {/* Services Links */}
-            <motion.div variants={itemVariants} className="lg:col-span-4 flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-0">
+            <motion.div variants={itemVariants} className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[28%]">
               <h4 className="text-white font-bold text-base sm:text-lg lg:text-xl tracking-wide mb-1 sm:mb-2">Services</h4>
               <ul className="grid grid-cols-2 gap-x-4 gap-y-2.5">
                 {[
@@ -190,7 +197,7 @@ const Footer = () => {
             </motion.div>
 
             {/* Contact Info */}
-            <motion.div variants={itemVariants} className="lg:col-span-3 flex flex-col gap-3 sm:gap-4 mt-2 sm:mt-0">
+            <motion.div variants={itemVariants} className="flex flex-col gap-3 sm:gap-4 w-full lg:w-[25%]">
               <h4 className="text-white font-bold text-base sm:text-lg lg:text-xl tracking-wide mb-1 sm:mb-2">Contact</h4>
               <ul className="flex flex-col gap-4">
                 <li className="flex flex-col gap-2 group cursor-pointer w-full">
@@ -228,19 +235,12 @@ const Footer = () => {
                     <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-purple-400 transition-colors" />
                   </div>
                   <span className="text-slate-400 text-xs sm:text-sm group-hover:text-white transition-colors">
-                    contact@pentacloudconsulting.com
+                    contactus@pentacloudconsulting.com
                   </span>
                 </li>
               </ul>
             </motion.div>
           </motion.div>
-
-          {/* Big Center Text */}
-          <div className="flex justify-center w-full mt-10 mb-6 pointer-events-none select-none overflow-hidden">
-            <span className="text-[8vw] leading-none font-black text-white/5 tracking-[0.05em] text-center w-full">
-              PENTACLOUD
-            </span>
-          </div>
 
           {/* Bottom Bar */}
           <div className="relative border-t border-white/10 pt-4 flex flex-col md:flex-row items-center justify-between gap-4">

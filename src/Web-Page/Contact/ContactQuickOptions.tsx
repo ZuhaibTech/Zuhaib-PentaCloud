@@ -19,7 +19,7 @@ const options = [
     title: "Email Us",
     body: "For detailed briefs, RFPs, and formal business inquiries.",
     cta: "Send Email",
-    href: "mailto:contact@pentacloudconsulting.com",
+    href: "mailto:contactus@pentacloudconsulting.com",
     color: "#1A7FD4",
     response: "Within 24 Hours"
   },
@@ -28,7 +28,7 @@ const options = [
     title: "Schedule",
     body: "Book a 30-min discovery call with our consultants.",
     cta: "Book a Call",
-    href: "#", // Add Calendly link
+    href: "tel:+971545132807",
     color: "#F59E0B",
     response: "Flexible Time"
   },

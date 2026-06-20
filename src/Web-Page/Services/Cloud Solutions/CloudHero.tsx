@@ -8,8 +8,10 @@ import {
 
 const CloudHero = () => {
   const [nodesOnline, setNodesOnline] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const interval = setInterval(() => {
       setNodesOnline((prev) => (prev < 247 ? prev + 1 : 247));
     }, 20);
@@ -45,7 +47,7 @@ const CloudHero = () => {
       />
 
       {/* Cloud Particles */}
-      {[...Array(15)].map((_, i) => (
+      {isMounted && [...Array(15)].map((_, i) => (
         <motion.div
           key={i}
           initial={{ y: "110vh", x: `${Math.random() * 100}vw`, opacity: 0 }}

@@ -263,7 +263,7 @@ const ContactInfoForm = () => {
                     },
                     { 
                       label: "Instagram", 
-                      url: "https://www.instagram.com/pentacloud.in?igsh=MWt5dnF1N25iYmFnOA%3D%3D",
+                      url: "https://www.instagram.com/pentacloudconsulting/",
                       icon: (
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:rotate-[360deg]">
                           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />

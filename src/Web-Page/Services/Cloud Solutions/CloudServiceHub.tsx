@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
-  Network, Rocket, Brain, GitMerge, Headphones, 
+  Network, Rocket, Brain, GitMerge,  
   ShieldCheck, Wifi, Server, Cloud,
   ArrowRight, ExternalLink
 } from "lucide-react";
@@ -140,37 +140,6 @@ const CloudServiceHub = () => {
       )
     },
     {
-      icon: Headphones,
-      color: "#F59E0B",
-      bg: "#FFF8E0",
-      title: "MSP & Break-Fix",
-      desc: "24/7 proactive monitoring and incident response by Tier 3 engineers. We solve issues before they affect your business.",
-      tags: ["24/7 Support", "SLA", "Tier 3"],
-      metric: "15 min Response Time",
-      visual: (
-        <div className="relative w-full h-full flex flex-col items-center justify-center px-12">
-           <div className="w-full h-4 bg-slate-100 rounded-full overflow-hidden mb-4 shadow-inner">
-             <motion.div 
-               animate={{ width: ["0%", "100%", "0%"] }}
-               transition={{ duration: 4, repeat: Infinity }}
-               className="h-full bg-[#F59E0B]"
-             />
-           </div>
-           <div className="grid grid-cols-3 gap-4 w-full">
-              {[1, 2, 3].map((i) => (
-                <motion.div 
-                  key={i}
-                  animate={{ opacity: [0.3, 1, 0.3] }}
-                  transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.3 }}
-                  className="h-2 bg-[#F59E0B]/20 rounded-full"
-                />
-              ))}
-           </div>
-           <Headphones size={48} className="text-[#F59E0B] mt-8" />
-        </div>
-      )
-    },
-    {
       icon: ShieldCheck,
       color: "#EC4899",
       bg: "#FFE8F0",
@@ -218,31 +187,6 @@ const CloudServiceHub = () => {
         </div>
       )
     },
-    {
-      icon: Server,
-      color: "#34C98A",
-      bg: "#E8FFE8",
-      title: "DC Partnerships",
-      desc: "Secure colocation and hybrid cloud setups connecting your on-premise assets to our strategic datacenter network.",
-      tags: ["Colocation", "Hybrid", "Private Cloud"],
-      metric: "Tier 4 DC Access",
-      visual: (
-        <div className="relative w-full h-full flex items-center justify-center">
-           <div className="grid grid-cols-2 gap-4">
-              {[1, 2, 3, 4].map((i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ scale: 1.1 }}
-                  className="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center text-slate-300 relative"
-                >
-                  <Server size={20} />
-                  {i === 1 && <motion.div animate={{ opacity: [0, 1] }} transition={{ repeat: Infinity, duration: 0.5 }} className="absolute w-2 h-2 bg-green-500 rounded-full top-1 right-1" />}
-                </motion.div>
-              ))}
-           </div>
-        </div>
-      )
-    }
   ];
 
   const activeService = services[activeIndex];
