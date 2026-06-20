@@ -34,19 +34,6 @@ const WhatsApp = () => {
         onClick={handleClick}
         className="relative w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(37,211,102,0.4)] group overflow-hidden"
       >
-        {/* Pulsing Background */}
-        <motion.div
-          animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.5, 0, 0.5],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-          }}
-          className="absolute inset-0 bg-[#25D366] rounded-full"
-        />
-
         {/* WhatsApp Icon */}
         <div className="relative z-10 flex items-center justify-center">
             {/* Custom WhatsApp SVG for a more authentic look than just MessageCircle */}

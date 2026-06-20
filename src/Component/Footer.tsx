@@ -145,8 +145,8 @@ const Footer = () => {
                 ))}
               </div>
 
-              {/* Big Background Text */}
-              <div className="w-[1200px] lg:w-[1400px] pointer-events-none select-none z-0 mt-2 sm:mt-6 -ml-1">
+              {/* Big Background Text - Desktop */}
+              <div className="hidden lg:block w-[1200px] lg:w-[1400px] pointer-events-none select-none z-0 mt-2 sm:mt-6 -ml-1">
                 <span className="text-[16vw] sm:text-[140px] lg:text-[9vw] leading-[0.75] font-black text-white/5 tracking-tight text-left block">
                   PENTACLOUD
                 </span>
@@ -241,6 +241,13 @@ const Footer = () => {
               </ul>
             </motion.div>
           </motion.div>
+
+          {/* Big Background Text - Mobile */}
+          <div className="block lg:hidden w-full pointer-events-none select-none z-0 overflow-hidden mb-6 mt-4">
+            <span className="text-[10.5vw] sm:text-[9vw] leading-[0.75] font-black text-white/5 tracking-tight text-center block w-full">
+              PENTACLOUD
+            </span>
+          </div>
 
           {/* Bottom Bar */}
           <div className="relative border-t border-white/10 pt-4 flex flex-col md:flex-row items-center justify-between gap-4">

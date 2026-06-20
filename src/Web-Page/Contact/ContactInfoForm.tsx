@@ -59,15 +59,15 @@ const FormBlock = ({ handleSubmit, formStatus, agreed, setAgreed, formData, setF
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`${CLAY_CARD} p-5 sm:p-8 md:p-12 rounded-[20px] sm:rounded-[32px]`}
+      className={`${CLAY_CARD} p-4 sm:p-8 md:p-12 rounded-[20px] sm:rounded-[32px]`}
     >
       <div className="mb-6 sm:mb-10">
         <h3 className="text-xl sm:text-3xl font-nunito font-black text-[#0D1B2A] mb-2 sm:mb-3">Send Us a Message</h3>
         <p className="text-[#4A6080] font-inter text-xs sm:text-sm leading-relaxed">Fill in the form below and one of our consultants will reach out within 24 hours.</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-8">
           <div className="space-y-1.5">
             <label className="font-nunito font-black text-[#0D1B2A] text-xs sm:text-sm ml-2">Full Name *</label>
             <input required minLength={2} type="text" placeholder="Your full name" className={`${CLAY_INPUT} px-4 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm`} />
@@ -78,7 +78,7 @@ const FormBlock = ({ handleSubmit, formStatus, agreed, setAgreed, formData, setF
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-8">
           <div className="space-y-1.5">
             <label className="font-nunito font-black text-[#0D1B2A] text-xs sm:text-sm ml-2">Phone Number</label>
             <input type="tel" placeholder="+91 or +971 ..." className={`${CLAY_INPUT} px-4 py-3 sm:px-6 sm:py-4 text-xs sm:text-sm`} />
@@ -151,7 +151,7 @@ const ContactInfoForm = () => {
   };
 
   return (
-    <div className="bg-background min-h-screen pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 sm:px-6">
+    <div className="bg-background min-h-screen pt-24 sm:pt-28 pb-4 sm:pb-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         {formStatus === "success" ? (
           <motion.div
@@ -181,7 +181,7 @@ const ContactInfoForm = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:sticky lg:top-32 space-y-6 sm:space-y-8"
+              className="lg:sticky lg:top-32 space-y-4 sm:space-y-8"
             >
               {/* [image 2] Area: Intro Header */}
               <div>
