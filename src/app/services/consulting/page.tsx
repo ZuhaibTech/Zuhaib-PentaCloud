@@ -4,10 +4,10 @@ import Footer from "@/Component/Footer";
 
 export default function ConsultingPage() {
   return (
-    <>
+    <main className="w-full min-h-screen overflow-x-hidden">
       <Navbar />
       <ConsultingAndTraining />
       <Footer />
-    </>
+    </main>
   );
 }

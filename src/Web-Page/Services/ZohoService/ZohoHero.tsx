@@ -7,7 +7,7 @@ import { CLAY_CARD, NEUMORPHIC_BUTTON } from "./Constants";
 
 const ZohoHero = () => {
   return (
-    <section className="relative w-full pt-10 sm:pt-28 md:pt-32 pb-6 sm:pb-8 md:pb-12 overflow-hidden px-4 sm:px-6">
+    <section className="relative w-full pt-24 sm:pt-28 md:pt-32 pb-4 sm:pb-6 md:pb-10 overflow-hidden px-4 sm:px-6">
       {/* Background blobs */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/50 rounded-full blur-[120px] -z-10 animate-pulse" />
       <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-indigo-100/40 rounded-full blur-[100px] -z-10" />
@@ -30,12 +30,12 @@ const ZohoHero = () => {
               ZOHO SERVICES
             </motion.div>
             
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-nunito font-black text-[#0D1B2A] leading-[1.2] md:leading-[1.1] mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[60px] font-nunito font-black text-[#0D1B2A] leading-[1.2] md:leading-[1.1] mb-3 sm:mb-5">
               Unlock the Full Power <br className="hidden sm:block"/>
               <span className="text-[#1A7FD4]">of the Zoho Ecosystem.</span>
             </h1>
             
-            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#4A6080] font-inter leading-relaxed mb-6 sm:mb-8 max-w-xl">
+            <p className="text-xs sm:text-sm md:text-base text-[#4A6080] font-inter leading-relaxed mb-4 sm:mb-6 max-w-xl">
               Pentacloud is a certified Zoho partner delivering end-to-end Zoho consulting, implementation, integration, and training services, helping businesses across India and the UAE maximise their Zoho investment and run smarter, faster, and more profitably.
             </p>
 
@@ -80,33 +80,33 @@ const ZohoHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="bg-white rounded-[32px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute -top-2 -right-2 sm:-top-8 sm:-right-8 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px]"
+              className="bg-white rounded-[24px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute top-2 right-2 sm:-top-4 sm:-right-4 p-2 sm:p-4 max-w-[95px] sm:max-w-[160px]"
             >
-               <p className="text-[7px] sm:text-[10px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-2 leading-none">Apps Expertise</p>
-               <h4 className="text-sm sm:text-3xl font-nunito font-black text-[#1A7FD4] mb-0.5 leading-none">45+ Apps</h4>
-               <p className="text-[7px] sm:text-[10px] font-bold text-[#4A6080] leading-none">Zoho ecosystem</p>
+               <p className="text-[6px] sm:text-[9px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-1 leading-none">Apps Expertise</p>
+               <h4 className="text-sm sm:text-2xl font-nunito font-black text-[#1A7FD4] mb-0 leading-none">45+ Apps</h4>
+               <p className="text-[6px] sm:text-[9px] font-bold text-[#4A6080] leading-none">Zoho ecosystem</p>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8 }}
-              className="bg-white rounded-[32px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute bottom-6 -left-2 sm:bottom-12 sm:-left-12 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px]"
+              className="bg-white rounded-[24px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute bottom-4 left-2 sm:bottom-8 sm:-left-6 p-2 sm:p-4 max-w-[95px] sm:max-w-[160px]"
             >
-               <p className="text-[7px] sm:text-[10px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-2 leading-none">Projects</p>
-               <h4 className="text-sm sm:text-3xl font-nunito font-black text-amber-500 mb-0.5 leading-none">40+ Projects</h4>
-               <p className="text-[7px] sm:text-[10px] font-bold text-[#4A6080] leading-none">Across industries</p>
+               <p className="text-[6px] sm:text-[9px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-1 leading-none">Projects</p>
+               <h4 className="text-sm sm:text-2xl font-nunito font-black text-amber-500 mb-0 leading-none">40+ Projects</h4>
+               <p className="text-[6px] sm:text-[9px] font-bold text-[#4A6080] leading-none">Across industries</p>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0 }}
-              className="bg-white rounded-[32px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute -bottom-2 right-2 sm:-bottom-8 sm:right-12 p-2.5 sm:p-6 max-w-[110px] sm:max-w-[200px]"
+              className="bg-white rounded-[24px] border border-slate-100 shadow-[0_4px_20px_rgba(163,185,210,0.3)] absolute bottom-2 right-2 sm:-bottom-4 sm:right-8 p-2 sm:p-4 max-w-[90px] sm:max-w-[160px]"
             >
-               <p className="text-[7px] sm:text-[10px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-2 leading-none">Avg ROI</p>
-               <h4 className="text-sm sm:text-3xl font-nunito font-black text-[#34C98A] mb-0.5 leading-none">250% ↑</h4>
-               <p className="text-[7px] sm:text-[10px] font-bold text-[#4A6080] leading-none">Within 12mo</p>
+               <p className="text-[6px] sm:text-[9px] font-black text-slate-400 uppercase tracking-wider mb-0.5 sm:mb-1 leading-none">Avg ROI</p>
+               <h4 className="text-sm sm:text-2xl font-nunito font-black text-[#34C98A] mb-0 leading-none">250% ↑</h4>
+               <p className="text-[6px] sm:text-[9px] font-bold text-[#4A6080] leading-none">Within 12mo</p>
             </motion.div>
           </motion.div>
 

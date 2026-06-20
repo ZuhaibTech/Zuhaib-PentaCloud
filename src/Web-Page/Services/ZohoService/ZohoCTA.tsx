@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 const ZohoCTA = () => {
   return (
@@ -29,10 +30,10 @@ const ZohoCTA = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center items-center gap-3 mb-6 sm:mb-12 w-full sm:w-auto">
-                 <button className="bg-white text-[#1A7FD4] px-5 py-3 rounded-xl sm:px-10 sm:py-5 sm:rounded-2xl font-nunito font-black text-xs sm:text-xl shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center gap-1.5 group w-full sm:w-auto cursor-pointer">
+                 <Link href="/contact" className="bg-white text-[#1A7FD4] px-5 py-3 rounded-xl sm:px-10 sm:py-5 sm:rounded-2xl font-nunito font-black text-xs sm:text-xl shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center gap-1.5 group w-full sm:w-auto cursor-pointer">
                     <span>Book Free Zoho Consultation</span>
                     <ArrowRight className="w-4 h-4 sm:w-5.5 sm:h-5.5 group-hover:translate-x-1 transition-transform shrink-0" />
-                 </button>
+                 </Link>
                  <a href="tel:+971545132807" className="bg-blue-600/40 backdrop-blur-md text-white border border-white/20 px-5 py-3 rounded-xl sm:px-10 sm:py-5 sm:rounded-2xl font-nunito font-bold text-xs sm:text-lg flex items-center justify-center gap-1.5 hover:bg-blue-600/60 transition-all w-full sm:w-auto">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
                     <span>Call +971 545 132 807</span>

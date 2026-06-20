@@ -8,7 +8,7 @@ const CLAY_BUTTON = "rounded-[50px] shadow-[0_8px_20px_rgba(26,127,212,0.30),ins
 
 const SalesforceConsultingHero = () => {
   return (
-    <section className="relative w-full min-h-[85vh] lg:min-h-screen bg-background flex items-center overflow-hidden pt-10 sm:pt-28 md:pt-32 pb-10 sm:pb-16 lg:pb-24 px-4 sm:px-6">
+    <section className="relative w-full min-h-[70vh] lg:min-h-[85vh] bg-background flex items-center overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12 px-4 sm:px-6">
       {/* Background Blobs */}
       <motion.div 
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
@@ -58,7 +58,7 @@ const SalesforceConsultingHero = () => {
                   initial={{ y: 60, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8, ease: [0.34, 1.56, 0.64, 1] as any, delay: 0.4 + i * 0.15 }}
-                  className="font-nunito font-extrabold text-[clamp(24px,5.5vw,72px)] leading-[1.2] md:leading-[1.1] text-[#0D1B2A]"
+                  className="font-nunito font-extrabold text-[clamp(22px,5vw,64px)] leading-[1.2] md:leading-[1.1] text-[#0D1B2A]"
                 >
                   {text}
                 </motion.h1>
@@ -69,7 +69,7 @@ const SalesforceConsultingHero = () => {
                 initial={{ y: 60, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: [0.34, 1.56, 0.64, 1] as any, delay: 0.7 }}
-                className="font-nunito font-extrabold text-[clamp(24px,5.5vw,72px)] leading-[1.2] md:leading-[1.1] text-transparent bg-clip-text bg-[length:200%_auto] animate-gradientSweep"
+                className="font-nunito font-extrabold text-[clamp(22px,5vw,64px)] leading-[1.2] md:leading-[1.1] text-transparent bg-clip-text bg-[length:200%_auto] animate-gradientSweep"
                 style={{ backgroundImage: 'linear-gradient(90deg, #1A7FD4, #29C6E0, #1A7FD4)' }}
               >
                 Deliver Results
@@ -82,7 +82,7 @@ const SalesforceConsultingHero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="font-inter text-xs sm:text-base md:text-[17px] text-[#4A6080] leading-[1.8] max-w-[520px] mb-6 sm:mb-8"
+            className="font-inter text-xs sm:text-sm md:text-[15px] text-[#4A6080] leading-[1.8] max-w-[500px] mb-5 sm:mb-7"
           >
             As a certified Salesforce Partner, Pentacloud delivers end-to-end Salesforce implementation, customization, and optimization services that transform your CRM into a scalable revenue-driving engine.
           </motion.p>
@@ -119,7 +119,7 @@ const SalesforceConsultingHero = () => {
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, type: "spring", delay: 0.3 }}
-            className={`relative w-full max-w-[420px] lg:max-w-[500px] aspect-[4/5] bg-background rounded-[24px] sm:rounded-[32px] border-2 border-dashed border-[#1A7FD4]/20 flex items-center justify-center shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)] group`}
+            className={`relative w-full max-w-[380px] lg:max-w-[440px] aspect-[4/5] bg-background rounded-[20px] sm:rounded-[28px] border-2 border-dashed border-[#1A7FD4]/20 flex items-center justify-center shadow-[10px_10px_20px_rgba(163,185,210,0.5),-10px_-10px_20px_rgba(255,255,255,0.95)] group`}
           >
             {/* Hero Image */}
             <div className="absolute inset-0 rounded-[24px] sm:rounded-[32px] overflow-hidden">
@@ -132,53 +132,53 @@ const SalesforceConsultingHero = () => {
             </div>
 
             {/* Top-Right Badge */}
-            <div className="absolute -top-3 right-4 bg-[#1A7FD4] text-white font-nunito font-bold text-[9px] sm:text-[13px] px-3 py-1 sm:px-5 sm:py-2 rounded-full shadow-lg leading-none">
+            <div className="absolute -top-2 right-2 sm:right-4 bg-[#1A7FD4] text-white font-nunito font-bold text-[8px] sm:text-[11px] px-2.5 py-1 sm:px-4 sm:py-1.5 rounded-full shadow-lg leading-none">
               Salesforce Certified ✓
             </div>
 
             {/* Floating Stat Cards */}
             <motion.div
-              animate={{ y: [-8, 8, -8] }}
+              animate={{ y: [-5, 5, -5] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-4 sm:-right-8 top-1/4 bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-[20px] shadow-xl flex flex-col gap-1.5 sm:gap-2 z-20 w-[120px] sm:w-[160px]"
+              className="absolute right-0 sm:-right-4 top-1/4 bg-white p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-xl flex flex-col gap-1 sm:gap-1.5 z-20 w-[100px] sm:w-[130px]"
             >
-              <div className="font-nunito font-bold text-[10px] sm:text-[12px] text-[#0D1B2A] leading-none">CRM Pipeline</div>
+              <div className="font-nunito font-bold text-[8px] sm:text-[10px] text-[#0D1B2A] leading-none">CRM Pipeline</div>
               <div className="flex items-center gap-1">
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#1A7FD4] animate-pulse" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#1A7FD4] animate-pulse" />
                 <div className="h-[2px] flex-1 bg-[#EEF3FF]" />
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#34C98A]" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#34C98A]" />
                 <div className="h-[2px] flex-1 bg-[#EEF3FF]" />
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#29C6E0]" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#29C6E0]" />
               </div>
-              <div className="flex justify-between text-[8px] sm:text-[10px] text-[#8BA4BE] leading-none">
+              <div className="flex justify-between text-[7px] sm:text-[9px] text-[#8BA4BE] leading-none">
                 <span>Lead</span>
                 <span>Won</span>
               </div>
             </motion.div>
 
             <motion.div
-              animate={{ y: [8, -8, 8] }}
+              animate={{ y: [5, -5, 5] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -left-4 sm:-left-12 bottom-1/4 bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-[20px] shadow-xl flex items-center gap-2 sm:gap-3 z-20"
+              className="absolute left-0 sm:-left-6 bottom-1/4 bg-white p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-xl flex items-center gap-1.5 sm:gap-2 z-20 w-[110px] sm:w-[155px]"
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#EEF3FF] text-[#1A7FD4] flex items-center justify-center shrink-0">
-                <Sliders className="w-4 h-4 sm:w-5 sm:h-5" />
+              <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-[#EEF3FF] text-[#1A7FD4] flex items-center justify-center shrink-0">
+                <Sliders className="w-3 h-3 sm:w-4 sm:h-4" />
               </div>
               <div className="min-w-0">
-                <div className="font-inter text-[8px] sm:text-[10px] text-[#8BA4BE] leading-none">Avg. Implementation</div>
-                <div className="font-nunito font-bold text-[11px] sm:text-[14px] text-[#0D1B2A] leading-none mt-1">3–6 Weeks</div>
+                <div className="font-inter text-[7px] sm:text-[9px] text-[#8BA4BE] leading-none">Avg. Implementation</div>
+                <div className="font-nunito font-bold text-[9px] sm:text-[12px] text-[#0D1B2A] leading-none mt-0.5">3–6 Weeks</div>
               </div>
             </motion.div>
 
             <motion.div
-              animate={{ y: [-6, 6, -6] }}
+              animate={{ y: [-4, 4, -4] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-              className="absolute -right-2 sm:-right-4 bottom-10 bg-white p-2.5 sm:p-4 rounded-xl sm:rounded-[20px] shadow-xl flex flex-col gap-1 z-20 w-[110px] sm:w-auto"
+              className="absolute right-0 sm:-right-2 bottom-8 bg-white p-2 sm:p-3 rounded-xl sm:rounded-2xl shadow-xl flex flex-col gap-1 z-20 w-[90px] sm:w-[110px]"
             >
-              <div className="font-inter text-[8px] sm:text-[10px] text-[#8BA4BE] leading-none">Client Satisfaction</div>
-              <div className="font-nunito font-bold text-[11px] sm:text-[14px] text-[#0D1B2A] leading-none mt-1">⭐ 4.9 / 5.0</div>
-              <div className="flex gap-0.5 mt-1">
-                {[...Array(5)].map((_, i) => <div key={i} className="w-2 h-2 bg-amber-400 rounded-sm" />)}
+              <div className="font-inter text-[7px] sm:text-[9px] text-[#8BA4BE] leading-none">Client Satisfaction</div>
+              <div className="font-nunito font-bold text-[9px] sm:text-[12px] text-[#0D1B2A] leading-none mt-0.5">⭐ 4.9 / 5.0</div>
+              <div className="flex gap-0.5 mt-0.5">
+                {[...Array(5)].map((_, i) => <div key={i} className="w-1.5 h-1.5 bg-amber-400 rounded-sm" />)}
               </div>
             </motion.div>
           </motion.div>

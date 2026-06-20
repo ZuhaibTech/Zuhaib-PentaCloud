@@ -7,7 +7,7 @@ import { NEUMORPHIC_BUTTON } from "./Constants";
 
 const DigitalHero = () => {
   return (
-    <section className="py-6 sm:py-12 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+    <section className="py-4 sm:py-8 md:py-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -17,12 +17,12 @@ const DigitalHero = () => {
         <div className="px-4 py-1.5 bg-white/60 backdrop-blur-sm rounded-full shadow-sm text-[#1A7FD4] text-[10px] sm:text-[11px] font-black tracking-[3px] uppercase mb-4 sm:mb-6 border border-white/40 inline-block">
           DIGITAL MARKETING
         </div>
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-nunito font-black text-[#0D1B2A] leading-[1.2] lg:leading-[1.1] mb-4 sm:mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[60px] font-nunito font-black text-[#0D1B2A] leading-[1.2] lg:leading-[1.1] mb-3 sm:mb-5">
           Marketing That Drives <br className="hidden sm:block"/>
           <span className="text-[#1A7FD4]">Real Revenue,</span> <br/>
           Not Just Clicks.
         </h1>
-        <p className="text-xs sm:text-base md:text-lg lg:text-xl text-[#4A6080] max-w-xl font-inter leading-relaxed mb-6 sm:mb-8">
+        <p className="text-xs sm:text-sm md:text-base text-[#4A6080] max-w-xl font-inter leading-relaxed mb-4 sm:mb-6">
           Pentacloud delivers full-stack digital marketing strategies that combine data, creativity, and technology to grow your brand, generate qualified leads, and deliver measurable ROI across every digital channel.
         </p>
         
@@ -61,30 +61,30 @@ const DigitalHero = () => {
            
            {/* Floating Stat Cards - Optimized coordinates for perfect mobile alignments */}
            <motion.div 
-             animate={{ y: [0, -6, 0] }} 
+             animate={{ y: [0, -5, 0] }} 
              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-             className="absolute top-4 -left-2 sm:top-10 sm:-left-8 p-2.5 sm:p-6 bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-blue-50/50 z-20"
+             className="absolute top-3 left-2 sm:top-6 sm:-left-4 p-2 sm:p-4 bg-white rounded-xl sm:rounded-2xl shadow-xl border border-blue-50/50 z-20 w-[95px] sm:w-[150px]"
            >
-              <p className="text-[8px] sm:text-[10px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Avg ROI Delivered</p>
-              <p className="text-base sm:text-3xl font-black text-[#1A7FD4]">300% ↑</p>
+              <p className="text-[7px] sm:text-[9px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Avg ROI Delivered</p>
+              <p className="text-sm sm:text-2xl font-black text-[#1A7FD4]">300% ↑</p>
            </motion.div>
 
            <motion.div 
-             animate={{ y: [0, 6, 0] }} 
+             animate={{ y: [0, 5, 0] }} 
              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-             className="absolute bottom-4 -right-2 sm:bottom-20 sm:-right-8 p-2.5 sm:p-6 bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-[#EEF3FF]/50 z-20"
+             className="absolute bottom-4 right-2 sm:bottom-10 sm:-right-4 p-2 sm:p-4 bg-white rounded-xl sm:rounded-2xl shadow-xl border border-[#EEF3FF]/50 z-20 w-[95px] sm:w-[150px]"
            >
-              <p className="text-[8px] sm:text-[10px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Campaigns Managed</p>
-              <p className="text-base sm:text-3xl font-black text-[#1A7FD4]">50+ Active</p>
+              <p className="text-[7px] sm:text-[9px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Campaigns Managed</p>
+              <p className="text-sm sm:text-2xl font-black text-[#1A7FD4]">50+ Active</p>
            </motion.div>
 
            <motion.div 
-             animate={{ y: [-4, 4, -4] }} 
+             animate={{ y: [-3, 3, -3] }} 
              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-             className="absolute -top-3 right-4 sm:-top-6 sm:right-10 p-2.5 sm:p-5 bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-blue-50/50 z-20"
+             className="absolute -top-3 right-4 sm:-top-4 sm:right-8 p-2 sm:p-4 bg-white rounded-xl sm:rounded-2xl shadow-xl border border-blue-50/50 z-20 w-[95px] sm:w-[150px]"
            >
-              <p className="text-[8px] sm:text-[10px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Avg Email Open Rate</p>
-              <p className="text-xs sm:text-2xl font-black text-[#34C98A]">42% ↑</p>
+              <p className="text-[7px] sm:text-[9px] uppercase font-bold text-slate-500 tracking-wider mb-0.5">Avg Email Open Rate</p>
+              <p className="text-sm sm:text-xl font-black text-[#34C98A]">42% ↑</p>
            </motion.div>
         </div>
       </motion.div>

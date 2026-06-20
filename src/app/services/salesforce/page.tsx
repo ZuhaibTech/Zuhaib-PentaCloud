@@ -10,7 +10,7 @@ import Footer from "@/Component/Footer";
 
 export default function SalesforcePage() {
   return (
-    <main className="w-full bg-background min-h-screen">
+    <main className="w-full bg-background min-h-screen overflow-x-hidden">
       <Navbar />
       <SalesforceConsultingHero />
       <WhatWeOffer />

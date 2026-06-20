@@ -4,10 +4,10 @@ import Footer from "@/Component/Footer";
 
 export default function CloudPage() {
   return (
-    <>
+    <main className="w-full min-h-screen overflow-x-hidden">
       <Navbar />
       <CloudSolutions />
       <Footer />
-    </>
+    </main>
   );
 }
