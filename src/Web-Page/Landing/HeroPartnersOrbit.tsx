@@ -20,14 +20,14 @@ const HeroPartnersOrbit = () => {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.8, type: "spring" }}
-      className="hidden lg:flex relative w-[480px] h-[480px] items-center justify-center"
+      className="hidden lg:flex relative w-[580px] h-[580px] items-center justify-center"
     >
       {/* Orbit Ring (Invisible guide ring with border) */}
-      <div className="absolute w-[380px] h-[380px] rounded-full border-[1.5px] border-blue-500/15 z-0" />
+      <div className="absolute w-[460px] h-[460px] rounded-full border-[1.5px] border-blue-500/15 z-0" />
 
       {/* Glow Trail */}
       <div
-        className={`absolute w-[380px] h-[380px] rounded-full z-[1] animate-orbit ${isPaused ? "paused" : ""}`}
+        className={`absolute w-[460px] h-[460px] rounded-full z-[1] animate-orbit ${isPaused ? "paused" : ""}`}
         style={{
           background: "conic-gradient(from 0deg, rgba(26,127,212,0.0), rgba(26,127,212,0.12) 60deg, rgba(26,127,212,0.0) 120deg)",
         }}
@@ -35,7 +35,7 @@ const HeroPartnersOrbit = () => {
 
       {/* Rotating Wrapper */}
       <div
-        className={`absolute w-[380px] h-[380px] rounded-full z-10 animate-orbit ${isPaused ? "paused" : ""}`}
+        className={`absolute w-[460px] h-[460px] rounded-full z-10 animate-orbit ${isPaused ? "paused" : ""}`}
       >
         {/* 4 Tiny Dots at 45deg intervals */}
         {[45, 135, 225, 315].map((angle) => (
@@ -45,7 +45,7 @@ const HeroPartnersOrbit = () => {
             style={{
               top: "50%",
               left: "50%",
-              transform: `rotate(${angle}deg) translate(190px) rotate(-${angle}deg) translate(-50%, -50%)`,
+              transform: `rotate(${angle}deg) translate(230px) rotate(-${angle}deg) translate(-50%, -50%)`,
             }}
           />
         ))}
@@ -56,10 +56,10 @@ const HeroPartnersOrbit = () => {
             key={partner.name}
             className="absolute"
             style={{
-              top: partner.pos === "top" ? "-42px" : partner.pos === "bottom" ? "auto" : "50%",
-              bottom: partner.pos === "bottom" ? "-42px" : "auto",
-              left: partner.pos === "left" ? "-42px" : partner.pos === "right" ? "auto" : "50%",
-              right: partner.pos === "right" ? "-42px" : "auto",
+              top: partner.pos === "top" ? "-52px" : partner.pos === "bottom" ? "auto" : "50%",
+              bottom: partner.pos === "bottom" ? "-52px" : "auto",
+              left: partner.pos === "left" ? "-52px" : partner.pos === "right" ? "auto" : "50%",
+              right: partner.pos === "right" ? "-52px" : "auto",
               transform: partner.pos === "top" || partner.pos === "bottom" ? "translateX(-50%)" : "translateY(-50%)",
             }}
           >
@@ -75,8 +75,8 @@ const HeroPartnersOrbit = () => {
               }}
               whileHover={{ scale: 1.15 }}
             >
-              <div className="relative w-[84px] h-[84px] bg-white rounded-full border-2 border-blue-500/12 shadow-[8px_8px_20px_rgba(26,127,212,0.12)] flex items-center justify-center p-3 cursor-pointer transition-all hover:shadow-[10px_10px_24px_rgba(26,127,212,0.18)]">
-                <div className="relative w-14 h-14">
+              <div className="relative w-[104px] h-[104px] bg-white rounded-full border-2 border-blue-500/12 shadow-[8px_8px_20px_rgba(26,127,212,0.12)] flex items-center justify-center p-3 cursor-pointer transition-all hover:shadow-[10px_10px_24px_rgba(26,127,212,0.18)]">
+                <div className="relative w-16 h-16">
                   <Image
                     src={partner.logo}
                     alt={partner.name}
@@ -105,7 +105,7 @@ const HeroPartnersOrbit = () => {
       </div>
 
       {/* Center Logo Cloud container */}
-      <div className="relative flex items-center justify-center z-10 w-[260px] h-[180px]">
+      <div className="relative flex items-center justify-center z-10 w-[310px] h-[215px]">
         {/* Pulsing cloud glow matching shape */}
         <motion.div
           animate={{
@@ -115,24 +115,24 @@ const HeroPartnersOrbit = () => {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           className="absolute inset-0 flex items-center justify-center blur-2xl z-0"
         >
-           <div className="relative w-[230px] h-[75px] bg-[#1A7FD4] rounded-full mt-12">
-             <div className="absolute bottom-[25px] left-[30px] w-[80px] h-[80px] bg-[#1A7FD4] rounded-full"></div>
-             <div className="absolute bottom-[25px] right-[40px] w-[110px] h-[110px] bg-[#1A7FD4] rounded-full"></div>
+           <div className="relative w-[275px] h-[90px] bg-[#1A7FD4] rounded-full mt-14">
+             <div className="absolute bottom-[30px] left-[35px] w-[96px] h-[96px] bg-[#1A7FD4] rounded-full"></div>
+             <div className="absolute bottom-[30px] right-[48px] w-[132px] h-[132px] bg-[#1A7FD4] rounded-full"></div>
            </div>
         </motion.div>
 
         {/* The Cloud CSS Shape */}
         <div className="absolute inset-0 flex items-center justify-center drop-shadow-[0_15px_35px_rgba(26,127,212,0.15)] z-10">
-           <div className="relative w-[230px] h-[75px] bg-white rounded-full mt-12">
+           <div className="relative w-[275px] h-[90px] bg-white rounded-full mt-14">
              {/* Left bump */}
-             <div className="absolute bottom-[25px] left-[30px] w-[80px] h-[80px] bg-white rounded-full"></div>
+             <div className="absolute bottom-[30px] left-[35px] w-[96px] h-[96px] bg-white rounded-full"></div>
              {/* Right bump */}
-             <div className="absolute bottom-[25px] right-[40px] w-[110px] h-[110px] bg-white rounded-full"></div>
+             <div className="absolute bottom-[30px] right-[48px] w-[132px] h-[132px] bg-white rounded-full"></div>
            </div>
         </div>
 
         {/* The Logo */}
-        <div className="relative z-20 w-[140px] h-[50px] mt-6">
+        <div className="relative z-20 w-[168px] h-[60px] mt-8">
           <Image
             src="/Logo/Penta Logo.png"
             alt="Pentacloud Logo"

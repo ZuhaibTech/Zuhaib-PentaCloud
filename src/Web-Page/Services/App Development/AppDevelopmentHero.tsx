@@ -8,7 +8,7 @@ const CLAY_BUTTON_BLUE = "rounded-[50px] shadow-[0_8px_20px_rgba(26,127,212,0.30
 
 const AppDevelopmentHero = () => {
   return (
-    <section className="relative w-full min-h-[70vh] lg:min-h-[85vh] bg-background flex items-center overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12 px-4 sm:px-6">
+    <section className="relative w-full min-h-[70vh] lg:min-h-[85vh] bg-background flex items-center overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12">
       {/* Background Blobs */}
       <motion.div 
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
@@ -26,10 +26,10 @@ const AppDevelopmentHero = () => {
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-[#E0F7FF] rounded-full filter blur-[70px] pointer-events-none" 
       />
 
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-12 items-center relative z-10">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
         
-        {/* Left Column */}
-        <div className="flex flex-col items-start w-full">
+        {/* Left Column — pinned to left edge */}
+        <div className="flex flex-col items-start w-full pl-6 md:pl-12 lg:pl-16 xl:pl-24 pr-4">
           {/* Badge Row */}
           <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
             <motion.div
@@ -104,8 +104,8 @@ const AppDevelopmentHero = () => {
           </motion.div>
         </div>
 
-        {/* Right Column - App Visual Area */}
-        <div className="relative flex items-center justify-center w-full max-w-full px-4 sm:px-8 lg:px-0 lg:-ml-6 xl:-ml-12 mt-8 lg:mt-0 overflow-visible lg:pt-6">
+        {/* Right Column — pinned to right edge */}
+        <div className="relative flex items-center justify-end w-full max-w-full pr-6 md:pr-12 lg:pr-16 xl:pr-24 lg:-ml-6 xl:-ml-12 mt-8 lg:mt-0 overflow-visible lg:pt-6">
           <motion.div
             initial={{ opacity: 0, x: 80, rotateY: 20 }}
             animate={{ opacity: 1, x: 0, rotateY: 0 }}

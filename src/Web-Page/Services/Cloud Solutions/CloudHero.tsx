@@ -19,7 +19,7 @@ const CloudHero = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-[70vh] lg:min-h-[85vh] overflow-hidden bg-[#F0F6FF] flex items-center pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12 px-4 sm:px-6">
+    <section className="relative w-full min-h-[70vh] lg:min-h-[85vh] overflow-hidden bg-[#F0F6FF] flex items-center pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12">
       {/* Background Blobs */}
       <motion.div 
         animate={{ 
@@ -67,9 +67,9 @@ const CloudHero = () => {
         </motion.div>
       ))}
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 w-full">
-        {/* Left Column */}
-        <div className="flex flex-col items-start text-left gap-3 sm:gap-5 w-full">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
+        {/* Left Column — pinned to left edge */}
+        <div className="flex flex-col items-start text-left gap-3 sm:gap-5 w-full pl-6 md:pl-12 lg:pl-16 xl:pl-24 pr-4">
           {/* Badge Row */}
           <div className="flex flex-wrap gap-2 justify-start">
             {[
@@ -157,12 +157,12 @@ const CloudHero = () => {
           </div>
         </div>
 
-        {/* Right Column - Visual */}
+        {/* Right Column — pinned to right edge */}
         <motion.div
           initial={{ x: 80, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, type: "spring", delay: 0.4 }}
-          className="relative w-full max-w-full px-2 sm:px-8 lg:px-0 mt-6 lg:-mt-16 overflow-hidden sm:overflow-visible flex items-center justify-center"
+          className="relative w-full max-w-full pr-6 md:pr-12 lg:pr-16 xl:pr-24 mt-6 lg:-mt-16 overflow-hidden sm:overflow-visible flex items-center justify-end"
         >
           <div className="bg-gradient-to-br from-[#EEF3FF] to-[#E0EEFF] rounded-2xl sm:rounded-[28px] p-3 sm:p-8 min-h-[260px] sm:min-h-[460px] max-w-[380px] lg:max-w-none w-full border-2 border-dashed border-[#1A7FD4]/15 shadow-[12px_12px_32px_rgba(26,127,212,0.15),-6px_-6px_16px_rgba(255,255,255,0.95)] relative flex flex-col items-center justify-center">
             

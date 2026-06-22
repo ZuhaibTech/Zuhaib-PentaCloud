@@ -17,6 +17,11 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   title: "Pentacloud Consulting",
   description: "Bengaluru-based technology consulting firm dedicated to driving digital transformation.",
+  icons: {
+    icon: "/Logo/Penta Favicon.png",
+    shortcut: "/Logo/Penta Favicon.png",
+    apple: "/Logo/Penta Favicon.png",
+  },
 };
 
 import WhatsApp from "@/Details/WhatsApp/WhatsApp";

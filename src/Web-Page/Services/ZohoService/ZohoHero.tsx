@@ -7,20 +7,19 @@ import { CLAY_CARD, NEUMORPHIC_BUTTON } from "./Constants";
 
 const ZohoHero = () => {
   return (
-    <section className="relative w-full pt-24 sm:pt-28 md:pt-32 pb-4 sm:pb-6 md:pb-10 overflow-hidden px-4 sm:px-6">
+    <section className="relative w-full pt-24 sm:pt-28 md:pt-32 pb-4 sm:pb-6 md:pb-10 overflow-hidden">
       {/* Background blobs */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/50 rounded-full blur-[120px] -z-10 animate-pulse" />
       <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-indigo-100/40 rounded-full blur-[100px] -z-10" />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-center">
           
-          {/* Left Content */}
+          {/* Left Content — pinned to left edge */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-start w-full"
+            className="flex flex-col items-start w-full pl-6 md:pl-12 lg:pl-16 xl:pl-24 pr-4"
           >
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -58,12 +57,12 @@ const ZohoHero = () => {
             </div>
           </motion.div>
 
-          {/* Right Visuals */}
+          {/* Right Visuals — pinned to right edge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, x: 50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative w-full max-w-full px-4 sm:px-8 lg:px-0 mt-8 lg:mt-0 overflow-hidden sm:overflow-visible"
+            className="relative w-full max-w-full pr-6 md:pr-12 lg:pr-16 xl:pr-24 mt-8 lg:mt-0 overflow-visible"
           >
             {/* Main Image Area */}
             <div className="bg-white p-2 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white/80 relative overflow-hidden aspect-[4/3] flex items-center justify-center group">
@@ -80,7 +79,7 @@ const ZohoHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="bg-white/95 backdrop-blur-sm rounded-[24px] border border-slate-100 shadow-[0_10px_30px_rgba(163,185,210,0.25)] absolute top-2 right-2 sm:-top-4 sm:-right-4 p-3 sm:p-5 flex flex-col items-center gap-2 sm:gap-3 z-20 min-w-[90px] sm:min-w-[130px]"
+              className="bg-white/95 backdrop-blur-sm rounded-[24px] border border-slate-100 shadow-[0_10px_30px_rgba(163,185,210,0.25)] absolute top-2 right-2 sm:-top-4 sm:right-2 p-3 sm:p-5 flex flex-col items-center gap-2 sm:gap-3 z-20 min-w-[90px] sm:min-w-[130px]"
             >
                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-2xl bg-white shadow-sm border border-slate-100/50 flex items-center justify-center">
                  <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500" />
@@ -129,7 +128,6 @@ const ZohoHero = () => {
           </motion.div>
 
         </div>
-      </div>
     </section>
   );
 };

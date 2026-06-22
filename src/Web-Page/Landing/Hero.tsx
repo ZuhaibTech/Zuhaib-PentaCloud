@@ -17,21 +17,25 @@ const Hero = () => {
 
   return (
     <section className="relative w-full min-h-[70vh] lg:min-h-[85vh] flex flex-col items-center justify-center overflow-hidden pt-24 pb-12 lg:pt-32 lg:pb-36">
-      {/* Background Image & Overlays */}
+      {/* Background Image — more visible */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-65"
         style={{ backgroundImage: "url('/Hero/Hero-BG.webp')" }}
       />
-      <div className="absolute inset-0 bg-[#F8FAFC]/90 z-10" />
-      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white to-transparent pointer-events-none z-10" />
+      {/* Very light overall tint */}
+      <div className="absolute inset-0 bg-[#F8FAFC]/20 z-10" />
+      {/* White fade on left half — makes text readable without hiding the image */}
+      <div className="absolute inset-y-0 left-0 w-[60%] bg-gradient-to-r from-white/85 via-white/50 to-transparent pointer-events-none z-10" />
+      {/* Top fade to merge with navbar */}
+      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/80 to-transparent pointer-events-none z-10" />
 
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-[1.15fr_0.85fr] gap-6 md:gap-8 lg:gap-4 items-center px-6 md:px-10 relative z-20">
-        {/* Left Column */}
+      <div className="w-full grid lg:grid-cols-2 items-center relative z-20">
+        {/* Left Column — pinned to the left edge */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-start gap-4 sm:gap-6 md:gap-8 w-full max-w-full min-w-0 overflow-hidden"
+          className="flex flex-col items-start gap-4 sm:gap-6 md:gap-8 w-full min-w-0 overflow-hidden pl-6 md:pl-12 lg:pl-16 xl:pl-24 pr-4"
         >
           {/* Badge */}
           <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-transparent border border-[#1A7FD4]/30 text-[#1A7FD4] text-[8px] md:text-[9px] font-extrabold tracking-[2px] uppercase">
@@ -92,8 +96,8 @@ const Hero = () => {
 
         </motion.div>
 
-        {/* Right Column - Orbit Animation (Desktop) */}
-        <div className="hidden lg:flex justify-center items-center">
+        {/* Right Column — pinned to the right edge */}
+        <div className="hidden lg:flex justify-end items-center pr-6 md:pr-12 lg:pr-16 xl:pr-24">
           <HeroPartnersOrbit />
         </div>
       </div>

@@ -15,8 +15,9 @@ const DataMigration = () => {
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/50 rounded-full blur-[150px] -z-10" />
       <div className="absolute top-[20%] -left-40 w-[600px] h-[600px] bg-indigo-100/40 rounded-full blur-[120px] -z-10" />
 
+      <MigrationHero />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <MigrationHero />
         <MigrationServices />
         <MigrationProcess />
         <MigrationWhyPentacloud />

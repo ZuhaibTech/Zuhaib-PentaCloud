@@ -7,11 +7,12 @@ import { NEUMORPHIC_BUTTON } from "./Constants";
 
 const ConsultingHero = () => {
   return (
-    <section className="py-4 sm:py-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+    <section className="py-4 sm:py-8 grid grid-cols-1 lg:grid-cols-2 items-center">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
+        className="pl-6 md:pl-12 lg:pl-16 xl:pl-24 pr-4"
       >
         <div className="px-4 py-1.5 bg-white/60 backdrop-blur-sm rounded-full shadow-sm text-[#1A7FD4] text-[10px] sm:text-[11px] font-black tracking-[3px] sm:tracking-[4px] uppercase mb-4 sm:mb-6 border border-white/40 inline-block">
           CONSULTING & TRAINING
@@ -46,7 +47,7 @@ const ConsultingHero = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative pt-6 lg:pt-0"
+        className="relative pt-6 lg:pt-0 pr-6 md:pr-12 lg:pr-16 xl:pr-24"
       >
         <div className="bg-gradient-to-br from-white to-blue-50 p-4 sm:p-6 rounded-[24px] sm:rounded-[48px] shadow-2xl border border-white aspect-[4/3] flex items-center justify-center relative group">
            <div className="absolute inset-0 rounded-[24px] sm:rounded-[48px] overflow-hidden">
