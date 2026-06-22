@@ -17,7 +17,7 @@ const TimelineCard = ({ milestone, index }: { milestone: any, index: number }) =
         <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#E8F0F8] rounded-full shadow-[3px_3px_6px_rgba(163,185,210,0.4),-3px_-3px_6px_rgba(255,255,255,0.85)] flex items-center justify-center">
             <motion.div 
               animate={{ scale: [1, 1.3, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
+              transition={{ duration: 1, repeat: Infinity }}
               className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-[#1A7FD4] rounded-full shadow-[0_0_8px_rgba(26,127,212,0.5)]"
             />
         </div>
@@ -32,13 +32,13 @@ const TimelineCard = ({ milestone, index }: { milestone: any, index: number }) =
       <motion.div 
         initial={{ x: isLeft ? -40 : 40, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8, type: "spring" }}
+        transition={{ duration: 0.4, type: "spring" }}
         whileHover={{ y: -10, scale: 1.02 }}
         viewport={{ once: true, margin: "-100px" }}
-        className="w-[calc(100%-55px)] ml-[55px] md:ml-0 md:w-[45%] bg-white rounded-[20px] sm:rounded-[32px] p-5 sm:p-8 shadow-[10px_10px_20px_rgba(163,185,210,0.25),-10px_-10px_20px_rgba(255,255,255,0.9)] hover:shadow-[16px_16px_32px_rgba(163,185,210,0.35),-16px_-16px_32px_rgba(255,255,255,1)] group transition-all duration-500 border border-slate-100"
+        className="w-[calc(100%-55px)] ml-[55px] md:ml-0 md:w-[45%] bg-white rounded-[20px] sm:rounded-[32px] p-5 sm:p-8 shadow-[10px_10px_20px_rgba(163,185,210,0.25),-10px_-10px_20px_rgba(255,255,255,0.9)] hover:shadow-[16px_16px_32px_rgba(163,185,210,0.35),-16px_-16px_32px_rgba(255,255,255,1)] group transition-all duration-200 border border-slate-100"
       >
         <div className="flex justify-between items-start mb-4 sm:mb-6">
-          <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-[20px] bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.25),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center transition-all group-hover:rotate-[15deg] group-hover:shadow-[3px_3px_8px_rgba(163,185,210,0.3)] duration-500" style={{ color: milestone.color }}>
+          <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-[20px] bg-[#E8F0F8] shadow-[inset_2px_2px_4px_rgba(163,185,210,0.25),inset_-2px_-2px_4px_rgba(255,255,255,0.7)] flex items-center justify-center transition-all group-hover:rotate-[15deg] group-hover:shadow-[3px_3px_8px_rgba(163,185,210,0.3)] duration-200" style={{ color: milestone.color }}>
             {React.cloneElement(milestone.icon, { className: "w-5 h-5 sm:w-6 sm:h-6" })}
           </div>
           <div className="bg-[#E8F0F8] text-[#1A7FD4] font-nunito font-black text-[8px] sm:text-[10px] px-3 py-1 sm:px-4 sm:py-1.5 rounded-full shadow-[2px_2px_4px_rgba(163,185,210,0.35),-2px_-2px_4px_rgba(255,255,255,0.8)] uppercase tracking-wider group-hover:scale-105 transition-transform">
@@ -96,7 +96,7 @@ const OurJourney = () => {
           <motion.div 
             initial={{ height: 0 }}
             whileInView={{ height: "100%" }}
-            transition={{ duration: 3, ease: "easeInOut" }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
             viewport={{ once: true }}
             className="absolute left-[20px] md:left-1/2 -translate-x-1/2 top-0 w-[6px] sm:w-[8px] bg-gradient-to-b from-[#1A7FD4] to-[#29C6E0] rounded-full shadow-[0_0_12px_rgba(26,127,212,0.35)]"
           />

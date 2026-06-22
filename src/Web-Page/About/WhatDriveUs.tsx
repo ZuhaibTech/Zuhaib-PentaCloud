@@ -68,13 +68,13 @@ const WhatDriveUs = () => {
           <motion.div 
             initial={{ x: -40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, type: "spring", bounce: 0.2 }}
+            transition={{ duration: 0.3, type: "spring", bounce: 0.2 }}
             viewport={{ once: true }}
             whileHover={{ y: -8 }}
-            className="group relative bg-white/50 backdrop-blur-sm rounded-[32px] p-7 sm:p-9 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-500 overflow-hidden"
+            className="group relative bg-white/50 backdrop-blur-sm rounded-[32px] p-7 sm:p-9 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-200 overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1A7FD4] to-transparent opacity-50" />
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] text-[#1A7FD4] flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-500">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] text-[#1A7FD4] flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-200">
               <Target size={28} strokeWidth={2.5} className="sm:w-8 sm:h-8" />
             </div>
             <div className="font-nunito font-black text-[10px] sm:text-[11px] tracking-[3px] text-[#1A7FD4] mb-3 uppercase">OUR MISSION</div>
@@ -88,13 +88,13 @@ const WhatDriveUs = () => {
           <motion.div 
             initial={{ x: 40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, type: "spring", bounce: 0.2 }}
+            transition={{ duration: 0.3, type: "spring", bounce: 0.2 }}
             viewport={{ once: true }}
             whileHover={{ y: -8 }}
-            className="group relative bg-white/50 backdrop-blur-sm rounded-[32px] p-7 sm:p-9 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-500 overflow-hidden"
+            className="group relative bg-white/50 backdrop-blur-sm rounded-[32px] p-7 sm:p-9 border border-white/60 shadow-[15px_15px_30px_rgba(163,185,210,0.15),-15px_-15px_30px_rgba(255,255,255,0.6)] hover:shadow-[25px_25px_50px_rgba(163,185,210,0.25)] transition-all duration-200 overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#29C6E0] to-transparent opacity-50" />
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] text-[#29C6E0] flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-500">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white shadow-[6px_6px_12px_rgba(163,185,210,0.1),-6px_-6px_12px_rgba(255,255,255,0.7)] text-[#29C6E0] flex items-center justify-center mb-6 sm:mb-8 group-hover:scale-105 transition-all duration-200">
               <Eye size={28} strokeWidth={2.5} className="sm:w-8 sm:h-8" />
             </div>
             <div className="font-nunito font-black text-[10px] sm:text-[11px] tracking-[3px] text-[#29C6E0] mb-3 uppercase">OUR VISION</div>
@@ -112,24 +112,24 @@ const WhatDriveUs = () => {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+              transition={{ duration: 0.25, delay: i * 0.08 }}
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
-              className="group relative bg-white/40 backdrop-blur-sm rounded-[28px] p-6 sm:p-7 border border-white/60 shadow-[10px_10px_20px_rgba(163,185,210,0.1),-8px_-8px_20px_rgba(255,255,255,0.5)] hover:shadow-[15px_15px_30px_rgba(163,185,210,0.15)] transition-all duration-500 overflow-hidden"
+              className="group relative bg-white/40 backdrop-blur-sm rounded-[28px] p-6 sm:p-7 border border-white/60 shadow-[10px_10px_20px_rgba(163,185,210,0.1),-8px_-8px_20px_rgba(255,255,255,0.5)] hover:shadow-[15px_15px_30px_rgba(163,185,210,0.15)] transition-all duration-200 overflow-hidden"
             >
               {/* Decorative Glow */}
               <div 
-                className="absolute -top-10 -right-10 w-20 h-20 rounded-full blur-[40px] opacity-0 group-hover:opacity-10 transition-opacity duration-700 pointer-events-none"
+                className="absolute -top-10 -right-10 w-20 h-20 rounded-full blur-[40px] opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"
                 style={{ backgroundColor: val.color }}
               />
 
               <div 
-                className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white shadow-[4px_4px_8px_rgba(163,185,210,0.08),-4px_-4px_8px_rgba(255,255,255,0.6)] flex items-center justify-center mb-5 transition-all duration-500 group-hover:scale-105"
+                className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white shadow-[4px_4px_8px_rgba(163,185,210,0.08),-4px_-4px_8px_rgba(255,255,255,0.6)] flex items-center justify-center mb-5 transition-all duration-200 group-hover:scale-105"
                 style={{ color: val.color }}
               >
                 <val.icon size={22} strokeWidth={2.5} className="sm:w-6 sm:h-6" />
               </div>
-              <h4 className="font-nunito font-black text-lg text-[#0D1B2A] mb-2 group-hover:text-[#1A7FD4] transition-colors duration-300">
+              <h4 className="font-nunito font-black text-lg text-[#0D1B2A] mb-2 group-hover:text-[#1A7FD4] transition-colors duration-150">
                 {val.title}
               </h4>
               <p className="font-inter text-[13px] text-[#4A6080] leading-relaxed font-medium">

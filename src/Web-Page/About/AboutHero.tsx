@@ -6,16 +6,15 @@ import { ArrowDown } from "lucide-react";
 
 const AboutHero = () => {
   return (
-    <section className="relative w-full min-h-[75vh] lg:min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16">
+    <section className="relative w-full min-h-[50vh] sm:min-h-[75vh] lg:min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10 sm:pt-24 sm:pb-16">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/Hero/About.jpeg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('/Hero/About-mobile.jpeg')] sm:bg-[url('/Hero/About.jpeg')]"
       />
 
       {/* Layered overlays: dark gradient bottom-up + subtle blue wash */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/80 via-[#0D1B2A]/40 to-[#0D1B2A]/20" />
-      <div className="absolute inset-0 bg-[#1A7FD4]/15" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A]/90 via-[#0D1B2A]/70 to-[#0D1B2A]/50 sm:from-[#0D1B2A]/80 sm:via-[#0D1B2A]/40 sm:to-[#0D1B2A]/20" />
+      <div className="absolute inset-0 bg-[#1A7FD4]/30 sm:bg-[#1A7FD4]/15" />
       {/* White top shade for navbar readability */}
       <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
 
@@ -37,7 +36,7 @@ const AboutHero = () => {
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, type: "spring", delay: 0.3 }}
-              className="text-white"
+              className="text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] sm:drop-shadow-none"
             >
               We Are
             </motion.div>
@@ -47,7 +46,7 @@ const AboutHero = () => {
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, type: "spring", delay: 0.45 }}
-              className="text-[#29C6E0] py-1 md:py-2"
+              className="text-[#29C6E0] py-1 md:py-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] sm:drop-shadow-none"
             >
               Pentacloud
             </motion.div>
@@ -57,7 +56,7 @@ const AboutHero = () => {
               initial={{ y: 80, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, type: "spring", delay: 0.6 }}
-              className="text-white"
+              className="text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] sm:drop-shadow-none"
             >
               Consulting
             </motion.div>

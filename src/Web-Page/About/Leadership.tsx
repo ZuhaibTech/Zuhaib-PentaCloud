@@ -25,7 +25,7 @@
 //     <motion.div
 //       initial={{ opacity: 0, y: 80 }}
 //       whileInView={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.8, delay: index * 0.1, type: "spring", bounce: 0.4 }}
+//       transition={{ duration: 0.4, delay: index * 0.1, type: "spring", bounce: 0.4 }}
 //       viewport={{ once: true, margin: "-50px" }}
 //       style={{ perspective: 1000 }}
 //       className="w-full"
@@ -34,14 +34,14 @@
 //         onMouseMove={handleMouse}
 //         onMouseLeave={handleMouseLeave}
 //         style={{ rotateX, rotateY }}
-//         className="w-full max-w-[300px] sm:max-w-[320px] mx-auto bg-background rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[8px_8px_16px_rgba(163,185,210,0.4),-8px_-8px_16px_rgba(255,255,255,0.9)] group transition-all duration-300 hover:shadow-[15px_15px_30px_rgba(163,185,210,0.5)] hover:-translate-y-1.5"
+//         className="w-full max-w-[300px] sm:max-w-[320px] mx-auto bg-background rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[8px_8px_16px_rgba(163,185,210,0.4),-8px_-8px_16px_rgba(255,255,255,0.9)] group transition-all duration-150 hover:shadow-[15px_15px_30px_rgba(163,185,210,0.5)] hover:-translate-y-1.5"
 //       >
 //         {/* Avatar Area */}
 //         <div className="relative h-[140px] sm:h-[180px]">
 //           <div className="absolute inset-0 overflow-hidden">
 //             <img 
 //               src={member.banner} 
-//               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+//               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" 
 //               alt="Banner" 
 //             />
 //           </div>

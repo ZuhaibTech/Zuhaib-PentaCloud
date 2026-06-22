@@ -104,27 +104,41 @@ const HeroPartnersOrbit = () => {
         ))}
       </div>
 
-      {/* Center Logo */}
-      <div className="relative w-[110px] h-[110px] flex items-center justify-center z-10">
+      {/* Center Logo Cloud container */}
+      <div className="relative flex items-center justify-center z-10 w-[260px] h-[180px]">
+        {/* Pulsing cloud glow matching shape */}
         <motion.div
           animate={{
-            boxShadow: [
-              "0 0 0 0px rgba(26,127,212,0.3)",
-              "0 0 0 16px rgba(26,127,212,0)"
-            ]
+            opacity: [0.15, 0.4, 0.15],
+            scale: [0.95, 1.08, 0.95]
           }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="absolute inset-0 rounded-full"
-        />
-        <div className="w-[90px] h-[90px] bg-white rounded-full p-4 shadow-[8px_8px_24px_rgba(26,127,212,0.20),-4px_-4px_12px_rgba(255,255,255,0.95)] flex items-center justify-center overflow-hidden">
-          <div className="relative w-16 h-16">
-            <Image
-              src="/Logo/Penta Logo.png"
-              alt="Pentacloud Logo"
-              fill
-              className="object-contain"
-            />
-          </div>
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-0 flex items-center justify-center blur-2xl z-0"
+        >
+           <div className="relative w-[230px] h-[75px] bg-[#1A7FD4] rounded-full mt-12">
+             <div className="absolute bottom-[25px] left-[30px] w-[80px] h-[80px] bg-[#1A7FD4] rounded-full"></div>
+             <div className="absolute bottom-[25px] right-[40px] w-[110px] h-[110px] bg-[#1A7FD4] rounded-full"></div>
+           </div>
+        </motion.div>
+
+        {/* The Cloud CSS Shape */}
+        <div className="absolute inset-0 flex items-center justify-center drop-shadow-[0_15px_35px_rgba(26,127,212,0.15)] z-10">
+           <div className="relative w-[230px] h-[75px] bg-white rounded-full mt-12">
+             {/* Left bump */}
+             <div className="absolute bottom-[25px] left-[30px] w-[80px] h-[80px] bg-white rounded-full"></div>
+             {/* Right bump */}
+             <div className="absolute bottom-[25px] right-[40px] w-[110px] h-[110px] bg-white rounded-full"></div>
+           </div>
+        </div>
+
+        {/* The Logo */}
+        <div className="relative z-20 w-[140px] h-[50px] mt-6">
+          <Image
+            src="/Logo/Penta Logo.png"
+            alt="Pentacloud Logo"
+            fill
+            className="object-contain"
+          />
         </div>
       </div>
 
