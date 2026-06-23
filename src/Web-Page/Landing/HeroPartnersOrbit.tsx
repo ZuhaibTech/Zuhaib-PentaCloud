@@ -81,6 +81,7 @@ const HeroPartnersOrbit = () => {
                     src={partner.logo}
                     alt={partner.name}
                     fill
+                    sizes="64px"
                     className="object-contain"
                   />
                 </div>
@@ -137,6 +138,8 @@ const HeroPartnersOrbit = () => {
             src="/Logo/Penta Logo.png"
             alt="Pentacloud Logo"
             fill
+            loading="eager"
+            sizes="168px"
             className="object-contain"
           />
         </div>
